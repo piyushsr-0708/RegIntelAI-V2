@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# ChromaDB
+chroma_db/
+vector_db/
+
+# Model checkpoints
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# Temporary files
+temp/
+tmp/
+scratch/
+
+# Playwright cache (if local)
+playwright-report/
+
+# Node (future frontend)
+node_modules/
