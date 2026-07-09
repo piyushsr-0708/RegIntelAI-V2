@@ -1,0 +1,2377 @@
+{
+  "document_id": "MD12715",
+  "title": "MD12715",
+  "document_status": "ACTIVE",
+  "metadata": {
+    "author": "Pritam Kundu",
+    "creator": "Microsoft® Word 2016",
+    "producer": "Microsoft® Word 2016",
+    "creation_date": "D:20240730192001+05'30'",
+    "modification_date": "D:20240730192001+05'30'",
+    "bookmarks_count": 0,
+    "file_size_bytes": 1057805,
+    "sha256": "72caa082f56115744b79a8f552e526e3d492247b2fd3d253318b562c3652e2e4",
+    "toc": []
+  },
+  "page_count": 16,
+  "body_font_size": 10.98,
+  "hierarchy": [
+    {
+      "node_id": "MD12715_n1",
+      "parent_id": null,
+      "level": 99,
+      "node_type": "image",
+      "title": "<image>",
+      "text": "<image>",
+      "page_number": 1,
+      "block_ids": [
+        "p1_b0"
+      ],
+      "bbox": [
+        436.04998779296875,
+        83.09999084472656,
+        518.7999877929688,
+        149.29998779296875
+      ],
+      "children": []
+    },
+    {
+      "node_id": "MD12715_n2",
+      "parent_id": null,
+      "level": 99,
+      "node_type": "image",
+      "title": "<image>",
+      "text": "<image>",
+      "page_number": 1,
+      "block_ids": [
+        "p1_b5"
+      ],
+      "bbox": [
+        72.0,
+        85.1400146484375,
+        143.39999389648438,
+        138.69000244140625
+      ],
+      "children": []
+    },
+    {
+      "node_id": "MD12715_n3",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "भारतीय ररज़र्व बैंक RESERVE BANK OF INDIA",
+      "text": "भारतीय ररज़र्व बैंक RESERVE BANK OF INDIA\nRBI/DPSS/2024-25/123 CO.DPSS.OVRST.No.S447/06-26-002/2024-25 July 30, 2024\nThe Chairman / Managing Director / Chief Executive Officer Authorised Non-bank Payment System Operators\n\n\nMadam / Dear Sir,\nMaster Directions on Cyber Resilience and Digital Payment Security Controls for non-\nbank Payment System Operators\nThe safety and security of payment systems is a key objective of the Reserve Bank of India\n(RBI). To ensure that the authorised non-bank Payment System Operators (PSOs) are\nresilient to existing and emerging information systems and cyber security risks, it was\nannounced in the Statement on Developmental and Regulatory Policies issued as part of\nMonetary Policy Statement dated April 08, 2022 that RBI will issue directions on Cyber\nResilience and Payment Security Controls for Payment System Operators (PSOs).\n2.\nAccordingly, a draft Master Direction was published on June 02, 2023 seeking\ncomments / feedback from stakeholders. Based on the feedback received, it has been decided\nto issue the final Directions, covering robust governance mechanisms for identification,\nassessment, monitoring and management of these risks. The Directions also cover baseline\nsecurity measures for ensuring system resiliency as well as safe and secure digital payment\ntransactions. However, they shall endeavour to migrate to latest security standards. The\nexisting instructions on security and risk mitigation measures for payments done using cards,\nPrepaid Payment Instruments (PPIs) and mobile banking continue to be applicable as hitherto.\nIn case of any discrepancy in applicability of guidelines, the instructions provided in this Master\nDirection shall prevail.\nभुगतान और ननपटान प्रणाली निभाग, केंद्रीय कायाालय, 14 िी मंनिल, केंद्रीय कायाालय भिन,शहीद भगत न ंह मागा, फोटा, मुम्बई - 400001\nफोनTel: (91-22) 2260 1000; फैक् Fax: (91-22) 2265 9566; ईमेल-e-mail : cgmdpssco@rbi.org.in\nDepartment of Payment and Settlement Systems, Central Office, 14th Floor, Central Office Building, Shahid Bhagat Singh Road, Fort, Mumbai -400001\nनहंदी आ ान है, इ का प्रयोग बढाइए\n3.\n These Directions are issued under Section 10 (2) read with Section 18 of Payment\nand Settlement Systems Act, 2007 (Act 51 of 2007).\nYours faithfully,\n(Sudhanshu Prasad)\nChief General Manager\nIndex Page Section I - Preliminary 4 Introduction 4 Short Title and Commencement 4 Applicability 5 Purpose 5 Section II - Governance Controls 5 Cyber Security Preparedness 5 Risk Assessment and Monitoring 6 Section III - Baseline Information Security Measures / Controls 6 Inventory Management 6 Identity and Access Management 6 Network Security 7 Application Security Life Cycle 8 Security Testing 8 Vendor Risk Management 9 Data Security 9 Patch and Change Management Life Cycle 10 Incident Response 10 Business Continuity Plan (BCP) 10 Application Programming Interfaces (APIs) 11 Employee Awareness / Training 11 Cloud Security 11 Other Security Measures 12 Section IV - Digital Payment Security Measures / Controls 13 Mobile Payments 14 Card Payments 14 Prepaid Payment Instruments 15 Acronyms 16\nMaster Directions on Cyber Resilience and Digital Payment Security Controls for non-\nbank Payment System Operators (PSOs)\nSection I\nPreliminary\nIntroduction\n1.\nIn exercise of the powers conferred under Section 10 (2) read with Section 18 of the\nPayment and Settlement Systems Act, 2007 (PSS Act), the Reserve Bank of India (RBI, Bank)\nbeing satisfied that it is necessary and expedient in the public interest so to do, issues the\nMaster Directions hereinafter specified.\nShort Title and Commencement\n2.\nThese Master Directions shall be called the Reserve Bank of India (Cyber Resilience\nand Digital Payment Security Controls for non-bank PSOs) Master Directions, 2024 (Master\nDirections, Directions).\n3.\nThe Directions shall come into effect on the day they are placed on the official website\nof the RBI. In order to provide adequate time to put in place the necessary compliance\nstructure, a phased implementation approach1 is prescribed as under -\nRegulated Entity Timeline Large non-bank PSOs2 April 1, 2025 Medium non-bank PSOs3 April 1, 2026 Small non-bank PSOs4 April 1, 2028\n1 The timelines prescribed in the instructions issued earlier by RBI shall continue to be applicable as hitherto.\n\n2 For the purpose of these Directions, Clearing Corporation of India Limited (CCIL), National Payments Corporation of India (NPCI), NPCI Bharat Bill Pay Limited, Card Payment Networks, Non-bank ATM Networks, White Label ATM Operators (WLAOs), Large PPI Issuers, Trade Receivables Discounting System (TReDS) Operators, Bharat Bill Payment Operating Units (BBPOUs) and Payment Aggregators (PAs) are considered as large non-bank PSOs.\n\n3 Cross-border (in-bound) Money Transfer Operators under Money Transfer Service Scheme (MTSS) and Medium PPI Issuers are considered as medium non-bank PSOs.\n\n4 Small PPI Issuers and Instant Money Transfer Operators are considered as small non-bank PSOs.\n\nCategorisation of authorised non-bank PPI Issuers into small, medium and large is as per the Oversight Framework for Financial Market Infrastructures (FMIs) and Retail Payment Systems (RPSs). If a PPI Issuer moves to a higher category, the timeline of the category to which it moves into, would apply. For instance, if a small (or medium) PPI issuer moves into medium category (or large), it will need to comply with these Directions within a period of two (or one) years from the time of new categorisation, as the case may be.\nApplicability\n4.\nThe provisions of these Directions shall apply to all authorised non-bank PSOs.\n5.\nTo effectively identify, monitor, control and manage cyber and technology related risks\narising out of linkages of PSOs with unregulated entities who are part of their digital payments\necosystem (like payment gateways, third party service providers, vendors, etc.), PSOs shall\nensure adherence to these Directions by such unregulated entities as well, subject to mutual\nagreement. An organisational policy in this respect, approved by the Board, shall be put in\nplace.\nPurpose\n6.\nThese Directions aim to improve safety and security of the payment systems operated\nby PSOs by providing a framework for overall information security preparedness with an\nemphasis on cyber resilience.\nSection II\nGovernance Controls\n7.\nThe Board of Directors (Board) of the PSO shall be responsible for ensuring adequate\noversight over information security risks, including cyber risk and cyber resilience.\nHowever, primary oversight may be delegated to a sub-committee of the Board, headed\nby a member with experience in information / cyber security, which shall meet at least\nonce every quarter.\n8.\nThe PSO shall formulate a Board approved Information Security (IS) policy to manage\npotential information security risks covering all applications and products concerning\npayment systems as well as management of risks that have materialised. The policy shall\nbe reviewed annually. It shall cover at the minimum, (i) roles and responsibilities of Board\n/ sub-committees of the Board, senior management and other key personnel; (ii)\nmeasures to identify, assess, manage and monitor cyber security risk which shall also\ninclude various types of security controls for ensuring cyber resiliency along with\nprocesses for training and awareness of employees / stakeholders.\nCyber Security Preparedness\n9.\nThe PSO shall prepare a distinct Board approved Cyber Crisis Management Plan (CCMP)\nto detect, contain, respond and recover from cyber threats and cyber attacks. Relevant\nguidelines from CERT-In / National Critical Information Infrastructure Protection Centre\n(NCIIPC) / IDRBT and other agencies may be referred for guidance.\nRisk Assessment and Monitoring",
+      "page_number": 1,
+      "block_ids": [
+        "p1_b6",
+        "p1_b7",
+        "p1_b8",
+        "p1_b9",
+        "p1_b10",
+        "p1_b11",
+        "p1_b12",
+        "p1_b13",
+        "p1_b14",
+        "p1_b15",
+        "p1_b16",
+        "p1_b17",
+        "p1_b18",
+        "p1_b19",
+        "p1_b20",
+        "p1_b21",
+        "p1_b22",
+        "p1_b23",
+        "p1_b24",
+        "p1_b25",
+        "p1_b26",
+        "p1_b1",
+        "p1_b2",
+        "p1_b3",
+        "p1_b4",
+        "p2_b1",
+        "p2_b2",
+        "p2_b3",
+        "p2_b4",
+        "p2_b5",
+        "p3_b1",
+        "p4_b1",
+        "p4_b2",
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6",
+        "p4_b7",
+        "p4_b8",
+        "p4_b9",
+        "p4_b10",
+        "p4_b11",
+        "p4_b12",
+        "p4_b13",
+        "p4_b14",
+        "p4_b15",
+        "p4_b16",
+        "p4_b17",
+        "p4_b18",
+        "p5_b1",
+        "p5_b2",
+        "p5_b3",
+        "p5_b4",
+        "p5_b5",
+        "p5_b6",
+        "p5_b7",
+        "p5_b8",
+        "p5_b9",
+        "p5_b10",
+        "p5_b11",
+        "p5_b12",
+        "p5_b13",
+        "p5_b14",
+        "p5_b15",
+        "p5_b16",
+        "p5_b17",
+        "p5_b18",
+        "p5_b19",
+        "p5_b20",
+        "p5_b21",
+        "p5_b22",
+        "p5_b23",
+        "p5_b24",
+        "p5_b25",
+        "p5_b26",
+        "p5_b27",
+        "p5_b28",
+        "p5_b29",
+        "p5_b30",
+        "p5_b31",
+        "p5_b32",
+        "p6_b1"
+      ],
+      "bbox": [
+        72.0,
+        64.10308074951172,
+        526.450927734375,
+        821.2049560546875
+      ],
+      "children": []
+    },
+    {
+      "node_id": "MD12715_n4",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "10. The Board shall entrust the responsibility and accountability for implementing the IS policy",
+      "text": "10. The Board shall entrust the responsibility and accountability for implementing the IS policy\nand the cyber resilience framework as well as for continuously assessing the overall IS\nposture of PSO to a senior level executive with expertise in areas of information security\nincluding cyber security. [e.g. Chief Information Security Officer (CISO)].",
+      "page_number": 6,
+      "block_ids": [
+        "p6_b2",
+        "p6_b3",
+        "p6_b4",
+        "p6_b5"
+      ],
+      "bbox": [
+        72.0,
+        83.12310028076172,
+        526.4324340820312,
+        152.26576232910156
+      ],
+      "children": []
+    },
+    {
+      "node_id": "MD12715_n5",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "11. The PSO shall define appropriate Key Risk Indicators (KRIs) to identify potential risk",
+      "text": "11. The PSO shall define appropriate Key Risk Indicators (KRIs) to identify potential risk\nevents and Key Performance Indicators (KPIs) to assess the effectiveness of security\ncontrols. These KRIs and KPIs shall be continuously monitored by the sub-committee of\nthe Board referred to in paragraph 7.",
+      "page_number": 6,
+      "block_ids": [
+        "p6_b6",
+        "p6_b7",
+        "p6_b8",
+        "p6_b9"
+      ],
+      "bbox": [
+        72.0,
+        158.9830780029297,
+        526.3902587890625,
+        228.16578674316406
+      ],
+      "children": []
+    },
+    {
+      "node_id": "MD12715_n6",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "12. IT assessment reports (such as system audit, VA / PT reports, etc.) shall be placed before",
+      "text": "12. IT assessment reports (such as system audit, VA / PT reports, etc.) shall be placed before\nthe sub-committee responsible for IT oversight in the meeting due immediately after such\nreport is available.",
+      "page_number": 6,
+      "block_ids": [
+        "p6_b10",
+        "p6_b11",
+        "p6_b12"
+      ],
+      "bbox": [
+        72.0,
+        234.8831024169922,
+        526.3978881835938,
+        285.10577392578125
+      ],
+      "children": []
+    },
+    {
+      "node_id": "MD12715_n7",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "13. The PSO shall, undertake a cyber risk assessment exercise relating to launch of new",
+      "text": "13. The PSO shall, undertake a cyber risk assessment exercise relating to launch of new\nproduct / services / technologies or undertaking major changes to infrastructure or\nprocesses of existing product / services. Action points emanating from such assessment\nshall be implemented under the oversight of the CISO or equivalent executive.\nSection III\nBaseline Information Security Measures / Controls",
+      "page_number": 6,
+      "block_ids": [
+        "p6_b13",
+        "p6_b14",
+        "p6_b15",
+        "p6_b16",
+        "p6_b17",
+        "p6_b18"
+      ],
+      "bbox": [
+        72.0,
+        291.8231201171875,
+        526.401611328125,
+        417.96575927734375
+      ],
+      "children": []
+    },
+    {
+      "node_id": "MD12715_n8",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "14. Inventory Management",
+      "text": "14. Inventory Management",
+      "page_number": 6,
+      "block_ids": [
+        "p6_b19"
+      ],
+      "bbox": [
+        72.0,
+        424.68310546875,
+        219.25244140625,
+        449.58575439453125
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n9",
+          "parent_id": "MD12715_n8",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) The PSO shall maintain a record of all the key roles, information assets (applications,",
+          "text": "(a) The PSO shall maintain a record of all the key roles, information assets (applications,\ndata, infrastructure, personnel, services, etc.), critical functions, processes and third-\nparty service providers, and classify and document their levels of usage, criticality\nand business value.",
+          "page_number": 6,
+          "block_ids": [
+            "p6_b20",
+            "p6_b21",
+            "p6_b22",
+            "p6_b23"
+          ],
+          "bbox": [
+            93.31999969482422,
+            456.3031005859375,
+            526.4324340820312,
+            525.42578125
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n10",
+          "parent_id": "MD12715_n8",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) A complete process flow diagram of network resources, inter-connections and",
+          "text": "(b) A complete process flow diagram of network resources, inter-connections and\ndependencies, and data flows with other information assets, including any other third-\nparty systems, shall be created and maintained.",
+          "page_number": 6,
+          "block_ids": [
+            "p6_b24",
+            "p6_b25",
+            "p6_b26"
+          ],
+          "bbox": [
+            93.31999969482422,
+            532.203125,
+            526.3984375,
+            582.3657836914062
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n11",
+          "parent_id": "MD12715_n8",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) Asset information shall necessarily include an identifier, network address, asset",
+          "text": "(c) Asset information shall necessarily include an identifier, network address, asset\nlocation, asset owner name and End of Life Support (EoLS). All assets (hardware or\nsoftware) approaching EoLS shall be assessed to evaluate risks associated with the\ncontinued use of the unsupported asset.",
+          "page_number": 6,
+          "block_ids": [
+            "p6_b27",
+            "p6_b28",
+            "p6_b29",
+            "p6_b30"
+          ],
+          "bbox": [
+            93.31999969482422,
+            589.0831298828125,
+            526.4016723632812,
+            658.2657470703125
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n12",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "15. Identity and Access Management",
+      "text": "15. Identity and Access Management",
+      "page_number": 6,
+      "block_ids": [
+        "p6_b31"
+      ],
+      "bbox": [
+        72.0,
+        664.9830932617188,
+        276.1524353027344,
+        689.94580078125
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n13",
+          "parent_id": "MD12715_n12",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) Policies, procedures and controls that address access privileges as well as",
+          "text": "(a) Policies, procedures and controls that address access privileges as well as\nadministration of access rights must be established.",
+          "page_number": 6,
+          "block_ids": [
+            "p6_b32",
+            "p6_b33"
+          ],
+          "bbox": [
+            93.31999969482422,
+            696.6231079101562,
+            526.0462646484375,
+            727.8257446289062
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n14",
+          "parent_id": "MD12715_n12",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) All individuals having access to the IT environment of the PSO shall be assigned a",
+          "text": "(b) All individuals having access to the IT environment of the PSO shall be assigned a\ndigital identity, which shall be maintained and monitored till termination.",
+          "page_number": 6,
+          "block_ids": [
+            "p6_b34",
+            "p6_b35"
+          ],
+          "bbox": [
+            93.31999969482422,
+            734.6030883789062,
+            526.3430786132812,
+            765.8057861328125
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n15",
+          "parent_id": "MD12715_n12",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) Default authentication settings in systems / software / services shall be deactivated",
+          "text": "(c) Default authentication settings in systems / software / services shall be deactivated\nand changed before they are rolled out to live environment.",
+          "page_number": 7,
+          "block_ids": [
+            "p7_b1",
+            "p7_b2"
+          ],
+          "bbox": [
+            93.31999969482422,
+            64.10308074951172,
+            526.4324340820312,
+            95.36579895019531
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n16",
+          "parent_id": "MD12715_n12",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(d) Access to systems and different environments (development, test, production, etc.)",
+          "text": "(d) Access to systems and different environments (development, test, production, etc.)\nshall be based on need-to-have, need-to-know and based on the principle of least\nprivilege5.",
+          "page_number": 7,
+          "block_ids": [
+            "p7_b3",
+            "p7_b4",
+            "p7_b5"
+          ],
+          "bbox": [
+            93.31999969482422,
+            102.08306121826172,
+            526.27294921875,
+            152.94500732421875
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n17",
+          "parent_id": "MD12715_n12",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(e) The use of privileged accounts6 shall be with multi-factor authentication and tightly",
+          "text": "(e) The use of privileged accounts6 shall be with multi-factor authentication and tightly\nmonitored. Appropriate controls, including rotation policy, shall be implemented.",
+          "page_number": 7,
+          "block_ids": [
+            "p7_b6",
+            "p7_b7"
+          ],
+          "bbox": [
+            93.31999969482422,
+            160.18309020996094,
+            526.4102172851562,
+            191.824951171875
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n18",
+          "parent_id": "MD12715_n12",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(f) Necessary security controls, including centralised mechanism to whitelist / blacklist,",
+          "text": "(f) Necessary security controls, including centralised mechanism to whitelist / blacklist,\nshall be put in place to ensure secure use of removable media and portable devices\n(eg. smartphones, laptops, etc.).",
+          "page_number": 7,
+          "block_ids": [
+            "p7_b8",
+            "p7_b9",
+            "p7_b10"
+          ],
+          "bbox": [
+            93.31999969482422,
+            198.1030731201172,
+            526.176025390625,
+            248.3257598876953
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n19",
+          "parent_id": "MD12715_n12",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(g) In case of remote / work from home situations, adequate precautions, including multi-",
+          "text": "(g) In case of remote / work from home situations, adequate precautions, including multi-\nfactor authentication mechanism, shall be in place.",
+          "page_number": 7,
+          "block_ids": [
+            "p7_b11",
+            "p7_b12"
+          ],
+          "bbox": [
+            93.31999969482422,
+            255.04307556152344,
+            523.3762817382812,
+            286.24578857421875
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n20",
+          "parent_id": "MD12715_n12",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(h) The PSO shall define and implement procedures that limit, lock and terminate system",
+          "text": "(h) The PSO shall define and implement procedures that limit, lock and terminate system\nand remote sessions after a pre-defined period of inactivity.",
+          "page_number": 7,
+          "block_ids": [
+            "p7_b13",
+            "p7_b14"
+          ],
+          "bbox": [
+            93.31999969482422,
+            292.96307373046875,
+            526.17822265625,
+            324.22576904296875
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n21",
+          "parent_id": "MD12715_n12",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(i) PSO shall have physical and environmental safeguards, with periodic testing, to",
+          "text": "(i) PSO shall have physical and environmental safeguards, with periodic testing, to\nprotect access to its information assets from natural disasters and other threats.",
+          "page_number": 7,
+          "block_ids": [
+            "p7_b15",
+            "p7_b16"
+          ],
+          "bbox": [
+            93.31999969482422,
+            330.9430847167969,
+            526.4046020507812,
+            362.1457824707031
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n22",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "16. Network Security",
+      "text": "16. Network Security\nThe PSO shall put in place the following measures to protect its network and systems\nfrom external threats:",
+      "page_number": 7,
+      "block_ids": [
+        "p7_b17",
+        "p7_b18",
+        "p7_b19"
+      ],
+      "bbox": [
+        72.0,
+        368.86309814453125,
+        526.1913452148438,
+        431.7657775878906
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n23",
+          "parent_id": "MD12715_n22",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) Network devices shall be configured and checked periodically for security rules;",
+          "text": "(a) Network devices shall be configured and checked periodically for security rules;",
+          "page_number": 7,
+          "block_ids": [
+            "p7_b20"
+          ],
+          "bbox": [
+            93.31999969482422,
+            438.5199890136719,
+            504.05242919921875,
+            451.89996337890625
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n24",
+          "parent_id": "MD12715_n22",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) A Security Operations Centre (SOC) shall ensure proactive and centralised",
+          "text": "(b) A Security Operations Centre (SOC) shall ensure proactive and centralised\nmonitoring of comprehensive network and system logs collected and management of\nsecurity incidents with effective tools for detection, escalation and quick response;",
+          "page_number": 7,
+          "block_ids": [
+            "p7_b21",
+            "p7_b22",
+            "p7_b23"
+          ],
+          "bbox": [
+            93.31999969482422,
+            458.44000244140625,
+            526.4050903320312,
+            509.5257568359375
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n25",
+          "parent_id": "MD12715_n22",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) Automated mechanisms (eg. Security Information and Event Management (SIEM)",
+          "text": "(c) Automated mechanisms (eg. Security Information and Event Management (SIEM)\nsystem), which correlate all network and system alerts and any other anomalous\nactivity across its business units to detect multi-faceted attacks, shall be established;",
+          "page_number": 7,
+          "block_ids": [
+            "p7_b24",
+            "p7_b25",
+            "p7_b26"
+          ],
+          "bbox": [
+            93.31999969482422,
+            516.280029296875,
+            526.4324340820312,
+            567.3657836914062
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n26",
+          "parent_id": "MD12715_n22",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(d) Anti-malware solutions shall be implemented so as to prevent, detect and contain",
+          "text": "(d) Anti-malware solutions shall be implemented so as to prevent, detect and contain\nmalware attacks by scanning all incoming data to prevent malware from being\ninstalled and infecting a system;\n5 Principle of least privilege refers to granting a user or a process only those privileges or access to the specific data, resources and applications that are/is necessary for intended function or to complete a required task.\n6 Privileged accounts refer to a user account that has more privileges than ordinary user e.g. Administrator level accounts. Such user may be able to install or remove software, upgrade the operating system, or modify system or application configurations. They might also have access to files that are not normally accessible to standard users.",
+          "page_number": 7,
+          "block_ids": [
+            "p7_b27",
+            "p7_b28",
+            "p7_b29",
+            "p7_b30"
+          ],
+          "bbox": [
+            72.0,
+            574.1199951171875,
+            526.4324340820312,
+            770.864990234375
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n27",
+          "parent_id": "MD12715_n22",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(e) Multi-layered boundary defences shall be incorporated into IS systems to efficiently",
+          "text": "(e) Multi-layered boundary defences shall be incorporated into IS systems to efficiently\nmonitor the network traffic and filter the flow of data in and out of the organisation.\nThere shall be adequate measures to detect and remedy unusual activities / events;",
+          "page_number": 8,
+          "block_ids": [
+            "p8_b1",
+            "p8_b2",
+            "p8_b3"
+          ],
+          "bbox": [
+            93.31999969482422,
+            64.13999938964844,
+            528.5324096679688,
+            115.22578430175781
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n28",
+          "parent_id": "MD12715_n22",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(f) Network segmentation shall be made based on role, location and environment",
+          "text": "(f) Network segmentation shall be made based on role, location and environment\n(production, testing, development, etc.) to segregate systems and data of varying\ncriticality; Whitelisting solutions shall be in place to ensure that only permitted\napplications and services with validated needs are running. Whitelisting of ports may\nalso be ensured with constant monitoring; and",
+          "page_number": 8,
+          "block_ids": [
+            "p8_b4",
+            "p8_b5",
+            "p8_b6",
+            "p8_b7",
+            "p8_b8"
+          ],
+          "bbox": [
+            93.31999969482422,
+            122.05998229980469,
+            526.4198608398438,
+            211.06581115722656
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n29",
+          "parent_id": "MD12715_n22",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(g) PSOs shall allow devices (such as laptop, desktop, mobile, etc.) to be connected to",
+          "text": "(g) PSOs shall allow devices (such as laptop, desktop, mobile, etc.) to be connected to\nits network only after ensuring that they meet the prescribed security measures /\nrequirements.",
+          "page_number": 8,
+          "block_ids": [
+            "p8_b9",
+            "p8_b10",
+            "p8_b11"
+          ],
+          "bbox": [
+            93.31999969482422,
+            217.8199920654297,
+            526.4324340820312,
+            268.90576171875
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n30",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "17. Application Security Life Cycle (ASLC)",
+      "text": "17. Application Security Life Cycle (ASLC)",
+      "page_number": 8,
+      "block_ids": [
+        "p8_b12"
+      ],
+      "bbox": [
+        72.0,
+        275.74310302734375,
+        301.17242431640625,
+        300.645751953125
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n31",
+          "parent_id": "MD12715_n30",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) The PSO shall follow a 'secure by design' approach such as Secure-Software",
+          "text": "(a) The PSO shall follow a 'secure by design' approach such as Secure-Software\nDevelopment Life Cycle (S-SDLC) for design and development of products / services\nand ensure that no security weaknesses are introduced during the build process.",
+          "page_number": 8,
+          "block_ids": [
+            "p8_b13",
+            "p8_b14",
+            "p8_b15"
+          ],
+          "bbox": [
+            93.31999969482422,
+            307.3031005859375,
+            526.4089965820312,
+            357.46575927734375
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n32",
+          "parent_id": "MD12715_n30",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) The PSO shall implement a multi-tier application architecture, that ensures",
+          "text": "(b) The PSO shall implement a multi-tier application architecture, that ensures\nsegregation of database layer from other layers, while developing digital payment\nproducts and services.",
+          "page_number": 8,
+          "block_ids": [
+            "p8_b16",
+            "p8_b17",
+            "p8_b18"
+          ],
+          "bbox": [
+            93.31999969482422,
+            364.18310546875,
+            526.3818359375,
+            414.42578125
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n33",
+          "parent_id": "MD12715_n30",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) The ASLC guidelines shall apply to procured products / services as well. Further, the",
+          "text": "(c) The ASLC guidelines shall apply to procured products / services as well. Further, the\nPSO shall obtain the source code of all critical applications procured from third-party\nvendors. In case obtaining source code is not possible, there shall be an escrow\narrangement for the source code to ensure continuity of services.",
+          "page_number": 8,
+          "block_ids": [
+            "p8_b19",
+            "p8_b20",
+            "p8_b21",
+            "p8_b22"
+          ],
+          "bbox": [
+            93.31999969482422,
+            421.1430969238281,
+            526.4266357421875,
+            490.3257751464844
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n34",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "18. Security Testing",
+      "text": "18. Security Testing",
+      "page_number": 8,
+      "block_ids": [
+        "p8_b23"
+      ],
+      "bbox": [
+        72.0,
+        518.7630615234375,
+        181.9324493408203,
+        531.0057373046875
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n35",
+          "parent_id": "MD12715_n34",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) The PSO shall ensure that all its applications are subjected to rigorous security",
+          "text": "(a) The PSO shall ensure that all its applications are subjected to rigorous security\ntesting, such as source code review, VA, PT, etc., through qualified professionals at\nadequate frequency (at least on annual basis) in authenticated mode.",
+          "page_number": 8,
+          "block_ids": [
+            "p8_b24",
+            "p8_b25",
+            "p8_b26"
+          ],
+          "bbox": [
+            93.31999969482422,
+            537.6630859375,
+            526.4400024414062,
+            587.8258056640625
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n36",
+          "parent_id": "MD12715_n34",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) If the source code is not owned by the PSO, it shall obtain a certificate from the",
+          "text": "(b) If the source code is not owned by the PSO, it shall obtain a certificate from the\napplication developer stating that the application is free of vulnerabilities, malwares\nand any covert channels in the code. Fresh certificate shall be obtained for any\nchanges to source code.",
+          "page_number": 8,
+          "block_ids": [
+            "p8_b27",
+            "p8_b28",
+            "p8_b29",
+            "p8_b30"
+          ],
+          "bbox": [
+            93.31999969482422,
+            594.6030883789062,
+            526.3785400390625,
+            663.7257690429688
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n37",
+          "parent_id": "MD12715_n34",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) Deficiencies reported in the security testing shall be resolved in a time bound manner.",
+          "text": "(c) Deficiencies reported in the security testing shall be resolved in a time bound manner.\nAny recurring observation shall necessarily be reported to the Board sub-committee\nresponsible for IT oversight along with detailed analysis for recurrence and resolution.",
+          "page_number": 8,
+          "block_ids": [
+            "p8_b31",
+            "p8_b32",
+            "p8_b33"
+          ],
+          "bbox": [
+            93.31999969482422,
+            670.5031127929688,
+            526.4324340820312,
+            720.685791015625
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n38",
+          "parent_id": "MD12715_n34",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(d) Any deployment or redeployment of new or existing services supporting critical",
+          "text": "(d) Any deployment or redeployment of new or existing services supporting critical\nfunctions, applications and infrastructure components must be done only after\nconducting security audits, including VA / PT, and addressing the resultant\nobservations.",
+          "page_number": 8,
+          "block_ids": [
+            "p8_b34",
+            "p8_b35",
+            "p9_b1",
+            "p9_b2"
+          ],
+          "bbox": [
+            93.31999969482422,
+            64.10308074951172,
+            526.2971801757812,
+            758.6057739257812
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n39",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "19. Vendor Risk Management",
+      "text": "19. Vendor Risk Management\nThe PSO shall be guided by the Framework for Outsourcing of Payment and Settlement-\nrelated Activities by PSOs issued by RBI vide circular dated August 03, 2021 (updated\nfrom time to time).",
+      "page_number": 9,
+      "block_ids": [
+        "p9_b3",
+        "p9_b4",
+        "p9_b5",
+        "p9_b6"
+      ],
+      "bbox": [
+        72.0,
+        102.08306121826172,
+        526.4073486328125,
+        183.88575744628906
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n40",
+          "parent_id": "MD12715_n39",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) The PSO shall put in place necessary security controls for preventing infiltration into",
+          "text": "(a) The PSO shall put in place necessary security controls for preventing infiltration into\nits network from vendor environments.",
+          "page_number": 9,
+          "block_ids": [
+            "p9_b7",
+            "p9_b8"
+          ],
+          "bbox": [
+            93.31999969482422,
+            190.6030731201172,
+            526.017578125,
+            221.8657989501953
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n41",
+          "parent_id": "MD12715_n39",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) The PSO shall adhere to the relevant legal and regulatory requirements relating to",
+          "text": "(b) The PSO shall adhere to the relevant legal and regulatory requirements relating to\ngeographical location of infrastructure and processing, storage and usage of data\nand also ensure compliance by their vendors.",
+          "page_number": 9,
+          "block_ids": [
+            "p9_b9",
+            "p9_b10",
+            "p9_b11"
+          ],
+          "bbox": [
+            93.31999969482422,
+            228.5830535888672,
+            526.2125244140625,
+            278.74578857421875
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n42",
+          "parent_id": "MD12715_n39",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) In case of vendors involved in critical processes and activities7, the PSO shall obtain",
+          "text": "(c) In case of vendors involved in critical processes and activities7, the PSO shall obtain\ncertified assurance from an independent auditor on the vendor's cyber resilience\ncapabilities.",
+          "page_number": 9,
+          "block_ids": [
+            "p9_b12",
+            "p9_b13",
+            "p9_b14"
+          ],
+          "bbox": [
+            93.31999969482422,
+            285.5230712890625,
+            526.421142578125,
+            335.6857604980469
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n43",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "20. Data Security",
+      "text": "20. Data Security",
+      "page_number": 9,
+      "block_ids": [
+        "p9_b15"
+      ],
+      "bbox": [
+        72.0,
+        342.4031066894531,
+        172.81243896484375,
+        367.36578369140625
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n44",
+          "parent_id": "MD12715_n43",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) The PSO shall put in place a comprehensive data leak prevention policy for",
+          "text": "(a) The PSO shall put in place a comprehensive data leak prevention policy for\nconfidentiality, integrity, availability and protection of business and customer\ninformation (both in transit and at rest) in respect of data available with it or at vendor\nmanaged facilities, commensurate with the criticality and sensitivity of the information\nheld / transmitted.",
+          "page_number": 9,
+          "block_ids": [
+            "p9_b16",
+            "p9_b17",
+            "p9_b18",
+            "p9_b19",
+            "p9_b20"
+          ],
+          "bbox": [
+            93.31999969482422,
+            374.0231018066406,
+            526.4324340820312,
+            462.1857604980469
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n45",
+          "parent_id": "MD12715_n43",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) The PSO shall employ suitable mechanism to ensure traceability and visibility of data",
+          "text": "(b) The PSO shall employ suitable mechanism to ensure traceability and visibility of data\nassets.",
+          "page_number": 9,
+          "block_ids": [
+            "p9_b21",
+            "p9_b22"
+          ],
+          "bbox": [
+            93.31999969482422,
+            468.9031066894531,
+            526.2111206054688,
+            500.165771484375
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n46",
+          "parent_id": "MD12715_n43",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) The PSO shall develop and implement an Information Security Management System",
+          "text": "(c) The PSO shall develop and implement an Information Security Management System\n(ISMS) based on applicable standards.",
+          "page_number": 9,
+          "block_ids": [
+            "p9_b23",
+            "p9_b24"
+          ],
+          "bbox": [
+            93.31999969482422,
+            506.883056640625,
+            526.1958618164062,
+            538.0857543945312
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n47",
+          "parent_id": "MD12715_n43",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(d) Application and database security controls shall focus on secure handling,",
+          "text": "(d) Application and database security controls shall focus on secure handling,\nprocessing, storage and protection of data, in particular, Personally Identifiable\nInformation (PII). Data in transit and rest shall be secured through either data or\nchannel encryption or both.",
+          "page_number": 9,
+          "block_ids": [
+            "p9_b25",
+            "p9_b26",
+            "p9_b27",
+            "p9_b28"
+          ],
+          "bbox": [
+            93.31999969482422,
+            544.8031005859375,
+            526.351318359375,
+            613.9857788085938
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n48",
+          "parent_id": "MD12715_n43",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(e) The PSO storing card (debit / credit / prepaid) data shall adhere to PCI-DSS",
+          "text": "(e) The PSO storing card (debit / credit / prepaid) data shall adhere to PCI-DSS\nguidelines and obtain PCI-DSS certification.",
+          "page_number": 9,
+          "block_ids": [
+            "p9_b29",
+            "p9_b30"
+          ],
+          "bbox": [
+            93.31999969482422,
+            620.703125,
+            526.4244995117188,
+            651.90576171875
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n49",
+          "parent_id": "MD12715_n43",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(f) The PSO shall have necessary systems and procedures in place to periodically (at",
+          "text": "(f) The PSO shall have necessary systems and procedures in place to periodically (at\nleast on a half-yearly basis) test the backed-up data to ensure recovery without loss\nof transactions or audit-trails.\n7 Critical processes as defined in the Framework for Outsourcing of Payment and Settlement-related Activities by PSOs issued by RBI vide circular dated August 03, 2021 (updated from time to time).",
+          "page_number": 9,
+          "block_ids": [
+            "p9_b31",
+            "p9_b32",
+            "p9_b33",
+            "p9_b34"
+          ],
+          "bbox": [
+            72.0,
+            658.68310546875,
+            526.2822265625,
+            770.864990234375
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n50",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "21. Patch and Change Management Life Cycle",
+      "text": "21. Patch and Change Management Life Cycle",
+      "page_number": 10,
+      "block_ids": [
+        "p10_b1"
+      ],
+      "bbox": [
+        72.0,
+        64.16307830810547,
+        317.67242431640625,
+        76.40577697753906
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n51",
+          "parent_id": "MD12715_n50",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) The PSO shall put in place a documented policy and process to identify and",
+          "text": "(a) The PSO shall put in place a documented policy and process to identify and\nimplement patches to technology and software assets released by OEMs / others.",
+          "page_number": 10,
+          "block_ids": [
+            "p10_b2",
+            "p10_b3"
+          ],
+          "bbox": [
+            93.31999969482422,
+            83.12310028076172,
+            526.0370483398438,
+            114.32575988769531
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n52",
+          "parent_id": "MD12715_n50",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) Security patches shall be applied to the relevant systems and applications within an",
+          "text": "(b) Security patches shall be applied to the relevant systems and applications within an\nappropriate time frame from their release. In case of critical patches released to tackle\nwell-known / reported attacks, the PSO shall have a mechanism to apply them\nimmediately.",
+          "page_number": 10,
+          "block_ids": [
+            "p10_b4",
+            "p10_b5",
+            "p10_b6",
+            "p10_b7"
+          ],
+          "bbox": [
+            93.31999969482422,
+            121.04308319091797,
+            526.2111206054688,
+            190.2458038330078
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n53",
+          "parent_id": "MD12715_n50",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) Any change to system, technology, application, source code, etc., shall be managed",
+          "text": "(c) Any change to system, technology, application, source code, etc., shall be managed\nusing robust change management processes and after ensuring that overall integrity\nof the IT set-up is not compromised.",
+          "page_number": 10,
+          "block_ids": [
+            "p10_b8",
+            "p10_b9",
+            "p10_b10"
+          ],
+          "bbox": [
+            93.31999969482422,
+            196.9630584716797,
+            526.3233642578125,
+            247.1258087158203
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n54",
+          "parent_id": "MD12715_n50",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(d) Patches and changes shall be implemented in production environment after testing",
+          "text": "(d) Patches and changes shall be implemented in production environment after testing\nand validating the same in other environments (e.g. development, testing, etc.).",
+          "page_number": 10,
+          "block_ids": [
+            "p10_b11",
+            "p10_b12"
+          ],
+          "bbox": [
+            93.31999969482422,
+            253.90306091308594,
+            526.4324340820312,
+            285.10577392578125
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n55",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "22. Incident Response",
+      "text": "22. Incident Response",
+      "page_number": 10,
+      "block_ids": [
+        "p10_b13"
+      ],
+      "bbox": [
+        72.0,
+        291.88311767578125,
+        197.23243713378906,
+        316.7857666015625
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n56",
+          "parent_id": "MD12715_n55",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) The PSO shall put in place a Board approved incident response mechanism, which",
+          "text": "(a) The PSO shall put in place a Board approved incident response mechanism, which\nshall include provisions to promptly notify its senior management, relevant employees\nand regulatory, supervisory and relevant public authorities, of cyber incidents.",
+          "page_number": 10,
+          "block_ids": [
+            "p10_b14",
+            "p10_b15",
+            "p10_b16"
+          ],
+          "bbox": [
+            93.31999969482422,
+            323.4430847167969,
+            526.2546997070312,
+            373.60577392578125
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n57",
+          "parent_id": "MD12715_n55",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) Response strategies shall incorporate readiness to meet various incident scenarios",
+          "text": "(b) Response strategies shall incorporate readiness to meet various incident scenarios\nbased on situational awareness and potential impact, consistent communication and\nco-ordination with stakeholders.",
+          "page_number": 10,
+          "block_ids": [
+            "p10_b17",
+            "p10_b18",
+            "p10_b19"
+          ],
+          "bbox": [
+            93.31999969482422,
+            380.3830871582031,
+            526.2799072265625,
+            430.5657653808594
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n58",
+          "parent_id": "MD12715_n55",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) Post-incident analysis, including forensic analysis (wherever necessary), shall be",
+          "text": "(c) Post-incident analysis, including forensic analysis (wherever necessary), shall be\nconducted to determine the impact and root cause of incidents. Adequate measures\nshall be taken to avoid recurrence of similar incidents.",
+          "page_number": 10,
+          "block_ids": [
+            "p10_b20",
+            "p10_b21",
+            "p10_b22"
+          ],
+          "bbox": [
+            93.31999969482422,
+            437.2830810546875,
+            526.1429443359375,
+            487.5057678222656
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n59",
+          "parent_id": "MD12715_n55",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(d) Unusual incidents like cyber-attacks, outage of critical system / infrastructure, internal",
+          "text": "(d) Unusual incidents like cyber-attacks, outage of critical system / infrastructure, internal\nfraud, settlement delay, etc., shall be reported to RBI in the Incident Reporting Format\n(Annex 1) within 6 hours of detection. Indicative list of types of incidents to be reported\nis in Annex 2. Any cyber security incident shall also be reported to CERT-In.",
+          "page_number": 10,
+          "block_ids": [
+            "p10_b23",
+            "p10_b24",
+            "p10_b25",
+            "p10_b26"
+          ],
+          "bbox": [
+            93.31999969482422,
+            494.22308349609375,
+            526.271240234375,
+            563.40576171875
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n60",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "23. Business Continuity Plan (BCP)",
+      "text": "23. Business Continuity Plan (BCP)",
+      "page_number": 10,
+      "block_ids": [
+        "p10_b27"
+      ],
+      "bbox": [
+        72.0,
+        589.14306640625,
+        262.5924377441406,
+        601.3857421875
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n61",
+          "parent_id": "MD12715_n60",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) The PSO shall develop a BCP based on different cyber threat scenarios, including",
+          "text": "(a) The PSO shall develop a BCP based on different cyber threat scenarios, including\nextreme but plausible events to which it may be exposed. It shall be reviewed at least\nonce a year and include a comprehensive cyber incident response, resumption and\nrecovery plan, to manage cyber security events or incidents.",
+          "page_number": 10,
+          "block_ids": [
+            "p10_b28",
+            "p10_b29",
+            "p10_b30",
+            "p10_b31"
+          ],
+          "bbox": [
+            93.31999969482422,
+            608.0430908203125,
+            526.3964233398438,
+            677.2257690429688
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n62",
+          "parent_id": "MD12715_n60",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) The BCP shall be designed to enable rapid recovery from any adverse event and",
+          "text": "(b) The BCP shall be designed to enable rapid recovery from any adverse event and\nfacilitate safe resumption of critical operations aligned with Recovery Time Objective\n(RTO) and Recovery Point Objective (RPO) while ensuring the security of processes\nand data.",
+          "page_number": 10,
+          "block_ids": [
+            "p10_b32",
+            "p10_b33",
+            "p10_b34",
+            "p10_b35"
+          ],
+          "bbox": [
+            93.31999969482422,
+            683.9630737304688,
+            526.2178344726562,
+            753.145751953125
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n63",
+          "parent_id": "MD12715_n60",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) The PSO shall strive to achieve near-zero RPO.",
+          "text": "(c) The PSO shall strive to achieve near-zero RPO.",
+          "page_number": 11,
+          "block_ids": [
+            "p11_b1"
+          ],
+          "bbox": [
+            93.31999969482422,
+            64.10308074951172,
+            351.2124328613281,
+            76.34577941894531
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n64",
+          "parent_id": "MD12715_n60",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(d) The PSO shall set up a Disaster Recovery (DR) facility in a different seismic zone",
+          "text": "(d) The PSO shall set up a Disaster Recovery (DR) facility in a different seismic zone\nthan the Primary Data Centre (PDC). There shall be a defined methodology for\nreconciliation of data so as to ensure that there is no data loss while resuming\noperations from the DR.",
+          "page_number": 11,
+          "block_ids": [
+            "p11_b2",
+            "p11_b3",
+            "p11_b4",
+            "p11_b5"
+          ],
+          "bbox": [
+            93.31999969482422,
+            83.12310028076172,
+            526.4324340820312,
+            152.26576232910156
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n65",
+          "parent_id": "MD12715_n60",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(e) DR drills shall be conducted on a half-yearly or more frequent basis. Any divergence",
+          "text": "(e) DR drills shall be conducted on a half-yearly or more frequent basis. Any divergence\nfrom the RTO and RPO shall be analysed and the deficiency be rectified on urgent\nbasis.",
+          "page_number": 11,
+          "block_ids": [
+            "p11_b6",
+            "p11_b7",
+            "p11_b8"
+          ],
+          "bbox": [
+            93.31999969482422,
+            158.9830780029297,
+            526.3983764648438,
+            209.2057647705078
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n66",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "24. Application Programming Interfaces (APIs)",
+      "text": "24. Application Programming Interfaces (APIs)",
+      "page_number": 11,
+      "block_ids": [
+        "p11_b9"
+      ],
+      "bbox": [
+        72.0,
+        215.92308044433594,
+        320.732421875,
+        240.88575744628906
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n67",
+          "parent_id": "MD12715_n66",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) To safeguard applications against risks emanating from insecure APIs, the PSO shall",
+          "text": "(a) To safeguard applications against risks emanating from insecure APIs, the PSO shall\nput in place, inter-alia, the following measures:",
+          "page_number": 11,
+          "block_ids": [
+            "p11_b10",
+            "p11_b11"
+          ],
+          "bbox": [
+            93.31999969482422,
+            247.54307556152344,
+            526.145263671875,
+            278.74578857421875
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n68",
+          "parent_id": "MD12715_n66",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(i) Authentication and Authorisation - Establish identity of the communicating",
+          "text": "(i) Authentication and Authorisation - Establish identity of the communicating\napplications;",
+          "page_number": 11,
+          "block_ids": [
+            "p11_b12",
+            "p11_b13"
+          ],
+          "bbox": [
+            114.55999755859375,
+            285.5230712890625,
+            526.2587890625,
+            316.72576904296875
+          ],
+          "children": [
+            {
+              "node_id": "MD12715_n69",
+              "parent_id": "MD12715_n68",
+              "level": 6,
+              "node_type": "subclause",
+              "title": "(ii) Confidentiality - Ensure that the message content is not tampered with;",
+              "text": "(ii) Confidentiality - Ensure that the message content is not tampered with;",
+              "page_number": 11,
+              "block_ids": [
+                "p11_b14"
+              ],
+              "bbox": [
+                114.55999755859375,
+                323.4430847167969,
+                486.232421875,
+                335.6857604980469
+              ],
+              "children": []
+            },
+            {
+              "node_id": "MD12715_n70",
+              "parent_id": "MD12715_n68",
+              "level": 6,
+              "node_type": "subclause",
+              "title": "(iii) Integrity - Resources are reliably transferred; and",
+              "text": "(iii) Integrity - Resources are reliably transferred; and",
+              "page_number": 11,
+              "block_ids": [
+                "p11_b15"
+              ],
+              "bbox": [
+                114.55999755859375,
+                342.4031066894531,
+                380.3724365234375,
+                354.6457824707031
+              ],
+              "children": []
+            },
+            {
+              "node_id": "MD12715_n71",
+              "parent_id": "MD12715_n68",
+              "level": 6,
+              "node_type": "subclause",
+              "title": "(iv) Availability and Threat Protection - APIs are available when needed; anomalous8",
+              "text": "(iv) Availability and Threat Protection - APIs are available when needed; anomalous8\nactivities identified and mitigative action taken.",
+              "page_number": 11,
+              "block_ids": [
+                "p11_b16",
+                "p11_b17"
+              ],
+              "bbox": [
+                114.55999755859375,
+                361.36309814453125,
+                526.4324340820312,
+                392.6257629394531
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "MD12715_n72",
+          "parent_id": "MD12715_n66",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) The PSO shall adhere to relevant standards and globally recognised frameworks on",
+          "text": "(b) The PSO shall adhere to relevant standards and globally recognised frameworks on\nAPI security.",
+          "page_number": 11,
+          "block_ids": [
+            "p11_b18",
+            "p11_b19"
+          ],
+          "bbox": [
+            93.31999969482422,
+            399.34307861328125,
+            526.3668823242188,
+            430.5657653808594
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n73",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "25. Employee Awareness / Training",
+      "text": "25. Employee Awareness / Training",
+      "page_number": 11,
+      "block_ids": [
+        "p11_b20"
+      ],
+      "bbox": [
+        72.0,
+        437.2830810546875,
+        265.1124267578125,
+        462.2457580566406
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n74",
+          "parent_id": "MD12715_n73",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) The PSO shall ensure periodic repeated training / awareness programs on information",
+          "text": "(a) The PSO shall ensure periodic repeated training / awareness programs on information\nsecurity issues for its employees and vendors managing its information assets.",
+          "page_number": 11,
+          "block_ids": [
+            "p11_b21",
+            "p11_b22"
+          ],
+          "bbox": [
+            90.0199966430664,
+            468.9031066894531,
+            526.3070068359375,
+            500.165771484375
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n75",
+          "parent_id": "MD12715_n73",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) A system of periodic evaluation of cyber security awareness amongst employees",
+          "text": "(b) A system of periodic evaluation of cyber security awareness amongst employees\nshall be operationalised. Employees with an awareness level below a benchmark\nscore may be restricted / prohibited from accessing information assets.",
+          "page_number": 11,
+          "block_ids": [
+            "p11_b23",
+            "p11_b24",
+            "p11_b25"
+          ],
+          "bbox": [
+            93.31999969482422,
+            506.883056640625,
+            526.192626953125,
+            557.0457763671875
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n76",
+          "parent_id": "MD12715_n73",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) Board members and key senior management personnel shall be provided training",
+          "text": "(c) Board members and key senior management personnel shall be provided training\nand sensitised on information security and cyber risks.",
+          "page_number": 11,
+          "block_ids": [
+            "p11_b26",
+            "p11_b27"
+          ],
+          "bbox": [
+            93.31999969482422,
+            563.8231201171875,
+            526.260009765625,
+            595.0257568359375
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n77",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "26. Cloud Security",
+      "text": "26. Cloud Security",
+      "page_number": 11,
+      "block_ids": [
+        "p11_b28"
+      ],
+      "bbox": [
+        72.0,
+        601.7431030273438,
+        173.9524383544922,
+        626.7057495117188
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n78",
+          "parent_id": "MD12715_n77",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) The PSO subscribing to cloud services shall put in place a cloud operation policy (as",
+          "text": "(a) The PSO subscribing to cloud services shall put in place a cloud operation policy (as\na part of board approved Information Security Policy), highlighting, inter-alia, activities\nthat can be located in cloud servers, clearly identified roles and responsibilities for\ncloud service provider (CSP), data localisation, protection and recoverability\nrequirements.\n8 Activity that is sufficiently different than historical activity.",
+          "page_number": 11,
+          "block_ids": [
+            "p11_b29",
+            "p11_b30",
+            "p11_b31",
+            "p11_b32",
+            "p11_b33",
+            "p11_b34"
+          ],
+          "bbox": [
+            72.0,
+            633.3630981445312,
+            526.46484375,
+            770.864990234375
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n79",
+          "parent_id": "MD12715_n77",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) It shall be ensured that data pertaining to the PSO is clearly segregated and stringent",
+          "text": "(b) It shall be ensured that data pertaining to the PSO is clearly segregated and stringent\naccess control measures are implemented. Multi-tenancy environments shall be\nprotected against data integrity and confidentiality risks, and against co-mingling of\ndata.",
+          "page_number": 12,
+          "block_ids": [
+            "p12_b1",
+            "p12_b2",
+            "p12_b3",
+            "p12_b4"
+          ],
+          "bbox": [
+            90.0199966430664,
+            64.10308074951172,
+            526.4155883789062,
+            133.28578186035156
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n80",
+          "parent_id": "MD12715_n77",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) The PSO shall ensure that the CSP is subjected to periodic (at least annually)",
+          "text": "(c) The PSO shall ensure that the CSP is subjected to periodic (at least annually)\nindependent information and cyber security audits. Such audit reports and the CSPs\noverall performance, its cyber resilience capabilities shall be reviewed annually by the\nBoard sub-committee responsible for IT oversight.",
+          "page_number": 12,
+          "block_ids": [
+            "p12_b5",
+            "p12_b6",
+            "p12_b7",
+            "p12_b8"
+          ],
+          "bbox": [
+            90.0199966430664,
+            140.02305603027344,
+            526.4223022460938,
+            209.2057647705078
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n81",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "27. Other Security Measures",
+      "text": "27. Other Security Measures",
+      "page_number": 12,
+      "block_ids": [
+        "p12_b9"
+      ],
+      "bbox": [
+        72.0,
+        234.94309997558594,
+        229.03244018554688,
+        247.18580627441406
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n82",
+          "parent_id": "MD12715_n81",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) The PSO shall ensure that all payment transactions, including cash withdrawals,",
+          "text": "(a) The PSO shall ensure that all payment transactions, including cash withdrawals,\ninvolving debit to the account conducted through electronic modes (bank accounts /\ndebit cards / credit cards / PPIs, etc.) are permitted only by validation through multi-\nfactor authentication, except where explicitly permitted / relaxed.",
+          "page_number": 12,
+          "block_ids": [
+            "p12_b10",
+            "p12_b11",
+            "p12_b12",
+            "p12_b13"
+          ],
+          "bbox": [
+            93.31999969482422,
+            253.9399871826172,
+            526.3624267578125,
+            323.98577880859375
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n83",
+          "parent_id": "MD12715_n81",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) The PSO shall ensure secure configuration of its entire IT infrastructure. It shall also",
+          "text": "(b) The PSO shall ensure secure configuration of its entire IT infrastructure. It shall also\nequip its servers with adequate security measures so that unauthorised / spoofed\ntransactions are not done and the authentication process is robust, secure and\ncentralised.",
+          "page_number": 12,
+          "block_ids": [
+            "p12_b14",
+            "p12_b15",
+            "p12_b16",
+            "p12_b17"
+          ],
+          "bbox": [
+            93.31999969482422,
+            330.739990234375,
+            526.3616943359375,
+            401.2249755859375
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n84",
+          "parent_id": "MD12715_n81",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) The PSO shall put in place a real-time / near real-time fraud monitoring solution to",
+          "text": "(c) The PSO shall put in place a real-time / near real-time fraud monitoring solution to\nidentify suspicious transactional behaviour and generate alerts.",
+          "page_number": 12,
+          "block_ids": [
+            "p12_b18",
+            "p12_b19"
+          ],
+          "bbox": [
+            93.31999969482422,
+            407.6199951171875,
+            526.3126831054688,
+            439.6857604980469
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n85",
+          "parent_id": "MD12715_n81",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(d) The PSO shall have a manned facility to function on 24x7x365 basis for facilitating",
+          "text": "(d) The PSO shall have a manned facility to function on 24x7x365 basis for facilitating\nswift resolution of unauthorised / fraudulent transactions reported by customers and\nalso to provide prompt response to Law Enforcement Agencies (LEAs).",
+          "page_number": 12,
+          "block_ids": [
+            "p12_b20",
+            "p12_b21",
+            "p12_b22"
+          ],
+          "bbox": [
+            93.31999969482422,
+            446.5,
+            526.3663330078125,
+            497.58575439453125
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n86",
+          "parent_id": "MD12715_n81",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(e) The PSO shall put in place a mechanism to capture, analyse, store and archive audit",
+          "text": "(e) The PSO shall put in place a mechanism to capture, analyse, store and archive audit\nlogs in a systematic manner. Log messages shall provide relevant information to\nuniquely identify the user that initiated an action, the action and parameters of that\nparticular action. Access to log data shall be provided on a controlled basis. Audit\nlogs shall be preserved for a period of at least five years.",
+          "page_number": 12,
+          "block_ids": [
+            "p12_b23",
+            "p12_b24",
+            "p12_b25",
+            "p12_b26",
+            "p12_b27"
+          ],
+          "bbox": [
+            93.31999969482422,
+            504.3399658203125,
+            526.4088134765625,
+            593.40576171875
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n87",
+          "parent_id": "MD12715_n81",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(f) The PSO shall ensure that the payment architecture operated by them is robust,",
+          "text": "(f) The PSO shall ensure that the payment architecture operated by them is robust,\nscalable and commensurate with the transaction volumes; this shall be reviewed by\nthe sub-committee of the Board.",
+          "page_number": 12,
+          "block_ids": [
+            "p12_b28",
+            "p12_b29",
+            "p12_b30"
+          ],
+          "bbox": [
+            93.31999969482422,
+            600.1600341796875,
+            526.4324340820312,
+            651.2457885742188
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n88",
+          "parent_id": "MD12715_n81",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(g) The PSO shall employ secure mail and messaging systems to ensure that inbound",
+          "text": "(g) The PSO shall employ secure mail and messaging systems to ensure that inbound\nand outbound traffic through mail, messages or any other media are secure.",
+          "page_number": 12,
+          "block_ids": [
+            "p12_b31",
+            "p12_b32"
+          ],
+          "bbox": [
+            93.31999969482422,
+            658.0,
+            526.1193237304688,
+            690.56494140625
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n89",
+          "parent_id": "MD12715_n81",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(h) The PSO shall subscribe to anti-phishing / anti-rogue app services for identifying and",
+          "text": "(h) The PSO shall subscribe to anti-phishing / anti-rogue app services for identifying and\ntaking down phishing websites / rogue applications.",
+          "page_number": 12,
+          "block_ids": [
+            "p12_b33",
+            "p12_b34"
+          ],
+          "bbox": [
+            93.31999969482422,
+            696.9000244140625,
+            526.31298828125,
+            729.0257568359375
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n90",
+          "parent_id": "MD12715_n81",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(i) The PSO shall, on an ongoing basis, either directly or through its participants and",
+          "text": "(i) The PSO shall, on an ongoing basis, either directly or through its participants and\nservice providers, create public awareness on precautionary measures to safeguard\nagainst frauds and cyber threats while using digital payment products.\nSection IV\nDigital Payment Security Measures / Controls\nIn addition to the extant instructions applicable to PSOs for digital payment transactions, the\nfollowing instructions shall also be applicable.",
+          "page_number": 13,
+          "block_ids": [
+            "p13_b1",
+            "p13_b2",
+            "p13_b3",
+            "p13_b4",
+            "p13_b5",
+            "p13_b6",
+            "p13_b7"
+          ],
+          "bbox": [
+            72.0,
+            64.13999938964844,
+            526.4172973632812,
+            222.76576232910156
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n91",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "28. The PSO shall facilitate its members / participants have mechanisms for online alerts",
+      "text": "28. The PSO shall facilitate its members / participants have mechanisms for online alerts\nbased on various parameters such as failed transactions, transaction velocity, as well as\nin case of new account parameters (eg., excessive activity), time zone, geo-location, IP\naddress origin (in respect of unusual patterns, prohibited zones / rogue IPs), behavioural\nbiometrics, transaction origination from point of compromise, transactions to mobile\nwallets / mobile numbers / VPAs on whom vishing or other types of fraud are registered /\nrecorded, declined transactions, transactions with no approval code, etc.",
+      "page_number": 13,
+      "block_ids": [
+        "p13_b8",
+        "p13_b9",
+        "p13_b10",
+        "p13_b11",
+        "p13_b12",
+        "p13_b13",
+        "p13_b14"
+      ],
+      "bbox": [
+        72.0,
+        229.4830780029297,
+        526.387939453125,
+        368.2657775878906
+      ],
+      "children": []
+    },
+    {
+      "node_id": "MD12715_n92",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "29. While sending SMS / e-mail alert or any other notification to customers, either by PSO or",
+      "text": "29. While sending SMS / e-mail alert or any other notification to customers, either by PSO or\npayment system participants, the following shall be ensured -",
+      "page_number": 13,
+      "block_ids": [
+        "p13_b15",
+        "p13_b16"
+      ],
+      "bbox": [
+        72.0,
+        374.98309326171875,
+        526.41357421875,
+        406.1857604980469
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n93",
+          "parent_id": "MD12715_n92",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) Bank account number / card number / other confidential information are redacted /",
+          "text": "(a) Bank account number / card number / other confidential information are redacted /\nmasked to the extent possible.",
+          "page_number": 13,
+          "block_ids": [
+            "p13_b17",
+            "p13_b18"
+          ],
+          "bbox": [
+            93.31999969482422,
+            412.9599914550781,
+            526.2091064453125,
+            445.08575439453125
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n94",
+          "parent_id": "MD12715_n92",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) Online payment transactions shall mention merchant name (not the payment gateway",
+          "text": "(b) Online payment transactions shall mention merchant name (not the payment gateway\n/ aggregator) and amount; for fund transfers, name of the beneficiary and debit\namount. The PSO shall ensure that the name is taken from the system of the entity\nmaintaining the beneficiary account.",
+          "page_number": 13,
+          "block_ids": [
+            "p13_b19",
+            "p13_b20",
+            "p13_b21",
+            "p13_b22"
+          ],
+          "bbox": [
+            93.31999969482422,
+            451.8399963378906,
+            526.4324340820312,
+            521.94580078125
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n95",
+          "parent_id": "MD12715_n92",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) In cases where the OTP is a factor of authentication, the PSO shall ensure that the",
+          "text": "(c) In cases where the OTP is a factor of authentication, the PSO shall ensure that the\nOTP is mentioned at the end of the notification message and the message shall also\nrefer the specific transaction.",
+          "page_number": 13,
+          "block_ids": [
+            "p13_b23",
+            "p13_b24",
+            "p13_b25"
+          ],
+          "bbox": [
+            93.31999969482422,
+            528.7000122070312,
+            526.427490234375,
+            579.7857666015625
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n96",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "30. The PSO shall provide a facility on its mobile application / website that would enable",
+      "text": "30. The PSO shall provide a facility on its mobile application / website that would enable\ncustomers, with necessary authentication, to identify / mark a fraudulent transaction for\nseamless and immediate notification to the issuer of payment instrument. It shall also\nensure facilitation of such mechanism by the system participants.\nMobile Payments",
+      "page_number": 13,
+      "block_ids": [
+        "p13_b26",
+        "p13_b27",
+        "p13_b28",
+        "p13_b29",
+        "p14_b1"
+      ],
+      "bbox": [
+        72.0,
+        64.16307830810547,
+        526.4229125976562,
+        668.3457641601562
+      ],
+      "children": []
+    },
+    {
+      "node_id": "MD12715_n97",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "31. The PSO providing / facilitating / processing mobile payment services transactions shall",
+      "text": "31. The PSO providing / facilitating / processing mobile payment services transactions shall\ncomply with the following security practices and risk mitigation measures and shall also\nensure that the participants in its payment system comply with these instructions:",
+      "page_number": 14,
+      "block_ids": [
+        "p14_b2",
+        "p14_b3",
+        "p14_b4"
+      ],
+      "bbox": [
+        72.0,
+        83.12310028076172,
+        526.3990478515625,
+        133.28578186035156
+      ],
+      "children": [
+        {
+          "node_id": "MD12715_n98",
+          "parent_id": "MD12715_n97",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(a) PSO shall put in place a mechanism to ensure that the mobile application is free from",
+          "text": "(a) PSO shall put in place a mechanism to ensure that the mobile application is free from\nany anomalies or exceptions for which the application was not programmed.",
+          "page_number": 14,
+          "block_ids": [
+            "p14_b5",
+            "p14_b6"
+          ],
+          "bbox": [
+            93.31999969482422,
+            140.0599822998047,
+            526.381103515625,
+            172.18580627441406
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n99",
+          "parent_id": "MD12715_n97",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(b) The PSO shall ensure that an authenticated session, together with its encryption",
+          "text": "(b) The PSO shall ensure that an authenticated session, together with its encryption\nprotocol, remains intact throughout an interaction with the customer. In case of any\ninterference or if the customer closes the application, the session shall be terminated,\nand the affected transactions resolved or reversed out.",
+          "page_number": 14,
+          "block_ids": [
+            "p14_b7",
+            "p14_b8",
+            "p14_b9",
+            "p14_b10"
+          ],
+          "bbox": [
+            93.31999969482422,
+            178.9399871826172,
+            526.3922119140625,
+            249.04579162597656
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n100",
+          "parent_id": "MD12715_n97",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(c) The PSO shall ensure device binding9 / finger printing of mobile applications with the",
+          "text": "(c) The PSO shall ensure device binding9 / finger printing of mobile applications with the\ndevice and SIM. In case the mobile application remains unused beyond a policy\ndetermined specified period, the PSO shall ensure device binding is performed again.",
+          "page_number": 14,
+          "block_ids": [
+            "p14_b11",
+            "p14_b12",
+            "p14_b13"
+          ],
+          "bbox": [
+            93.31999969482422,
+            255.7999725341797,
+            526.4324340820312,
+            306.8857421875
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n101",
+          "parent_id": "MD12715_n97",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(d) The PSO shall ensure that an online session on mobile application is automatically",
+          "text": "(d) The PSO shall ensure that an online session on mobile application is automatically\nterminated after a fixed period of inactivity and customers are prompted to re-login.",
+          "page_number": 14,
+          "block_ids": [
+            "p14_b14",
+            "p14_b15"
+          ],
+          "bbox": [
+            93.31999969482422,
+            313.6400146484375,
+            526.3666381835938,
+            345.7657775878906
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n102",
+          "parent_id": "MD12715_n97",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(e) The PSO shall, where applicable, set down the maximum number of failed log-in or",
+          "text": "(e) The PSO shall, where applicable, set down the maximum number of failed log-in or\nauthentication attempts after which access to the mobile application is blocked. There\nshall be a secure procedure to re-activate the access to blocked product / service.\nThe customer shall be notified for failed log-in or authentication attempts,\nimmediately.",
+          "page_number": 14,
+          "block_ids": [
+            "p14_b16",
+            "p14_b17",
+            "p14_b18",
+            "p14_b19",
+            "p14_b20"
+          ],
+          "bbox": [
+            93.31999969482422,
+            352.5199890136719,
+            526.4324951171875,
+            441.6716613769531
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n103",
+          "parent_id": "MD12715_n97",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(f) The PSO shall put in place a control mechanism, to identify any presence of remote",
+          "text": "(f) The PSO shall put in place a control mechanism, to identify any presence of remote\naccess applications (to the extent possible) and prohibit access to the mobile\npayment application while the remote access is live.",
+          "page_number": 14,
+          "block_ids": [
+            "p14_b21",
+            "p14_b22",
+            "p14_b23"
+          ],
+          "bbox": [
+            93.31999969482422,
+            448.3599853515625,
+            526.4190063476562,
+            499.4457702636719
+          ],
+          "children": []
+        },
+        {
+          "node_id": "MD12715_n104",
+          "parent_id": "MD12715_n97",
+          "level": 5,
+          "node_type": "clause",
+          "title": "(g) Whenever there is a change in registered mobile number or email ID linked to the",
+          "text": "(g) Whenever there is a change in registered mobile number or email ID linked to the\npayment instrument there shall be a cooling period of minimum 12 hours before\nallowing any payment transaction through online modes / channels.\nCard Payments",
+          "page_number": 14,
+          "block_ids": [
+            "p14_b24",
+            "p14_b25",
+            "p14_b26",
+            "p14_b27"
+          ],
+          "bbox": [
+            72.0,
+            506.20001220703125,
+            526.0903930664062,
+            595.3258056640625
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "MD12715_n105",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "32. The PSO shall ensure that terminals installed at merchants for capturing card details for",
+      "text": "32. The PSO shall ensure that terminals installed at merchants for capturing card details for\npayments or otherwise are validated against the PCI-P2PE program; PoS terminals with\nPIN entry installed at the merchants for capturing card payments (including the double\nswipe terminals) shall be approved by the PCI-PTS program.",
+      "page_number": 14,
+      "block_ids": [
+        "p14_b28",
+        "p14_b29",
+        "p14_b30",
+        "p14_b31"
+      ],
+      "bbox": [
+        72.0,
+        601.9830932617188,
+        526.4324340820312,
+        671.165771484375
+      ],
+      "children": []
+    },
+    {
+      "node_id": "MD12715_n106",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "33. The card networks shall facilitate implementation of transaction limits at card, Bank",
+      "text": "33. The card networks shall facilitate implementation of transaction limits at card, Bank\nIdentification Number (BIN) as well as at card issuer level. Such limits shall mandatorily\n9 The device binding shall be preferably implemented through a combination of hardware, software and service information.\nbe set at the card network switch itself. The card networks shall institute an alert\nmechanism on a 24x7x365 basis, to be triggered to the card issuer in case of any\nsuspicious incident. Card networks shall ensure that card details of the customers are\nstored in an encrypted form at any of their server locations. They shall also ensure that\nprocessing of the card details in readable format is performed in a secure manner.\nPrepaid Payment Instruments",
+      "page_number": 14,
+      "block_ids": [
+        "p14_b32",
+        "p14_b33",
+        "p14_b34",
+        "p15_b1",
+        "p15_b2",
+        "p15_b3",
+        "p15_b4",
+        "p15_b5",
+        "p15_b6"
+      ],
+      "bbox": [
+        72.0,
+        64.10308074951172,
+        526.4161376953125,
+        770.864990234375
+      ],
+      "children": []
+    },
+    {
+      "node_id": "MD12715_n107",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "34. PPI issuers are encouraged to communicate OTP and transaction alerts with users in a",
+      "text": "34. PPI issuers are encouraged to communicate OTP and transaction alerts with users in a\nlanguage of their choice, including vernacular languages.",
+      "page_number": 15,
+      "block_ids": [
+        "p15_b7",
+        "p15_b8"
+      ],
+      "bbox": [
+        72.0,
+        191.6230926513672,
+        526.37060546875,
+        222.8257598876953
+      ],
+      "children": []
+    },
+    {
+      "node_id": "MD12715_n108",
+      "parent_id": null,
+      "level": 3,
+      "node_type": "section",
+      "title": "35. The PPI issuers - banks and non-banks - shall put in place suitable cooling period for",
+      "text": "35. The PPI issuers - banks and non-banks - shall put in place suitable cooling period for\nfunds transfer and cash withdrawal after such funds are electronically loaded on to the\nPPI.\nAcronyms\nAPI Application Programming Interface ASLC Application Security Life Cycle ATM Automated Teller Machine BCP Business Continuity Plan BIN Bank Identification Number CCMP Cyber Crisis Management Plan CERT-In Indian Computer Emergency Response Team CISO Chief Information Security Officer CSP Cloud Service Provider DR Disaster Recovery EoLS End of Life support IDRBT Institute for Development and Research in Banking Technology IP Internet Protocol IS Information System ISMS Information Security Management System IT Information Technology KPI Key Performance Indicator KRI Key Risk Indicator LEA Law Enforcement Agency NCIIPC National Critical Information Infrastructure Protection Centre OEM Original Equipment Manufacturer OTP One Time Password PCI Payment Card Industry PCI-DSS Payment Card Industry-Data Security Standard PCI-P2PE Payment Card Industry-Point to Point Encryption PCI-PTS Payment Card Industry-PIN Transaction Security PDC Primary Data Centre PIN Personal Identification Number PoS Point of Sale PPI Prepaid Payment Instrument PSO Payment System Operator PSS Payment and Settlement Systems PT Penetration Testing RBI Reserve Bank of India RPO Recovery Point Objective RTO Recovery Time Objective SDLC Software Development Life Cycle S-SDLC Secure-Software Development Life Cycle SIEM Security Information and Event Management SIM Subscriber Identification Module SMS Short Message Service SOC Security Operations Centre VA Vulnerability Assessment VPA Virtual Payment Address WLAO White Label ATM Operator",
+      "page_number": 15,
+      "block_ids": [
+        "p15_b9",
+        "p15_b10",
+        "p15_b11",
+        "p16_b1",
+        "p16_b2"
+      ],
+      "bbox": [
+        72.0,
+        64.16307830810547,
+        526.4324340820312,
+        706.5857543945312
+      ],
+      "children": []
+    }
+  ]
+}
