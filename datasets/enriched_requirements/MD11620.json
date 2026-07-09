@@ -1,0 +1,649 @@
+{
+  "document_id": "MD11620",
+  "title": "MD11620",
+  "document_status": "WITHDRAWN",
+  "requirement_count": 13,
+  "enriched_requirements": [
+    {
+      "requirement_id": "MD11620_req11",
+      "document_id": "MD11620",
+      "logical_unit_id": "MD11620_lu11",
+      "requirement_type": "RECOMMENDATION",
+      "modality": "should",
+      "actor": "",
+      "action": "invariably report all transactions",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "1.2.1 The currency chests / Link Offices should invariably report all transactions through CyM - CC portal on the same day by 7 pm.",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD11620_n11"
+      ],
+      "block_ids": [
+        "p2_b5"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "through CyM - CC portal on the same day by 7 pm",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Reporting"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Evidence Upload",
+        "Document Review"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD11620_req12",
+      "document_id": "MD11620",
+      "logical_unit_id": "MD11620_lu12",
+      "requirement_type": "RECOMMENDATION",
+      "modality": "should",
+      "actor": "Bank",
+      "action": "report all transactions directly",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "1.2.2 The Sub-Treasury Offices (STOs) should report all transactions directly to the Issue Office of the Reserve Bank by 7 pm on the same day.",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD11620_n12"
+      ],
+      "block_ids": [
+        "p2_b6"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "to the Issue Office of the Reserve Bank by 7 pm on the same day",
+      "compliance_domain": [
+        "Treasury"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Reporting"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk"
+      ],
+      "verification_strategy": [
+        "Evidence Upload",
+        "Document Review"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD11620_req21",
+      "document_id": "MD11620",
+      "logical_unit_id": "MD11620_lu17",
+      "requirement_type": "RECOMMENDATION",
+      "modality": "should",
+      "actor": "",
+      "action": "be taken to ensure",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "Particular care should be taken to ensure that remittances of fresh notes/notes to the currency chests are not reported as 'deposit' transactions on the portal.",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD11620_n17"
+      ],
+      "block_ids": [
+        "p2_b13",
+        "p2_b14"
+      ],
+      "confidence": 0.9,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "that remittances of fresh notes/notes to the currency chests are not reported as 'deposit' transactions on the portal",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Risk",
+        "Treasury",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD11620_req30",
+      "document_id": "MD11620",
+      "logical_unit_id": "MD11620_lu23",
+      "requirement_type": "RECOMMENDATION",
+      "modality": "should",
+      "actor": "RBI",
+      "action": "be shown as withdrawal",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "2.1 Reporting of Soiled note remittances to RBI\nSoiled note remittances to RBI should not be shown as withdrawal by chest/s / link offices.",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11620_n23"
+      ],
+      "block_ids": [
+        "p3_b5",
+        "p3_b6"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "by chest/s / link offices",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "RBI"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD11620_req33",
+      "document_id": "MD11620",
+      "logical_unit_id": "MD11620_lu24",
+      "requirement_type": "RECOMMENDATION",
+      "modality": "should",
+      "actor": "",
+      "action": "initiate the diversion entry",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The CC sending the diversion should initiate the diversion entry.",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11620_n24"
+      ],
+      "block_ids": [
+        "p3_b7",
+        "p3_b8"
+      ],
+      "confidence": 0.7,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD11620_req34",
+      "document_id": "MD11620",
+      "logical_unit_id": "MD11620_lu24",
+      "requirement_type": "RECOMMENDATION",
+      "modality": "should",
+      "actor": "",
+      "action": "acknowledge the same",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The receiving CC should acknowledge the same.",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11620_n24"
+      ],
+      "block_ids": [
+        "p3_b7",
+        "p3_b8"
+      ],
+      "confidence": 0.7,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD11620_req35",
+      "document_id": "MD11620",
+      "logical_unit_id": "MD11620_lu24",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "be reported as Deposit/Withdrawal",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "Diversions must not be reported as Deposit/Withdrawal.",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11620_n24"
+      ],
+      "block_ids": [
+        "p3_b7",
+        "p3_b8"
+      ],
+      "confidence": 0.75,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD11620_req37",
+      "document_id": "MD11620",
+      "logical_unit_id": "MD11620_lu25",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "",
+      "action": "be charged",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "2.3 Delayed reporting where currency chests had \"Net Deposit\"\nPenal interest at the prevailing rate for delayed reporting of the instances where the currency chest had reported \"net deposit\" may not be charged.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11620_n25"
+      ],
+      "block_ids": [
+        "p4_b0",
+        "p4_b1",
+        "p4_b2",
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6"
+      ],
+      "confidence": 0.75,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "",
+      "compliance_domain": [
+        "Reporting",
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance",
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD11620_req38",
+      "document_id": "MD11620",
+      "logical_unit_id": "MD11620_lu25",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "",
+      "action": "be levied on the",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "However, in order to ensure proper discipline in reporting currency chest transactions, a flat penalty of ` 50,000 may be levied on the currency chests for delayed reporting irrespective of the value of net deposit.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11620_n25"
+      ],
+      "block_ids": [
+        "p4_b0",
+        "p4_b1",
+        "p4_b2",
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "currency chests for delayed reporting irrespective of the value of net deposit",
+      "compliance_domain": [
+        "Reporting",
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "CRITICAL",
+      "candidate_departments": [
+        "Compliance",
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "penalty"
+      ]
+    },
+    {
+      "requirement_id": "MD11620_req39",
+      "document_id": "MD11620",
+      "logical_unit_id": "MD11620_lu25",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "be levied at the",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "Rate of penal interest\nPenal interest shall be levied at the rate of 2% over the prevailing Bank Rate for the period of delayed reporting/wrong reporting/non-reporting /inclusion of ineligible amounts in chest balances.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11620_n25"
+      ],
+      "block_ids": [
+        "p4_b0",
+        "p4_b1",
+        "p4_b2",
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "rate of 2% over the prevailing Bank Rate for the period of delayed reporting/wrong reporting/non-reporting /inclusion of ineligible a",
+      "compliance_domain": [
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD11620_req40",
+      "document_id": "MD11620",
+      "logical_unit_id": "MD11620_lu25",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be applicable to currency",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "Levy of penal interest in respect of currency chests at treasuries\nThe above instructions shall be applicable to currency chests at treasury/sub- treasury offices also.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11620_n25"
+      ],
+      "block_ids": [
+        "p4_b0",
+        "p4_b1",
+        "p4_b2",
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "chests at treasury/sub- treasury offices also",
+      "compliance_domain": [
+        "Treasury"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD11620_req41",
+      "document_id": "MD11620",
+      "logical_unit_id": "MD11620_lu27",
+      "requirement_type": "RECOMMENDATION",
+      "modality": "should",
+      "actor": "banks",
+      "action": "ordinarily be no occasion",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "5.1 As the sole criterion for levy of penal interest for delayed reporting is the number of days of delay, there should ordinarily be no occasion for banks to request for reconsideration of the Reserve Bank's decision in individual cases.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11620_n27"
+      ],
+      "block_ids": [
+        "p4_b7"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "for banks to request for reconsideration of the Reserve Bank's decision in individual cases",
+      "compliance_domain": [
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD11620_req42",
+      "document_id": "MD11620",
+      "logical_unit_id": "MD11620_lu27",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "bank",
+      "action": "be made to the",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "However, representations, if any, on account of genuine difficulties faced by chests especially in hilly/remote areas and those affected by natural calamities, etc., may be made to the Issue Office concerned through the Head / Controlling office of the bank concerned within a month from the date of debit of the bank concerned.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11620_n27"
+      ],
+      "block_ids": [
+        "p4_b7"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "Issue Office concerned through the Head / Controlling office of the bank concerned within a month from the date of debit of the bank co",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "Bank"
+      ],
+      "regulatory_keywords": []
+    }
+  ]
+}

@@ -1,0 +1,5532 @@
+{
+  "document_id": "MD12226",
+  "title": "MD12226",
+  "document_status": "ACTIVE",
+  "requirement_count": 108,
+  "enriched_requirements": [
+    {
+      "requirement_id": "MD12226_req11",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu4",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "be called the Master",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) These Directions shall be called the Master Direction - Reserve Bank of India\n(Credit Derivatives) Directions, 2022.",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n5",
+        "MD12226_n6",
+        "MD12226_n7"
+      ],
+      "block_ids": [
+        "p2_b17",
+        "p2_b18",
+        "p2_b19",
+        "p2_b20",
+        "p2_b21"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "Direction - Reserve Bank of India (Credit Derivatives) Directions, 2022",
+      "compliance_domain": [
+        "Treasury"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req12",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu5",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "apply to credit derivatives",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) These Directions shall apply to credit derivatives transactions undertaken in Over-\nthe-Counter (OTC) markets and on recognised stock exchanges in India.",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n6"
+      ],
+      "block_ids": [
+        "p2_b19",
+        "p2_b20"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "transactions undertaken in Over- the-Counter (OTC) markets and on recognised stock exchanges in India",
+      "compliance_domain": [
+        "Treasury"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req13",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu6",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "come into force on",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iii) These Directions shall come into force on May 09, 2022.",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n7"
+      ],
+      "block_ids": [
+        "p2_b21"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "May 09, 2022",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req15",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu9",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "a settlement process in",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(a) 'Auction settlement' of CDS means a settlement process in which the price of\nthe reference/deliverable obligation at which the settlement will happen is\ndetermined through an auction mechanism.",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n10"
+      ],
+      "block_ids": [
+        "p2_b24",
+        "p2_b25",
+        "p2_b26"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "which the price of the reference/deliverable obligation at which the settlement will happen is determined through an auction m",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req16",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu10",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "a settlement process in",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(b) 'Cash settlement' of CDS means a settlement process in which the protection\nseller pays to the protection buyer, the notional amount of the CDS contract\nless the expected recovery value of the reference obligation.",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n11"
+      ],
+      "block_ids": [
+        "p2_b27",
+        "p2_b28",
+        "p2_b29"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "which the protection seller pays to the protection buyer, the notional amount of the CDS contract less the expected recovery v",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req17",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu11",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "an entity that interposes",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(c) 'Central counterparty' means an entity that interposes itself between\ncounterparties to contracts traded in one or more financial markets, becoming\n<image>\nthe buyer to every seller and the seller to every buyer and thereby ensuring the\nperformance of open contracts.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n12",
+        "MD12226_n13"
+      ],
+      "block_ids": [
+        "p2_b30",
+        "p2_b31",
+        "p3_b1",
+        "p3_b2",
+        "p3_b3"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "itself between counterparties to contracts traded in one or more financial markets, becoming <image> the buyer to every sell",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req18",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu12",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "have the same meaning",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(d) 'Company' shall have the same meaning as assigned to it in Section 2(20) of\nthe Companies Act, 2013 (18 of 2013).",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n14"
+      ],
+      "block_ids": [
+        "p3_b4",
+        "p3_b5"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "as assigned to it in Section 2(20) of the Companies Act, 2013 (18 of 2013)",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "act"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req19",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu13",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "Bank",
+      "action": "be specified by the",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(e) 'Corporate bonds and debentures' mean non-convertible debt securities which\ncreate or acknowledge indebtedness and include debentures, bonds and such\nother securities issued by a body corporate or a trust or any statutory body\nconstituted by virtue of a legislation, whether constituting a charge on the\nassets of the issuer or not, but excludes money market debt instruments,\nsecurity receipts, securitized debt instruments and bonds issued by the Central\nGovernment or a State Government, or such other persons as may be\nspecified by the Reserve Bank.",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n15"
+      ],
+      "block_ids": [
+        "p3_b6",
+        "p3_b7",
+        "p3_b8",
+        "p3_b9",
+        "p3_b10",
+        "p3_b11",
+        "p3_b12",
+        "p3_b13"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "Reserve Bank",
+      "compliance_domain": [
+        "Treasury",
+        "Cyber Security"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Cyber Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "IT",
+        "Treasury",
+        "Risk",
+        "Cyber Security"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": [
+        "statutory"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req20",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu14",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "a credit derivative contract",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(f) 'Credit Default Swap (CDS)' means a credit derivative contract in which one\ncounterparty (protection seller) commits to pay to the other counterparty\n(protection buyer) in the case of a credit event with respect to a reference entity\nand in return, the protection buyer makes periodic payments (premium) to the\nprotection seller until the maturity of the contract or the credit event, whichever\nis earlier.",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n16"
+      ],
+      "block_ids": [
+        "p3_b14",
+        "p3_b15",
+        "p3_b16",
+        "p3_b17",
+        "p3_b18",
+        "p3_b19"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "in which one counterparty (protection seller) commits to pay to the other counterparty (protection buyer) in the case of",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req21",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu15",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "a derivative contract whose",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(g) 'Credit derivative' means a derivative contract whose value is derived from the\ncredit risk of an underlying debt instrument.",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n17"
+      ],
+      "block_ids": [
+        "p3_b20",
+        "p3_b21"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "value is derived from the credit risk of an underlying debt instrument",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req22",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu16",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "a pre-defined event in",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(h) 'Credit event' means a pre-defined event in a credit derivative contract, which\ntriggers a settlement under the contract.",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n18"
+      ],
+      "block_ids": [
+        "p3_b22",
+        "p3_b23"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "a credit derivative contract, which triggers a settlement under the contract",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req23",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu17",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "a debt instrument issued",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) 'Deliverable obligation' means a debt instrument issued by the reference entity\nthat the protection buyer can deliver to the protection seller in a physically\nsettled CDS contract, in case of occurrence of a credit event.",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n19"
+      ],
+      "block_ids": [
+        "p3_b24",
+        "p3_b25",
+        "p3_b26"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "by the reference entity that the protection buyer can deliver to the protection seller in a physically settled CDS contract,",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req24",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu18",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "have the same meaning",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(j) 'Electronic Trading Platform (ETP)' shall have the same meaning as assigned\nto it in Paragraph 2(1)(iii) of The Electronic Trading Platforms (Reserve Bank)\nDirections, 2018 issued vide Notification No.",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n20"
+      ],
+      "block_ids": [
+        "p3_b27",
+        "p3_b28",
+        "p3_b29",
+        "p3_b30"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "as assigned to it in Paragraph 2(1)(iii) of The Electronic Trading Platforms (Reserve Bank) Directions, 2018 issued vide Notific",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req26",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu19",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "mean 'recognised stock exchange'",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(k) 'Exchange' shall mean 'recognised stock exchange' and shall have the same\nmeaning as assigned to it in Section 2(f) of the Securities Contract Regulation\nAct, 1956 (42 of 1956).",
+      "page_numbers": [
+        3,
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n21",
+        "MD12226_n22"
+      ],
+      "block_ids": [
+        "p3_b31",
+        "p3_b32",
+        "p3_b33",
+        "p4_b1"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "and shall have the same meaning as assigned to it in Section 2(f) of the Securities Contract Regulation Act, 1956 (42",
+      "compliance_domain": [
+        "Treasury"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "act"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req27",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu20",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "have the same meaning",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(l) 'Government-related entity' shall have the same meaning as assigned to it in\nParagraph 9 of Indian Accounting Standard (Ind AS) 24: Related Party\nDisclosures.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n23"
+      ],
+      "block_ids": [
+        "p4_b2",
+        "p4_b3",
+        "p4_b4"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "as assigned to it in Paragraph 9 of Indian Accounting Standard (Ind AS) 24: Related Party Disclosures",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "standard"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req28",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu21",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "the activity of undertaking",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(m) 'Hedging' means the activity of undertaking a credit derivative transaction to\nreduce credit risk of a particular debt instrument or a portfolio of debt\ninstruments.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n24"
+      ],
+      "block_ids": [
+        "p4_b5",
+        "p4_b6",
+        "p4_b7"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "a credit derivative transaction to reduce credit risk of a particular debt instrument or a portfolio of debt instruments",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req29",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu22",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "a company engaged primarily",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(n) 'Infrastructure company' means a company engaged primarily in activities\nrelated to specific infrastructure sub-sectors listed under the Harmonized\nMaster List of Infrastructure Sub-sectors notified by Department of Economic\nAffairs, Ministry of Finance, Government of India, via gazette notification no.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n25"
+      ],
+      "block_ids": [
+        "p4_b8",
+        "p4_b9",
+        "p4_b10",
+        "p4_b11",
+        "p4_b12"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "in activities related to specific infrastructure sub-sectors listed under the Harmonized Master List of Infrastructure Sub",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req31",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu23",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "an entity which provides",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(o) 'Market-maker' means an entity which provides prices to users and other\nmarket-makers.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n26"
+      ],
+      "block_ids": [
+        "p4_b13",
+        "p4_b14"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "prices to users and other market-makers",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req36",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu25",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "have the same meaning",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(q) 'Net worth' shall have the same meaning as assigned to it in Section 2(57) of\nthe Companies Act, 2013 (18 of 2013).",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n29"
+      ],
+      "block_ids": [
+        "p4_b27",
+        "p4_b28"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "as assigned to it in Section 2(57) of the Companies Act, 2013 (18 of 2013)",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "act"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req37",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu26",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "mean a 'person resident",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(r) 'Non-resident' shall mean a 'person resident outside India' and shall have the\nsame meaning as assigned to it in Section 2(w) of Foreign Exchange\nManagement Act, 1999 (42 of 1999).",
+      "page_numbers": [
+        4,
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n30",
+        "MD12226_n31"
+      ],
+      "block_ids": [
+        "p4_b29",
+        "p4_b30",
+        "p4_b31",
+        "p5_b1"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "outside India' and shall have the same meaning as assigned to it in Section 2(w) of Foreign Exchange Management Act, 1999 (42",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "act"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req38",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu27",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "include electronic trading platforms",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(s) 'Over-the-Counter (OTC) markets' mean the markets where transactions are\nundertaken in any manner other than on exchanges and shall include\nelectronic trading platforms (ETPs).",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n32"
+      ],
+      "block_ids": [
+        "p5_b2",
+        "p5_b3",
+        "p5_b4"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "(ETPs)",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req39",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu28",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "a settlement process in",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(t) 'Physical settlement' of CDS means a settlement process in which the\nprotection buyer delivers any of the eligible deliverable obligations to the\nprotection seller against the receipt of notional amount of the CDS contract.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n33"
+      ],
+      "block_ids": [
+        "p5_b5",
+        "p5_b6",
+        "p5_b7"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "which the protection buyer delivers any of the eligible deliverable obligations to the protection seller against the receipt o",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req40",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu29",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "an entity, against whose",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(u) 'Reference entity' means an entity, against whose credit risk, a credit derivative\ncontract is entered into.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n34"
+      ],
+      "block_ids": [
+        "p5_b8",
+        "p5_b9"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "credit risk, a credit derivative contract is entered into",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req41",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu30",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "a debt instrument issued",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(v) 'Reference obligation' means a debt instrument issued by the reference entity\nand specified in a CDS contract for the purpose of valuation of the contract and\nfor determining the cash settlement value or the deliverable obligation in case\nof occurrence of a credit event.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n35"
+      ],
+      "block_ids": [
+        "p5_b10",
+        "p5_b11",
+        "p5_b12",
+        "p5_b13"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "by the reference entity and specified in a CDS contract for the purpose of valuation of the contract and for determining the",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req42",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu31",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "have the same meaning",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(w) 'Related party' shall have the same meaning as assigned to it under Paragraph\n9 of Indian Accounting Standard (Ind AS) 24 - Related Party Disclosures.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n36"
+      ],
+      "block_ids": [
+        "p5_b14",
+        "p5_b15"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "as assigned to it under Paragraph 9 of Indian Accounting Standard (Ind AS) 24 - Related Party Disclosures",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "standard"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req43",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu32",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "mean a 'person resident",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(x) 'Resident' shall mean a 'person resident in India' and shall have the same\nmeaning as assigned to it in section 2(v) of the Foreign Exchange\nManagement Act, 1999 (42 of 1999).",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n37"
+      ],
+      "block_ids": [
+        "p5_b16",
+        "p5_b17",
+        "p5_b18"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "in India' and shall have the same meaning as assigned to it in section 2(v) of the Foreign Exchange Management Act, 1999 (42 o",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "act"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req44",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu33",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "a CDS contract in",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(y) 'Single-name CDS' means a CDS contract in which the underlying is a single\nreference entity.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n38"
+      ],
+      "block_ids": [
+        "p5_b19",
+        "p5_b20"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "which the underlying is a single reference entity",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req45",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu34",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "any event that results",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(z) 'Substitution event' means any event that results in the reference obligation\nbeing replaced by another obligation issued by the reference entity.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n39",
+        "MD12226_n40"
+      ],
+      "block_ids": [
+        "p5_b21",
+        "p5_b22",
+        "p5_b23",
+        "p5_b24",
+        "p5_b25",
+        "p5_b26",
+        "p5_b27",
+        "p5_b28"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "in the reference obligation being replaced by another obligation issued by the reference entity",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req46",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu34",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "any event that results",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(aa) 'Succession event' means any event that results in the reference entity no\nlonger being the primary obligor for the reference obligation.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n39",
+        "MD12226_n40"
+      ],
+      "block_ids": [
+        "p5_b21",
+        "p5_b22",
+        "p5_b23",
+        "p5_b24",
+        "p5_b25",
+        "p5_b26",
+        "p5_b27",
+        "p5_b28"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "in the reference entity no longer being the primary obligor for the reference obligation",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req47",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu34",
+      "requirement_type": "DEFINITION",
+      "modality": "means",
+      "actor": "",
+      "action": "a person that undertakes",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(bb) 'User' means a person that undertakes derivative transactions other than as a\nmarket-maker.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n39",
+        "MD12226_n40"
+      ],
+      "block_ids": [
+        "p5_b21",
+        "p5_b22",
+        "p5_b23",
+        "p5_b24",
+        "p5_b25",
+        "p5_b26",
+        "p5_b27",
+        "p5_b28"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "derivative transactions other than as a market-maker",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req48",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu35",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "have the same meaning",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) Words and expressions, used but not defined in these Directions, shall have the\nsame meaning as assigned to them in the Act.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n40"
+      ],
+      "block_ids": [
+        "p5_b27",
+        "p5_b28"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "as assigned to them in the Act",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "act"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req49",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu37",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be eligible to participate",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) The following persons shall be eligible to participate in credit derivatives market:",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n42"
+      ],
+      "block_ids": [
+        "p5_b30"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "in credit derivatives market:",
+      "compliance_domain": [
+        "Treasury"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req52",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu41",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "",
+      "action": "undertake transactions in single-name",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) Market-makers and users may undertake transactions in single-name CDS\ncontracts.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n47"
+      ],
+      "block_ids": [
+        "p6_b6",
+        "p6_b7"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "CDS contracts",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req54",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu44",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be eligible to act",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) The following entities shall be eligible to act as market-makers in credit derivatives:",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n50"
+      ],
+      "block_ids": [
+        "p6_b10"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "as market-makers in credit derivatives:",
+      "compliance_domain": [
+        "Treasury"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "act"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req58",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu48",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "NBFC",
+      "action": "cease to act as",
+      "conditions": [
+        "In case an NBFC"
+      ],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) In case an NBFC, an SPD or an HFC, fails to meet the eligibility criteria subsequent\nto the receipt of approval for acting as a market-maker, it shall cease to act as a\nmarket-maker.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n54"
+      ],
+      "block_ids": [
+        "p6_b21",
+        "p6_b22",
+        "p6_b23",
+        "p6_b24"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "a market-maker",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "NBFC"
+      ],
+      "regulatory_keywords": [
+        "act"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req59",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu48",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "NBFC",
+      "action": "continue to meet all",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The NBFC, SPD or HFC shall continue to meet all its obligations\nunder the existing contracts till the maturity/termination of such contracts.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n54"
+      ],
+      "block_ids": [
+        "p6_b21",
+        "p6_b22",
+        "p6_b23",
+        "p6_b24"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "its obligations under the existing contracts till the maturity/termination of such contracts",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "NBFC"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req60",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu49",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "be a market-maker or",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iii) At least one of the parties to a credit derivative transaction shall be a market-maker\nor a central counterparty authorised by the Reserve Bank for the purpose.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n55"
+      ],
+      "block_ids": [
+        "p6_b25",
+        "p6_b26"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "a central counterparty authorised by the Reserve Bank for the purpose",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req62",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu51",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be classified by market-makers",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) Users shall be classified by market-makers either as retail or non-retail for the\npurpose of offering credit derivative contracts.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n57",
+        "MD12226_n58"
+      ],
+      "block_ids": [
+        "p6_b28",
+        "p6_b29",
+        "p6_b30"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "either as retail or non-retail for the purpose of offering credit derivative contracts",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req63",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu52",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be eligible to be",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) The following users shall be eligible to be classified as non-retail users:",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n58"
+      ],
+      "block_ids": [
+        "p6_b30"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "classified as non-retail users:",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req71",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu60",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be classified as a",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iii) Any user who is not eligible to be classified as a non-retail user shall be classified as\na retail user.",
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n67"
+      ],
+      "block_ids": [
+        "p7_b12",
+        "p7_b13"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "retail user",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req72",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu61",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "have the option to",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iv) Any user who is otherwise eligible to be classified as a non-retail user shall have the\noption to get classified as a retail user.",
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n68"
+      ],
+      "block_ids": [
+        "p7_b14",
+        "p7_b15"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "get classified as a retail user",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req74",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu63",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be allowed to buy",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) Retail users shall be allowed to buy protection only for the purpose of hedging.",
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n70",
+        "MD12226_n71",
+        "MD12226_n72"
+      ],
+      "block_ids": [
+        "p7_b17",
+        "p7_b18",
+        "p7_b19"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "protection only for the purpose of hedging",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req75",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu64",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be allowed to buy",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) Non-retail users shall be allowed to buy protection for hedging or otherwise.",
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n71"
+      ],
+      "block_ids": [
+        "p7_b18"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "protection for hedging or otherwise",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req76",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu65",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be eligible to act",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iii) The following non-retail users shall be eligible to act as protection sellers:",
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n72"
+      ],
+      "block_ids": [
+        "p7_b19"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "as protection sellers:",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "act"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req82",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu71",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be permitted to act",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iv) Insurance Companies, Pension Funds, Mutual Funds and Alternative Investment\nFunds mentioned under Paragraph 6(iii) shall be permitted to act as protection\nsellers subject to approval of their respective regulator.",
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n78"
+      ],
+      "block_ids": [
+        "p7_b25",
+        "p7_b26",
+        "p7_b27"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "as protection sellers subject to approval of their respective regulator",
+      "compliance_domain": [
+        "Treasury"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "act"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req83",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu72",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be subject to the",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(v) Participation by FPIs shall be subject to the provisions of A.P.",
+      "page_numbers": [
+        7,
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n79",
+        "MD12226_n80"
+      ],
+      "block_ids": [
+        "p7_b28",
+        "p7_b29",
+        "p7_b30",
+        "p8_b1"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "provisions of A",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req86",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu74",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be a resident entity",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) The reference entity in a CDS contract shall be a resident entity who is eligible to\nissue any of the debt instruments mentioned under Paragraph 7(ii).",
+      "page_numbers": [
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n82",
+        "MD12226_n83"
+      ],
+      "block_ids": [
+        "p8_b3",
+        "p8_b4",
+        "p8_b5",
+        "p8_b6"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "who is eligible to issue any of the debt instruments mentioned under Paragraph 7(ii)",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req87",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu75",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be eligible to be",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) The following debt instruments issued in India shall be eligible to be a reference\nobligation in a CDS contract:",
+      "page_numbers": [
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n83"
+      ],
+      "block_ids": [
+        "p8_b5",
+        "p8_b6"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "a reference obligation in a CDS contract:",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req91",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu79",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be eligible to be",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iii) Bonds with call/put options shall be eligible to be reference obligations.",
+      "page_numbers": [
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n87"
+      ],
+      "block_ids": [
+        "p8_b11"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "reference obligations",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req93",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu80",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "be permitted as reference",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "shall not be permitted\nas reference obligations.",
+      "page_numbers": [
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n88"
+      ],
+      "block_ids": [
+        "p8_b12",
+        "p8_b13",
+        "p8_b14"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "obligations",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req94",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu81",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be in dematerialised form",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(v) The reference obligation/deliverable obligation shall be in dematerialised form.",
+      "page_numbers": [
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n89"
+      ],
+      "block_ids": [
+        "p8_b15"
+      ],
+      "confidence": 0.7,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req97",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu84",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "enter into CDS transactions",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) Market participants shall not enter into CDS transactions if the reference entity is a\nrelated party to either the protection buyer or the protection seller.",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n92",
+        "MD12226_n93",
+        "MD12226_n94",
+        "MD12226_n95",
+        "MD12226_n96"
+      ],
+      "block_ids": [
+        "p8_b18",
+        "p8_b19",
+        "p8_b20",
+        "p8_b21",
+        "p8_b22",
+        "p8_b23",
+        "p8_b24",
+        "p8_b25",
+        "p8_b26",
+        "p8_b27",
+        "p8_b28",
+        "p8_b29",
+        "p8_b30",
+        "p9_b1",
+        "p9_b2",
+        "p9_b3",
+        "p9_b4",
+        "p9_b5",
+        "p9_b6",
+        "p9_b7"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "if the reference entity is a related party to either the protection buyer or the protection seller",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req98",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu84",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "be deemed as related",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "However, two (or\nmore) government-related entities shall not be deemed as related parties for the\npurpose of these Directions.",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n92",
+        "MD12226_n93",
+        "MD12226_n94",
+        "MD12226_n95",
+        "MD12226_n96"
+      ],
+      "block_ids": [
+        "p8_b18",
+        "p8_b19",
+        "p8_b20",
+        "p8_b21",
+        "p8_b22",
+        "p8_b23",
+        "p8_b24",
+        "p8_b25",
+        "p8_b26",
+        "p8_b27",
+        "p8_b28",
+        "p8_b29",
+        "p8_b30",
+        "p9_b1",
+        "p9_b2",
+        "p9_b3",
+        "p9_b4",
+        "p9_b5",
+        "p9_b6",
+        "p9_b7"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "parties for the purpose of these Directions",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req99",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu84",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "establish appropriate controls to",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "Market-makers shall establish appropriate controls to\nensure that transactions with related parties are carried out on an arm's length\nbasis.",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n92",
+        "MD12226_n93",
+        "MD12226_n94",
+        "MD12226_n95",
+        "MD12226_n96"
+      ],
+      "block_ids": [
+        "p8_b18",
+        "p8_b19",
+        "p8_b20",
+        "p8_b21",
+        "p8_b22",
+        "p8_b23",
+        "p8_b24",
+        "p8_b25",
+        "p8_b26",
+        "p8_b27",
+        "p8_b28",
+        "p8_b29",
+        "p8_b30",
+        "p9_b1",
+        "p9_b2",
+        "p9_b3",
+        "p9_b4",
+        "p9_b5",
+        "p9_b6",
+        "p9_b7"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "ensure that transactions with related parties are carried out on an arm's length basis",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req100",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu85",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "buy/sell protection on reference",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) Market participants shall not buy/sell protection on reference entities if there are\nregulatory restrictions on such participants assuming similar exposures in the cash\nmarket or in violation of any other regulatory restriction, as may be applicable.",
+      "page_numbers": [
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n93"
+      ],
+      "block_ids": [
+        "p8_b24",
+        "p8_b25",
+        "p8_b26"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "entities if there are regulatory restrictions on such participants assuming similar exposures in the cash market or i",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "regulatory"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req105",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu86",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "apply to CDS transactions",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "However, provisions under Paragraph 2,\nParagraph 5.1 and Paragraph 5.2 of the above circular shall not apply to CDS\ntransactions undertaken in terms of these Directions.",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n94",
+        "MD12226_n95"
+      ],
+      "block_ids": [
+        "p8_b27",
+        "p8_b28",
+        "p8_b29",
+        "p8_b30",
+        "p9_b1",
+        "p9_b2",
+        "p9_b3",
+        "p9_b4",
+        "p9_b5"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "undertaken in terms of these Directions",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req106",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu87",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "settle CDS contracts bilaterally",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iv) Market participants shall settle CDS contracts bilaterally or through any clearing and\nsettlement arrangement approved by the Reserve Bank.",
+      "page_numbers": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n96"
+      ],
+      "block_ids": [
+        "p9_b6",
+        "p9_b7"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "or through any clearing and settlement arrangement approved by the Reserve Bank",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req108",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu88",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be determined by the",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The\nprocedure for cash settlement and auction settlement shall be determined by the\nCredit Derivatives Determinations Committee as specified under Paragraph 9 of\nthese Directions.",
+      "page_numbers": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n97"
+      ],
+      "block_ids": [
+        "p9_b8",
+        "p9_b9",
+        "p9_b10",
+        "p9_b11"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "Credit Derivatives Determinations Committee as specified under Paragraph 9 of these Directions",
+      "compliance_domain": [
+        "Treasury",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req110",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu90",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "ensure that all CDS",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) Market-makers shall ensure that all CDS transactions by retail users are\nundertaken for the purpose of hedging, i.e.",
+      "page_numbers": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n99"
+      ],
+      "block_ids": [
+        "p9_b13",
+        "p9_b14"
+      ],
+      "confidence": 0.9,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "transactions by retail users are undertaken for the purpose of hedging, i",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req112",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu91",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "have exposure to any",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(a) shall have exposure to any of the eligible reference obligations;",
+      "page_numbers": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n100"
+      ],
+      "block_ids": [
+        "p9_b15"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "of the eligible reference obligations",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "exposure"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req113",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu92",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "buy a CDS contract(s)",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(b) shall not buy a CDS contract(s) with notional amount higher than the face value\nof the reference obligation held by them;",
+      "page_numbers": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n101"
+      ],
+      "block_ids": [
+        "p9_b16",
+        "p9_b17"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "with notional amount higher than the face value of the reference obligation held by them",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req114",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu93",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "buy a CDS contract",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "immediately",
+      "full_sentence": "(c) shall not buy a CDS contract with a tenor later than the maturity of the\nreference obligation held by them or the standard CDS maturity date\nimmediately after the maturity of the reference obligation.",
+      "page_numbers": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n102",
+        "MD12226_n103",
+        "MD12226_n104"
+      ],
+      "block_ids": [
+        "p9_b18",
+        "p9_b19",
+        "p9_b20",
+        "p9_b21",
+        "p9_b22",
+        "p9_b23",
+        "p9_b24",
+        "p9_b25",
+        "p9_b26"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "with a tenor later than the maturity of the reference obligation held by them or the standard CDS maturity date immediately after t",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "standard"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req115",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu93",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be obliged to provide",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "To ensure compliance with the above, market-makers may call for any relevant\ninformation/documents from the retail user, who, in turn, shall be obliged to provide\nsuch information.",
+      "page_numbers": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n102",
+        "MD12226_n103",
+        "MD12226_n104"
+      ],
+      "block_ids": [
+        "p9_b18",
+        "p9_b19",
+        "p9_b20",
+        "p9_b21",
+        "p9_b22",
+        "p9_b23",
+        "p9_b24",
+        "p9_b25",
+        "p9_b26"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "such information",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "compliance"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req116",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu94",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "exit their CDS position",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) Retail users shall exit their CDS position within one month from the date they cease\nto have underlying exposure.",
+      "page_numbers": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n103"
+      ],
+      "block_ids": [
+        "p9_b24",
+        "p9_b25"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "within one month from the date they cease to have underlying exposure",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "exposure"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req117",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu95",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be mandatorily physically settled",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iii) CDS contracts involving retail users shall be mandatorily physically settled.",
+      "page_numbers": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n104"
+      ],
+      "block_ids": [
+        "p9_b26"
+      ],
+      "confidence": 0.7,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req118",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu97",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "devise standard master agreement/s",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) Fixed Income Money Market and Derivatives Association of India (FIMMDA), in\nconsultation with market participants and based on international best practices,\nshall devise standard master agreement/s for the Indian CDS market which shall,\ninter-alia, include credit event definitions and settlement procedures.",
+      "page_numbers": [
+        9,
+        10
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n106",
+        "MD12226_n107",
+        "MD12226_n108"
+      ],
+      "block_ids": [
+        "p9_b28",
+        "p9_b29",
+        "p9_b30",
+        "p9_b31",
+        "p10_b1",
+        "p10_b2",
+        "p10_b3"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "for the Indian CDS market which shall, inter-alia, include credit event definitions and settlement procedures",
+      "compliance_domain": [
+        "Treasury"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "standard"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req119",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu98",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": ", at the minimum,",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) FIMMDA shall, at the minimum, publish the following trading conventions for CDS\ncontracts:",
+      "page_numbers": [
+        10
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n108"
+      ],
+      "block_ids": [
+        "p10_b2",
+        "p10_b3"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "publish the following trading conventions for CDS contracts:",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req124",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu106",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": ", inter-alia, mention the",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) The CDS contracts shall, inter-alia, mention the following:",
+      "page_numbers": [
+        10
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n116"
+      ],
+      "block_ids": [
+        "p10_b11"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "following:",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req127",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu110",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "represent a direct claim",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) The CDS contract shall represent a direct claim on the protection seller.",
+      "page_numbers": [
+        10
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n120"
+      ],
+      "block_ids": [
+        "p10_b15",
+        "p10_b16"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "on the protection seller",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req128",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu110",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "have any clause that",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The\ncontract shall not have any clause that may:",
+      "page_numbers": [
+        10
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n120"
+      ],
+      "block_ids": [
+        "p10_b15",
+        "p10_b16"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "may:",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req132",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu115",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "comply with the Master",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) Market-makers in OTC markets shall comply with the Master Direction - Reserve\nBank of India (Market-makers in OTC Derivatives) Directions, 2021 issued vide RBI\nCircular No.",
+      "page_numbers": [
+        10,
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n125",
+        "MD12226_n126"
+      ],
+      "block_ids": [
+        "p10_b25",
+        "p10_b26",
+        "p10_b27",
+        "p10_b28",
+        "p10_b29",
+        "p10_b30",
+        "p10_b31",
+        "p11_b1"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "Direction - Reserve Bank of India (Market-makers in OTC Derivatives) Directions, 2021 issued vide RBI Circular No",
+      "compliance_domain": [
+        "Treasury"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "RBI"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req135",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu117",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "report all OTC CDS",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "within 30 minutes of the\ntransaction",
+      "full_sentence": "(i) Market-makers shall report all OTC CDS transactions within 30 minutes of the\ntransaction, to the trade repository of Clearing Corporation of India Ltd.",
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n128",
+        "MD12226_n129"
+      ],
+      "block_ids": [
+        "p11_b3",
+        "p11_b4",
+        "p11_b5",
+        "p11_b6"
+      ],
+      "confidence": 0.9,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "transactions within 30 minutes of the transaction, to the trade repository of Clearing Corporation of India Ltd",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Reporting"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Evidence Upload",
+        "Document Review"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req136",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu118",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "report all unwinding, novation,",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) Market-makers shall report all unwinding, novation, settlement transactions, and\nany credit, substitution or succession event to the trade repository of CCIL.",
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n129"
+      ],
+      "block_ids": [
+        "p11_b5",
+        "p11_b6"
+      ],
+      "confidence": 0.9,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "settlement transactions, and any credit, substitution or succession event to the trade repository of CCIL",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Reporting"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Evidence Upload",
+        "Document Review"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req138",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu120",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "set up a Credit",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) FIMMDA shall set up a Credit Derivatives Determinations Committee, consisting of\nmarket-makers and users in credit derivatives as voting members.",
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n131",
+        "MD12226_n132",
+        "MD12226_n133",
+        "MD12226_n134"
+      ],
+      "block_ids": [
+        "p11_b8",
+        "p11_b9",
+        "p11_b10",
+        "p11_b11",
+        "p11_b12",
+        "p11_b13",
+        "p11_b14",
+        "p11_b15",
+        "p11_b16",
+        "p11_b17",
+        "p11_b18",
+        "p11_b19",
+        "p11_b20",
+        "p11_b21"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "Derivatives Determinations Committee, consisting of market-makers and users in credit derivatives as voting members",
+      "compliance_domain": [
+        "Treasury",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req139",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu120",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "ensure that users are",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "FIMMDA shall\nensure that users are adequately represented in the Committee.",
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n131",
+        "MD12226_n132",
+        "MD12226_n133",
+        "MD12226_n134"
+      ],
+      "block_ids": [
+        "p11_b8",
+        "p11_b9",
+        "p11_b10",
+        "p11_b11",
+        "p11_b12",
+        "p11_b13",
+        "p11_b14",
+        "p11_b15",
+        "p11_b16",
+        "p11_b17",
+        "p11_b18",
+        "p11_b19",
+        "p11_b20",
+        "p11_b21"
+      ],
+      "confidence": 0.9,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "adequately represented in the Committee",
+      "compliance_domain": [
+        "Governance"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Operations",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req140",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu120",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "",
+      "action": "also include central counterparties",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The Committee\nmay also include central counterparties as observer members and\nlegal/audit/consultancy firms as consultative members.",
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n131",
+        "MD12226_n132",
+        "MD12226_n133",
+        "MD12226_n134"
+      ],
+      "block_ids": [
+        "p11_b8",
+        "p11_b9",
+        "p11_b10",
+        "p11_b11",
+        "p11_b12",
+        "p11_b13",
+        "p11_b14",
+        "p11_b15",
+        "p11_b16",
+        "p11_b17",
+        "p11_b18",
+        "p11_b19",
+        "p11_b20",
+        "p11_b21"
+      ],
+      "confidence": 0.9,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "as observer members and legal/audit/consultancy firms as consultative members",
+      "compliance_domain": [
+        "Audit",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Audit"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance",
+        "Internal Audit",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Manual Audit"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req141",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu121",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "establish rules for governing",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) FIMMDA shall establish rules for governing the activities of the Credit Derivatives\nDeterminations Committee in line with international best practices.",
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n132"
+      ],
+      "block_ids": [
+        "p11_b13",
+        "p11_b14"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "the activities of the Credit Derivatives Determinations Committee in line with international best practices",
+      "compliance_domain": [
+        "Treasury",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req142",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu122",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "make factual determinations regarding",
+      "conditions": [
+        "when approached by market\nparticipants"
+      ],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iii) The Credit Derivatives Determinations Committee, when approached by market\nparticipants, shall make factual determinations regarding key provisions of credit\nderivative contracts including, but not limited to, the occurrence of a credit event,\nsubstitution event, succession event, determining the identity of successor\nreference entity, etc.",
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n133"
+      ],
+      "block_ids": [
+        "p11_b15",
+        "p11_b16",
+        "p11_b17",
+        "p11_b18",
+        "p11_b19"
+      ],
+      "confidence": 0.9,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "key provisions of credit derivative contracts including, but not limited to, the occurrence of a credit event, s",
+      "compliance_domain": [
+        "Treasury",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req143",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu123",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": ", in consultation with",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iv) The Credit Derivatives Determinations Committee shall, in consultation with market\nparticipants, develop a standard procedure for cash settlement of CDS contracts.",
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n134"
+      ],
+      "block_ids": [
+        "p11_b20",
+        "p11_b21"
+      ],
+      "confidence": 0.9,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "market participants, develop a standard procedure for cash settlement of CDS contracts",
+      "compliance_domain": [
+        "Treasury",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Treasury",
+        "Risk",
+        "Operations",
+        "Board",
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "standard"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req144",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu124",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "",
+      "action": "conduct an auction to",
+      "conditions": [
+        "when approached by market\nparticipants"
+      ],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(v) The Credit Derivatives Determinations Committee, when approached by market\nparticipants, may conduct an auction to determine the reference price for\nsettlement of CDS contracts.",
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n135",
+        "MD12226_n136"
+      ],
+      "block_ids": [
+        "p11_b22",
+        "p11_b23",
+        "p11_b24",
+        "p11_b25",
+        "p11_b26",
+        "p11_b27",
+        "p11_b28"
+      ],
+      "confidence": 0.9,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "determine the reference price for settlement of CDS contracts",
+      "compliance_domain": [
+        "Treasury",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req145",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu124",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "put in place procedures/safeguards",
+      "conditions": [
+        "In case an auction is conducted"
+      ],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "In case an auction is conducted, the Credit\nDerivatives Determinations Committee shall put in place procedures/safeguards to\nensure that the reference price is determined in a fair and transparent manner.",
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n135",
+        "MD12226_n136"
+      ],
+      "block_ids": [
+        "p11_b22",
+        "p11_b23",
+        "p11_b24",
+        "p11_b25",
+        "p11_b26",
+        "p11_b27",
+        "p11_b28"
+      ],
+      "confidence": 0.95,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "to ensure that the reference price is determined in a fair and transparent manner",
+      "compliance_domain": [
+        "Treasury",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Treasury",
+        "Risk",
+        "Operations",
+        "Board",
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req146",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu125",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be binding on the",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(vi) The decisions of the Credit Derivatives Determinations Committee shall be binding\non the market participants.",
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n136"
+      ],
+      "block_ids": [
+        "p11_b27",
+        "p11_b28"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "market participants",
+      "compliance_domain": [
+        "Treasury",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req147",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu127",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "",
+      "action": "offer standardised single-name CDS",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) Exchanges may offer standardised single-name CDS contracts with guaranteed\nsettlement.",
+      "page_numbers": [
+        11,
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n138",
+        "MD12226_n139",
+        "MD12226_n140",
+        "MD12226_n141",
+        "MD12226_n142"
+      ],
+      "block_ids": [
+        "p11_b30",
+        "p11_b31",
+        "p11_b32",
+        "p11_b33",
+        "p12_b1",
+        "p12_b2",
+        "p12_b3",
+        "p12_b4",
+        "p12_b5"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "contracts with guaranteed settlement",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req148",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu128",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "obtain prior approval of",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) Exchanges shall obtain prior approval of the Reserve Bank for product design,\nchanges in product design, eligible participants and other details of CDS contracts.",
+      "page_numbers": [
+        11,
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n139",
+        "MD12226_n140"
+      ],
+      "block_ids": [
+        "p11_b32",
+        "p11_b33",
+        "p12_b1"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "the Reserve Bank for product design, changes in product design, eligible participants and other details of CDS contracts",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req149",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu129",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "ensure that the participants",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iii) Exchanges shall ensure that the participants on exchanges are made adequately\naware of the risks associated with CDS.",
+      "page_numbers": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n141"
+      ],
+      "block_ids": [
+        "p12_b2",
+        "p12_b3"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "on exchanges are made adequately aware of the risks associated with CDS",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req150",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu130",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be as specified under",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iv) The reference entities and reference obligations for exchange-traded CDS shall be\nas specified under Paragraph 7 of these Directions.",
+      "page_numbers": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n142"
+      ],
+      "block_ids": [
+        "p12_b4",
+        "p12_b5"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "Paragraph 7 of these Directions",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req151",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu131",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "undertake transactions in exchange-traded",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(v) Participants who are retail users, as defined under Paragraph 5.2 of these\nDirections, shall undertake transactions in exchange-traded CDS only for hedging\nand such users",
+      "page_numbers": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n143"
+      ],
+      "block_ids": [
+        "p12_b6",
+        "p12_b7",
+        "p12_b8"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "CDS only for hedging and such users",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req153",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu133",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "buy a CDS contract(s)",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(b) shall not buy a CDS contract(s) for notional amount higher than the face value\nof the reference obligation held by them;",
+      "page_numbers": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n145"
+      ],
+      "block_ids": [
+        "p12_b10",
+        "p12_b11"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "for notional amount higher than the face value of the reference obligation held by them",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req155",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu135",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "buy/sell protection on reference",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(vi) Participants shall not buy/sell protection on reference entities if there are regulatory\nrestrictions on assuming similar exposures in the cash market or in violation of any\nother regulatory restriction, as may be applicable.",
+      "page_numbers": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n147"
+      ],
+      "block_ids": [
+        "p12_b15",
+        "p12_b16",
+        "p12_b17"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "entities if there are regulatory restrictions on assuming similar exposures in the cash market or in violation of any",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "regulatory"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req157",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu136",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be determined by the",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The procedure for cash settlement and auction settlement shall be\ndetermined by the Credit Derivatives Determinations Committee as specified under\nParagraph 9 of these Directions.",
+      "page_numbers": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n148"
+      ],
+      "block_ids": [
+        "p12_b18",
+        "p12_b19",
+        "p12_b20",
+        "p12_b21"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "Credit Derivatives Determinations Committee as specified under Paragraph 9 of these Directions",
+      "compliance_domain": [
+        "Treasury",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req158",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu137",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be applicable to exchange-traded",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(viii) The determinations made by Credit Derivatives Determinations Committee shall be\napplicable to exchange-traded CDS contracts.",
+      "page_numbers": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n149"
+      ],
+      "block_ids": [
+        "p12_b22",
+        "p12_b23"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "CDS contracts",
+      "compliance_domain": [
+        "Treasury",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req159",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu138",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "",
+      "action": "transact in exchange-traded CDS",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ix) Foreign Portfolio Investors (FPIs) may transact in exchange-traded CDS as\nprotection sellers and/or protection buyers.",
+      "page_numbers": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n150"
+      ],
+      "block_ids": [
+        "p12_b24",
+        "p12_b25",
+        "p12_b26",
+        "p12_b27",
+        "p12_b28",
+        "p12_b29",
+        "p12_b30"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "as protection sellers and/or protection buyers",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req160",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu138",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be subject to the",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "Participation by FPIs shall be subject to\nthe provisions of A.P.",
+      "page_numbers": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n150"
+      ],
+      "block_ids": [
+        "p12_b24",
+        "p12_b25",
+        "p12_b26",
+        "p12_b27",
+        "p12_b28",
+        "p12_b29",
+        "p12_b30"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "provisions of A",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req162",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu138",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "report the gross notional",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "daily",
+      "full_sentence": "Exchanges shall report the gross notional amount of\nprotection sold by FPIs to CCIL on a daily basis by the end of the day, or on an\nintra-day basis if required by the Reserve Bank.",
+      "page_numbers": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n150"
+      ],
+      "block_ids": [
+        "p12_b24",
+        "p12_b25",
+        "p12_b26",
+        "p12_b27",
+        "p12_b28",
+        "p12_b29",
+        "p12_b30"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "amount of protection sold by FPIs to CCIL on a daily basis by the end of the day, or on an intra-day basis if required by th",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Reporting"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Evidence Upload",
+        "Document Review"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req163",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu139",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "report all CDS transactions",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "daily",
+      "full_sentence": "(x) Exchanges shall report all CDS transactions to the trade repository authorised for\nthe purpose by the Reserve Bank on a daily basis by the end of the day, in the form\nand manner prescribed by the Reserve Bank.",
+      "page_numbers": [
+        12,
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n151",
+        "MD12226_n152",
+        "MD12226_n153"
+      ],
+      "block_ids": [
+        "p12_b31",
+        "p12_b32",
+        "p12_b33",
+        "p13_b1",
+        "p13_b2",
+        "p13_b3",
+        "p13_b4",
+        "p13_b5"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "to the trade repository authorised for the purpose by the Reserve Bank on a daily basis by the end of the day, in the form",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Reporting"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Evidence Upload",
+        "Document Review"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req164",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu140",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "furnish any information relating",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(xi) Exchanges shall furnish any information relating to CDS transactions to the\nReserve Bank or any other agency as may be specified by the Reserve Bank in the\nmanner and format and within the time frame as may be specified by the Reserve\nBank.",
+      "page_numbers": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n153"
+      ],
+      "block_ids": [
+        "p13_b2",
+        "p13_b3",
+        "p13_b4",
+        "p13_b5"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "to CDS transactions to the Reserve Bank or any other agency as may be specified by the Reserve Bank in the manner and",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Reporting"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Evidence Upload",
+        "Document Review"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req165",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu142",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "put in place appropriate",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) Market-makers shall put in place appropriate and robust methodologies for marking\nto market credit derivative contracts.",
+      "page_numbers": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n155",
+        "MD12226_n156",
+        "MD12226_n157"
+      ],
+      "block_ids": [
+        "p13_b7",
+        "p13_b8",
+        "p13_b9",
+        "p13_b10",
+        "p13_b11",
+        "p13_b12",
+        "p13_b13",
+        "p13_b14",
+        "p13_b15",
+        "p13_b16",
+        "p13_b17"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "and robust methodologies for marking to market credit derivative contracts",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req166",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu143",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "use the daily CDS",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "daily",
+      "full_sentence": "(ii) Market-makers shall use the daily CDS curve published by FIMMDA or any other\nbenchmark recommended by FIMMDA, or a proprietary model, to value their CDS\npositions.",
+      "page_numbers": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n156"
+      ],
+      "block_ids": [
+        "p13_b9",
+        "p13_b10",
+        "p13_b11"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "curve published by FIMMDA or any other benchmark recommended by FIMMDA, or a proprietary model, to value their CDS positions",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req167",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu144",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "disclose the valuation as",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iii) Market-makers using their proprietary model for valuing the CDS positions shall\ndisclose the valuation as per the proprietary model, including the rationale for using\nthat model and an explanation of the valuation methodology in the Notes to\nAccounts in their financial statements.",
+      "page_numbers": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n157"
+      ],
+      "block_ids": [
+        "p13_b12",
+        "p13_b13",
+        "p13_b14",
+        "p13_b15",
+        "p13_b16",
+        "p13_b17"
+      ],
+      "confidence": 0.9,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "per the proprietary model, including the rationale for using that model and an explanation of the valuation methodology in t",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Process",
+        "Reporting"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Evidence Upload",
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req168",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu144",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "also include the valuation",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The disclosure shall also include the\nvaluation as per the CDS curve published by FIMMDA or a benchmark\nrecommended by FIMMDA.2",
+      "page_numbers": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n157"
+      ],
+      "block_ids": [
+        "p13_b12",
+        "p13_b13",
+        "p13_b14",
+        "p13_b15",
+        "p13_b16",
+        "p13_b17"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "as per the CDS curve published by FIMMDA or a benchmark recommended by FIMMDA",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req170",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu146",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "follow the applicable prudential",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) Market participants shall follow the applicable prudential norms and capital\nadequacy requirements for credit derivatives issued by their respective regulators.",
+      "page_numbers": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n159",
+        "MD12226_n160"
+      ],
+      "block_ids": [
+        "p13_b19",
+        "p13_b20",
+        "p13_b21",
+        "p13_b22",
+        "p13_b23",
+        "p13_b24",
+        "p13_b25",
+        "p13_b26"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "norms and capital adequacy requirements for credit derivatives issued by their respective regulators",
+      "compliance_domain": [
+        "Treasury",
+        "Prudential Regulation"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "capital"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req171",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu147",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be as per notified",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) The accounting of credit derivative contracts by market participants shall be as per\nnotified and applicable accounting standards read with regulatory\nguidelines/instructions issued by the respective regulators.",
+      "page_numbers": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n160"
+      ],
+      "block_ids": [
+        "p13_b21",
+        "p13_b22",
+        "p13_b23",
+        "p13_b24",
+        "p13_b25",
+        "p13_b26"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "and applicable accounting standards read with regulatory guidelines/instructions issued by the respective regulators",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Policy"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Policy Review"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "regulatory"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req172",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu147",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be followed in this",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "In case the notified\napplicable accounting standards or the respective regulator have not prescribed the\naccounting treatment for credit derivative contracts, guidance, if any, issued by the\nInstitute of Chartered Accountants of India shall be followed in this regard.",
+      "page_numbers": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n160"
+      ],
+      "block_ids": [
+        "p13_b21",
+        "p13_b22",
+        "p13_b23",
+        "p13_b24",
+        "p13_b25",
+        "p13_b26"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "regard",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req174",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu149",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "be effective once FIMMDA",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) The Reserve Bank may call for any information or statement or seek any\nclarification, which in the opinion of the Reserve Bank is relevant, from persons or\nagencies dealing in credit derivatives contracts, including eligible participants, and\n\n2 The requirement to disclose valuation as per the CDS curve published by FIMMDA or a benchmark recommended by FIMMDA shall be effective once FIMMDA starts publishing the CDS curve or recommends a valuation benchmark.",
+      "page_numbers": [
+        13,
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n162",
+        "MD12226_n163"
+      ],
+      "block_ids": [
+        "p13_b28",
+        "p13_b29",
+        "p13_b30",
+        "p14_b1",
+        "p14_b2",
+        "p14_b3",
+        "p14_b4"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "starts publishing the CDS curve or recommends a valuation benchmark",
+      "compliance_domain": [
+        "Treasury"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req175",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu149",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "furnish such information, statement",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "<image>\nsuch persons, agencies and participants shall furnish such information, statement\nor clarification in the manner and format and within the time frame as may be\nspecified by the Reserve Bank.",
+      "page_numbers": [
+        13,
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n162",
+        "MD12226_n163"
+      ],
+      "block_ids": [
+        "p13_b28",
+        "p13_b29",
+        "p13_b30",
+        "p14_b1",
+        "p14_b2",
+        "p14_b3",
+        "p14_b4"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "or clarification in the manner and format and within the time frame as may be specified by the Reserve Bank",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Reporting"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Evidence Upload",
+        "Document Review"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req176",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu151",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "Bank",
+      "action": "in public interest, publish",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) The Reserve Bank, or any other person or agency authorised by the Reserve Bank,\nmay in public interest, publish any anonymised data related to transactions in credit\nderivatives market.",
+      "page_numbers": [
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n165"
+      ],
+      "block_ids": [
+        "p14_b6",
+        "p14_b7",
+        "p14_b8"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "any anonymised data related to transactions in credit derivatives market",
+      "compliance_domain": [
+        "Treasury"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD12226_req177",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu153",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "Bank",
+      "action": ", in addition to",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) In the event of any person or agency violating any provision of these Directions or\nthe provisions of any other applicable law, the Reserve Bank may, in addition to\ntaking any penal or regulatory action in accordance with law, disallow that person\nor agency from dealing in the credit derivatives market for a period not exceeding\none month at a time, after providing reasonable opportunity to the person or agency\nto defend its actions, and such action will be made public by the Reserve Bank.",
+      "page_numbers": [
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n167"
+      ],
+      "block_ids": [
+        "p14_b10",
+        "p14_b11",
+        "p14_b12",
+        "p14_b13",
+        "p14_b14",
+        "p14_b15"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "taking any penal or regulatory action in accordance with law, disallow that person or agency from dealing in the credit derivatives m",
+      "compliance_domain": [
+        "Treasury"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": [
+        "regulatory",
+        "provision"
+      ]
+    },
+    {
+      "requirement_id": "MD12226_req178",
+      "document_id": "MD12226",
+      "logical_unit_id": "MD12226_lu154",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "apply to all credit",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "These Directions shall apply to all credit derivative transactions entered into from\nthe date the Directions come into effect.",
+      "page_numbers": [
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12226_n168"
+      ],
+      "block_ids": [
+        "p14_b16",
+        "p14_b17",
+        "p14_b18",
+        "p14_b19"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "derivative transactions entered into from the date the Directions come into effect",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    }
+  ]
+}

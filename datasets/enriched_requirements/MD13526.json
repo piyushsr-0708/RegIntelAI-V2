@@ -1,0 +1,1552 @@
+{
+  "document_id": "MD13526",
+  "title": "MD13526",
+  "document_status": "REPEALED",
+  "requirement_count": 31,
+  "enriched_requirements": [
+    {
+      "requirement_id": "MD13526_req19",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu8",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "be termed as the",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "immediately",
+      "full_sentence": "These Directions shall be termed as the Reserve Bank of India (Trade\nReceivables Discounting System) Directions, 2026 and shall be effective\nimmediately.",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n9",
+        "MD13526_n10"
+      ],
+      "block_ids": [
+        "p3_b9",
+        "p3_b10",
+        "p3_b11",
+        "p3_b12"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "Reserve Bank of India (Trade Receivables Discounting System) Directions, 2026 and shall be effective immediately",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview",
+        "Database Verification"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req24",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu15",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "",
+      "action": "be",
+      "conditions": [
+        "in case of reverse\nfactoring)"
+      ],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iii) Factoring Unit - refers to trade receivable in the form of invoice / bill uploaded\neither by the seller (in the case of factoring) or by buyer (in case of reverse\nfactoring), as the case may be.",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n16"
+      ],
+      "block_ids": [
+        "p3_b22",
+        "p3_b23",
+        "p3_b24"
+      ],
+      "confidence": 0.75,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req30",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu22",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "RBI",
+      "action": "seek authorisation for setting",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "An entity shall seek authorisation for setting up and operating TReDS platform in\naccordance with the RBI's Master Direction on 'Authorisation to operate a\nPayment System.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n23"
+      ],
+      "block_ids": [
+        "p4_b6",
+        "p4_b7",
+        "p4_b8"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "up and operating TReDS platform in accordance with the RBI's Master Direction on 'Authorisation to operate a Payment Sy",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Database Verification"
+      ],
+      "regulatory_entities": [
+        "RBI"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req31",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu23",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "The entity",
+      "action": "be a company incorporated",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The entity must be a company incorporated in India and registered under the\nCompanies Act.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n24"
+      ],
+      "block_ids": [
+        "p4_b9",
+        "p4_b10",
+        "p4_b11"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "in India and registered under the Companies Act",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "act"
+      ]
+    },
+    {
+      "requirement_id": "MD13526_req32",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu23",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "the entity",
+      "action": "cover the proposed activity",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The Memorandum of Association of the entity must cover the\nproposed activity of operating as a TReDS platform.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n24"
+      ],
+      "block_ids": [
+        "p4_b9",
+        "p4_b10",
+        "p4_b11"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "of operating as a TReDS platform",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req33",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu24",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "apply along with a",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "within 45 days of\nobtaining the no objection certificate",
+      "full_sentence": "An entity regulated by any of the financial sector regulator(s) shall apply along\nwith a 'No Objection Certificate' from such regulator(s), within 45 days of\nobtaining the no objection certificate.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n25"
+      ],
+      "block_ids": [
+        "p4_b12",
+        "p4_b13",
+        "p4_b14"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "'No Objection Certificate' from such regulator(s), within 45 days of obtaining the no objection certificate",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req34",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu25",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be guided by the",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "An entity having Foreign Direct Investment (FDI) shall be guided by the\nConsolidated FDI policy of the Government of India and the relevant foreign\nexchange management regulations on this subject.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n26",
+        "MD13526_n27"
+      ],
+      "block_ids": [
+        "p4_b15",
+        "p4_b16",
+        "p4_b17",
+        "p4_b18"
+      ],
+      "confidence": 0.9,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "Consolidated FDI policy of the Government of India and the relevant foreign exchange management regulations on this subject",
+      "compliance_domain": [
+        "Treasury",
+        "Foreign Exchange",
+        "Governance"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Policy"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk",
+        "Board"
+      ],
+      "verification_strategy": [
+        "Policy Review"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req35",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu27",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "have a minimum net-worth",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "An applicant shall have a minimum net-worth of ₹25 crore and shall submit a\ncertificate in the format (as provided in Master Directions on Authorisation to\noperate a Payment System dated June 15, 2026) from its statutory auditor.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n28"
+      ],
+      "block_ids": [
+        "p4_b19",
+        "p4_b20",
+        "p4_b21"
+      ],
+      "confidence": 0.9,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "of ₹25 crore and shall submit a certificate in the format (as provided in Master Directions on Authorisation to operate a Pay",
+      "compliance_domain": [
+        "Audit",
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Reporting"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Internal Audit",
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Evidence Upload",
+        "Document Review",
+        "Database Verification"
+      ],
+      "regulatory_entities": [
+        "Auditor"
+      ],
+      "regulatory_keywords": [
+        "statutory"
+      ]
+    },
+    {
+      "requirement_id": "MD13526_req36",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu28",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "ensure that net- worth",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "by March 31, 2028",
+      "full_sentence": "Existing entities authorised to operate TReDS platform shall ensure that net-\nworth criterion is met latest by March 31, 2028.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n29"
+      ],
+      "block_ids": [
+        "p4_b22",
+        "p4_b23"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "criterion is met latest by March 31, 2028",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req37",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu29",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be maintained on an",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The minimum net-worth shall be maintained on an ongoing basis.",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n30"
+      ],
+      "block_ids": [
+        "p4_b24"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "ongoing basis",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req41",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu34",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "bring participants together for",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The TReDS platform (hereinafter referred to as \"platform\") shall bring participants\ntogether for facilitating uploading, accepting, bidding, discounting, and settlement\nof the invoices / bills of sellers.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n35"
+      ],
+      "block_ids": [
+        "p5_b5",
+        "p5_b6",
+        "p5_b7",
+        "p5_b8"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "facilitating uploading, accepting, bidding, discounting, and settlement of the invoices / bills of sellers",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req42",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu34",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "put in place a",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "It shall put in place a suitable mechanism to\nestablish genuineness of the uploaded invoices / bills.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n35"
+      ],
+      "block_ids": [
+        "p5_b5",
+        "p5_b6",
+        "p5_b7",
+        "p5_b8"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "suitable mechanism to establish genuineness of the uploaded invoices / bills",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req44",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu36",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "ensure that participation related",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The platform shall ensure that participation related Master agreement includes\ninter-alia the following stipulations:",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n37",
+        "MD13526_n38",
+        "MD13526_n39",
+        "MD13526_n40"
+      ],
+      "block_ids": [
+        "p5_b12",
+        "p5_b13",
+        "p5_b14",
+        "p5_b15",
+        "p5_b16",
+        "p5_b17",
+        "p5_b18",
+        "p5_b19",
+        "p5_b20",
+        "p5_b21",
+        "p5_b22",
+        "p5_b23",
+        "p5_b24",
+        "p5_b25",
+        "p5_b26",
+        "p5_b27"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "Master agreement includes inter-alia the following stipulations:",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req46",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu37",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be no option for",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "There shall be no option for the buyer for set-offs\nwith respect to quality of goods or otherwise.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n38",
+        "MD13526_n39",
+        "MD13526_n40"
+      ],
+      "block_ids": [
+        "p5_b14",
+        "p5_b15",
+        "p5_b16",
+        "p5_b17",
+        "p5_b18",
+        "p5_b19",
+        "p5_b20",
+        "p5_b21",
+        "p5_b22",
+        "p5_b23",
+        "p5_b24",
+        "p5_b25",
+        "p5_b26",
+        "p5_b27"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "the buyer for set-offs with respect to quality of goods or otherwise",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req48",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu39",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "file the said assignment",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(iii) Since financing a transaction on TReDS will result in assignment of\nreceivables in favour of the financier, the platform shall file the said\nassignment with the central registry (CERSAI), as provided under\nRegistration of Assignment of Receivables (Reserve Bank) Regulations,\n2022 dated January 14, 2022 (as amended from time to time).",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n40"
+      ],
+      "block_ids": [
+        "p5_b23",
+        "p5_b24",
+        "p5_b25",
+        "p5_b26",
+        "p5_b27"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "with the central registry (CERSAI), as provided under Registration of Assignment of Receivables (Reserve Bank) Regulations, 2",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Reporting"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Evidence Upload",
+        "Document Review"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req49",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu40",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "Bank",
+      "action": "undertake customer due diligence",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "It shall undertake customer due diligence (CDD) of buyers in accordance with\nReserve Bank of India (Commercial Banks - Know Your Customer) Directions,\n2025, as amended from time to time.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n41"
+      ],
+      "block_ids": [
+        "p5_b28",
+        "p5_b29",
+        "p5_b30"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "(CDD) of buyers in accordance with Reserve Bank of India (Commercial Banks - Know Your Customer) Directions, 2025, as",
+      "compliance_domain": [
+        "KYC"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [
+        "Bank",
+        "Reserve Bank",
+        "Customer"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req50",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu41",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "bank",
+      "action": "put in place necessary",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The platform shall put in place necessary validation mechanisms to ensure that\nseller is an MSME, and funds due to seller are credited in the seller's bank\naccount only.",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n42"
+      ],
+      "block_ids": [
+        "p5_b31",
+        "p5_b32",
+        "p6_b0"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "validation mechanisms to ensure that seller is an MSME, and funds due to seller are credited in the seller's bank account only",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Process"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Document Review",
+        "Interview"
+      ],
+      "regulatory_entities": [
+        "Bank"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req51",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu42",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "banks",
+      "action": "facilitate the discounting of",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "It shall facilitate the discounting of factoring units by way of receiving bids from\nmultiple financiers in a transparent manner, resulting in flow of funds to the\nsellers, providing intimation to banks holding working capital / cash credit\naccounts of buyer and seller, serving of notice of assignment to buyer in favour\nof financier, with final payment being made by the buyer to the financier on due\ndate.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n43"
+      ],
+      "block_ids": [
+        "p6_b1",
+        "p6_b2",
+        "p6_b3",
+        "p6_b4",
+        "p6_b5",
+        "p6_b6"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "factoring units by way of receiving bids from multiple financiers in a transparent manner, resulting in flow of funds to",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": [
+        "capital"
+      ]
+    },
+    {
+      "requirement_id": "MD13526_req52",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu43",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "",
+      "action": "also enable further discounting",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "It may also enable further discounting / re-discounting of the discounted factoring\nunits by the financiers, resulting in its assignment in favour of other financiers.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n44"
+      ],
+      "block_ids": [
+        "p6_b7",
+        "p6_b8",
+        "p6_b9",
+        "p6_b10"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "/ re-discounting of the discounted factoring units by the financiers, resulting in its assignment in favour of other f",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "RE"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req53",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu43",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "RBI",
+      "action": "be subject to relevant1",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "Such transfers shall be subject to relevant1 instructions issued by RBI, as\napplicable.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n44"
+      ],
+      "block_ids": [
+        "p6_b7",
+        "p6_b8",
+        "p6_b9",
+        "p6_b10"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "instructions issued by RBI, as applicable",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [
+        "RBI"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req54",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu44",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be \"without recourse\" to",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "Factoring units discounted under TReDS shall be \"without recourse\" to the\nsellers.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n45"
+      ],
+      "block_ids": [
+        "p6_b11",
+        "p6_b12"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "the sellers",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req55",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu44",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "be responsibility of TReDS",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "Default, if any, by the buyer shall not be responsibility of TReDS.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n45"
+      ],
+      "block_ids": [
+        "p6_b11",
+        "p6_b12"
+      ],
+      "confidence": 0.7,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req56",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu45",
+      "requirement_type": "EXCEPTION",
+      "modality": "provided that",
+      "actor": "",
+      "action": "avail insurance facility for",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "Financiers may avail insurance facility for TReDS transactions, subject to the\nfollowing:",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n46",
+        "MD13526_n47",
+        "MD13526_n48"
+      ],
+      "block_ids": [
+        "p6_b13",
+        "p6_b14",
+        "p6_b15",
+        "p6_b16",
+        "p6_b17"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "TReDS transactions",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req57",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu46",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "be levied on the",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) Premium for insurance shall not be levied on the seller.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n47",
+        "MD13526_n48"
+      ],
+      "block_ids": [
+        "p6_b15",
+        "p6_b16",
+        "p6_b17"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "seller",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req58",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu47",
+      "requirement_type": "PROHIBITION",
+      "modality": "shall not",
+      "actor": "",
+      "action": "be treated as a",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) Credit insurance shall not be treated as a Credit Risk Mitigant (CRM) to avail\nany prudential benefits.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n48"
+      ],
+      "block_ids": [
+        "p6_b16",
+        "p6_b17"
+      ],
+      "confidence": 0.85,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "Credit Risk Mitigant (CRM) to avail any prudential benefits",
+      "compliance_domain": [
+        "Prudential Regulation"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "HIGH",
+      "candidate_departments": [
+        "Risk"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req59",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu48",
+      "requirement_type": "PERMISSION",
+      "modality": "may",
+      "actor": "",
+      "action": "avail guarantee in respect",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "Financiers may avail guarantee in respect of factoring units from any credit\nguarantee fund trust setup by Government of India.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n49"
+      ],
+      "block_ids": [
+        "p6_b18",
+        "p6_b19"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "of factoring units from any credit guarantee fund trust setup by Government of India",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "LOW",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req61",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu50",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be in custody of",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The platform shall be in custody of all the Master agreements.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n51",
+        "MD13526_n52"
+      ],
+      "block_ids": [
+        "p6_b22",
+        "p6_b23"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "all the Master agreements",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req62",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu52",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "facilitate efficient and seamless",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "The platform shall facilitate efficient and seamless settlement of transactions\nbetween financier and seller for financing of trade receivables and between buyer\nand financier on the due date, using any authorised payment system.",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n53"
+      ],
+      "block_ids": [
+        "p6_b24",
+        "p6_b25",
+        "p6_b26"
+      ],
+      "confidence": 0.9,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "settlement of transactions between financier and seller for financing of trade receivables and between buyer and fin",
+      "compliance_domain": [
+        "Digital Payments",
+        "AML"
+      ],
+      "risk_domain": [
+        "Compliance Risk",
+        "Operational Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance",
+        "Risk",
+        "Operations"
+      ],
+      "verification_strategy": [
+        "Database Verification"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req65",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu56",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "RBI",
+      "action": "submit returns to RBI",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "TReDS entity shall submit returns to RBI as listed in Annexure to this MD.",
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n57",
+        "MD13526_n58"
+      ],
+      "block_ids": [
+        "p7_b2",
+        "p7_b3"
+      ],
+      "confidence": 1.0,
+      "validation_warnings": [],
+      "object": "as listed in Annexure to this MD",
+      "compliance_domain": [
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Reporting"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Evidence Upload",
+        "Document Review"
+      ],
+      "regulatory_entities": [
+        "RBI"
+      ],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req68",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu59",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "continue to be valid",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(i) Notwithstanding such repeal, all authorisation / approvals granted, actions\ntaken, and acknowledgements issued under the aforesaid circulars /\nguidelines shall continue to be valid and shall be deemed to have been\ngranted under this Master Direction.",
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n60",
+        "MD13526_n61"
+      ],
+      "block_ids": [
+        "p7_b12",
+        "p7_b13",
+        "p7_b14",
+        "p7_b15",
+        "p7_b16",
+        "p7_b17"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "and shall be deemed to have been granted under this Master Direction",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    },
+    {
+      "requirement_id": "MD13526_req69",
+      "document_id": "MD13526",
+      "logical_unit_id": "MD13526_lu60",
+      "requirement_type": "OBLIGATION",
+      "modality": "shall",
+      "actor": "",
+      "action": "be deemed to have",
+      "conditions": [],
+      "exceptions": [],
+      "timeline": "",
+      "full_sentence": "(ii) The circulars and guidelines so repealed shall be deemed to have been in\nforce until the date of coming into effect of this Master Direction.",
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD13526_n61"
+      ],
+      "block_ids": [
+        "p7_b16",
+        "p7_b17"
+      ],
+      "confidence": 0.8,
+      "validation_warnings": [
+        "NO_ACTOR_DETECTED"
+      ],
+      "object": "been in force until the date of coming into effect of this Master Direction",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "implementation_category": [
+        "Other"
+      ],
+      "criticality": "MEDIUM",
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "verification_strategy": [
+        "Unknown"
+      ],
+      "regulatory_entities": [],
+      "regulatory_keywords": []
+    }
+  ]
+}
