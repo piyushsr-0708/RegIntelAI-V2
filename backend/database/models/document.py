@@ -17,3 +17,4 @@ class Document(Base):
     
     # Relationships
     requirements: Mapped[List["Requirement"]] = relationship(back_populates="document", cascade="all, delete-orphan")
+    logical_units: Mapped[List["LogicalUnit"]] = relationship(back_populates="document", cascade="all, delete-orphan")

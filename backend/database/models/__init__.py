@@ -2,7 +2,7 @@ from backend.database.base import Base
 from backend.database.models.document import Document
 from backend.database.models.requirement import Requirement
 from backend.database.models.control import ComplianceControl, RequirementControlMapping
-from backend.database.models.provenance import RequirementProvenance
+from backend.database.models.logical_unit import LogicalUnit
 from backend.database.models.department import Department, ControlAssignment
 from backend.database.models.user import User, Role
 from backend.database.models.map import ManagementActionPlan
@@ -15,7 +15,7 @@ __all__ = [
     "Requirement",
     "ComplianceControl",
     "RequirementControlMapping",
-    "RequirementProvenance",
+    "LogicalUnit",
     "Department",
     "ControlAssignment",
     "User",

@@ -9,6 +9,7 @@ class Requirement(Base):
     id: Mapped[str] = mapped_column(String(36), primary_key=True, default=generate_uuid)
     requirement_id: Mapped[str] = mapped_column(String(255), unique=True, index=True)
     document_id: Mapped[str] = mapped_column(String(36), ForeignKey("documents.id"))
+    logical_unit_id: Mapped[Optional[str]] = mapped_column(String(36), ForeignKey("logical_units.id"), nullable=True)
     
     requirement_type: Mapped[str] = mapped_column(String(100), index=True)
     action: Mapped[str] = mapped_column(String(255))
@@ -19,8 +20,8 @@ class Requirement(Base):
     
     # Relationships
     document: Mapped["Document"] = relationship(back_populates="requirements")
+    logical_unit: Mapped[Optional["LogicalUnit"]] = relationship(back_populates="requirements")
     controls: Mapped[List["ComplianceControl"]] = relationship(
         secondary="requirement_control_mapping",
         back_populates="requirements"
     )
-    provenance: Mapped["RequirementProvenance"] = relationship(back_populates="requirement", uselist=False, cascade="all, delete-orphan")
