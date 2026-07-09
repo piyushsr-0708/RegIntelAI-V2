@@ -56,3 +56,27 @@ playwright-report/
 
 # Node (future frontend)
 node_modules/
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Runtime artifacts
+backend/database/*.db
+regintel.db
+
+# Database
+regintel.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated pipeline outputs
+datasets/parsed/
+datasets/normalized/
+datasets/hierarchy/
+datasets/logical_units/
+datasets/requirements/
+datasets/enriched_requirements/
+datasets/controls/
