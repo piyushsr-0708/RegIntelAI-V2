@@ -1,0 +1,2998 @@
+{
+  "document_id": "MD12032",
+  "title": "MD12032",
+  "document_status": "ACTIVE",
+  "page_count": 22,
+  "logical_unit_count": 75,
+  "logical_units": [
+    {
+      "logical_unit_id": "MD12032_lu1",
+      "document_id": "MD12032",
+      "title": "<image>",
+      "text": "<image>\nRBI/2020-21/74 DoS.CO.CSITE.SEC.No.1852/31.01.015/2020-21 February 18, 2021\nThe Chairman/ Managing Director/ Chief Executive Officer All Scheduled Commercial Banks excluding RRBs/ Small Finance Banks/Payments Banks/ Credit Card issuing NBFCs.\nMadam/ Dear Sir,\nMaster Direction on Digital Payment Security Controls\nPlease refer to para II (7) of the Statement on Developmental and Regulatory Policies of the Bi-monthly Monetary Policy Statement for 2020-21 dated December 4, 2020 (extract given below). The Master Direction provides necessary guidelines for the regulated entities to set up a robust governance structure and implement common minimum standards of security controls for digital payment products and services.\nYours faithfully,\n(T.K. Rajan) Chief General Manager\nDigital Payment Security Controls\nGoing by the pre-eminent role being played by digital payment systems in India, RBI gives highest importance to the security controls around it. Now it is proposed to issue Reserve Bank of India (Digital Payment Security Controls) Directions 2020, for regulated entities to set up a robust governance structure for such systems and implement common minimum standards of security controls for channels like internet, mobile banking, card payments, among others. While the guidelines will be technology and platform agnostic, it will create an enhanced and enabling environment for customers to use digital payment products in more safe and secure manner.\nNecessary guidelines will be issued separately.\nIndex Introduction Chapter I - Preliminary Short Title and Commencement Applicability Definitions Chapter II - General Controls Governance and Management of Security Risks Other Generic Security Controls Application Security Life Cycle (ASLC) Authentication Framework\nFraud Risk Management Reconciliation Mechanism Customer Protection, Awareness and Grievance Redressal Mechanism Chapter III - Internet Banking Security Controls Chapter IV - Mobile Payments Application Security Controls Chapter V - Card Payments Security Acronyms\nMaster Direction on Digital Payment Security Controls\nINTRODUCTION\nIn exercise of the powers conferred by the Banking Regulation Act, 1949, the Reserve\nBank of India Act, 1934 and Payment and Settlement Systems Act, 2007, the Reserve\nBank, being satisfied that it is necessary and expedient in the public interest so to do,\nhereby, issues the directions hereinafter specified.\nCHAPTER - I\nPRELIMINARY",
+      "node_type": "image",
+      "level": 99,
+      "page_range": [
+        1
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n1"
+      ],
+      "block_ids": [
+        "p1_b10",
+        "p1_b1",
+        "p1_b2",
+        "p1_b3",
+        "p1_b4",
+        "p1_b5",
+        "p1_b6",
+        "p1_b7",
+        "p1_b8",
+        "p1_b9",
+        "p2_b1",
+        "p2_b2",
+        "p3_b1",
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7",
+        "p3_b8"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu2",
+      "document_id": "MD12032",
+      "title": "1. Short Title and Commencement",
+      "text": "1. Short Title and Commencement\na. These directions shall be called the Reserve Bank of India (Digital Payment\nSecurity Controls) directions, 2021.\nb. These directions shall come into effect six months from the day they are placed\non the official website of the Reserve Bank of India (RBI). However, in respect\nof instructions already issued either by Department of Payment and Settlement\nSystems (DPSS), Department of Regulation (DoR) or Department of\nSupervision (DoS) of RBI including those to select Regulated Entities (REs), by\nway of circular or advisory, the timeline would be with immediate effect or as\nper the timelines already prescribed.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n2"
+      ],
+      "block_ids": [
+        "p3_b9",
+        "p3_b10",
+        "p3_b11",
+        "p3_b12",
+        "p3_b13",
+        "p3_b14",
+        "p3_b15",
+        "p3_b16",
+        "p3_b17",
+        "p3_b18"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu3",
+      "document_id": "MD12032",
+      "title": "2. Applicability",
+      "text": "2. Applicability\nThe provisions of these directions shall apply to the following Regulated Entities (REs):\na) Scheduled Commercial Banks (excluding Regional Rural Banks);\nb) Small Finance Banks;\nc) Payments Banks; and\nd) Credit card issuing NBFCs.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n3"
+      ],
+      "block_ids": [
+        "p3_b19",
+        "p3_b20",
+        "p3_b21",
+        "p3_b22",
+        "p3_b23",
+        "p3_b24"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu4",
+      "document_id": "MD12032",
+      "title": "3. Definitions",
+      "text": "3. Definitions\nAll expressions unless defined herein shall have the same meaning as have been\nassigned to them under the Banking Regulation Act, 1949, Reserve Bank of India Act,\n1934, Payment and Settlement Systems Act, 2007 or Information Technology Act,\n2000/ Information Technology (Amendment) Act, 2008 and Rules made thereunder,\nany statutory modification or re-enactment thereto or as used in commercial parlance,\nas the case may be.\nCHAPTER - II\nGENERAL CONTROLS\nGovernance and Management of Security Risks",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n4"
+      ],
+      "block_ids": [
+        "p3_b25",
+        "p3_b26",
+        "p3_b27",
+        "p3_b28",
+        "p3_b29",
+        "p3_b30",
+        "p3_b31",
+        "p4_b1",
+        "p4_b2",
+        "p4_b3"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu5",
+      "document_id": "MD12032",
+      "title": "4. REs shall formulate a policy for digital payment products and services with the",
+      "text": "4. REs shall formulate a policy for digital payment products and services with the\napproval of their Board. The contours of the policy, while discussing the parameters\nof any \"new product\" including its alignment with the overall business strategy and\ninherent risk of the product, risk management/ mitigation measures, compliance\nwith regulatory instructions, customer experience, etc., should explicitly discuss\nabout payment security requirements from Functionality, Security and Performance\n(FSP) angles such as:\na) Necessary controls to protect the confidentiality of customer data and integrity\nof data and processes associated with the digital product/ services offered;\nb) Availability of requisite infrastructure e.g. human resources, technology, etc.\nwith necessary back up;\nc) Assurance that the payment product is built in a secure manner offering robust\nperformance ensuring safety, consistency and rolled out after necessary testing for achieving desired FSP;\nd) Capacity building and expansion with scalability (to meet the growth for efficient\ntransaction processing);\ne) Minimal customer service disruption with high availability of systems/ channels\n(to have minimal technical declines);\nf) Efficient and effective dispute resolution mechanism and handling of customer grievance; and g) Adequate and appropriate review mechanism followed by swift corrective\naction, in case any one of the above requirements is hampered or having high potential to get hampered.\n\nThe Board and Senior Management shall be responsible for implementation of this\npolicy. The policy shall be reviewed periodically, at least on a yearly basis. REs may\nformulate this policy separately for its different digital products or include the same\nas part of their overall product policy. Further, the policy document should require\nthat every digital payment product/ services offered addresses the mechanics, clear\ndefinition of starting point, critical intermittent stages/ points and end point in the\ndigital payment cycle, security aspects, validations till the digital payment is settled,\nclear pictorial representation of digital path and exception handling. In addition,\nsigning off of the above requirements, mechanism for carrying out User Acceptance\nTests (UAT) in multiple stages before roll out, sign off from multiple stakeholders\n(post UAT) and data archival requirements shall also be taken in to account. The\nneed for an external assessment of the entire process including the logic, build and\nsecurity aspects of the application(s) supporting the digital product should be clearly\narticulated.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n5",
+        "MD12032_n6"
+      ],
+      "block_ids": [
+        "p4_b4",
+        "p4_b5",
+        "p4_b6",
+        "p4_b7",
+        "p4_b8",
+        "p4_b9",
+        "p4_b10",
+        "p4_b11",
+        "p4_b12",
+        "p4_b13",
+        "p4_b14",
+        "p4_b15",
+        "p4_b16",
+        "p4_b17",
+        "p4_b18",
+        "p4_b19",
+        "p4_b20",
+        "p4_b21",
+        "p4_b22",
+        "p4_b23",
+        "p4_b24",
+        "p4_b25",
+        "p4_b26",
+        "p4_b27",
+        "p4_b28",
+        "p5_b1",
+        "p5_b2"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu6",
+      "document_id": "MD12032",
+      "title": "5. REs shall incorporate appropriate processes into their governance and risk",
+      "text": "5. REs shall incorporate appropriate processes into their governance and risk\nmanagement programs for identifying, analysing, monitoring and managing the\nspecific risks, including compliance risk and fraud risk, associated with the portfolio\nof digital payment products and services on a continual basis and in a holistic\nmanner. The Board/ Senior Management of REs shall have appropriate\nperformance monitoring systems/ key performance indicators for assessing\nwhether the product or service offered through digital payment channels meet\noperational and security norms.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n7"
+      ],
+      "block_ids": [
+        "p5_b3",
+        "p5_b4",
+        "p5_b5",
+        "p5_b6",
+        "p5_b7",
+        "p5_b8",
+        "p5_b9",
+        "p5_b10"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu7",
+      "document_id": "MD12032",
+      "title": "6. As part of this process, the REs shall define product-level limits on the level of",
+      "text": "6. As part of this process, the REs shall define product-level limits on the level of\nacceptable security risk, document specific security objectives and performance\ncriteria including quantitative benchmarks for evaluating the success of the security\nbuilt into the digital payment product or service, periodically compare actual results\nwith projections and qualitative benchmarks to detect and address adverse trends\nor concerns in a timely manner and modify the business plan/ strategy involving the\nproduct, when appropriate, based on the security performance of the product or\nservice.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n8"
+      ],
+      "block_ids": [
+        "p5_b11",
+        "p5_b12",
+        "p5_b13",
+        "p5_b14",
+        "p5_b15",
+        "p5_b16",
+        "p5_b17",
+        "p5_b18"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu8",
+      "document_id": "MD12032",
+      "title": "7. REs shall have trained resources with necessary expertise to manage the digital",
+      "text": "7. REs shall have trained resources with necessary expertise to manage the digital\npayment infrastructure. Wherever the REs are dependent on third party service\nproviders, adequate oversight and controls for monitoring the activities of the third\nparty personnel, in line with RBI guidelines on outsourcing, shall be put in place.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n9"
+      ],
+      "block_ids": [
+        "p5_b19",
+        "p5_b20",
+        "p5_b21",
+        "p5_b22"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu9",
+      "document_id": "MD12032",
+      "title": "8. REs shall conduct risk assessments with regard to the safety and security of digital",
+      "text": "8. REs shall conduct risk assessments with regard to the safety and security of digital\npayment products and associated processes and services as well as suitability and\nappropriateness of the same vis-a-vis the target users, both prior to establishing the\nservice(s) and regularly thereafter. The risk assessment should take into account -\na) The technology stack and solutions used;\nb) Known vulnerabilities at each of the touchpoints of the digital product and the\nremedial action taken by the entity;\nc) Dependence on third party service providers and oversight over such providers;\nd) Risk arising out of integration of digital payment platform with other systems\nboth internal and external to the RE, including core systems and systems of payment systems operators, etc.;\ne) The customer experience, convenience and technology adoption required to\nuse such products;\nf) Reconciliation process;\ng) Interoperability aspects;\nh) Data storage, security and privacy protection as per extant laws/ instructions;\ni) Operational risk including fraud risk;\nj) Business continuity and service availability;\nk) Compliance with extant cyber security requirements; and l) Compatibility aspects.\nSuch assessment shall cover the surrounding ecosystem as well. The assessment\nof risks shall address the need to protect and secure payment data1 and evaluate\nthe resilience of systems. The internal Risk and Control Self-Assessment (RCSA)\nexercise shall cover the risks (inherent) & controls vis-à-vis the probability and\nimpact of threats to arrive at residual risk. In such an exercise, it is imperative for\nREs to maintain database of all systems and applications storing customer data in\nthe payment ecosystem and compliance with applicable PCI standards in each of\nthe systems (notwithstanding mandatory requirements of certification/ standard\naccreditation).",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n10"
+      ],
+      "block_ids": [
+        "p5_b23",
+        "p5_b24",
+        "p5_b25",
+        "p5_b26",
+        "p5_b27",
+        "p5_b28",
+        "p5_b29",
+        "p5_b30",
+        "p6_b1",
+        "p6_b2",
+        "p6_b3",
+        "p6_b4",
+        "p6_b5",
+        "p6_b6",
+        "p6_b7",
+        "p6_b8",
+        "p6_b9",
+        "p6_b10"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu10",
+      "document_id": "MD12032",
+      "title": "9. REs shall evaluate the risks associated with the chosen technology platforms,",
+      "text": "9. REs shall evaluate the risks associated with the chosen technology platforms,\napplication architecture, both on the server and client side. Further, REs should\nundertake a review of the risk scenarios and existing security measures based on\nincidents affecting their services, before any major change to the infrastructure or\nprocedures is made or, when, any new threats are identified through risk monitoring\nactivities. Further, unused or unwanted features of the platform should be closely\ncontrolled to minimise risk.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n11"
+      ],
+      "block_ids": [
+        "p6_b11",
+        "p6_b12",
+        "p6_b13",
+        "p6_b14",
+        "p6_b15",
+        "p6_b16",
+        "p6_b17"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu11",
+      "document_id": "MD12032",
+      "title": "10. REs shall develop sound internal control systems and take into account the",
+      "text": "10. REs shall develop sound internal control systems and take into account the\noperational risk before offering digital payment products and related services. This\nwould include ensuring that adequate safeguards are in place to protect integrity of\ndata, customer confidentiality and security of data.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n12"
+      ],
+      "block_ids": [
+        "p6_b18",
+        "p6_b19",
+        "p6_b20",
+        "p6_b21"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu12",
+      "document_id": "MD12032",
+      "title": "11. REs shall ensure that the digital payment architecture is robust and scalable,",
+      "text": "11. REs shall ensure that the digital payment architecture is robust and scalable,\ncommensurate with the transaction volumes and customer growth. The IT strategy\nof the RE shall ensure that a robust capacity management plan is in place to meet\nevolving demand. REs shall also put in place review mechanism of IT/ IT Security\narchitecture and technology platform overhaul on a periodic basis based on Board-\napproved policy.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n13"
+      ],
+      "block_ids": [
+        "p6_b22",
+        "p6_b23",
+        "p6_b24",
+        "p6_b25",
+        "p6_b26",
+        "p6_b27"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu13",
+      "document_id": "MD12032",
+      "title": "12. REs shall have necessary capacity, systems and procedures in place to periodically",
+      "text": "12. REs shall have necessary capacity, systems and procedures in place to periodically\ntest the backed-up data, application pertaining to digital products to ensure recovery\n1 customer data; customer and beneficiary account details; payment credentials; transaction data;\nwithout loss of transactions or audit-trails. These facilities should be tested at least\non a half-yearly basis for digital payment products and services.\nOther Generic Security Controls",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n14"
+      ],
+      "block_ids": [
+        "p6_b28",
+        "p6_b29",
+        "p6_b30",
+        "p7_b1",
+        "p7_b2",
+        "p7_b3"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu14",
+      "document_id": "MD12032",
+      "title": "13. The communication protocol in the digital payment channels (especially over",
+      "text": "13. The communication protocol in the digital payment channels (especially over\nInternet) shall adhere to a secure standard. An appropriate level of encryption and\nsecurity shall be implemented in the digital payment ecosystem.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n15"
+      ],
+      "block_ids": [
+        "p7_b4",
+        "p7_b5",
+        "p7_b6"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu15",
+      "document_id": "MD12032",
+      "title": "14. Web applications providing the digital payment products and services should not",
+      "text": "14. Web applications providing the digital payment products and services should not\nstore sensitive information in HTML hidden fields, cookies, or any other client-side\nstorage to avoid any compromise in the integrity of the data.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n16"
+      ],
+      "block_ids": [
+        "p7_b7",
+        "p7_b8",
+        "p7_b9"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu16",
+      "document_id": "MD12032",
+      "title": "15. REs shall implement Web Application Firewall (WAF) solution and DDoS mitigation",
+      "text": "15. REs shall implement Web Application Firewall (WAF) solution and DDoS mitigation\ntechniques to secure the digital payment products and services offered over\nInternet.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n17"
+      ],
+      "block_ids": [
+        "p7_b10",
+        "p7_b11",
+        "p7_b12"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu17",
+      "document_id": "MD12032",
+      "title": "16. The key length (for symmetric/ asymmetric encryption, hashing), algorithms (for",
+      "text": "16. The key length (for symmetric/ asymmetric encryption, hashing), algorithms (for\nencryption, signing, exchange of keys, creation of message digest, random number\ngenerators), cipher suites, digital certificates and applicable protocols used in\ntransmission channels, processing of data, authentication purpose, shall be strong,\nadopting internationally accepted and published standards that are not deprecated/\ndemonstrated to be insecure/ vulnerable and the configurations involved in\nimplementing such controls are in general, compliant with extant instructions and\nthe law of the land.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n18"
+      ],
+      "block_ids": [
+        "p7_b13",
+        "p7_b14",
+        "p7_b15",
+        "p7_b16",
+        "p7_b17",
+        "p7_b18",
+        "p7_b19",
+        "p7_b20"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu18",
+      "document_id": "MD12032",
+      "title": "17. REs shall renew their digital certificates used in digital payment ecosystem well in",
+      "text": "17. REs shall renew their digital certificates used in digital payment ecosystem well in\ntime.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n19"
+      ],
+      "block_ids": [
+        "p7_b21",
+        "p7_b22"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu19",
+      "document_id": "MD12032",
+      "title": "18. The mobile application2 and internet banking application should have effective",
+      "text": "18. The mobile application2 and internet banking application should have effective\nlogging and monitoring capabilities to track user activity, security changes and\nidentify anomalous behaviour and transactions.\nApplication Security Life Cycle (ASLC)",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n20"
+      ],
+      "block_ids": [
+        "p7_b23",
+        "p7_b24",
+        "p7_b25",
+        "p7_b26"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu20",
+      "document_id": "MD12032",
+      "title": "19. REs shall implement multi-tier application architecture, segregating application,",
+      "text": "19. REs shall implement multi-tier application architecture, segregating application,\ndatabase and presentation layer in the digital payment products and services.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n21"
+      ],
+      "block_ids": [
+        "p7_b27",
+        "p7_b28"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu21",
+      "document_id": "MD12032",
+      "title": "20. REs shall follow a 'secure by design' approach in the development of digital",
+      "text": "20. REs shall follow a 'secure by design' approach in the development of digital\npayment products and services. REs shall ensure that digital payment applications\nare inherently more secure by embedding security within their development\nlifecycle.\n2 Mobile banking, mobile payment applications of the regulated entities",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n22"
+      ],
+      "block_ids": [
+        "p7_b29",
+        "p7_b30",
+        "p7_b31",
+        "p7_b32",
+        "p7_b33"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu22",
+      "document_id": "MD12032",
+      "title": "21. REs shall explicitly define security objectives (including protection of customer",
+      "text": "21. REs shall explicitly define security objectives (including protection of customer\ninformation/ data) during (a) requirements gathering, (b) designing, (c)\ndevelopment, (d) testing including source code review, (e) implementation,\nmaintenance & monitoring and (f) decommissioning phases of the digital payment\napplications.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n23"
+      ],
+      "block_ids": [
+        "p8_b1",
+        "p8_b2",
+        "p8_b3",
+        "p8_b4",
+        "p8_b5"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu23",
+      "document_id": "MD12032",
+      "title": "22. REs (including those partnering with other entities to co-brand/ co-develop",
+      "text": "22. REs (including those partnering with other entities to co-brand/ co-develop\napplications) shall adopt and incorporate a threat modelling approach during\napplication lifecycle management into their policies, processes, guidelines and\nprocedures.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n24"
+      ],
+      "block_ids": [
+        "p8_b6",
+        "p8_b7",
+        "p8_b8",
+        "p8_b9"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu24",
+      "document_id": "MD12032",
+      "title": "23. For digital payment applications that are licensed by a third party vendor, REs shall",
+      "text": "23. For digital payment applications that are licensed by a third party vendor, REs shall\nhave an escrow arrangement for the source code for ensuring continuity of services\nin case the vendor defaults or is unable to provide services.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n25"
+      ],
+      "block_ids": [
+        "p8_b10",
+        "p8_b11",
+        "p8_b12"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu25",
+      "document_id": "MD12032",
+      "title": "24. REs shall conduct security testing including review of source code, Vulnerability",
+      "text": "24. REs shall conduct security testing including review of source code, Vulnerability\nAssessment (VA) and Penetration Testing (PT) of their digital payment applications\nto assure that the application is secure for putting through transactions while\npreserving confidentiality and integrity of the data that is stored and transmitted.\nSuch testing should invariably cover compliance with various standards like\nOWASP. If the source code is not owned by the RE, then, in such cases, the RE\nshall obtain a certificate from the application developer stating that the application\nis free of known vulnerabilities, malwares and any covert channels in the code. In\nthis context,\na) The VA shall be conducted at least on a half-yearly basis; PT shall be\nconducted at least on a yearly basis. In addition, VA/PT shall be conducted as and when any new IT Infrastructure or digital payment application is introduced or when any major change is performed in application or infrastructure;\nb) Testing related to review of source code/ certification shall be conducted/\nobtained. This shall continue on a yearly basis, if changes/ upgrades have been made to the application during the year;\nc) Testing/ Certification should broadly address the objective that the product/\nversion/module(s) functions only in a manner that it is intended to do, is developed as per the best secure design/ coding practices and standards, addressing known flaws/threats due to insecure coding; and d) Penal provisions shall be included by the RE into third-party contractual\narrangements for any non-compliance by the application provider.\n\n25. REs may also run automated VA scanning tools to automatically scan all systems\non the network that are critical, public facing or store customer sensitive data on a\ncontinuous/ more frequent basis.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n26"
+      ],
+      "block_ids": [
+        "p8_b13",
+        "p8_b14",
+        "p8_b15",
+        "p8_b16",
+        "p8_b17",
+        "p8_b18",
+        "p8_b19",
+        "p8_b20",
+        "p8_b21",
+        "p8_b22",
+        "p8_b23",
+        "p8_b24",
+        "p8_b25",
+        "p8_b26",
+        "p8_b27",
+        "p8_b28"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu26",
+      "document_id": "MD12032",
+      "title": "26. REs shall compare the results from earlier vulnerability scans to verify/ ascertain",
+      "text": "26. REs shall compare the results from earlier vulnerability scans to verify/ ascertain\nthat vulnerabilities are addressed either by patching, implementing a compensating\ncontrol, or documenting and accepting the residual risk with necessary approval\nand that there is no recurrence of the known vulnerabilities. The identified\nvulnerabilities should be fixed in a time-bound manner.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n27"
+      ],
+      "block_ids": [
+        "p9_b1",
+        "p9_b2",
+        "p9_b3",
+        "p9_b4",
+        "p9_b5"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu27",
+      "document_id": "MD12032",
+      "title": "27. REs shall ensure that all vulnerability scanning is performed in authenticated mode",
+      "text": "27. REs shall ensure that all vulnerability scanning is performed in authenticated mode\neither with agents running locally on the system to analyse the security configuration\nor with remote scanners that are given administrative rights on the system being\ntested.3",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n28"
+      ],
+      "block_ids": [
+        "p9_b6",
+        "p9_b7",
+        "p9_b8",
+        "p9_b9"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu28",
+      "document_id": "MD12032",
+      "title": "28. REs shall verify and thoroughly test the functionality (to validate whether the system",
+      "text": "28. REs shall verify and thoroughly test the functionality (to validate whether the system\nmeets the functional requirements/ specifications) and security controls of payment\nproducts and services before its launch/ moving to the production environment.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n29"
+      ],
+      "block_ids": [
+        "p9_b10",
+        "p9_b11",
+        "p9_b12"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu29",
+      "document_id": "MD12032",
+      "title": "29. REs shall institute a mechanism to actively monitor for the non-genuine/",
+      "text": "29. REs shall institute a mechanism to actively monitor for the non-genuine/\nunauthorised/ malicious applications (with similar name/ features) on popular app-\nstores and the Web and respond accordingly to bring them down.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n30"
+      ],
+      "block_ids": [
+        "p9_b13",
+        "p9_b14",
+        "p9_b15"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu30",
+      "document_id": "MD12032",
+      "title": "30. The server at the RE's end should have adequate checks and balances to ensure",
+      "text": "30. The server at the RE's end should have adequate checks and balances to ensure\nthat no transaction is carried out through non-genuine/ unauthorised digital payment\nproducts/ applications and the authentication process is robust, secure and\ncentralised.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n31"
+      ],
+      "block_ids": [
+        "p9_b16",
+        "p9_b17",
+        "p9_b18",
+        "p9_b19"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu31",
+      "document_id": "MD12032",
+      "title": "31. The security controls for digital payment applications must focus on how these",
+      "text": "31. The security controls for digital payment applications must focus on how these\napplications handle, store and protect payment data. The APIs for secure data\nstorage and communication have to be implemented and used correctly in order to\nbe effective. REs shall refer to standards such as OWASP-MASVS, OWASP-ASVS\nand other relevant OWASP standards, security and data protection guidelines in\nISO 12812, threat catalogues and guides developed by NIST (including for\nBluetooth and LTE security), for application security and other protection measures.\nSuch testing has to necessarily verify for vulnerabilities including, but not limited to\nOWASP/ OWASP Mobile Top 10, application security guidelines/ requirements\ndeveloped/ shared by operating system providers/ OEMs.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n32"
+      ],
+      "block_ids": [
+        "p9_b20",
+        "p9_b21",
+        "p9_b22",
+        "p9_b23",
+        "p9_b24",
+        "p9_b25",
+        "p9_b26",
+        "p9_b27",
+        "p9_b28",
+        "p9_b29"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu32",
+      "document_id": "MD12032",
+      "title": "32. REs shall redact/ mask customer information such as account numbers/ card",
+      "text": "32. REs shall redact/ mask customer information such as account numbers/ card\nnumbers/ other sensitive information when transmitted via SMS/ e-mails.\n3 SANS Critical Security Controls\nAuthentication Framework",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n33"
+      ],
+      "block_ids": [
+        "p9_b30",
+        "p9_b31",
+        "p9_b32",
+        "p10_b1"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu33",
+      "document_id": "MD12032",
+      "title": "33. In view of the proliferation of cyber-attacks and their potential consequences, REs",
+      "text": "33. In view of the proliferation of cyber-attacks and their potential consequences, REs\nshould implement, except where explicitly permitted/ relaxed, multi-factor\nauthentication for payments through electronic modes and fund transfers, including\ncash withdrawals from ATMs/ micro-ATMs/ business correspondents, through\ndigital payment applications. At least one of the authentication methodologies\nshould be generally dynamic or non-replicable. [e.g., Use of One Time Password,\nmobile devices (device binding and SIM), biometric/ PKI/ hardware tokens, EMV\nchip card (for Card Present Transactions) with server-side verification could be\ntermed either in dynamic or non-replicable methodologies.].",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        10
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n34"
+      ],
+      "block_ids": [
+        "p10_b2",
+        "p10_b3",
+        "p10_b4",
+        "p10_b5",
+        "p10_b6",
+        "p10_b7",
+        "p10_b8",
+        "p10_b9",
+        "p10_b10"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu34",
+      "document_id": "MD12032",
+      "title": "34. REs may also adopt adaptive authentication to select the right authentication factors",
+      "text": "34. REs may also adopt adaptive authentication to select the right authentication factors\ndepending on risk assessment, user risk profile and behaviour. Properly designed\nand implemented multi-factor authentication methods are more reliable and\nstronger fraud deterrents and are more difficult to compromise. The key objectives\nof multi-factor authentication are to protect the confidentiality of payment data as\nwell as enhance confidence in digital payment by combating various cyber-attack\nmechanisms like phishing, keylogging, spyware/ malware and other internet-based\nfrauds targeted at REs and their customers. In this regard,\na) The implementation of appropriate authentication methodologies should be\nbased on an assessment of the risk posed by the RE's digital payment products and services. The risk should be evaluated in light of the type of customer (e.g., retail/ corporate/ commercial); the customer transactional requirements/ pattern (e.g., bill payment, fund transfer), the sensitivity of customer information and the volume, value of transactions involved.\n\nb) Beyond the technology factor, the success of a particular authentication method\ndepends on appropriate policies, procedures, and controls. An effective authentication method should take into consideration customer acceptance, ease of use, reliable performance, scalability to accommodate growth, customer profile, location, transaction, etc., and interoperability with other systems.\n\nc) To enhance online processing security, multi factor authentication and alerts\n(like SMS, e-mail, etc.) should be applied in respect of all payment transactions (including debits and credits), creation of new account linkages (addition/ modification/ deletion of beneficiaries), changing account details or revision to fund transfer limits. In devising these security features, REs should take into account their efficacy and differing customer preferences for additional online protection.\n\nd) The alerts and OTPs received by the customer for online transactions shall\nidentify the merchant name, wherever applicable, rather than the payment aggregator through which the transaction was effected.\ne) As an integral part of the multi factor authentication architecture, REs should\nalso implement appropriate measures to minimise exposure to a middleman attack which is more commonly known as a man-in-the-middle attack (MITM), man-in-the browser (MITB) attack or man-in-the application attack. This is to ensure, among other things, that the data in transit is secured and the transactions are authenticated only by genuine/ authorised source/ process.\n\nf) An authenticated session, together with its encryption protocol, should remain intact throughout the interaction with the customer. Else, in the event of interference or in case the customer closes the application, the session should be terminated, and the affected transactions resolved or reversed out. The customer should be promptly notified about the status of the transaction by email, SMS or through other means.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        10
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n35"
+      ],
+      "block_ids": [
+        "p10_b11",
+        "p10_b12",
+        "p10_b13",
+        "p10_b14",
+        "p10_b15",
+        "p10_b16",
+        "p10_b17",
+        "p10_b18",
+        "p10_b19",
+        "p10_b20",
+        "p10_b21",
+        "p10_b22",
+        "p10_b23",
+        "p11_b1",
+        "p11_b2"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu35",
+      "document_id": "MD12032",
+      "title": "35. REs should set down the maximum number of failed log-in or authentication",
+      "text": "35. REs should set down the maximum number of failed log-in or authentication\nattempts after which access to the digital payment product/ service is blocked. They\nshould have a secure procedure in place to re-activate the access to blocked\nproduct/ service. The customer shall be notified for failed log-in or authentication\nattempts.\nFraud Risk Management",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n36"
+      ],
+      "block_ids": [
+        "p11_b3",
+        "p11_b4",
+        "p11_b5",
+        "p11_b6",
+        "p11_b7",
+        "p11_b8"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu36",
+      "document_id": "MD12032",
+      "title": "36. The REs shall document and implement the configuration aspects for identifying",
+      "text": "36. The REs shall document and implement the configuration aspects for identifying\nsuspicious transactional behaviour in respect of rules, preventive, detective types\nof controls, mechanism to alert the customers in case of failed authentication, time\nframe for the same, etc.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n37"
+      ],
+      "block_ids": [
+        "p11_b9",
+        "p11_b10",
+        "p11_b11",
+        "p11_b12"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu37",
+      "document_id": "MD12032",
+      "title": "37. System alerts shall be parameterised and monitored in terms of various applicable",
+      "text": "37. System alerts shall be parameterised and monitored in terms of various applicable\nparameters. Such parameters, as applicable could be: transaction velocity (e.g.,\nfund transfers, cash withdrawals, payments through electronic modes, adding new\nbeneficiaries, etc.) in a short period, more so in the accounts of customers who've\nnever used mobile app/ internet banking/ card ever (depending upon the type of\npayment channel), high risk merchant category codes (MCC) parameters,\ncounterfeit card parameters (String of Invalid CVV/ PINs indicates an account\ngeneration attack), new account parameters (excessive activity on a new account),\ntime zones, geo-locations, IP address origin (in respect of unusual patterns,\nprohibited zones/ rogue IPs), behavioural biometrics, transaction origination from\npoint of compromise, transactions to mobile wallets/ mobile numbers/ VPAs on\nwhom vishing fraud or other types of fraud is/are registered/ recorded, declined\ntransactions, transactions with no approval code, etc.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n38"
+      ],
+      "block_ids": [
+        "p11_b13",
+        "p11_b14",
+        "p11_b15",
+        "p11_b16",
+        "p11_b17",
+        "p11_b18",
+        "p11_b19",
+        "p11_b20",
+        "p11_b21",
+        "p11_b22",
+        "p11_b23",
+        "p11_b24",
+        "p11_b25"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu38",
+      "document_id": "MD12032",
+      "title": "38. Fraud analysis shall be conducted to identify the reason for fraud occurrence and",
+      "text": "38. Fraud analysis shall be conducted to identify the reason for fraud occurrence and\ndetermine mechanism to prevent such frauds.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n39"
+      ],
+      "block_ids": [
+        "p12_b1",
+        "p12_b2"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu39",
+      "document_id": "MD12032",
+      "title": "39. The staff, especially in the fraud control function, shall be educated about frauds",
+      "text": "39. The staff, especially in the fraud control function, shall be educated about frauds\nand trained in the following skills and areas of expertise:\na) Fraud control tools and their usage;\nb) Investigative techniques and procedures;\nc) Cardholder and merchant education techniques to prevent fraud;\nd) Scheme/ Card operating regulations;\ne) Data processing and analysis and liaising or communicating with law\nenforcement agencies; and f) The requisite skills required to (i) set and update appropriate rules, (ii) monitor the exceptions thrown based on the rules on a continuous basis and take necessary actions promptly, (iii) communicate/ escalate wherever required to appropriate authorities, and (iv) differentiate false positives from the rest.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n40"
+      ],
+      "block_ids": [
+        "p12_b3",
+        "p12_b4",
+        "p12_b5",
+        "p12_b6"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu40",
+      "document_id": "MD12032",
+      "title": "40. REs shall maintain updated contact details of service providers, intermediaries,",
+      "text": "40. REs shall maintain updated contact details of service providers, intermediaries,\nexternal agencies and other stakeholders (including other REs) for coordination in\nincident response. REs shall put in place a mechanism with the stakeholders to\nupdate and verify such contact details. REs shall also formulate specific SOPs to\nhandle incidents related to payment ecosystem to mitigate the loss either to the\ncustomer or RE.\nReconciliation Mechanism",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n41"
+      ],
+      "block_ids": [
+        "p12_b7",
+        "p12_b8",
+        "p12_b9",
+        "p12_b10",
+        "p12_b11",
+        "p12_b12",
+        "p12_b13"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu41",
+      "document_id": "MD12032",
+      "title": "41. A real time/ near-real time (not later than 24 hours from the time of receipt of",
+      "text": "41. A real time/ near-real time (not later than 24 hours from the time of receipt of\nsettlement file(s)) reconciliation framework for all digital payment transactions\nbetween RE and all other stakeholders such as payment system operators,\nbusiness correspondents, card networks, payment system processors, payment\naggregators, payment gateways, third party technology service providers, other\nparticipants, etc., shall be put in place for better detection and prevention of\nsuspicious transactions. A mechanism shall be introduced to monitor the\nimplementation and effectiveness of such framework.\nCustomer Protection, Awareness and Grievance Redressal Mechanism",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n42"
+      ],
+      "block_ids": [
+        "p12_b14",
+        "p12_b15",
+        "p12_b16",
+        "p12_b17",
+        "p12_b18",
+        "p12_b19",
+        "p12_b20",
+        "p12_b21",
+        "p12_b22"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu42",
+      "document_id": "MD12032",
+      "title": "42. REs shall incorporate secure, safe and responsible usage guidelines and training",
+      "text": "42. REs shall incorporate secure, safe and responsible usage guidelines and training\nmaterials for end users within the digital payment applications. They shall also make\nit mandatory (i.e. not providing any option to circumvent/ avoid the material) for the\nconsumer to go through secure usage guidelines (even in the consumer's preferred\nlanguage) while obtaining and recording confirmation during the on-boarding\nprocedure in the first instance and first use after each update of the digital payment\napplication or after major updates to secure and safe usage guidelines.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n43"
+      ],
+      "block_ids": [
+        "p12_b23",
+        "p12_b24",
+        "p12_b25",
+        "p12_b26",
+        "p12_b27",
+        "p13_b1",
+        "p13_b2"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu43",
+      "document_id": "MD12032",
+      "title": "43. REs shall mention/ incorporate a section on the digital payment application clearly",
+      "text": "43. REs shall mention/ incorporate a section on the digital payment application clearly\nspecifying the process and procedure (with forms/ contact information, etc.) to lodge\nconsumer grievances. A mechanism to keep this information periodically updated\nshall also be put in place. The reporting facility on the application shall provide an\noption for registering a grievance. Customer dispute handling, reporting and\nresolution procedures, including the expected timelines for the RE's response\nshould be clearly defined.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n44"
+      ],
+      "block_ids": [
+        "p13_b3",
+        "p13_b4",
+        "p13_b5",
+        "p13_b6",
+        "p13_b7",
+        "p13_b8",
+        "p13_b9"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu44",
+      "document_id": "MD12032",
+      "title": "44. REs shall adhere to extant instructions4, updated from time to time, to put in place",
+      "text": "44. REs shall adhere to extant instructions4, updated from time to time, to put in place\nsystem/s for online dispute resolution for resolving disputes and grievances of\ncustomers pertaining to digital payments.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n45"
+      ],
+      "block_ids": [
+        "p13_b10",
+        "p13_b11",
+        "p13_b12"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu45",
+      "document_id": "MD12032",
+      "title": "45. REs shall educate customers about the need to maintain the physical and logical",
+      "text": "45. REs shall educate customers about the need to maintain the physical and logical\nsecurity of their devices accessing digital payment products and services including\nrecommending secure/ regular installation of operating system and application\nupdates, downloading applications only from authorised sources, having anti-\nmalware/ anti-virus applications on devices, etc.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n46"
+      ],
+      "block_ids": [
+        "p13_b13",
+        "p13_b14",
+        "p13_b15",
+        "p13_b16",
+        "p13_b17"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu46",
+      "document_id": "MD12032",
+      "title": "46. REs shall ensure that its customers are provided information about the risks,",
+      "text": "46. REs shall ensure that its customers are provided information about the risks,\nbenefits and liabilities of using digital payment products and its related services\nbefore they subscribe to them. Customers shall also be informed clearly and\nprecisely on their rights, obligations and responsibilities on matters relating to digital\npayments, and, any problems that may arise from its service unavailability,\nprocessing errors and security breaches. The terms and conditions including\ncustomer privacy and security policy applying to digital payment products and\nservices shall be readily available to customers within the product. All digital\nchannels are to be offered on express willingness of customers and shall not be\nbundled without their knowledge.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n47"
+      ],
+      "block_ids": [
+        "p13_b18",
+        "p13_b19",
+        "p13_b20",
+        "p13_b21",
+        "p13_b22",
+        "p13_b23",
+        "p13_b24",
+        "p13_b25",
+        "p13_b26",
+        "p13_b27"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu47",
+      "document_id": "MD12032",
+      "title": "47. Whenever new operating features or functions, particularly those relating to",
+      "text": "47. Whenever new operating features or functions, particularly those relating to\nsecurity, integrity and authentication, are introduced to online delivery channels,\n4 RBI/2020-21/21 DPSS.CO.PD No.116/02.12.004/2020-21 circular dated August 6, 2020 on 'Online Dispute Resolution (ODR) System for Digital Payments'\nclear and effective communication followed by sufficient instructions to properly\nutilise such new features should be provided to the customers.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n48"
+      ],
+      "block_ids": [
+        "p13_b28",
+        "p13_b29",
+        "p13_b30",
+        "p14_b1",
+        "p14_b2"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu48",
+      "document_id": "MD12032",
+      "title": "48. REs may continuously create public awareness on the types of threats and attacks",
+      "text": "48. REs may continuously create public awareness on the types of threats and attacks\nused against the consumers while using digital payment products and\nprecautionary measures to safeguard against the same. Customers shall be\ncautioned against commonly known threats in recent times like phishing, vishing,\nreverse-phishing, remote access of mobile devices and educated to secure and\nsafeguard their account details, credentials, PIN, card details, devices, etc.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n49"
+      ],
+      "block_ids": [
+        "p14_b3",
+        "p14_b4",
+        "p14_b5",
+        "p14_b6",
+        "p14_b7",
+        "p14_b8"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu49",
+      "document_id": "MD12032",
+      "title": "49. REs shall provide digital payment products and services, to a customer only at her/",
+      "text": "49. REs shall provide digital payment products and services, to a customer only at her/\nhis option based on specific written or authenticated electronic requisition along with\na positive acknowledgement of the terms and conditions.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n50"
+      ],
+      "block_ids": [
+        "p14_b9",
+        "p14_b10",
+        "p14_b11"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu50",
+      "document_id": "MD12032",
+      "title": "50. REs should provide a mechanism on their mobile and internet banking application",
+      "text": "50. REs should provide a mechanism on their mobile and internet banking application\nfor their customers to, with necessary authentication, identify/ mark a transaction\nas fraudulent for seamless and immediate notification to his RE. On such\nnotification by the customer, the REs may endeavour to build the capability for\nseamless/ instant reporting of fraudulent transactions to the corresponding\nbeneficiary/ counterparty's RE; vice-versa have mechanism to receive such\nfraudulent transactions reported from other REs. The objective of this mechanism\nis to accelerate early detection and enable the banking/ payment system to trace\nthe transaction trail and mitigate the loss to the defrauded customer at the earliest\npossible time.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n51"
+      ],
+      "block_ids": [
+        "p14_b12",
+        "p14_b13",
+        "p14_b14",
+        "p14_b15",
+        "p14_b16",
+        "p14_b17",
+        "p14_b18",
+        "p14_b19",
+        "p14_b20",
+        "p14_b21"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu51",
+      "document_id": "MD12032",
+      "title": "Chapter III",
+      "text": "Chapter III\nINTERNET BANKING SECURITY CONTROLS\nIn addition to the controls prescribed in Chapter II, the following instructions are\napplicable to REs offering/ intending to offer internet banking facility to their customers:",
+      "node_type": "chapter",
+      "level": 2,
+      "page_range": [
+        15
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n52",
+        "MD12032_n53",
+        "MD12032_n54",
+        "MD12032_n55",
+        "MD12032_n56"
+      ],
+      "block_ids": [
+        "p15_b1",
+        "p15_b2",
+        "p15_b3",
+        "p15_b4",
+        "p15_b5",
+        "p15_b6",
+        "p15_b7",
+        "p15_b8",
+        "p15_b9",
+        "p15_b10",
+        "p15_b11",
+        "p15_b12",
+        "p15_b13",
+        "p15_b14",
+        "p15_b15",
+        "p15_b16",
+        "p15_b17",
+        "p15_b18",
+        "p15_b19",
+        "p15_b20",
+        "p15_b21",
+        "p15_b22"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu52",
+      "document_id": "MD12032",
+      "title": "51. Internet banking websites are vulnerable to authentication related brute force",
+      "text": "51. Internet banking websites are vulnerable to authentication related brute force\nattacks/ application layer Denial of Service (DoS) attacks. Based on the RE's\nindividual risk/ vulnerability assessment on authentication-related attacks such as\nbrute force/ DoS attacks, REs shall implement additional levels of authentication to\ninternet banking website such as adaptive authentication, strong CAPTCHA\n(preferably with anti-bot features) with server-side validation, etc., in order to plug\nthis vulnerability and prevent its exploitation. Appropriate measures shall be taken\nto prevent DNS cache poisoning attacks and for secure handling of cookies. Virtual\nkeyboard option should be made available.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        15
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n53"
+      ],
+      "block_ids": [
+        "p15_b5",
+        "p15_b6",
+        "p15_b7",
+        "p15_b8",
+        "p15_b9",
+        "p15_b10",
+        "p15_b11",
+        "p15_b12",
+        "p15_b13"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu53",
+      "document_id": "MD12032",
+      "title": "52. An online session shall be automatically terminated after a fixed period of inactivity.",
+      "text": "52. An online session shall be automatically terminated after a fixed period of inactivity.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        15
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n54"
+      ],
+      "block_ids": [
+        "p15_b14"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu54",
+      "document_id": "MD12032",
+      "title": "53. Secure delivery of password for login purpose shall be ensured. The password",
+      "text": "53. Secure delivery of password for login purpose shall be ensured. The password\ngenerated and dispatched by the RE should be valid for a limited period from the\ndate of its creation. If the password is generated and dispatched by the RE, then,\nthe user shall be compulsorily required to change the password, on the first login.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        15
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n55"
+      ],
+      "block_ids": [
+        "p15_b15",
+        "p15_b16",
+        "p15_b17",
+        "p15_b18"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu55",
+      "document_id": "MD12032",
+      "title": "54. When the internet banking application is accessed through external websites (eg:",
+      "text": "54. When the internet banking application is accessed through external websites (eg:\nin case of payment of taxes, e-commerce transactions, etc.), the procedure for\nauthentication and the appearance/ look and feel of the RE's internet banking site\nshould be made uniform as far as possible.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        15
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n56"
+      ],
+      "block_ids": [
+        "p15_b19",
+        "p15_b20",
+        "p15_b21",
+        "p15_b22"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu56",
+      "document_id": "MD12032",
+      "title": "Chapter IV",
+      "text": "Chapter IV\nMOBILE PAYMENTS APPLICATION SECURITY CONTROLS\nIn addition to the controls prescribed in Chapter II, the following instructions are\napplicable to the REs offering/ intending to offer mobile banking/ mobile payments\nfacility to their customers through mobile application:",
+      "node_type": "chapter",
+      "level": 2,
+      "page_range": [
+        16,
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n57",
+        "MD12032_n58",
+        "MD12032_n59",
+        "MD12032_n60",
+        "MD12032_n61",
+        "MD12032_n62",
+        "MD12032_n63",
+        "MD12032_n64",
+        "MD12032_n65",
+        "MD12032_n66",
+        "MD12032_n67",
+        "MD12032_n68",
+        "MD12032_n69"
+      ],
+      "block_ids": [
+        "p16_b1",
+        "p16_b2",
+        "p16_b3",
+        "p16_b4",
+        "p16_b5",
+        "p16_b6",
+        "p16_b7",
+        "p16_b8",
+        "p16_b9",
+        "p16_b10",
+        "p16_b11",
+        "p16_b12",
+        "p16_b13",
+        "p16_b14",
+        "p16_b15",
+        "p16_b16",
+        "p16_b17",
+        "p16_b18",
+        "p16_b19",
+        "p16_b20",
+        "p16_b21",
+        "p16_b22",
+        "p16_b23",
+        "p16_b24",
+        "p17_b1",
+        "p17_b2",
+        "p17_b3",
+        "p17_b4",
+        "p17_b5",
+        "p17_b6",
+        "p17_b7",
+        "p17_b8",
+        "p17_b9",
+        "p17_b10",
+        "p17_b11",
+        "p17_b12",
+        "p17_b13",
+        "p17_b14",
+        "p17_b15",
+        "p17_b16",
+        "p17_b17",
+        "p17_b18",
+        "p17_b19",
+        "p17_b20",
+        "p17_b21",
+        "p17_b22",
+        "p17_b23",
+        "p17_b24",
+        "p17_b25",
+        "p17_b26",
+        "p17_b27",
+        "p17_b28",
+        "p17_b29"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu57",
+      "document_id": "MD12032",
+      "title": "55. On detection of any anomalies or exceptions for which the mobile application was",
+      "text": "55. On detection of any anomalies or exceptions for which the mobile application was\nnot programmed, the customer shall be directed to remove the current copy/\ninstance of the application and proceed with installation of a new copy/ instance of\nthe application. REs shall be able to verify the version of the mobile application\nbefore the transactions are enabled.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        16
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n58"
+      ],
+      "block_ids": [
+        "p16_b6",
+        "p16_b7",
+        "p16_b8",
+        "p16_b9",
+        "p16_b10"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu58",
+      "document_id": "MD12032",
+      "title": "56. Specific Controls for mobile applications include:",
+      "text": "56. Specific Controls for mobile applications include:\na) Device policy enforcement (allowing app installation/ execution after baseline\nrequirements are met);\nb) Application secure download/ install;\nc) Deactivating older application versions in a phased but time bound manner (not\nexceeding six months from the date of release of newer version) i.e., maintaining only one version (excluding the overlap period while phasing out older version) of the mobile application on a platform/ operating system;\nd) Storage of customer data;\ne) Device or application encryption;\nf) Ensuring minimal data collection/ app permissions;\ng) Application sandbox/ containerisation;\nh) Ability to identify remote access applications (to the extent possible) and\nprohibit login access to the mobile application, as a matter of precaution; and i) Code obfuscation.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        16
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n59"
+      ],
+      "block_ids": [
+        "p16_b11",
+        "p16_b12",
+        "p16_b13",
+        "p16_b14",
+        "p16_b15"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu59",
+      "document_id": "MD12032",
+      "title": "57. REs may consider to perform validation on the security and compatibility condition",
+      "text": "57. REs may consider to perform validation on the security and compatibility condition\nof the device/ operating system and the mobile application to ensure that activities\nrelating to the account are put through the mobile application in a safe and secure\nmanner.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        16
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n60"
+      ],
+      "block_ids": [
+        "p16_b16",
+        "p16_b17",
+        "p16_b18",
+        "p16_b19"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu60",
+      "document_id": "MD12032",
+      "title": "58. REs may explore the feasibility of implementing a code that checks if the device is",
+      "text": "58. REs may explore the feasibility of implementing a code that checks if the device is\nrooted/ jailbroken prior to the installation of the mobile application and disallow the\nmobile application to install/ function if the phone is rooted/ jailbroken.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        16
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n61"
+      ],
+      "block_ids": [
+        "p16_b20",
+        "p16_b21",
+        "p16_b22"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu61",
+      "document_id": "MD12032",
+      "title": "59. Checksum of current active version of application shall be hosted on public platform",
+      "text": "59. Checksum of current active version of application shall be hosted on public platform\nso that users can verify the same.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        16
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n62"
+      ],
+      "block_ids": [
+        "p16_b23",
+        "p16_b24"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu62",
+      "document_id": "MD12032",
+      "title": "60. REs shall ensure device binding of mobile application5.",
+      "text": "60. REs shall ensure device binding of mobile application5.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n63"
+      ],
+      "block_ids": [
+        "p17_b1"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu63",
+      "document_id": "MD12032",
+      "title": "61. Considering that the additional factor of authentication and mobile application may",
+      "text": "61. Considering that the additional factor of authentication and mobile application may\nreside on the same mobile device in the case of mobile banking, mobile payments,\nREs may consider implementing alternatives to SMS-based OTP authentication\nmechanisms.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n64"
+      ],
+      "block_ids": [
+        "p17_b2",
+        "p17_b3",
+        "p17_b4",
+        "p17_b5"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu64",
+      "document_id": "MD12032",
+      "title": "62. The mobile application should require re-authentication whenever the device or",
+      "text": "62. The mobile application should require re-authentication whenever the device or\napplication remains unused for a designated period and each time the user\nlaunches the application. Applications must be able to identify new network\nconnections or connections from unsecured networks like unsecured Wi-Fi\nconnections and must implement appropriate authentication/ checks/ measures to\nperform transactions under those circumstances.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n65"
+      ],
+      "block_ids": [
+        "p17_b6",
+        "p17_b7",
+        "p17_b8",
+        "p17_b9",
+        "p17_b10",
+        "p17_b11"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu65",
+      "document_id": "MD12032",
+      "title": "63. The mobile application should not store/ retain sensitive personal/ consumer",
+      "text": "63. The mobile application should not store/ retain sensitive personal/ consumer\nauthentication information such as user IDs, passwords, keys, hashes, hard coded\nreferences on the device and the application should securely wipe any sensitive\ncustomer information from memory when the customer/ user exits the application.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n66"
+      ],
+      "block_ids": [
+        "p17_b12",
+        "p17_b13",
+        "p17_b14",
+        "p17_b15"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu66",
+      "document_id": "MD12032",
+      "title": "64. REs shall ensure that their mobile application limit the writing of sensitive",
+      "text": "64. REs shall ensure that their mobile application limit the writing of sensitive\ninformation into 'temp' files. The sensitive information written in such files must be\nsuitably encrypted/ masked/ hashed and stored securely.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n67"
+      ],
+      "block_ids": [
+        "p17_b16",
+        "p17_b17",
+        "p17_b18"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu67",
+      "document_id": "MD12032",
+      "title": "65. REs may consider designing anti-malware capabilities into their mobile",
+      "text": "65. REs may consider designing anti-malware capabilities into their mobile\napplications.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n68"
+      ],
+      "block_ids": [
+        "p17_b19",
+        "p17_b20"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu68",
+      "document_id": "MD12032",
+      "title": "66. REs shall ensure that the usage of raw (visible) SQL queries in mobile applications",
+      "text": "66. REs shall ensure that the usage of raw (visible) SQL queries in mobile applications\nto fetch or update data from databases is avoided. Mobile applications should be\nsecured from SQL injection type of vulnerabilities. Sensitive information should be\nwritten to the database in an encrypted form. Web content, as part of the mobile\napplication's layout, should not be loaded if errors are detected during SSL/ TLS\nnegotiation. Certificate errors on account of the certificate not being signed by a\nrecognised certificate authority; expiry/ revocation of the certificate must be\ndisplayed to the user.\n5 The device binding should be preferably implemented through a combination of hardware, software and service information.\nIn case, the RE allows multiple devices to be registered, then, (a) the user must be notified of every new device registration on multiple channels such as registered mobile number, email or phone call and (b) in relation to the mobile application, RE must maintain a record of all registered devices, providing the user a facility to disable a registered device.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n69"
+      ],
+      "block_ids": [
+        "p17_b21",
+        "p17_b22",
+        "p17_b23",
+        "p17_b24",
+        "p17_b25",
+        "p17_b26",
+        "p17_b27",
+        "p17_b28",
+        "p17_b29"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu69",
+      "document_id": "MD12032",
+      "title": "Chapter V",
+      "text": "Chapter V\nCARD PAYMENTS SECURITY\nIn addition to the controls prescribed in Chapter II, the following instructions are\napplicable to the REs offering/ intending to issue cards (credit/ debit/ prepaid) (physical\nor virtual) to their customers:",
+      "node_type": "chapter",
+      "level": 2,
+      "page_range": [
+        18,
+        19
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n70",
+        "MD12032_n71",
+        "MD12032_n72",
+        "MD12032_n73",
+        "MD12032_n74",
+        "MD12032_n75",
+        "MD12032_n76",
+        "MD12032_n77"
+      ],
+      "block_ids": [
+        "p18_b1",
+        "p18_b2",
+        "p18_b3",
+        "p18_b4",
+        "p18_b5",
+        "p18_b6",
+        "p18_b7",
+        "p18_b8",
+        "p18_b9",
+        "p18_b10",
+        "p18_b11",
+        "p18_b12",
+        "p18_b13",
+        "p18_b14",
+        "p18_b15",
+        "p18_b16",
+        "p18_b17",
+        "p18_b18",
+        "p18_b19",
+        "p18_b20",
+        "p18_b21",
+        "p18_b22",
+        "p18_b23",
+        "p18_b24",
+        "p18_b25",
+        "p18_b26",
+        "p18_b27",
+        "p18_b28",
+        "p19_b1",
+        "p19_b2",
+        "p19_b3",
+        "p19_b4",
+        "p19_b5",
+        "p19_b6",
+        "p19_b7",
+        "p19_b8",
+        "p19_b9",
+        "p19_b10",
+        "p19_b11",
+        "p19_b12",
+        "p19_b13",
+        "p19_b14",
+        "p19_b15",
+        "p19_b16",
+        "p19_b17",
+        "p19_b18",
+        "p19_b19",
+        "p19_b20",
+        "p19_b21",
+        "p19_b22",
+        "p19_b23",
+        "p19_b24",
+        "p19_b25",
+        "p19_b26",
+        "p20_b1",
+        "p20_b2",
+        "p20_b3",
+        "p21_b1",
+        "p21_b2",
+        "p21_b3",
+        "p21_b4",
+        "p21_b5",
+        "p21_b6",
+        "p21_b7",
+        "p21_b8",
+        "p21_b9",
+        "p21_b10",
+        "p21_b11",
+        "p21_b12",
+        "p21_b13",
+        "p21_b14",
+        "p21_b15",
+        "p21_b16",
+        "p21_b17",
+        "p21_b18",
+        "p21_b19",
+        "p21_b20",
+        "p21_b21",
+        "p21_b22",
+        "p21_b23",
+        "p21_b24",
+        "p21_b25",
+        "p21_b26",
+        "p21_b27",
+        "p21_b28",
+        "p21_b29",
+        "p21_b30",
+        "p21_b31",
+        "p21_b32",
+        "p22_b1",
+        "p22_b2",
+        "p22_b3",
+        "p22_b4",
+        "p22_b5",
+        "p22_b6",
+        "p22_b7",
+        "p22_b8",
+        "p22_b9",
+        "p22_b10",
+        "p22_b11",
+        "p22_b12",
+        "p22_b13",
+        "p22_b14",
+        "p22_b15",
+        "p22_b16",
+        "p22_b17",
+        "p22_b18",
+        "p22_b19",
+        "p22_b20",
+        "p22_b21",
+        "p22_b22",
+        "p22_b23",
+        "p22_b24"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu70",
+      "document_id": "MD12032",
+      "title": "67. REs shall follow various payment card standards (over and above PCI-DSS and",
+      "text": "67. REs shall follow various payment card standards (over and above PCI-DSS and\nPA-DSS6) as per Payment Card Industry (PCI) prescriptions for comprehensive\npayment card security as per applicability/ readiness of updated versions of the\nstandards such as -\na) PCI-PIN (secure management, processing, and transmission of personal\nidentification number (PIN) data);\nb) PCI-PTS (security approval framework addresses the logical and/ or physical\nprotection of cardholder and other sensitive data at point of interaction (POI) devices and hardware security modules (HSMs);\nc) PCI-HSM (securing cardholder-authentication applications and processes\nincluding key generation, key injection, PIN verification, secure encryption algorithm, etc.); and d) PCI-P2PE (security standard that requires payment card information to be\nencrypted instantly upon its initial swipe and then securely transferred directly to the payment processor).",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        18
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n71"
+      ],
+      "block_ids": [
+        "p18_b6",
+        "p18_b7",
+        "p18_b8",
+        "p18_b9",
+        "p18_b10",
+        "p18_b11",
+        "p18_b12",
+        "p18_b13",
+        "p18_b14"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu71",
+      "document_id": "MD12032",
+      "title": "68. REs should ensure that terminals installed at the merchants for capturing card",
+      "text": "68. REs should ensure that terminals installed at the merchants for capturing card\ndetails for payments or otherwise are validated against the PCI-P2PE program to\nuse PCI-approved P2PE solutions; PoS terminals with PIN entry installed at the\nmerchants for capturing card payments (including the double swipe terminals) are\napproved by the PCI-PTS program.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        18
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n72"
+      ],
+      "block_ids": [
+        "p18_b15",
+        "p18_b16",
+        "p18_b17",
+        "p18_b18",
+        "p18_b19"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu72",
+      "document_id": "MD12032",
+      "title": "69. Acquirers shall secure their card payment infrastructure (Unique Key Per Terminal",
+      "text": "69. Acquirers shall secure their card payment infrastructure (Unique Key Per Terminal\n- UKPT or Derived Unique Key Per Transaction - DUKPT/ Terminal Line\nEncryption - TLE).",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        18
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n73",
+        "MD12032_n74"
+      ],
+      "block_ids": [
+        "p18_b20",
+        "p18_b21",
+        "p18_b22"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu73",
+      "document_id": "MD12032",
+      "title": "70. The security controls to be implemented at HSM are:",
+      "text": "70. The security controls to be implemented at HSM are:\na) The HSMs should have logging enabled, the logs must themselves be tamper\nproof;\nb) HSM can become a single point of failure. This needs to be mitigated by\n'clustering' for high availability and ensure secure backups;\nc) Access to the HSM should be controlled through Access Control Lists (ACLs);\nd) Separate ACLs should be maintained for each individual application to ensure\napplication level isolation;\ne) All access to HSM should be managed and monitored using a robust Privileged\nIdentity and Access Management solution;\nf) Decryption and validation of keys, PIN should be done at HSM;\n\n6 PCI Secure Software Standard, a PCI standard within PCI Software Security Framework (SSF) will replace PA-DSS as the primary standard for securing payment software in 2022. (ref: PCI security standards website)\ng) Card PIN generation and printing should be directly at system connected HSM;\nh) CVV generation and validation should be done at HSM;\ni) Ensure HSM is implemented with secure PIN block format with controls to disable outputting PIN block in weaker format;\nj) Secure key management for HSMs (such as LMKs, etc.); and k) Security of the physical keys of the HSM device should be properly maintained.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        18
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n75"
+      ],
+      "block_ids": [
+        "p18_b23",
+        "p18_b24",
+        "p18_b25",
+        "p18_b26",
+        "p18_b27",
+        "p18_b28",
+        "p19_b1"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu74",
+      "document_id": "MD12032",
+      "title": "71. REs shall implement the following for improving the security posture of the ATM:",
+      "text": "71. REs shall implement the following for improving the security posture of the ATM:\na) Implement security measures such as BIOS password, disabling USB ports,\ndisabling auto-run facility, applying the latest patches of operating system and other softwares, terminal security solution, time-based admin access, etc;\nb) Implement anti-skimming and whitelisting solution; and c) Upgrade all the ATMs with supported versions of operating system. Use of\nATMs that have unsupported operating systems shall be prohibited.\n\n72. REs shall ensure robust surveillance/ monitoring of card transactions (especially\noverseas cash withdrawals) and setting up of rules and limits commensurate with\ntheir risk appetites. REs shall take up with the card network and/ or ATM network\nas the case may be, to put in place transaction limits at Card, BIN as well as at the\nRE level. Such limits shall be mandatorily set at the card network switch itself. Limits\ncould be mandated both for domestic as well as international transactions\nseparately. REs shall put in place transaction control mechanisms with necessary\ncaps (restrictions on transactions), if any of the limits set as per the above\nrequirement is breached. A periodic review mechanism of such limits set as per the\nrisk appetite of the RE shall be put in place as per the Board-approved policy. REs\nshall institute a mechanism to monitor breaches, if any, on a 24x7 basis, including\nweekends, long holidays and put in place a robust incident response mechanism to\nmitigate the fraud loss, on account of suspicious transactions, if any. REs shall\nensure that card details of the customers are not stored in plain text at the RE and\nits vendor(s) locations, systems and applications. REs shall also ensure that the\nprocessing of card details in readable format is performed in a secure manner to\nstrictly avoid data leakage of sensitive customer information.",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        19
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n76"
+      ],
+      "block_ids": [
+        "p19_b2",
+        "p19_b3",
+        "p19_b4",
+        "p19_b5",
+        "p19_b6",
+        "p19_b7",
+        "p19_b8",
+        "p19_b9",
+        "p19_b10",
+        "p19_b11",
+        "p19_b12",
+        "p19_b13",
+        "p19_b14",
+        "p19_b15",
+        "p19_b16",
+        "p19_b17",
+        "p19_b18",
+        "p19_b19",
+        "p19_b20",
+        "p19_b21"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    },
+    {
+      "logical_unit_id": "MD12032_lu75",
+      "document_id": "MD12032",
+      "title": "73. REs that use card data scanning tools to identify unencrypted (clear text) payments",
+      "text": "73. REs that use card data scanning tools to identify unencrypted (clear text) payments\ncard data in their ecosystem especially during audits shall adhere to the following\nsafety measures:\na) Any tool (procured by/ from a third-party) for the purpose of scanning of\nunencrypted card data should first be tested in a test environment to understand the scope and impact of the tool's capabilities;\nb) The scanning tool should be installed only in the RE's premises on their devices;\nc) Card data scanning should not be done remotely;\nd) The discovered data, if any, must preferably reside in the scanning tool.\nExportable card data must be appropriately masked. (No data, even masked, must be taken out of the RE's premises/ infrastructure); and e) Limited access to service providers to conduct the scan or analyse the data, if\nat all, must be provided only on the RE's devices.\nAcronyms\nACL\n\nAccess Control List\nASLC Application Security Life Cycle\nATM\n\nAutomated Teller Machine\nBIN\n\nBank Identification Number\nBIOS Basic Input/ Output System\nCAPTCHA\n\nCompletely Automated Public Turing test to tell Computers and Humans Apart\nCVV\n\nCard Verification Value\nDDoS Distributed Denial of Service\nDNS\n\nDomain Name Server\nDoR Department of Regulation\nDoS\n\nDepartment of Supervision\nDPSS Department of Payment and Settlement Systems\nDUKPT\n\nDerived Unique Key per Transaction\nEMV\n\nEuropay, Mastercard, and Visa\nFSP Functionality, Security and Performance\nHSM Hardware Security Module\nHTML HyperText Markup Language\nIP\n\nInternet Protocol\nIT\n\nInformation Technology\nIVR\n\nInteractive Voice Response\nLMK Local Master Key\nMCC Merchant Category Code\nMITB Man-in-The Browser attack\nMITM Man-In-the-Middle attack\nNIST National Institute of Standards and Technology\nOEM Original Equipment Manufacturer\nOTP\n\nOne Time Password\nOWASP\n\nOpen Web Application Security Project\nOWASP-ASVS\n\nOpen Web Application Security Project - Application Security Verification Standard\nOWASP-MASVS\n\nOpen Web Application Security Project - Mobile Application Security Verification Standard\nPA-DSS\n\nPayment Application Data Security Standard\nPCI\n\nPayment Card Industry\nPCI-DSS\n\nPayment Card Industry-Data Security Standard\nPCI-HSM Payment Card Industry-Hardware Security Module\nPCI-P2PE\n\nPayment Card Industry-Point to Point Encryption\nPCI-PTS Payment Card Industry-PIN Transaction Security\nPIN\n\nPersonal Identification Number\nPKI\n\nPublic Key Infrastructure\nPoS\n\nPoint of Sale\nPT Penetration Testing\nRBI\n\nReserve Bank of India\nRCSA Risk Control Self-Assessment\nREs\n\nRegulated Entities\nSIM\n\nSubscriber Identification Module\nSOP\n\nStandard Operating Procedure\nSQL\n\nStructured Query Language\nSSL\n\nSecure Socket Layer\nTLE\n\nTerminal Line Encryption\nTLS\n\nTransport Layer Security\nUAT User Acceptance Test\nUKPT Unique Key Per terminal\nUSB\n\nUniversal Serial Bus\nVA Vulnerability Assessment\nVPA\n\nVirtual Payment Address\nWAF Web Application Firewall",
+      "node_type": "section",
+      "level": 3,
+      "page_range": [
+        19
+      ],
+      "hierarchy_node_ids": [
+        "MD12032_n77"
+      ],
+      "block_ids": [
+        "p19_b22",
+        "p19_b23",
+        "p19_b24",
+        "p19_b25",
+        "p19_b26",
+        "p20_b1",
+        "p20_b2",
+        "p20_b3",
+        "p21_b1",
+        "p21_b2",
+        "p21_b3",
+        "p21_b4",
+        "p21_b5",
+        "p21_b6",
+        "p21_b7",
+        "p21_b8",
+        "p21_b9",
+        "p21_b10",
+        "p21_b11",
+        "p21_b12",
+        "p21_b13",
+        "p21_b14",
+        "p21_b15",
+        "p21_b16",
+        "p21_b17",
+        "p21_b18",
+        "p21_b19",
+        "p21_b20",
+        "p21_b21",
+        "p21_b22",
+        "p21_b23",
+        "p21_b24",
+        "p21_b25",
+        "p21_b26",
+        "p21_b27",
+        "p21_b28",
+        "p21_b29",
+        "p21_b30",
+        "p21_b31",
+        "p21_b32",
+        "p22_b1",
+        "p22_b2",
+        "p22_b3",
+        "p22_b4",
+        "p22_b5",
+        "p22_b6",
+        "p22_b7",
+        "p22_b8",
+        "p22_b9",
+        "p22_b10",
+        "p22_b11",
+        "p22_b12",
+        "p22_b13",
+        "p22_b14",
+        "p22_b15",
+        "p22_b16",
+        "p22_b17",
+        "p22_b18",
+        "p22_b19",
+        "p22_b20",
+        "p22_b21",
+        "p22_b22",
+        "p22_b23",
+        "p22_b24"
+      ],
+      "metadata": {
+        "document_status": "ACTIVE",
+        "source_doc_metadata": {
+          "author": "",
+          "creator": "Acrobat PDFMaker 21 for Word",
+          "producer": "Adobe PDF Library 21.1.170",
+          "creation_date": "D:20210219195312+05'30'",
+          "modification_date": "D:20210219195539+05'30'",
+          "bookmarks_count": 0,
+          "file_size_bytes": 267719,
+          "sha256": "fa38c084267fbd3123aff95b1f69cfb1e802ea31966af35f22ae93b11a148ba9",
+          "toc": []
+        }
+      }
+    }
+  ]
+}
