@@ -1,0 +1,5161 @@
+{
+  "document_id": "MD12986",
+  "title": "MD12986",
+  "document_status": "REPEALED",
+  "reasoned_control_count": 84,
+  "reasoned_controls": [
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req10",
+      "logical_unit_id": "MD12986_lu11",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Prohibition Enforcement",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Regulatory Prohibition Enforcement' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.56,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Regulatory Prohibition Enforcement' based on 'General' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        1
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n12"
+      ],
+      "block_ids": [
+        "p1_b15"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req32",
+      "logical_unit_id": "MD12986_lu24",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n27"
+      ],
+      "block_ids": [
+        "p3_b9",
+        "p3_b10"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req33",
+      "logical_unit_id": "MD12986_lu25",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n28",
+        "MD12986_n29"
+      ],
+      "block_ids": [
+        "p3_b11",
+        "p3_b12"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req34",
+      "logical_unit_id": "MD12986_lu27",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n30"
+      ],
+      "block_ids": [
+        "p3_b13",
+        "p3_b14",
+        "p3_b15",
+        "p3_b16",
+        "p3_b17"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req37",
+      "logical_unit_id": "MD12986_lu29",
+      "regulatory_intent": {
+        "primary_objective": "Protect information assets and ensure system resilience",
+        "mitigated_risk": "Cyber Security Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Cyber Security Governance",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Cyber Security Governance' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Cyber Security Governance' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n32"
+      ],
+      "block_ids": [
+        "p3_b23",
+        "p3_b24",
+        "p3_b25"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req39",
+      "logical_unit_id": "MD12986_lu31",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3,
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n34",
+        "MD12986_n35",
+        "MD12986_n36",
+        "MD12986_n37",
+        "MD12986_n38",
+        "MD12986_n39",
+        "MD12986_n40",
+        "MD12986_n41"
+      ],
+      "block_ids": [
+        "p3_b27",
+        "p4_b0",
+        "p4_b2",
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6",
+        "p4_b7",
+        "p4_b8",
+        "p4_b9",
+        "p4_b10",
+        "p4_b11",
+        "p4_b12",
+        "p4_b13",
+        "p4_b14",
+        "p4_b15",
+        "p4_b16",
+        "p4_b17",
+        "p4_b18",
+        "p4_b19"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req40",
+      "logical_unit_id": "MD12986_lu31",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Vendor & Outsourcing Governance",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Third-Party Risk Assessment",
+        "process_description": "Conducting due diligence on outsourced service providers",
+        "operational_owner": "Vendor Management"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.95,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.93,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Vendor & Outsourcing Governance' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3,
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n34",
+        "MD12986_n35",
+        "MD12986_n36",
+        "MD12986_n37",
+        "MD12986_n38",
+        "MD12986_n39",
+        "MD12986_n40",
+        "MD12986_n41"
+      ],
+      "block_ids": [
+        "p3_b27",
+        "p4_b0",
+        "p4_b2",
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6",
+        "p4_b7",
+        "p4_b8",
+        "p4_b9",
+        "p4_b10",
+        "p4_b11",
+        "p4_b12",
+        "p4_b13",
+        "p4_b14",
+        "p4_b15",
+        "p4_b16",
+        "p4_b17",
+        "p4_b18",
+        "p4_b19"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req41",
+      "logical_unit_id": "MD12986_lu31",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3,
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n34",
+        "MD12986_n35",
+        "MD12986_n36",
+        "MD12986_n37",
+        "MD12986_n38",
+        "MD12986_n39",
+        "MD12986_n40",
+        "MD12986_n41"
+      ],
+      "block_ids": [
+        "p3_b27",
+        "p4_b0",
+        "p4_b2",
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6",
+        "p4_b7",
+        "p4_b8",
+        "p4_b9",
+        "p4_b10",
+        "p4_b11",
+        "p4_b12",
+        "p4_b13",
+        "p4_b14",
+        "p4_b15",
+        "p4_b16",
+        "p4_b17",
+        "p4_b18",
+        "p4_b19"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req44",
+      "logical_unit_id": "MD12986_lu34",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Vendor & Outsourcing Governance",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Third-Party Risk Assessment",
+        "process_description": "Conducting due diligence on outsourced service providers",
+        "operational_owner": "Vendor Management"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.95,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.93,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Vendor & Outsourcing Governance' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n38"
+      ],
+      "block_ids": [
+        "p4_b12",
+        "p4_b13",
+        "p4_b14"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req48",
+      "logical_unit_id": "MD12986_lu38",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        4,
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n42",
+        "MD12986_n43"
+      ],
+      "block_ids": [
+        "p4_b20",
+        "p4_b21",
+        "p4_b22",
+        "p4_b23",
+        "p4_b24",
+        "p5_b0"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req51",
+      "logical_unit_id": "MD12986_lu42",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Third-Party Risk Management' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n47",
+        "MD12986_n48"
+      ],
+      "block_ids": [
+        "p5_b8",
+        "p5_b9",
+        "p5_b10",
+        "p5_b11"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req52",
+      "logical_unit_id": "MD12986_lu44",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Third-Party Risk Management' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        5,
+        6,
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n49",
+        "MD12986_n50",
+        "MD12986_n51",
+        "MD12986_n52",
+        "MD12986_n53",
+        "MD12986_n54",
+        "MD12986_n55",
+        "MD12986_n56",
+        "MD12986_n57",
+        "MD12986_n58",
+        "MD12986_n59",
+        "MD12986_n60"
+      ],
+      "block_ids": [
+        "p5_b12",
+        "p5_b13",
+        "p5_b14",
+        "p5_b15",
+        "p5_b16",
+        "p5_b17",
+        "p5_b18",
+        "p5_b19",
+        "p5_b20",
+        "p5_b21",
+        "p5_b22",
+        "p5_b23",
+        "p5_b24",
+        "p5_b25",
+        "p5_b26",
+        "p5_b27",
+        "p5_b28",
+        "p5_b29",
+        "p6_b0",
+        "p6_b2",
+        "p6_b3",
+        "p6_b4",
+        "p6_b5",
+        "p6_b6",
+        "p6_b7",
+        "p6_b8",
+        "p7_b0"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req53",
+      "logical_unit_id": "MD12986_lu44",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        5,
+        6,
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n49",
+        "MD12986_n50",
+        "MD12986_n51",
+        "MD12986_n52",
+        "MD12986_n53",
+        "MD12986_n54",
+        "MD12986_n55",
+        "MD12986_n56",
+        "MD12986_n57",
+        "MD12986_n58",
+        "MD12986_n59",
+        "MD12986_n60"
+      ],
+      "block_ids": [
+        "p5_b12",
+        "p5_b13",
+        "p5_b14",
+        "p5_b15",
+        "p5_b16",
+        "p5_b17",
+        "p5_b18",
+        "p5_b19",
+        "p5_b20",
+        "p5_b21",
+        "p5_b22",
+        "p5_b23",
+        "p5_b24",
+        "p5_b25",
+        "p5_b26",
+        "p5_b27",
+        "p5_b28",
+        "p5_b29",
+        "p6_b0",
+        "p6_b2",
+        "p6_b3",
+        "p6_b4",
+        "p6_b5",
+        "p6_b6",
+        "p6_b7",
+        "p6_b8",
+        "p7_b0"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req64",
+      "logical_unit_id": "MD12986_lu55",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Prohibition Enforcement",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Regulatory Prohibition Enforcement' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.56,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Regulatory Prohibition Enforcement' based on 'General' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n62"
+      ],
+      "block_ids": [
+        "p7_b3"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req65",
+      "logical_unit_id": "MD12986_lu56",
+      "regulatory_intent": {
+        "primary_objective": "Manage liquidity, market risk, and capital adequacy",
+        "mitigated_risk": "Market & Liquidity Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Customer Due Diligence",
+        "capability_domain": "Treasury"
+      },
+      "business_process": {
+        "primary_process": "Account Opening & KYC Updating",
+        "process_description": "Collection and verification of customer identity documents",
+        "operational_owner": "Retail Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Customer Due Diligence' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.95,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.79,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Customer Due Diligence' based on 'Treasury' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n63",
+        "MD12986_n64",
+        "MD12986_n65",
+        "MD12986_n66",
+        "MD12986_n67"
+      ],
+      "block_ids": [
+        "p7_b4",
+        "p7_b5",
+        "p7_b6",
+        "p7_b7",
+        "p7_b8",
+        "p7_b9",
+        "p7_b10",
+        "p7_b11",
+        "p7_b12",
+        "p7_b13",
+        "p7_b14",
+        "p7_b15",
+        "p7_b16"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req66",
+      "logical_unit_id": "MD12986_lu56",
+      "regulatory_intent": {
+        "primary_objective": "Provide independent assurance of compliance and controls",
+        "mitigated_risk": "Control Failure Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Audit Governance",
+        "capability_domain": "Audit"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Audit Governance' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Audit Governance' based on 'Audit' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n63",
+        "MD12986_n64",
+        "MD12986_n65",
+        "MD12986_n66",
+        "MD12986_n67"
+      ],
+      "block_ids": [
+        "p7_b4",
+        "p7_b5",
+        "p7_b6",
+        "p7_b7",
+        "p7_b8",
+        "p7_b9",
+        "p7_b10",
+        "p7_b11",
+        "p7_b12",
+        "p7_b13",
+        "p7_b14",
+        "p7_b15",
+        "p7_b16"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req71",
+      "logical_unit_id": "MD12986_lu61",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Prohibition Enforcement",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Regulatory Prohibition Enforcement' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.56,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Regulatory Prohibition Enforcement' based on 'General' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n68"
+      ],
+      "block_ids": [
+        "p7_b17",
+        "p7_b18",
+        "p7_b19"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req72",
+      "logical_unit_id": "MD12986_lu61",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        7
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n68"
+      ],
+      "block_ids": [
+        "p7_b17",
+        "p7_b18",
+        "p7_b19"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req73",
+      "logical_unit_id": "MD12986_lu62",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Vendor & Outsourcing Governance",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Third-Party Risk Assessment",
+        "process_description": "Conducting due diligence on outsourced service providers",
+        "operational_owner": "Vendor Management"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Vendor & Outsourcing Governance' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.95,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.79,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Vendor & Outsourcing Governance' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        7,
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n69",
+        "MD12986_n70"
+      ],
+      "block_ids": [
+        "p7_b20",
+        "p7_b21",
+        "p7_b22",
+        "p7_b23",
+        "p7_b24",
+        "p7_b25",
+        "p7_b26",
+        "p7_b27",
+        "p8_b0"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req74",
+      "logical_unit_id": "MD12986_lu62",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        7,
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n69",
+        "MD12986_n70"
+      ],
+      "block_ids": [
+        "p7_b20",
+        "p7_b21",
+        "p7_b22",
+        "p7_b23",
+        "p7_b24",
+        "p7_b25",
+        "p7_b26",
+        "p7_b27",
+        "p8_b0"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req75",
+      "logical_unit_id": "MD12986_lu62",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Regulatory Compliance Obligation' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.56,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        7,
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n69",
+        "MD12986_n70"
+      ],
+      "block_ids": [
+        "p7_b20",
+        "p7_b21",
+        "p7_b22",
+        "p7_b23",
+        "p7_b24",
+        "p7_b25",
+        "p7_b26",
+        "p7_b27",
+        "p8_b0"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req81",
+      "logical_unit_id": "MD12986_lu69",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Vendor & Outsourcing Governance",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Third-Party Risk Assessment",
+        "process_description": "Conducting due diligence on outsourced service providers",
+        "operational_owner": "Vendor Management"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Vendor & Outsourcing Governance' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.95,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.79,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Vendor & Outsourcing Governance' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        8
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n77"
+      ],
+      "block_ids": [
+        "p8_b18",
+        "p8_b19",
+        "p8_b20",
+        "p8_b21"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req82",
+      "logical_unit_id": "MD12986_lu70",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Anti-Money Laundering Controls",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Anti-Money Laundering Controls' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        8,
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n78",
+        "MD12986_n79"
+      ],
+      "block_ids": [
+        "p8_b22",
+        "p8_b23",
+        "p8_b24",
+        "p9_b0"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req84",
+      "logical_unit_id": "MD12986_lu72",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Third-Party Risk Management' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        9
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n81",
+        "MD12986_n82",
+        "MD12986_n83",
+        "MD12986_n84",
+        "MD12986_n85"
+      ],
+      "block_ids": [
+        "p9_b4",
+        "p9_b5",
+        "p9_b6",
+        "p9_b7",
+        "p9_b8",
+        "p9_b9",
+        "p9_b10",
+        "p9_b11",
+        "p9_b12"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req89",
+      "logical_unit_id": "MD12986_lu77",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Governance Obligation Compliance",
+        "capability_domain": "Governance"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Governance Obligation Compliance' based on 'Governance' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        9,
+        10
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n86",
+        "MD12986_n87",
+        "MD12986_n88",
+        "MD12986_n89",
+        "MD12986_n90",
+        "MD12986_n91",
+        "MD12986_n92",
+        "MD12986_n93",
+        "MD12986_n94"
+      ],
+      "block_ids": [
+        "p9_b13",
+        "p9_b14",
+        "p9_b15",
+        "p9_b16",
+        "p9_b17",
+        "p9_b18",
+        "p9_b19",
+        "p9_b20",
+        "p9_b21",
+        "p9_b22",
+        "p9_b23",
+        "p9_b24",
+        "p9_b25",
+        "p9_b26",
+        "p9_b27",
+        "p9_b28",
+        "p10_b0"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req98",
+      "logical_unit_id": "MD12986_lu86",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        10,
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n96",
+        "MD12986_n97",
+        "MD12986_n98",
+        "MD12986_n99",
+        "MD12986_n100",
+        "MD12986_n101",
+        "MD12986_n102",
+        "MD12986_n103",
+        "MD12986_n104",
+        "MD12986_n105",
+        "MD12986_n106",
+        "MD12986_n107"
+      ],
+      "block_ids": [
+        "p10_b4",
+        "p10_b5",
+        "p10_b6",
+        "p10_b7",
+        "p10_b8",
+        "p10_b9",
+        "p10_b10",
+        "p10_b11",
+        "p10_b12",
+        "p10_b13",
+        "p10_b14",
+        "p10_b15",
+        "p10_b16",
+        "p10_b17",
+        "p10_b18",
+        "p10_b19",
+        "p10_b20",
+        "p10_b21",
+        "p10_b22",
+        "p10_b23",
+        "p10_b24",
+        "p10_b25",
+        "p10_b26",
+        "p10_b27",
+        "p10_b28",
+        "p11_b0",
+        "p11_b2",
+        "p11_b3",
+        "p11_b4",
+        "p11_b5"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req102",
+      "logical_unit_id": "MD12986_lu90",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Fraud Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Fraud Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        10
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n100"
+      ],
+      "block_ids": [
+        "p10_b13",
+        "p10_b14",
+        "p10_b15"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req104",
+      "logical_unit_id": "MD12986_lu92",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Vendor & Outsourcing Governance",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Third-Party Risk Assessment",
+        "process_description": "Conducting due diligence on outsourced service providers",
+        "operational_owner": "Vendor Management"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.95,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.93,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Vendor & Outsourcing Governance' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        10
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n102"
+      ],
+      "block_ids": [
+        "p10_b19",
+        "p10_b20",
+        "p10_b21",
+        "p10_b22"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req107",
+      "logical_unit_id": "MD12986_lu95",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Vendor & Outsourcing Governance",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Third-Party Risk Assessment",
+        "process_description": "Conducting due diligence on outsourced service providers",
+        "operational_owner": "Vendor Management"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.95,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.93,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Vendor & Outsourcing Governance' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        10,
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n105",
+        "MD12986_n106"
+      ],
+      "block_ids": [
+        "p10_b27",
+        "p10_b28",
+        "p11_b0"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req110",
+      "logical_unit_id": "MD12986_lu97",
+      "regulatory_intent": {
+        "primary_objective": "Protect information assets and ensure system resilience",
+        "mitigated_risk": "Cyber Security Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Cyber Security Governance",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Cyber Security Governance' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n108"
+      ],
+      "block_ids": [
+        "p11_b6",
+        "p11_b7"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req111",
+      "logical_unit_id": "MD12986_lu98",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n109"
+      ],
+      "block_ids": [
+        "p11_b8",
+        "p11_b9",
+        "p11_b10"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req112",
+      "logical_unit_id": "MD12986_lu99",
+      "regulatory_intent": {
+        "primary_objective": "Protect information assets and ensure system resilience",
+        "mitigated_risk": "Cyber Security Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Cyber Threat Monitoring",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Cyber Threat Monitoring' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Cyber Threat Monitoring' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n110"
+      ],
+      "block_ids": [
+        "p11_b11",
+        "p11_b12",
+        "p11_b13"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req113",
+      "logical_unit_id": "MD12986_lu100",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n111"
+      ],
+      "block_ids": [
+        "p11_b14",
+        "p11_b15",
+        "p11_b16"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req114",
+      "logical_unit_id": "MD12986_lu101",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n112"
+      ],
+      "block_ids": [
+        "p11_b17",
+        "p11_b18",
+        "p11_b19"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req115",
+      "logical_unit_id": "MD12986_lu102",
+      "regulatory_intent": {
+        "primary_objective": "Protect information assets and ensure system resilience",
+        "mitigated_risk": "Cyber Security Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Cyber Security Governance",
+        "capability_domain": "Cyber Security"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Signed submission acknowledgement receipt",
+        "evidence_format": "Portal_Acknowledgement"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "HIGH_IMMUTABLE",
+        "tamper_resistance": "System state/logs are machine-generated and immutable by end-users."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Regulatory Portal",
+        "data_modality": "Browser_Automation"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Regulatory Portal telemetry mapping for 'Cyber Security Governance' based on 'Cyber Security' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n113",
+        "MD12986_n114"
+      ],
+      "block_ids": [
+        "p11_b20",
+        "p11_b21",
+        "p11_b22",
+        "p11_b23",
+        "p11_b24"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req116",
+      "logical_unit_id": "MD12986_lu102",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n113",
+        "MD12986_n114"
+      ],
+      "block_ids": [
+        "p11_b20",
+        "p11_b21",
+        "p11_b22",
+        "p11_b23",
+        "p11_b24"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req118",
+      "logical_unit_id": "MD12986_lu104",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Third-Party Risk Management' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        11
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n115"
+      ],
+      "block_ids": [
+        "p11_b25",
+        "p11_b26",
+        "p11_b27"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req119",
+      "logical_unit_id": "MD12986_lu105",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        11,
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n116",
+        "MD12986_n117",
+        "MD12986_n118",
+        "MD12986_n119",
+        "MD12986_n120",
+        "MD12986_n121",
+        "MD12986_n122",
+        "MD12986_n123",
+        "MD12986_n124",
+        "MD12986_n125",
+        "MD12986_n126"
+      ],
+      "block_ids": [
+        "p11_b28",
+        "p11_b29",
+        "p12_b0",
+        "p12_b2",
+        "p12_b3",
+        "p12_b4",
+        "p12_b5",
+        "p12_b6",
+        "p12_b7",
+        "p12_b8",
+        "p12_b9",
+        "p12_b10",
+        "p12_b11",
+        "p12_b12",
+        "p12_b13",
+        "p12_b14",
+        "p12_b15",
+        "p12_b16",
+        "p12_b17",
+        "p12_b18",
+        "p12_b19"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req127",
+      "logical_unit_id": "MD12986_lu113",
+      "regulatory_intent": {
+        "primary_objective": "Protect information assets and ensure system resilience",
+        "mitigated_risk": "Cyber Security Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Cyber Security Governance",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Cyber Security Governance' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n125"
+      ],
+      "block_ids": [
+        "p12_b15",
+        "p12_b16",
+        "p12_b17"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req129",
+      "logical_unit_id": "MD12986_lu115",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n127"
+      ],
+      "block_ids": [
+        "p12_b20",
+        "p12_b21"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req130",
+      "logical_unit_id": "MD12986_lu116",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Database record reflecting 'Third-Party Risk Management' execution state",
+        "evidence_format": "Database_Record"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Core Banking System (CBS)",
+        "data_modality": "SQL"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Core Banking System (CBS) telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        12
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n128"
+      ],
+      "block_ids": [
+        "p12_b22",
+        "p12_b23",
+        "p12_b24",
+        "p12_b25"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req131",
+      "logical_unit_id": "MD12986_lu117",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        12,
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n129",
+        "MD12986_n130"
+      ],
+      "block_ids": [
+        "p12_b26",
+        "p12_b27",
+        "p12_b28",
+        "p12_b29",
+        "p13_b0",
+        "p13_b2",
+        "p13_b3",
+        "p13_b4",
+        "p13_b5",
+        "p13_b6"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req132",
+      "logical_unit_id": "MD12986_lu117",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        12,
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n129",
+        "MD12986_n130"
+      ],
+      "block_ids": [
+        "p12_b26",
+        "p12_b27",
+        "p12_b28",
+        "p12_b29",
+        "p13_b0",
+        "p13_b2",
+        "p13_b3",
+        "p13_b4",
+        "p13_b5",
+        "p13_b6"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req133",
+      "logical_unit_id": "MD12986_lu117",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Third-Party Risk Management' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        12,
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n129",
+        "MD12986_n130"
+      ],
+      "block_ids": [
+        "p12_b26",
+        "p12_b27",
+        "p12_b28",
+        "p12_b29",
+        "p13_b0",
+        "p13_b2",
+        "p13_b3",
+        "p13_b4",
+        "p13_b5",
+        "p13_b6"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req134",
+      "logical_unit_id": "MD12986_lu117",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        12,
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n129",
+        "MD12986_n130"
+      ],
+      "block_ids": [
+        "p12_b26",
+        "p12_b27",
+        "p12_b28",
+        "p12_b29",
+        "p13_b0",
+        "p13_b2",
+        "p13_b3",
+        "p13_b4",
+        "p13_b5",
+        "p13_b6"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req135",
+      "logical_unit_id": "MD12986_lu118",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        13,
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n131",
+        "MD12986_n132",
+        "MD12986_n133",
+        "MD12986_n134",
+        "MD12986_n135",
+        "MD12986_n136",
+        "MD12986_n137",
+        "MD12986_n138",
+        "MD12986_n139",
+        "MD12986_n140",
+        "MD12986_n141",
+        "MD12986_n142",
+        "MD12986_n143",
+        "MD12986_n144"
+      ],
+      "block_ids": [
+        "p13_b7",
+        "p13_b8",
+        "p13_b9",
+        "p13_b10",
+        "p13_b11",
+        "p13_b12",
+        "p13_b13",
+        "p13_b14",
+        "p13_b15",
+        "p13_b16",
+        "p13_b17",
+        "p13_b18",
+        "p13_b19",
+        "p13_b20",
+        "p13_b21",
+        "p13_b22",
+        "p13_b23",
+        "p13_b24",
+        "p13_b25",
+        "p13_b26",
+        "p13_b27",
+        "p13_b28",
+        "p13_b29",
+        "p13_b30",
+        "p14_b0",
+        "p14_b2",
+        "p14_b3",
+        "p14_b4",
+        "p14_b5",
+        "p14_b6",
+        "p14_b7",
+        "p14_b8",
+        "p14_b9",
+        "p14_b10",
+        "p14_b11",
+        "p14_b12",
+        "p14_b13",
+        "p14_b14"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req137",
+      "logical_unit_id": "MD12986_lu119",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n132",
+        "MD12986_n133",
+        "MD12986_n134",
+        "MD12986_n135"
+      ],
+      "block_ids": [
+        "p13_b8",
+        "p13_b9",
+        "p13_b10",
+        "p13_b11",
+        "p13_b12",
+        "p13_b13",
+        "p13_b14",
+        "p13_b15",
+        "p13_b16",
+        "p13_b17",
+        "p13_b18",
+        "p13_b19",
+        "p13_b20"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req141",
+      "logical_unit_id": "MD12986_lu122",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Regulatory Compliance Obligation' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.56,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        13
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n135"
+      ],
+      "block_ids": [
+        "p13_b17",
+        "p13_b18",
+        "p13_b19",
+        "p13_b20"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req149",
+      "logical_unit_id": "MD12986_lu129",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n143"
+      ],
+      "block_ids": [
+        "p14_b8",
+        "p14_b9"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req152",
+      "logical_unit_id": "MD12986_lu131",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Third-Party Risk Management' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n145"
+      ],
+      "block_ids": [
+        "p14_b15",
+        "p14_b16",
+        "p14_b17"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req153",
+      "logical_unit_id": "MD12986_lu132",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Third-Party Risk Management' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n146"
+      ],
+      "block_ids": [
+        "p14_b18",
+        "p14_b19",
+        "p14_b20",
+        "p14_b21"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req154",
+      "logical_unit_id": "MD12986_lu132",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n146"
+      ],
+      "block_ids": [
+        "p14_b18",
+        "p14_b19",
+        "p14_b20",
+        "p14_b21"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req155",
+      "logical_unit_id": "MD12986_lu133",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Third-Party Risk Management' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        14
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n147"
+      ],
+      "block_ids": [
+        "p14_b22",
+        "p14_b23",
+        "p14_b24",
+        "p14_b25"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req156",
+      "logical_unit_id": "MD12986_lu134",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Third-Party Risk Management' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        14,
+        15
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n148",
+        "MD12986_n149"
+      ],
+      "block_ids": [
+        "p14_b26",
+        "p14_b27",
+        "p14_b28",
+        "p14_b29",
+        "p15_b0",
+        "p15_b2",
+        "p15_b3"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req157",
+      "logical_unit_id": "MD12986_lu134",
+      "regulatory_intent": {
+        "primary_objective": "Protect information assets and ensure system resilience",
+        "mitigated_risk": "Cyber Security Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Cyber Security Governance",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Cyber Security Governance' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        14,
+        15
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n148",
+        "MD12986_n149"
+      ],
+      "block_ids": [
+        "p14_b26",
+        "p14_b27",
+        "p14_b28",
+        "p14_b29",
+        "p15_b0",
+        "p15_b2",
+        "p15_b3"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req159",
+      "logical_unit_id": "MD12986_lu135",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        15
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n150"
+      ],
+      "block_ids": [
+        "p15_b4",
+        "p15_b5",
+        "p15_b6",
+        "p15_b7",
+        "p15_b8",
+        "p15_b9",
+        "p15_b10"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req161",
+      "logical_unit_id": "MD12986_lu136",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Third-Party Risk Management' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        15
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n151"
+      ],
+      "block_ids": [
+        "p15_b11",
+        "p15_b12",
+        "p15_b13",
+        "p15_b14",
+        "p15_b15",
+        "p15_b16"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req162",
+      "logical_unit_id": "MD12986_lu136",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        15
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n151"
+      ],
+      "block_ids": [
+        "p15_b11",
+        "p15_b12",
+        "p15_b13",
+        "p15_b14",
+        "p15_b15",
+        "p15_b16"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req163",
+      "logical_unit_id": "MD12986_lu137",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        15
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n152"
+      ],
+      "block_ids": [
+        "p15_b17",
+        "p15_b18",
+        "p15_b19",
+        "p15_b20"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req164",
+      "logical_unit_id": "MD12986_lu138",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        15
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n153"
+      ],
+      "block_ids": [
+        "p15_b21",
+        "p15_b22",
+        "p15_b23",
+        "p15_b24",
+        "p15_b25",
+        "p15_b26"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req165",
+      "logical_unit_id": "MD12986_lu139",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Third-Party Risk Management' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        15,
+        16
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n154",
+        "MD12986_n155"
+      ],
+      "block_ids": [
+        "p15_b27",
+        "p15_b28",
+        "p15_b29",
+        "p15_b30",
+        "p16_b0",
+        "p16_b2",
+        "p16_b3",
+        "p16_b4"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req166",
+      "logical_unit_id": "MD12986_lu140",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        16
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n156",
+        "MD12986_n157",
+        "MD12986_n158",
+        "MD12986_n159"
+      ],
+      "block_ids": [
+        "p16_b5",
+        "p16_b6",
+        "p16_b7",
+        "p16_b8",
+        "p16_b9",
+        "p16_b10",
+        "p16_b11",
+        "p16_b12"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req170",
+      "logical_unit_id": "MD12986_lu144",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        16
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n160"
+      ],
+      "block_ids": [
+        "p16_b13",
+        "p16_b14"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req171",
+      "logical_unit_id": "MD12986_lu145",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        16,
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n161",
+        "MD12986_n162",
+        "MD12986_n163",
+        "MD12986_n164",
+        "MD12986_n165",
+        "MD12986_n166",
+        "MD12986_n167",
+        "MD12986_n168",
+        "MD12986_n169",
+        "MD12986_n170"
+      ],
+      "block_ids": [
+        "p16_b15",
+        "p16_b16",
+        "p16_b17",
+        "p16_b18",
+        "p16_b19",
+        "p16_b20",
+        "p16_b21",
+        "p16_b22",
+        "p16_b23",
+        "p16_b24",
+        "p16_b25",
+        "p16_b26",
+        "p16_b27",
+        "p17_b0",
+        "p17_b2",
+        "p17_b3",
+        "p17_b4",
+        "p17_b5",
+        "p17_b6",
+        "p17_b7",
+        "p17_b8",
+        "p17_b9",
+        "p17_b10",
+        "p17_b11",
+        "p17_b12",
+        "p17_b13"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req181",
+      "logical_unit_id": "MD12986_lu154",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Third-Party Risk Management' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n171",
+        "MD12986_n172"
+      ],
+      "block_ids": [
+        "p17_b14",
+        "p17_b15",
+        "p17_b16",
+        "p17_b17",
+        "p17_b18"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req182",
+      "logical_unit_id": "MD12986_lu154",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n171",
+        "MD12986_n172"
+      ],
+      "block_ids": [
+        "p17_b14",
+        "p17_b15",
+        "p17_b16",
+        "p17_b17",
+        "p17_b18"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req184",
+      "logical_unit_id": "MD12986_lu156",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Vendor & Outsourcing Governance",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Third-Party Risk Assessment",
+        "process_description": "Conducting due diligence on outsourced service providers",
+        "operational_owner": "Vendor Management"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Vendor & Outsourcing Governance' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.95,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.79,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Vendor & Outsourcing Governance' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n173"
+      ],
+      "block_ids": [
+        "p17_b19",
+        "p17_b20",
+        "p17_b21"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req185",
+      "logical_unit_id": "MD12986_lu157",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n174"
+      ],
+      "block_ids": [
+        "p17_b22",
+        "p17_b23",
+        "p17_b24",
+        "p17_b25",
+        "p17_b26"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req186",
+      "logical_unit_id": "MD12986_lu157",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Vendor & Outsourcing Governance",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Third-Party Risk Assessment",
+        "process_description": "Conducting due diligence on outsourced service providers",
+        "operational_owner": "Vendor Management"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.95,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.93,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Vendor & Outsourcing Governance' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        17
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n174"
+      ],
+      "block_ids": [
+        "p17_b22",
+        "p17_b23",
+        "p17_b24",
+        "p17_b25",
+        "p17_b26"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req187",
+      "logical_unit_id": "MD12986_lu158",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Vendor & Outsourcing Governance",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Third-Party Risk Assessment",
+        "process_description": "Conducting due diligence on outsourced service providers",
+        "operational_owner": "Vendor Management"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Vendor & Outsourcing Governance' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.95,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.79,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Vendor & Outsourcing Governance' based on 'Outsourcing' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        17,
+        18
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n175",
+        "MD12986_n176"
+      ],
+      "block_ids": [
+        "p17_b27",
+        "p17_b28",
+        "p17_b29",
+        "p17_b30",
+        "p18_b0",
+        "p18_b2",
+        "p18_b3",
+        "p18_b4",
+        "p18_b5"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req188",
+      "logical_unit_id": "MD12986_lu158",
+      "regulatory_intent": {
+        "primary_objective": "Ensure fair treatment and protect consumer rights",
+        "mitigated_risk": "Reputational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Customer Rights & Protection",
+        "capability_domain": "Customer Protection"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Customer Rights & Protection' based on 'Customer Protection' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        17,
+        18
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n175",
+        "MD12986_n176"
+      ],
+      "block_ids": [
+        "p17_b27",
+        "p17_b28",
+        "p17_b29",
+        "p17_b30",
+        "p18_b0",
+        "p18_b2",
+        "p18_b3",
+        "p18_b4",
+        "p18_b5"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req189",
+      "logical_unit_id": "MD12986_lu160",
+      "regulatory_intent": {
+        "primary_objective": "Ensure fair treatment and protect consumer rights",
+        "mitigated_risk": "Reputational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Customer Rights & Protection",
+        "capability_domain": "Customer Protection"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Customer Rights & Protection' based on 'Customer Protection' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        18,
+        19
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n178",
+        "MD12986_n179",
+        "MD12986_n180",
+        "MD12986_n181",
+        "MD12986_n182"
+      ],
+      "block_ids": [
+        "p18_b7",
+        "p18_b8",
+        "p18_b9",
+        "p18_b10",
+        "p18_b11",
+        "p18_b12",
+        "p18_b13",
+        "p18_b14",
+        "p18_b15",
+        "p18_b16",
+        "p18_b17",
+        "p18_b18",
+        "p18_b19",
+        "p18_b20",
+        "p18_b21",
+        "p18_b22",
+        "p18_b23",
+        "p18_b24",
+        "p19_b0"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req190",
+      "logical_unit_id": "MD12986_lu161",
+      "regulatory_intent": {
+        "primary_objective": "Ensure fair treatment and protect consumer rights",
+        "mitigated_risk": "Reputational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Customer Rights & Protection",
+        "capability_domain": "Customer Protection"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Customer Rights & Protection' based on 'Customer Protection' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        18
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n179"
+      ],
+      "block_ids": [
+        "p18_b12",
+        "p18_b13",
+        "p18_b14",
+        "p18_b15",
+        "p18_b16",
+        "p18_b17"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req191",
+      "logical_unit_id": "MD12986_lu161",
+      "regulatory_intent": {
+        "primary_objective": "Ensure fair treatment and protect consumer rights",
+        "mitigated_risk": "Reputational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Customer Rights & Protection",
+        "capability_domain": "Customer Protection"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Customer Rights & Protection' based on 'Customer Protection' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        18
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n179"
+      ],
+      "block_ids": [
+        "p18_b12",
+        "p18_b13",
+        "p18_b14",
+        "p18_b15",
+        "p18_b16",
+        "p18_b17"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req192",
+      "logical_unit_id": "MD12986_lu161",
+      "regulatory_intent": {
+        "primary_objective": "Identify, measure, and mitigate enterprise risks",
+        "mitigated_risk": "Enterprise Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Third-Party Risk Management",
+        "capability_domain": "Outsourcing"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Third-Party Risk Management' based on 'Outsourcing' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        18
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n179"
+      ],
+      "block_ids": [
+        "p18_b12",
+        "p18_b13",
+        "p18_b14",
+        "p18_b15",
+        "p18_b16",
+        "p18_b17"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req193",
+      "logical_unit_id": "MD12986_lu162",
+      "regulatory_intent": {
+        "primary_objective": "Ensure fair treatment and protect consumer rights",
+        "mitigated_risk": "Reputational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Customer Rights & Protection",
+        "capability_domain": "Customer Protection"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Customer Rights & Protection' based on 'Customer Protection' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        18
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n180"
+      ],
+      "block_ids": [
+        "p18_b18",
+        "p18_b19"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req194",
+      "logical_unit_id": "MD12986_lu163",
+      "regulatory_intent": {
+        "primary_objective": "Ensure fair treatment and protect consumer rights",
+        "mitigated_risk": "Reputational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Customer Rights & Protection",
+        "capability_domain": "Customer Protection"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Customer Rights & Protection' based on 'Customer Protection' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        18,
+        19
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n181",
+        "MD12986_n182"
+      ],
+      "block_ids": [
+        "p18_b20",
+        "p18_b21",
+        "p18_b22",
+        "p18_b23",
+        "p18_b24",
+        "p19_b0"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req197",
+      "logical_unit_id": "MD12986_lu166",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        19
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n185"
+      ],
+      "block_ids": [
+        "p19_b4",
+        "p19_b5",
+        "p19_b6",
+        "p19_b7",
+        "p19_b8"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req198",
+      "logical_unit_id": "MD12986_lu167",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        19
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n186",
+        "MD12986_n187"
+      ],
+      "block_ids": [
+        "p19_b9",
+        "p19_b10",
+        "p19_b11",
+        "p19_b12",
+        "p19_b13",
+        "p19_b14",
+        "p19_b15",
+        "p19_b16",
+        "p19_b17",
+        "p19_b18",
+        "p19_b19",
+        "p19_b20",
+        "p19_b21",
+        "p19_b22",
+        "p19_b23",
+        "p19_b24"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req199",
+      "logical_unit_id": "MD12986_lu167",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        19
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n186",
+        "MD12986_n187"
+      ],
+      "block_ids": [
+        "p19_b9",
+        "p19_b10",
+        "p19_b11",
+        "p19_b12",
+        "p19_b13",
+        "p19_b14",
+        "p19_b15",
+        "p19_b16",
+        "p19_b17",
+        "p19_b18",
+        "p19_b19",
+        "p19_b20",
+        "p19_b21",
+        "p19_b22",
+        "p19_b23",
+        "p19_b24"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req200",
+      "logical_unit_id": "MD12986_lu167",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        19
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n186",
+        "MD12986_n187"
+      ],
+      "block_ids": [
+        "p19_b9",
+        "p19_b10",
+        "p19_b11",
+        "p19_b12",
+        "p19_b13",
+        "p19_b14",
+        "p19_b15",
+        "p19_b16",
+        "p19_b17",
+        "p19_b18",
+        "p19_b19",
+        "p19_b20",
+        "p19_b21",
+        "p19_b22",
+        "p19_b23",
+        "p19_b24"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req203",
+      "logical_unit_id": "MD12986_lu167",
+      "regulatory_intent": {
+        "primary_objective": "Ensure secure, timely, and reliable fund transfers",
+        "mitigated_risk": "Operational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Digital Payments Governance",
+        "capability_domain": "Digital Payments"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Digital Payments Governance' based on 'Digital Payments' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        19
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n186",
+        "MD12986_n187"
+      ],
+      "block_ids": [
+        "p19_b9",
+        "p19_b10",
+        "p19_b11",
+        "p19_b12",
+        "p19_b13",
+        "p19_b14",
+        "p19_b15",
+        "p19_b16",
+        "p19_b17",
+        "p19_b18",
+        "p19_b19",
+        "p19_b20",
+        "p19_b21",
+        "p19_b22",
+        "p19_b23",
+        "p19_b24"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req205",
+      "logical_unit_id": "MD12986_lu169",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        19,
+        20
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n188",
+        "MD12986_n189"
+      ],
+      "block_ids": [
+        "p19_b25",
+        "p19_b26",
+        "p19_b27",
+        "p20_b0"
+      ]
+    },
+    {
+      "document_id": "MD12986",
+      "requirement_id": "MD12986_req206",
+      "logical_unit_id": "MD12986_lu171",
+      "regulatory_intent": {
+        "primary_objective": "Ensure secure, timely, and reliable fund transfers",
+        "mitigated_risk": "Operational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Payment System Compliance",
+        "capability_domain": "Digital Payments"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Payment System Compliance' based on 'Digital Payments' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        20
+      ],
+      "hierarchy_node_ids": [
+        "MD12986_n191"
+      ],
+      "block_ids": [
+        "p20_b3",
+        "p20_b4",
+        "p20_b5",
+        "p20_b6",
+        "p20_b7",
+        "p20_b8",
+        "p20_b9"
+      ]
+    }
+  ]
+}

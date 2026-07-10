@@ -1,0 +1,797 @@
+{
+  "document_id": "MD11327",
+  "title": "MD11327",
+  "document_status": "WITHDRAWN",
+  "reasoned_control_count": 15,
+  "reasoned_controls": [
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req11",
+      "logical_unit_id": "MD11327_lu11",
+      "regulatory_intent": {
+        "primary_objective": "Ensure regulator visibility into bank operations",
+        "mitigated_risk": "Supervisory Blindness Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Best Practice Advisory",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Signed submission acknowledgement receipt",
+        "evidence_format": "Portal_Acknowledgement"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "HIGH_IMMUTABLE",
+        "tamper_resistance": "System state/logs are machine-generated and immutable by end-users."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Regulatory Portal",
+        "data_modality": "Browser_Automation"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.8,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.77,
+        "reasoning_summary": "Inferred Regulatory Portal telemetry mapping for 'Regulatory Best Practice Advisory' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n11"
+      ],
+      "block_ids": [
+        "p2_b5"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req12",
+      "logical_unit_id": "MD11327_lu11",
+      "regulatory_intent": {
+        "primary_objective": "Ensure secure, timely, and reliable fund transfers",
+        "mitigated_risk": "Operational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Digital Payments Governance",
+        "capability_domain": "Digital Payments"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Signed submission acknowledgement receipt",
+        "evidence_format": "Portal_Acknowledgement"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "HIGH_IMMUTABLE",
+        "tamper_resistance": "System state/logs are machine-generated and immutable by end-users."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Regulatory Portal",
+        "data_modality": "Browser_Automation"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Regulatory Portal telemetry mapping for 'Digital Payments Governance' based on 'Digital Payments' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n11"
+      ],
+      "block_ids": [
+        "p2_b5"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req13",
+      "logical_unit_id": "MD11327_lu12",
+      "regulatory_intent": {
+        "primary_objective": "Manage liquidity, market risk, and capital adequacy",
+        "mitigated_risk": "Market & Liquidity Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Treasury & Investment Control",
+        "capability_domain": "Treasury"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Signed submission acknowledgement receipt",
+        "evidence_format": "Portal_Acknowledgement"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "HIGH_IMMUTABLE",
+        "tamper_resistance": "System state/logs are machine-generated and immutable by end-users."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Regulatory Portal",
+        "data_modality": "Browser_Automation"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Regulatory Portal telemetry mapping for 'Treasury & Investment Control' based on 'Treasury' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n12"
+      ],
+      "block_ids": [
+        "p2_b6"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req20",
+      "logical_unit_id": "MD11327_lu16",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Permission Governance",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Permission Governance' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n16"
+      ],
+      "block_ids": [
+        "p2_b10"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req25",
+      "logical_unit_id": "MD11327_lu18",
+      "regulatory_intent": {
+        "primary_objective": "Monitor cross-border capital flows and enforce limits",
+        "mitigated_risk": "Macro-Prudential Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Foreign Exchange Compliance",
+        "capability_domain": "Foreign Exchange"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Foreign Exchange Compliance' based on 'Foreign Exchange' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n18"
+      ],
+      "block_ids": [
+        "p2_b12",
+        "p2_b13"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req26",
+      "logical_unit_id": "MD11327_lu19",
+      "regulatory_intent": {
+        "primary_objective": "Monitor cross-border capital flows and enforce limits",
+        "mitigated_risk": "Macro-Prudential Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Foreign Exchange Compliance",
+        "capability_domain": "Foreign Exchange"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Foreign Exchange Compliance' based on 'Foreign Exchange' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n19"
+      ],
+      "block_ids": [
+        "p3_b0",
+        "p3_b1"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req28",
+      "logical_unit_id": "MD11327_lu20",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Reporting Governance",
+        "capability_domain": "Reporting"
+      },
+      "business_process": {
+        "primary_process": "Regulatory Reporting",
+        "process_description": "Data aggregation and portal submission",
+        "operational_owner": "Compliance"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Signed submission acknowledgement receipt",
+        "evidence_format": "Portal_Acknowledgement"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "HIGH_IMMUTABLE",
+        "tamper_resistance": "System state/logs are machine-generated and immutable by end-users."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Regulatory Portal",
+        "data_modality": "Browser_Automation"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.95,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.93,
+        "reasoning_summary": "Inferred Regulatory Portal telemetry mapping for 'Regulatory Reporting Governance' based on 'Reporting' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n20"
+      ],
+      "block_ids": [
+        "p3_b2",
+        "p3_b3"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req29",
+      "logical_unit_id": "MD11327_lu20",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Reporting Governance",
+        "capability_domain": "Reporting"
+      },
+      "business_process": {
+        "primary_process": "Regulatory Reporting",
+        "process_description": "Data aggregation and portal submission",
+        "operational_owner": "Compliance"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Signed submission acknowledgement receipt",
+        "evidence_format": "Portal_Acknowledgement"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "HIGH_IMMUTABLE",
+        "tamper_resistance": "System state/logs are machine-generated and immutable by end-users."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Regulatory Portal",
+        "data_modality": "Browser_Automation"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.95,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.93,
+        "reasoning_summary": "Inferred Regulatory Portal telemetry mapping for 'Regulatory Reporting Governance' based on 'Reporting' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n20"
+      ],
+      "block_ids": [
+        "p3_b2",
+        "p3_b3"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req30",
+      "logical_unit_id": "MD11327_lu21",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Disclosure Obligation",
+        "capability_domain": "Reporting"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Disclosure Obligation' based on 'Reporting' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n21"
+      ],
+      "block_ids": [
+        "p3_b4",
+        "p3_b5"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req31",
+      "logical_unit_id": "MD11327_lu21",
+      "regulatory_intent": {
+        "primary_objective": "Ensure regulator visibility into bank operations",
+        "mitigated_risk": "Supervisory Blindness Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Best Practice Advisory",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Signed submission acknowledgement receipt",
+        "evidence_format": "Portal_Acknowledgement"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "HIGH_IMMUTABLE",
+        "tamper_resistance": "System state/logs are machine-generated and immutable by end-users."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Regulatory Portal",
+        "data_modality": "Browser_Automation"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.8,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.77,
+        "reasoning_summary": "Inferred Regulatory Portal telemetry mapping for 'Regulatory Best Practice Advisory' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n21"
+      ],
+      "block_ids": [
+        "p3_b4",
+        "p3_b5"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req32",
+      "logical_unit_id": "MD11327_lu21",
+      "regulatory_intent": {
+        "primary_objective": "Ensure secure, timely, and reliable fund transfers",
+        "mitigated_risk": "Operational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Digital Payments Governance",
+        "capability_domain": "Digital Payments"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Digital Payments Governance' based on 'Digital Payments' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n21"
+      ],
+      "block_ids": [
+        "p3_b4",
+        "p3_b5"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req44",
+      "logical_unit_id": "MD11327_lu28",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Disclosure Obligation",
+        "capability_domain": "Reporting"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Disclosure Obligation' based on 'Reporting' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n28"
+      ],
+      "block_ids": [
+        "p4_b1",
+        "p4_b2"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req45",
+      "logical_unit_id": "MD11327_lu29",
+      "regulatory_intent": {
+        "primary_objective": "Manage liquidity, market risk, and capital adequacy",
+        "mitigated_risk": "Market & Liquidity Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Treasury & Investment Control",
+        "capability_domain": "Treasury"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Treasury & Investment Control' based on 'Treasury' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n29"
+      ],
+      "block_ids": [
+        "p4_b3",
+        "p4_b4"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req46",
+      "logical_unit_id": "MD11327_lu31",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Reporting Governance",
+        "capability_domain": "Reporting"
+      },
+      "business_process": {
+        "primary_process": "Regulatory Reporting",
+        "process_description": "Data aggregation and portal submission",
+        "operational_owner": "Compliance"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Signed submission acknowledgement receipt",
+        "evidence_format": "Portal_Acknowledgement"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "HIGH_IMMUTABLE",
+        "tamper_resistance": "System state/logs are machine-generated and immutable by end-users."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Regulatory Portal",
+        "data_modality": "Browser_Automation"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.95,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.93,
+        "reasoning_summary": "Inferred Regulatory Portal telemetry mapping for 'Regulatory Reporting Governance' based on 'Reporting' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n31"
+      ],
+      "block_ids": [
+        "p4_b6"
+      ]
+    },
+    {
+      "document_id": "MD11327",
+      "requirement_id": "MD11327_req47",
+      "logical_unit_id": "MD11327_lu31",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Permission Governance",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Permission Governance' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11327_n31"
+      ],
+      "block_ids": [
+        "p4_b6"
+      ]
+    }
+  ]
+}

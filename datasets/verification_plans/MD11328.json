@@ -1,0 +1,550 @@
+{
+  "document_id": "MD11328",
+  "title": " ",
+  "document_status": "WITHDRAWN",
+  "plan_count": 3,
+  "verification_plans": [
+    {
+      "plan_id": "CVP_VR_MD11328_req18",
+      "rule_id": "VR_MD11328_req18",
+      "requirement_id": "MD11328_req18",
+      "document_id": "MD11328",
+      "logical_unit_id": "MD11328_lu8",
+      "control_name": "Compliance Authorisation Control",
+      "business_capability": "Regulatory Permission Governance",
+      "control_category": "Governance",
+      "criticality": "LOW",
+      "verification_strategy": "GenericManualPlan",
+      "estimated_execution_minutes": 45,
+      "estimated_manual_effort_hours": 0.75,
+      "automation_percentage": 0.0,
+      "parallel_execution_possible": false,
+      "checks": [
+        {
+          "check_id": "CVP_VR_MD11328_req18_C01",
+          "plan_id": "CVP_VR_MD11328_req18",
+          "sequence_number": 1,
+          "title": "Verify existence of implementation evidence",
+          "description": "Locate and confirm that documentary evidence of 'Regulatory Permission Governance' implementation exists in the evidence repository.",
+          "verification_platform": "Application",
+          "verification_mechanism": "Board / Committee Minutes Review",
+          "command": "",
+          "command_type": "Manual",
+          "command_parameters": "Access the Board Secretariat or corporate secretarial records system. Retrieve Board and Risk Committee meeting minutes for the relevant period.",
+          "expected_result": "Evidence documents are present, dated within the verification period, and signed by the responsible owner.",
+          "comparison_operator": "exists",
+          "expected_data_type": "String",
+          "evidence_required": [
+            "Board Meeting Minutes",
+            "Risk Committee Minutes",
+            "Board Attendance Register"
+          ],
+          "machine_verifiable": false,
+          "automation_candidate": false,
+          "mandatory": true,
+          "failure_impact": "BLOCKER",
+          "retry_count": 2,
+          "timeout_seconds": 60,
+          "confidence": 0.7,
+          "reasoning": "Document existence is verifiable by an independent reviewer without requiring departmental cooperation.",
+          "dependencies": [],
+          "parallel_eligible": false
+        },
+        {
+          "check_id": "CVP_VR_MD11328_req18_C02",
+          "plan_id": "CVP_VR_MD11328_req18",
+          "sequence_number": 2,
+          "title": "Assess Adequacy of Evidence Against Control Objective",
+          "description": "Review evidence content to confirm it adequately demonstrates compliance with the control objective for 'Regulatory Permission Governance'.",
+          "verification_platform": "Application",
+          "verification_mechanism": "Structured Compliance Walkthrough",
+          "command": "",
+          "command_type": "Manual",
+          "command_parameters": "Apply compliance review checklist. Document findings.",
+          "expected_result": "Board has discussed and minuted relevant regulatory agenda items. Risk oversight Committee meeting held at prescribed frequency. Quorum requirements met.",
+          "comparison_operator": "manual",
+          "expected_data_type": "String",
+          "evidence_required": [
+            "Completed Review Checklist",
+            "Auditor Notes"
+          ],
+          "machine_verifiable": false,
+          "automation_candidate": false,
+          "mandatory": true,
+          "failure_impact": "MAJOR",
+          "retry_count": 2,
+          "timeout_seconds": 60,
+          "confidence": 0.65,
+          "reasoning": "Adequacy assessment requires professional judgment from an independent reviewer.",
+          "dependencies": [
+            {
+              "depends_on_check_id": "CVP_VR_MD11328_req18_C01",
+              "dependency_type": "PASS_GATE"
+            }
+          ],
+          "parallel_eligible": false
+        },
+        {
+          "check_id": "CVP_VR_MD11328_req18_C03",
+          "plan_id": "CVP_VR_MD11328_req18",
+          "sequence_number": 3,
+          "title": "Auditor Sign-Off on Verification Outcome",
+          "description": "The reviewing auditor or compliance officer formally records the outcome of verification.",
+          "verification_platform": "Application",
+          "verification_mechanism": "Compliance System Sign-Off",
+          "command": "",
+          "command_type": "Manual",
+          "command_parameters": "Record findings in the compliance management system. Attach evidence references.",
+          "expected_result": "Verification outcome (PASS/FAIL/PARTIAL) recorded with auditor signature and timestamp.",
+          "comparison_operator": "exists",
+          "expected_data_type": "String",
+          "evidence_required": [
+            "Signed Verification Record"
+          ],
+          "machine_verifiable": false,
+          "automation_candidate": false,
+          "mandatory": true,
+          "failure_impact": "BLOCKER",
+          "retry_count": 2,
+          "timeout_seconds": 60,
+          "confidence": 0.75,
+          "reasoning": "Formal sign-off creates an immutable audit trail independent of the implementing department.",
+          "dependencies": [
+            {
+              "depends_on_check_id": "CVP_VR_MD11328_req18_C02",
+              "dependency_type": "PASS_GATE"
+            }
+          ],
+          "parallel_eligible": false
+        }
+      ],
+      "total_checks": 3,
+      "mandatory_checks": 3,
+      "machine_verifiable_checks": 0,
+      "execution_dag": {
+        "nodes": [
+          {
+            "check_id": "CVP_VR_MD11328_req18_C01",
+            "sequence_number": 1,
+            "depends_on": [],
+            "parallel_eligible": false,
+            "is_gate": false
+          },
+          {
+            "check_id": "CVP_VR_MD11328_req18_C02",
+            "sequence_number": 2,
+            "depends_on": [
+              "CVP_VR_MD11328_req18_C01"
+            ],
+            "parallel_eligible": false,
+            "is_gate": true
+          },
+          {
+            "check_id": "CVP_VR_MD11328_req18_C03",
+            "sequence_number": 3,
+            "depends_on": [
+              "CVP_VR_MD11328_req18_C02"
+            ],
+            "parallel_eligible": false,
+            "is_gate": true
+          }
+        ],
+        "total_sequential_steps": 3,
+        "parallelisable_groups": 0,
+        "critical_path_length": 3,
+        "has_mandatory_gates": true
+      },
+      "pass_condition": "ALL_CHECKS",
+      "final_decision_rule": "PASS if all 3 mandatory checks produce PASS result. FAIL if any BLOCKER check fails. PARTIAL if only MINOR checks fail.",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD11328_n8"
+      ],
+      "block_ids": [
+        "p2_b15",
+        "p2_b11",
+        "p2_b13",
+        "p2_b12",
+        "p2_b14",
+        "p3_b1",
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "plan_id": "CVP_VR_MD11328_req19",
+      "rule_id": "VR_MD11328_req19",
+      "requirement_id": "MD11328_req19",
+      "document_id": "MD11328",
+      "logical_unit_id": "MD11328_lu8",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Operational",
+      "criticality": "MEDIUM",
+      "verification_strategy": "GenericManualPlan",
+      "estimated_execution_minutes": 45,
+      "estimated_manual_effort_hours": 0.75,
+      "automation_percentage": 0.0,
+      "parallel_execution_possible": false,
+      "checks": [
+        {
+          "check_id": "CVP_VR_MD11328_req19_C01",
+          "plan_id": "CVP_VR_MD11328_req19",
+          "sequence_number": 1,
+          "title": "Verify existence of implementation evidence",
+          "description": "Locate and confirm that documentary evidence of 'Regulatory Compliance Obligation' implementation exists in the evidence repository.",
+          "verification_platform": "Unknown",
+          "verification_mechanism": "Structured Compliance Walkthrough",
+          "command": "",
+          "command_type": "Manual",
+          "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Compliance Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+          "expected_result": "Evidence documents are present, dated within the verification period, and signed by the responsible owner.",
+          "comparison_operator": "exists",
+          "expected_data_type": "String",
+          "evidence_required": [
+            "Compliance Walkthrough Checklist (completed)",
+            "Supporting Documentation",
+            "Interview Notes"
+          ],
+          "machine_verifiable": false,
+          "automation_candidate": false,
+          "mandatory": true,
+          "failure_impact": "BLOCKER",
+          "retry_count": 2,
+          "timeout_seconds": 60,
+          "confidence": 0.7,
+          "reasoning": "Document existence is verifiable by an independent reviewer without requiring departmental cooperation.",
+          "dependencies": [],
+          "parallel_eligible": false
+        },
+        {
+          "check_id": "CVP_VR_MD11328_req19_C02",
+          "plan_id": "CVP_VR_MD11328_req19",
+          "sequence_number": 2,
+          "title": "Assess Adequacy of Evidence Against Control Objective",
+          "description": "Review evidence content to confirm it adequately demonstrates compliance with the control objective for 'Regulatory Compliance Obligation'.",
+          "verification_platform": "Unknown",
+          "verification_mechanism": "Structured Compliance Walkthrough",
+          "command": "",
+          "command_type": "Manual",
+          "command_parameters": "Apply compliance review checklist. Document findings.",
+          "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+          "comparison_operator": "manual",
+          "expected_data_type": "String",
+          "evidence_required": [
+            "Completed Review Checklist",
+            "Auditor Notes"
+          ],
+          "machine_verifiable": false,
+          "automation_candidate": false,
+          "mandatory": true,
+          "failure_impact": "MAJOR",
+          "retry_count": 2,
+          "timeout_seconds": 60,
+          "confidence": 0.65,
+          "reasoning": "Adequacy assessment requires professional judgment from an independent reviewer.",
+          "dependencies": [
+            {
+              "depends_on_check_id": "CVP_VR_MD11328_req19_C01",
+              "dependency_type": "PASS_GATE"
+            }
+          ],
+          "parallel_eligible": false
+        },
+        {
+          "check_id": "CVP_VR_MD11328_req19_C03",
+          "plan_id": "CVP_VR_MD11328_req19",
+          "sequence_number": 3,
+          "title": "Auditor Sign-Off on Verification Outcome",
+          "description": "The reviewing auditor or compliance officer formally records the outcome of verification.",
+          "verification_platform": "Application",
+          "verification_mechanism": "Compliance System Sign-Off",
+          "command": "",
+          "command_type": "Manual",
+          "command_parameters": "Record findings in the compliance management system. Attach evidence references.",
+          "expected_result": "Verification outcome (PASS/FAIL/PARTIAL) recorded with auditor signature and timestamp.",
+          "comparison_operator": "exists",
+          "expected_data_type": "String",
+          "evidence_required": [
+            "Signed Verification Record"
+          ],
+          "machine_verifiable": false,
+          "automation_candidate": false,
+          "mandatory": true,
+          "failure_impact": "BLOCKER",
+          "retry_count": 2,
+          "timeout_seconds": 60,
+          "confidence": 0.75,
+          "reasoning": "Formal sign-off creates an immutable audit trail independent of the implementing department.",
+          "dependencies": [
+            {
+              "depends_on_check_id": "CVP_VR_MD11328_req19_C02",
+              "dependency_type": "PASS_GATE"
+            }
+          ],
+          "parallel_eligible": false
+        }
+      ],
+      "total_checks": 3,
+      "mandatory_checks": 3,
+      "machine_verifiable_checks": 0,
+      "execution_dag": {
+        "nodes": [
+          {
+            "check_id": "CVP_VR_MD11328_req19_C01",
+            "sequence_number": 1,
+            "depends_on": [],
+            "parallel_eligible": false,
+            "is_gate": false
+          },
+          {
+            "check_id": "CVP_VR_MD11328_req19_C02",
+            "sequence_number": 2,
+            "depends_on": [
+              "CVP_VR_MD11328_req19_C01"
+            ],
+            "parallel_eligible": false,
+            "is_gate": true
+          },
+          {
+            "check_id": "CVP_VR_MD11328_req19_C03",
+            "sequence_number": 3,
+            "depends_on": [
+              "CVP_VR_MD11328_req19_C02"
+            ],
+            "parallel_eligible": false,
+            "is_gate": true
+          }
+        ],
+        "total_sequential_steps": 3,
+        "parallelisable_groups": 0,
+        "critical_path_length": 3,
+        "has_mandatory_gates": true
+      },
+      "pass_condition": "ALL_CHECKS",
+      "final_decision_rule": "PASS if all 3 mandatory checks produce PASS result. FAIL if any BLOCKER check fails. PARTIAL if only MINOR checks fail.",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD11328_n8"
+      ],
+      "block_ids": [
+        "p2_b15",
+        "p2_b11",
+        "p2_b13",
+        "p2_b12",
+        "p2_b14",
+        "p3_b1",
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "plan_id": "CVP_VR_MD11328_req25",
+      "rule_id": "VR_MD11328_req25",
+      "requirement_id": "MD11328_req25",
+      "document_id": "MD11328",
+      "logical_unit_id": "MD11328_lu9",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Operational",
+      "criticality": "MEDIUM",
+      "verification_strategy": "GenericManualPlan",
+      "estimated_execution_minutes": 45,
+      "estimated_manual_effort_hours": 0.75,
+      "automation_percentage": 0.0,
+      "parallel_execution_possible": false,
+      "checks": [
+        {
+          "check_id": "CVP_VR_MD11328_req25_C01",
+          "plan_id": "CVP_VR_MD11328_req25",
+          "sequence_number": 1,
+          "title": "Verify existence of implementation evidence",
+          "description": "Locate and confirm that documentary evidence of 'Regulatory Compliance Obligation' implementation exists in the evidence repository.",
+          "verification_platform": "Unknown",
+          "verification_mechanism": "Structured Compliance Walkthrough",
+          "command": "",
+          "command_type": "Manual",
+          "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Compliance Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+          "expected_result": "Evidence documents are present, dated within the verification period, and signed by the responsible owner.",
+          "comparison_operator": "exists",
+          "expected_data_type": "String",
+          "evidence_required": [
+            "Compliance Walkthrough Checklist (completed)",
+            "Supporting Documentation",
+            "Interview Notes"
+          ],
+          "machine_verifiable": false,
+          "automation_candidate": false,
+          "mandatory": true,
+          "failure_impact": "BLOCKER",
+          "retry_count": 2,
+          "timeout_seconds": 60,
+          "confidence": 0.7,
+          "reasoning": "Document existence is verifiable by an independent reviewer without requiring departmental cooperation.",
+          "dependencies": [],
+          "parallel_eligible": false
+        },
+        {
+          "check_id": "CVP_VR_MD11328_req25_C02",
+          "plan_id": "CVP_VR_MD11328_req25",
+          "sequence_number": 2,
+          "title": "Assess Adequacy of Evidence Against Control Objective",
+          "description": "Review evidence content to confirm it adequately demonstrates compliance with the control objective for 'Regulatory Compliance Obligation'.",
+          "verification_platform": "Unknown",
+          "verification_mechanism": "Structured Compliance Walkthrough",
+          "command": "",
+          "command_type": "Manual",
+          "command_parameters": "Apply compliance review checklist. Document findings.",
+          "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+          "comparison_operator": "manual",
+          "expected_data_type": "String",
+          "evidence_required": [
+            "Completed Review Checklist",
+            "Auditor Notes"
+          ],
+          "machine_verifiable": false,
+          "automation_candidate": false,
+          "mandatory": true,
+          "failure_impact": "MAJOR",
+          "retry_count": 2,
+          "timeout_seconds": 60,
+          "confidence": 0.65,
+          "reasoning": "Adequacy assessment requires professional judgment from an independent reviewer.",
+          "dependencies": [
+            {
+              "depends_on_check_id": "CVP_VR_MD11328_req25_C01",
+              "dependency_type": "PASS_GATE"
+            }
+          ],
+          "parallel_eligible": false
+        },
+        {
+          "check_id": "CVP_VR_MD11328_req25_C03",
+          "plan_id": "CVP_VR_MD11328_req25",
+          "sequence_number": 3,
+          "title": "Auditor Sign-Off on Verification Outcome",
+          "description": "The reviewing auditor or compliance officer formally records the outcome of verification.",
+          "verification_platform": "Application",
+          "verification_mechanism": "Compliance System Sign-Off",
+          "command": "",
+          "command_type": "Manual",
+          "command_parameters": "Record findings in the compliance management system. Attach evidence references.",
+          "expected_result": "Verification outcome (PASS/FAIL/PARTIAL) recorded with auditor signature and timestamp.",
+          "comparison_operator": "exists",
+          "expected_data_type": "String",
+          "evidence_required": [
+            "Signed Verification Record"
+          ],
+          "machine_verifiable": false,
+          "automation_candidate": false,
+          "mandatory": true,
+          "failure_impact": "BLOCKER",
+          "retry_count": 2,
+          "timeout_seconds": 60,
+          "confidence": 0.75,
+          "reasoning": "Formal sign-off creates an immutable audit trail independent of the implementing department.",
+          "dependencies": [
+            {
+              "depends_on_check_id": "CVP_VR_MD11328_req25_C02",
+              "dependency_type": "PASS_GATE"
+            }
+          ],
+          "parallel_eligible": false
+        }
+      ],
+      "total_checks": 3,
+      "mandatory_checks": 3,
+      "machine_verifiable_checks": 0,
+      "execution_dag": {
+        "nodes": [
+          {
+            "check_id": "CVP_VR_MD11328_req25_C01",
+            "sequence_number": 1,
+            "depends_on": [],
+            "parallel_eligible": false,
+            "is_gate": false
+          },
+          {
+            "check_id": "CVP_VR_MD11328_req25_C02",
+            "sequence_number": 2,
+            "depends_on": [
+              "CVP_VR_MD11328_req25_C01"
+            ],
+            "parallel_eligible": false,
+            "is_gate": true
+          },
+          {
+            "check_id": "CVP_VR_MD11328_req25_C03",
+            "sequence_number": 3,
+            "depends_on": [
+              "CVP_VR_MD11328_req25_C02"
+            ],
+            "parallel_eligible": false,
+            "is_gate": true
+          }
+        ],
+        "total_sequential_steps": 3,
+        "parallelisable_groups": 0,
+        "critical_path_length": 3,
+        "has_mandatory_gates": true
+      },
+      "pass_condition": "ALL_CHECKS",
+      "final_decision_rule": "PASS if all 3 mandatory checks produce PASS result. FAIL if any BLOCKER check fails. PARTIAL if only MINOR checks fail.",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11328_n9"
+      ],
+      "block_ids": [
+        "p3_b11",
+        "p3_b8",
+        "p3_b9",
+        "p3_b10"
+      ],
+      "confidence": 0.7
+    }
+  ]
+}

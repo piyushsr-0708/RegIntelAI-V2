@@ -1,0 +1,1580 @@
+{
+  "document_id": "MD13374",
+  "title": "MD13374",
+  "document_status": "REPEALED",
+  "reasoned_control_count": 29,
+  "reasoned_controls": [
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req2",
+      "logical_unit_id": "MD13374_lu4",
+      "regulatory_intent": {
+        "primary_objective": "Ensure secure, timely, and reliable fund transfers",
+        "mitigated_risk": "Operational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Payment System Compliance",
+        "capability_domain": "Digital Payments"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Payment System Compliance' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Payment System Compliance' based on 'Digital Payments' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        1
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n4"
+      ],
+      "block_ids": [
+        "p1_b13",
+        "p1_b14"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req3",
+      "logical_unit_id": "MD13374_lu5",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        1
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n5"
+      ],
+      "block_ids": [
+        "p1_b15"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req4",
+      "logical_unit_id": "MD13374_lu6",
+      "regulatory_intent": {
+        "primary_objective": "Ensure secure, timely, and reliable fund transfers",
+        "mitigated_risk": "Operational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Payment System Compliance",
+        "capability_domain": "Digital Payments"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Payment System Compliance' based on 'Digital Payments' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        1
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n6"
+      ],
+      "block_ids": [
+        "p1_b16",
+        "p1_b17",
+        "p1_b18",
+        "p1_b19"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req7",
+      "logical_unit_id": "MD13374_lu10",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n10"
+      ],
+      "block_ids": [
+        "p2_b7",
+        "p2_b8",
+        "p2_b9",
+        "p2_b10"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req8",
+      "logical_unit_id": "MD13374_lu10",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n10"
+      ],
+      "block_ids": [
+        "p2_b7",
+        "p2_b8",
+        "p2_b9",
+        "p2_b10"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req9",
+      "logical_unit_id": "MD13374_lu11",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n11"
+      ],
+      "block_ids": [
+        "p2_b11",
+        "p2_b12",
+        "p2_b13",
+        "p2_b14",
+        "p2_b15"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req10",
+      "logical_unit_id": "MD13374_lu11",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n11"
+      ],
+      "block_ids": [
+        "p2_b11",
+        "p2_b12",
+        "p2_b13",
+        "p2_b14",
+        "p2_b15"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req11",
+      "logical_unit_id": "MD13374_lu11",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n11"
+      ],
+      "block_ids": [
+        "p2_b11",
+        "p2_b12",
+        "p2_b13",
+        "p2_b14",
+        "p2_b15"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req12",
+      "logical_unit_id": "MD13374_lu12",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Exception Management",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Exception Management' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n12"
+      ],
+      "block_ids": [
+        "p2_b16",
+        "p2_b17",
+        "p2_b18",
+        "p2_b19"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req13",
+      "logical_unit_id": "MD13374_lu12",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n12"
+      ],
+      "block_ids": [
+        "p2_b16",
+        "p2_b17",
+        "p2_b18",
+        "p2_b19"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req14",
+      "logical_unit_id": "MD13374_lu13",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n13"
+      ],
+      "block_ids": [
+        "p2_b20",
+        "p2_b21",
+        "p2_b22"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req15",
+      "logical_unit_id": "MD13374_lu14",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n14"
+      ],
+      "block_ids": [
+        "p2_b23",
+        "p2_b24"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req17",
+      "logical_unit_id": "MD13374_lu16",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n16"
+      ],
+      "block_ids": [
+        "p2_b26",
+        "p2_b27",
+        "p2_b28"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req18",
+      "logical_unit_id": "MD13374_lu16",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Permission Governance",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Permission Governance' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n16"
+      ],
+      "block_ids": [
+        "p2_b26",
+        "p2_b27",
+        "p2_b28"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req19",
+      "logical_unit_id": "MD13374_lu17",
+      "regulatory_intent": {
+        "primary_objective": "Ensure secure, timely, and reliable fund transfers",
+        "mitigated_risk": "Operational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Digital Payments Governance",
+        "capability_domain": "Digital Payments"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Digital Payments Governance' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.67,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Digital Payments Governance' based on 'Digital Payments' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n17"
+      ],
+      "block_ids": [
+        "p2_b29",
+        "p2_b30"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req20",
+      "logical_unit_id": "MD13374_lu19",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n19"
+      ],
+      "block_ids": [
+        "p3_b1",
+        "p3_b2"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req21",
+      "logical_unit_id": "MD13374_lu20",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n20"
+      ],
+      "block_ids": [
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req22",
+      "logical_unit_id": "MD13374_lu21",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n21"
+      ],
+      "block_ids": [
+        "p3_b7",
+        "p3_b8",
+        "p3_b9"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req23",
+      "logical_unit_id": "MD13374_lu21",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n21"
+      ],
+      "block_ids": [
+        "p3_b7",
+        "p3_b8",
+        "p3_b9"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req24",
+      "logical_unit_id": "MD13374_lu21",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n21"
+      ],
+      "block_ids": [
+        "p3_b7",
+        "p3_b8",
+        "p3_b9"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req26",
+      "logical_unit_id": "MD13374_lu23",
+      "regulatory_intent": {
+        "primary_objective": "Ensure secure, timely, and reliable fund transfers",
+        "mitigated_risk": "Operational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Payment System Compliance",
+        "capability_domain": "Digital Payments"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Payment System Compliance' based on 'Digital Payments' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n23"
+      ],
+      "block_ids": [
+        "p3_b12",
+        "p3_b13",
+        "p3_b14",
+        "p3_b15",
+        "p3_b16",
+        "p3_b17"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req27",
+      "logical_unit_id": "MD13374_lu23",
+      "regulatory_intent": {
+        "primary_objective": "Ensure fair treatment and protect consumer rights",
+        "mitigated_risk": "Reputational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Customer Rights & Protection",
+        "capability_domain": "Customer Protection"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Customer Rights & Protection' based on 'Customer Protection' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n23"
+      ],
+      "block_ids": [
+        "p3_b12",
+        "p3_b13",
+        "p3_b14",
+        "p3_b15",
+        "p3_b16",
+        "p3_b17"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req29",
+      "logical_unit_id": "MD13374_lu25",
+      "regulatory_intent": {
+        "primary_objective": "Establish board oversight and strategic direction",
+        "mitigated_risk": "Systemic Governance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Permission Governance",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Permission Governance' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n25"
+      ],
+      "block_ids": [
+        "p3_b19",
+        "p3_b20"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req30",
+      "logical_unit_id": "MD13374_lu25",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n25"
+      ],
+      "block_ids": [
+        "p3_b19",
+        "p3_b20"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req31",
+      "logical_unit_id": "MD13374_lu26",
+      "regulatory_intent": {
+        "primary_objective": "Ensure secure, timely, and reliable fund transfers",
+        "mitigated_risk": "Operational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Digital Payments Governance",
+        "capability_domain": "Digital Payments"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Digital Payments Governance' based on 'Digital Payments' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n26"
+      ],
+      "block_ids": [
+        "p3_b21",
+        "p3_b22"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req33",
+      "logical_unit_id": "MD13374_lu28",
+      "regulatory_intent": {
+        "primary_objective": "Ensure fair treatment and protect consumer rights",
+        "mitigated_risk": "Reputational Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Customer Rights & Protection",
+        "capability_domain": "Customer Protection"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Database record reflecting 'Customer Rights & Protection' execution state",
+        "evidence_format": "Database_Record"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Core Banking System (CBS)",
+        "data_modality": "SQL"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.95,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.81,
+        "reasoning_summary": "Inferred Core Banking System (CBS) telemetry mapping for 'Customer Rights & Protection' based on 'Customer Protection' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n28"
+      ],
+      "block_ids": [
+        "p3_b24",
+        "p3_b25"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req34",
+      "logical_unit_id": "MD13374_lu29",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n29"
+      ],
+      "block_ids": [
+        "p3_b26",
+        "p3_b27",
+        "p3_b28"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req36",
+      "logical_unit_id": "MD13374_lu31",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Prohibition Enforcement",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Execution artifacts confirming 'Regulatory Prohibition Enforcement' compliance",
+        "evidence_format": "Digital_Document"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "LOW_HUMAN_ATTESTED",
+        "tamper_resistance": "Relies on manual human attestation; highly susceptible to modification."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Document Management System (DMS)",
+        "data_modality": "NLP_Document_Analysis"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": false,
+        "human_in_the_loop_required": true
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.4,
+        "overall_confidence": 0.56,
+        "reasoning_summary": "Inferred Document Management System (DMS) telemetry mapping for 'Regulatory Prohibition Enforcement' based on 'General' signals.",
+        "confidence_explanation": "Requires human-in-the-loop for document or process assessment."
+      },
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n31"
+      ],
+      "block_ids": [
+        "p4_b1",
+        "p4_b2"
+      ]
+    },
+    {
+      "document_id": "MD13374",
+      "requirement_id": "MD13374_req38",
+      "logical_unit_id": "MD13374_lu33",
+      "regulatory_intent": {
+        "primary_objective": "Fulfill regulatory operational mandate",
+        "mitigated_risk": "Compliance Risk"
+      },
+      "compliance_capability": {
+        "capability_name": "Regulatory Compliance Obligation",
+        "capability_domain": "General"
+      },
+      "business_process": {
+        "primary_process": "Standard Operating Procedure",
+        "process_description": "Executing required operational workflows",
+        "operational_owner": "Business Operations"
+      },
+      "evidence_hypothesis": {
+        "ideal_evidence_description": "Auditable workflow or ticketing system record",
+        "evidence_format": "Workflow_Ticket"
+      },
+      "evidence_trust_assessment": {
+        "trust_level": "MEDIUM_SYSTEM_GENERATED",
+        "tamper_resistance": "System-generated but relies on mutable database states or workflows."
+      },
+      "telemetry_vector": {
+        "target_system_class": "Workflow Engine / Jira",
+        "data_modality": "REST_API"
+      },
+      "autonomy_assessment": {
+        "machine_verifiable": true,
+        "human_in_the_loop_required": false
+      },
+      "confidence_metrics": {
+        "semantic_confidence": 0.5,
+        "ontology_confidence": 0.5,
+        "evidence_confidence": 0.85,
+        "automation_confidence": 0.95,
+        "overall_confidence": 0.7,
+        "reasoning_summary": "Inferred Workflow Engine / Jira telemetry mapping for 'Regulatory Compliance Obligation' based on 'General' signals.",
+        "confidence_explanation": "High confidence in automation due to deterministic machine-readable telemetry."
+      },
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD13374_n33"
+      ],
+      "block_ids": [
+        "p4_b4",
+        "p4_b5"
+      ]
+    }
+  ]
+}
