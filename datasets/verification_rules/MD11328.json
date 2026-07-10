@@ -1,0 +1,171 @@
+{
+  "document_id": "MD11328",
+  "title": " ",
+  "document_status": "WITHDRAWN",
+  "rule_count": 3,
+  "verification_rules": [
+    {
+      "rule_id": "VR_MD11328_req18",
+      "requirement_id": "MD11328_req18",
+      "document_id": "MD11328",
+      "logical_unit_id": "MD11328_lu8",
+      "control_name": "Compliance Authorisation Control",
+      "business_capability": "Regulatory Permission Governance",
+      "control_category": "Governance",
+      "verification_type": "Document Review",
+      "verification_platform": "Application",
+      "verification_mechanism": "Board / Committee Minutes Review",
+      "executable_command": "",
+      "command_parameters": "Access the Board Secretariat or corporate secretarial records system. Retrieve Board and Risk Committee meeting minutes for the relevant period.",
+      "expected_result": "Board has discussed and minuted relevant regulatory agenda items. Risk oversight Committee meeting held at prescribed frequency. Quorum requirements met.",
+      "evidence_required": [
+        "Board Meeting Minutes",
+        "Risk Committee Minutes",
+        "Board Attendance Register"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.82,
+      "reasoning": "Board and committee governance is verifiable through minutes, which are maintained by the Company Secretary independently of the implementing department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD11328_n8"
+      ],
+      "block_ids": [
+        "p2_b15",
+        "p2_b11",
+        "p2_b13",
+        "p2_b12",
+        "p2_b14",
+        "p3_b1",
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11328_req19",
+      "requirement_id": "MD11328_req19",
+      "document_id": "MD11328",
+      "logical_unit_id": "MD11328_lu8",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Compliance Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD11328_n8"
+      ],
+      "block_ids": [
+        "p2_b15",
+        "p2_b11",
+        "p2_b13",
+        "p2_b12",
+        "p2_b14",
+        "p3_b1",
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11328_req25",
+      "requirement_id": "MD11328_req25",
+      "document_id": "MD11328",
+      "logical_unit_id": "MD11328_lu9",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Compliance Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11328_n9"
+      ],
+      "block_ids": [
+        "p3_b11",
+        "p3_b8",
+        "p3_b9",
+        "p3_b10"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,401 @@
+{
+  "document_id": "MD12483",
+  "title": "MD12483",
+  "document_status": "WITHDRAWN",
+  "rule_count": 6,
+  "verification_rules": [
+    {
+      "rule_id": "VR_MD12483_req21",
+      "requirement_id": "MD12483_req21",
+      "document_id": "MD12483",
+      "logical_unit_id": "MD12483_lu8",
+      "control_name": "Audit Compliance Control",
+      "business_capability": "Regulatory Disclosure Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Disclosure Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Audit",
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Internal Audit"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD12483_n11",
+        "MD12483_n12",
+        "MD12483_n13"
+      ],
+      "block_ids": [
+        "p2_b39",
+        "p2_b11",
+        "p2_b19",
+        "p2_b13",
+        "p2_b14",
+        "p2_b20",
+        "p2_b15",
+        "p2_b21",
+        "p2_b16",
+        "p2_b22",
+        "p2_b17",
+        "p2_b23",
+        "p2_b18",
+        "p2_b24",
+        "p2_b25",
+        "p2_b26",
+        "p2_b27",
+        "p2_b28",
+        "p2_b29",
+        "p2_b35",
+        "p2_b30",
+        "p2_b31",
+        "p2_b36",
+        "p2_b32",
+        "p2_b33",
+        "p2_b38",
+        "p2_b34",
+        "p3_b0",
+        "p3_b1",
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b10",
+        "p3_b7",
+        "p3_b11",
+        "p3_b8",
+        "p3_b12",
+        "p3_b9",
+        "p3_b13"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12483_req27",
+      "requirement_id": "MD12483_req27",
+      "document_id": "MD12483",
+      "logical_unit_id": "MD12483_lu10",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Compliance Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12483_n14"
+      ],
+      "block_ids": [
+        "p3_b14",
+        "p3_b15"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12483_req28",
+      "requirement_id": "MD12483_req28",
+      "document_id": "MD12483",
+      "logical_unit_id": "MD12483_lu11",
+      "control_name": "Foreign Exchange Compliance Control",
+      "business_capability": "FEMA Compliance Control",
+      "control_category": "Operational",
+      "verification_type": "Document Review",
+      "verification_platform": "Core Banking",
+      "verification_mechanism": "FEMA Transaction Register Review",
+      "executable_command": "",
+      "command_parameters": "Access the Treasury Management System or Core Banking FX module. Review transaction registers for the applicable period.",
+      "expected_result": "All FX transactions have: valid authorisation, A2/LRS declarations where applicable, correspondent bank confirmation, RBI reporting (Form A-2, FCGPR, etc.) filed within prescribed timelines.",
+      "evidence_required": [
+        "FX Transaction Register",
+        "A-2 Form Copies",
+        "RBI Return Submission Acknowledgement",
+        "Authorisation Records"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.78,
+      "reasoning": "FEMA compliance requires reviewing transaction-level documentation. An independent auditor can access TMS records without relying on the implementing team's self-certification.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Treasury",
+        "Operations"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12483_n15",
+        "MD12483_n16"
+      ],
+      "block_ids": [
+        "p3_b32",
+        "p3_b16",
+        "p3_b17",
+        "p3_b18",
+        "p3_b19",
+        "p3_b20",
+        "p3_b21",
+        "p3_b22",
+        "p3_b23",
+        "p3_b24",
+        "p3_b25",
+        "p3_b26",
+        "p3_b27",
+        "p3_b28",
+        "p3_b29",
+        "p3_b30",
+        "p3_b31"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12483_req29",
+      "requirement_id": "MD12483_req29",
+      "document_id": "MD12483",
+      "logical_unit_id": "MD12483_lu11",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Compliance Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12483_n15",
+        "MD12483_n16"
+      ],
+      "block_ids": [
+        "p3_b32",
+        "p3_b16",
+        "p3_b17",
+        "p3_b18",
+        "p3_b19",
+        "p3_b20",
+        "p3_b21",
+        "p3_b22",
+        "p3_b23",
+        "p3_b24",
+        "p3_b25",
+        "p3_b26",
+        "p3_b27",
+        "p3_b28",
+        "p3_b29",
+        "p3_b30",
+        "p3_b31"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12483_req31",
+      "requirement_id": "MD12483_req31",
+      "document_id": "MD12483",
+      "logical_unit_id": "MD12483_lu11",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Compliance Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12483_n15",
+        "MD12483_n16"
+      ],
+      "block_ids": [
+        "p3_b32",
+        "p3_b16",
+        "p3_b17",
+        "p3_b18",
+        "p3_b19",
+        "p3_b20",
+        "p3_b21",
+        "p3_b22",
+        "p3_b23",
+        "p3_b24",
+        "p3_b25",
+        "p3_b26",
+        "p3_b27",
+        "p3_b28",
+        "p3_b29",
+        "p3_b30",
+        "p3_b31"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12483_req32",
+      "requirement_id": "MD12483_req32",
+      "document_id": "MD12483",
+      "logical_unit_id": "MD12483_lu11",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Compliance Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12483_n15",
+        "MD12483_n16"
+      ],
+      "block_ids": [
+        "p3_b32",
+        "p3_b16",
+        "p3_b17",
+        "p3_b18",
+        "p3_b19",
+        "p3_b20",
+        "p3_b21",
+        "p3_b22",
+        "p3_b23",
+        "p3_b24",
+        "p3_b25",
+        "p3_b26",
+        "p3_b27",
+        "p3_b28",
+        "p3_b29",
+        "p3_b30",
+        "p3_b31"
+      ]
+    }
+  ]
+}

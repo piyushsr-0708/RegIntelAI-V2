@@ -1,0 +1,776 @@
+{
+  "document_id": "MD11322",
+  "title": "MD11322",
+  "document_status": "ACTIVE",
+  "rule_count": 15,
+  "verification_rules": [
+    {
+      "rule_id": "VR_MD11322_req12",
+      "requirement_id": "MD11322_req12",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu4",
+      "control_name": "Compliance Authorisation Control",
+      "business_capability": "Regulatory Permission Governance",
+      "control_category": "Governance",
+      "verification_type": "Document Review",
+      "verification_platform": "Application",
+      "verification_mechanism": "Board / Committee Minutes Review",
+      "executable_command": "",
+      "command_parameters": "Access the Board Secretariat or corporate secretarial records system. Retrieve Board and Risk Committee meeting minutes for the relevant period.",
+      "expected_result": "Board has discussed and minuted relevant regulatory agenda items. Risk oversight Committee meeting held at prescribed frequency. Quorum requirements met.",
+      "evidence_required": [
+        "Board Meeting Minutes",
+        "Risk Committee Minutes",
+        "Board Attendance Register"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.82,
+      "reasoning": "Board and committee governance is verifiable through minutes, which are maintained by the Company Secretary independently of the implementing department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n6"
+      ],
+      "block_ids": [
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7",
+        "p3_b8"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req13",
+      "requirement_id": "MD11322_req13",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu4",
+      "control_name": "Compliance Authorisation Control",
+      "business_capability": "Regulatory Permission Governance",
+      "control_category": "Reporting",
+      "verification_type": "Document Review",
+      "verification_platform": "Browser",
+      "verification_mechanism": "RBI CIMS / Regulatory Portal Login",
+      "executable_command": "",
+      "command_parameters": "Log in to RBI CIMS / regulatory submission portal. Retrieve submission history for the relevant return type and verify submission timestamps.",
+      "expected_result": "All regulatory returns submitted within stipulated timelines. Submission acknowledgements present. No outstanding or overdue returns.",
+      "evidence_required": [
+        "Portal Submission History Screenshot",
+        "Acknowledgement Receipt PDF",
+        "Sign-off from Authorised Signatory"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.8,
+      "reasoning": "Regulatory return submission is verifiable through the RBI portal's submission history, which is independent of the submitting department. A reviewer can log in and confirm submission without asking the department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Periodic Review",
+      "verification_pattern": "Evidence Upload",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n6"
+      ],
+      "block_ids": [
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7",
+        "p3_b8"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req14",
+      "requirement_id": "MD11322_req14",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu4",
+      "control_name": "Compliance Advisory Control",
+      "business_capability": "Regulatory Best Practice Advisory",
+      "control_category": "Advisory",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Best Practice Advisory' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of recommendation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Advisory' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n6"
+      ],
+      "block_ids": [
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7",
+        "p3_b8"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req17",
+      "requirement_id": "MD11322_req17",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu5",
+      "control_name": "Compliance Advisory Control",
+      "business_capability": "Regulatory Best Practice Advisory",
+      "control_category": "Advisory",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Best Practice Advisory' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of recommendation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Advisory' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n7"
+      ],
+      "block_ids": [
+        "p3_b9",
+        "p3_b10",
+        "p3_b11",
+        "p3_b12",
+        "p3_b13",
+        "p3_b14",
+        "p3_b15",
+        "p3_b16",
+        "p3_b17"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req18",
+      "requirement_id": "MD11322_req18",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu6",
+      "control_name": "Compliance Authorisation Control",
+      "business_capability": "Regulatory Permission Governance",
+      "control_category": "Governance",
+      "verification_type": "Document Review",
+      "verification_platform": "Application",
+      "verification_mechanism": "Board / Committee Minutes Review",
+      "executable_command": "",
+      "command_parameters": "Access the Board Secretariat or corporate secretarial records system. Retrieve Board and Risk Committee meeting minutes for the relevant period.",
+      "expected_result": "Board has discussed and minuted relevant regulatory agenda items. Risk oversight Committee meeting held at prescribed frequency. Quorum requirements met.",
+      "evidence_required": [
+        "Board Meeting Minutes",
+        "Risk Committee Minutes",
+        "Board Attendance Register"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.82,
+      "reasoning": "Board and committee governance is verifiable through minutes, which are maintained by the Company Secretary independently of the implementing department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n8"
+      ],
+      "block_ids": [
+        "p3_b18",
+        "p3_b19",
+        "p3_b20",
+        "p3_b21",
+        "p3_b22"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req22",
+      "requirement_id": "MD11322_req22",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu8",
+      "control_name": "Digital Payments Compliance Control",
+      "business_capability": "Payment System Compliance",
+      "control_category": "Operational",
+      "verification_type": "Log Analysis",
+      "verification_platform": "Application",
+      "verification_mechanism": "Payment Switch / Gateway Log Review",
+      "executable_command": "",
+      "command_parameters": "Access payment switch or gateway logs via SIEM or application logging system. Filter for transaction failure and exception events.",
+      "expected_result": "No unauthorised payment transactions. Success/failure ratios within threshold. All declined transactions appropriately logged and investigated.",
+      "evidence_required": [
+        "Payment Gateway Transaction Log Extract",
+        "Exception Report",
+        "Reconciliation Statement"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": true,
+      "confidence": 0.8,
+      "reasoning": "Payment system logs are independently accessible via the SIEM or log management platform without requiring the payments team to provide data.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n10"
+      ],
+      "block_ids": [
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req25",
+      "requirement_id": "MD11322_req25",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu9",
+      "control_name": "Compliance Authorisation Control",
+      "business_capability": "Regulatory Permission Governance",
+      "control_category": "Governance",
+      "verification_type": "Document Review",
+      "verification_platform": "Application",
+      "verification_mechanism": "Board / Committee Minutes Review",
+      "executable_command": "",
+      "command_parameters": "Access the Board Secretariat or corporate secretarial records system. Retrieve Board and Risk Committee meeting minutes for the relevant period.",
+      "expected_result": "Board has discussed and minuted relevant regulatory agenda items. Risk oversight Committee meeting held at prescribed frequency. Quorum requirements met.",
+      "evidence_required": [
+        "Board Meeting Minutes",
+        "Risk Committee Minutes",
+        "Board Attendance Register"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.82,
+      "reasoning": "Board and committee governance is verifiable through minutes, which are maintained by the Company Secretary independently of the implementing department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n11"
+      ],
+      "block_ids": [
+        "p4_b7",
+        "p4_b8",
+        "p4_b9",
+        "p4_b10",
+        "p4_b11",
+        "p4_b12",
+        "p4_b13",
+        "p4_b14",
+        "p4_b15",
+        "p4_b16",
+        "p4_b17",
+        "p4_b18",
+        "p4_b19",
+        "p4_b20",
+        "p4_b21"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req29",
+      "requirement_id": "MD11322_req29",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu10",
+      "control_name": "Digital Payments Governance — Exception Control",
+      "business_capability": "Digital Payments Governance",
+      "control_category": "Corrective",
+      "verification_type": "Log Analysis",
+      "verification_platform": "Application",
+      "verification_mechanism": "Payment Switch / Gateway Log Review",
+      "executable_command": "",
+      "command_parameters": "Access payment switch or gateway logs via SIEM or application logging system. Filter for transaction failure and exception events.",
+      "expected_result": "No unauthorised payment transactions. Success/failure ratios within threshold. All declined transactions appropriately logged and investigated.",
+      "evidence_required": [
+        "Payment Gateway Transaction Log Extract",
+        "Exception Report",
+        "Reconciliation Statement"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": true,
+      "confidence": 0.8,
+      "reasoning": "Payment system logs are independently accessible via the SIEM or log management platform without requiring the payments team to provide data.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n12"
+      ],
+      "block_ids": [
+        "p4_b22",
+        "p4_b23",
+        "p4_b24",
+        "p4_b25",
+        "p4_b26"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req30",
+      "requirement_id": "MD11322_req30",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu11",
+      "control_name": "Compliance Advisory Control",
+      "business_capability": "Regulatory Best Practice Advisory",
+      "control_category": "Advisory",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Best Practice Advisory' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of recommendation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Advisory' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n13"
+      ],
+      "block_ids": [
+        "p4_b27"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req31",
+      "requirement_id": "MD11322_req31",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu12",
+      "control_name": "Digital Payments Compliance Control",
+      "business_capability": "Payment System Compliance",
+      "control_category": "Operational",
+      "verification_type": "Log Analysis",
+      "verification_platform": "Application",
+      "verification_mechanism": "Payment Switch / Gateway Log Review",
+      "executable_command": "",
+      "command_parameters": "Access payment switch or gateway logs via SIEM or application logging system. Filter for transaction failure and exception events.",
+      "expected_result": "No unauthorised payment transactions. Success/failure ratios within threshold. All declined transactions appropriately logged and investigated.",
+      "evidence_required": [
+        "Payment Gateway Transaction Log Extract",
+        "Exception Report",
+        "Reconciliation Statement"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": true,
+      "confidence": 0.8,
+      "reasoning": "Payment system logs are independently accessible via the SIEM or log management platform without requiring the payments team to provide data.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n14"
+      ],
+      "block_ids": [
+        "p5_b0",
+        "p5_b1",
+        "p5_b2"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req32",
+      "requirement_id": "MD11322_req32",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu13",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Compliance Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n15"
+      ],
+      "block_ids": [
+        "p5_b3",
+        "p5_b4",
+        "p5_b5",
+        "p5_b6",
+        "p5_b7",
+        "p5_b8"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req34",
+      "requirement_id": "MD11322_req34",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu14",
+      "control_name": "Compliance Authorisation Control",
+      "business_capability": "Regulatory Permission Governance",
+      "control_category": "Governance",
+      "verification_type": "Document Review",
+      "verification_platform": "Application",
+      "verification_mechanism": "Board / Committee Minutes Review",
+      "executable_command": "",
+      "command_parameters": "Access the Board Secretariat or corporate secretarial records system. Retrieve Board and Risk Committee meeting minutes for the relevant period.",
+      "expected_result": "Board has discussed and minuted relevant regulatory agenda items. Risk oversight Committee meeting held at prescribed frequency. Quorum requirements met.",
+      "evidence_required": [
+        "Board Meeting Minutes",
+        "Risk Committee Minutes",
+        "Board Attendance Register"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.82,
+      "reasoning": "Board and committee governance is verifiable through minutes, which are maintained by the Company Secretary independently of the implementing department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n16"
+      ],
+      "block_ids": [
+        "p5_b9",
+        "p5_b10",
+        "p5_b11",
+        "p5_b12"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req37",
+      "requirement_id": "MD11322_req37",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu17",
+      "control_name": "Foreign Exchange Compliance — Authorisation Control",
+      "business_capability": "Foreign Exchange Compliance",
+      "control_category": "Governance",
+      "verification_type": "Document Review",
+      "verification_platform": "Core Banking",
+      "verification_mechanism": "FEMA Transaction Register Review",
+      "executable_command": "",
+      "command_parameters": "Access the Treasury Management System or Core Banking FX module. Review transaction registers for the applicable period.",
+      "expected_result": "All FX transactions have: valid authorisation, A2/LRS declarations where applicable, correspondent bank confirmation, RBI reporting (Form A-2, FCGPR, etc.) filed within prescribed timelines.",
+      "evidence_required": [
+        "FX Transaction Register",
+        "A-2 Form Copies",
+        "RBI Return Submission Acknowledgement",
+        "Authorisation Records"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.78,
+      "reasoning": "FEMA compliance requires reviewing transaction-level documentation. An independent auditor can access TMS records without relying on the implementing team's self-certification.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Treasury",
+        "Operations"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n19",
+        "MD11322_n20",
+        "MD11322_n21"
+      ],
+      "block_ids": [
+        "p5_b16",
+        "p5_b17",
+        "p5_b18",
+        "p5_b19",
+        "p5_b20",
+        "p5_b21",
+        "p5_b22",
+        "p5_b23",
+        "p5_b24",
+        "p5_b25"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req44",
+      "requirement_id": "MD11322_req44",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu20",
+      "control_name": "Kyc Authorisation Control",
+      "business_capability": "Know Your Customer (KYC) Compliance",
+      "control_category": "Governance",
+      "verification_type": "Database Validation",
+      "verification_platform": "Core Banking",
+      "verification_mechanism": "Core Banking SQL / Report Query",
+      "executable_command": "SELECT COUNT(*) FROM customer_master WHERE kyc_status NOT IN ('VERIFIED','COMPLIANT') AND account_status = 'ACTIVE';",
+      "command_parameters": "Adapt table and column names to the specific core banking system schema. Run with READ-ONLY credentials on the production database replica.",
+      "expected_result": "COUNT = 0. No active accounts with non-compliant KYC status. All customer records have verified KYC documentation.",
+      "evidence_required": [
+        "Database Query Output",
+        "KYC Register Extract",
+        "Sample Customer File Review (redacted)"
+      ],
+      "machine_verifiable": true,
+      "automation_candidate": true,
+      "confidence": 0.82,
+      "reasoning": "KYC status is stored in the core banking database and is independently queryable by the Compliance or Audit team without relying on the KYC implementation team's representation.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "KYC"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n22"
+      ],
+      "block_ids": [
+        "p6_b0",
+        "p6_b1",
+        "p6_b2",
+        "p6_b3",
+        "p6_b4"
+      ]
+    },
+    {
+      "rule_id": "VR_MD11322_req45",
+      "requirement_id": "MD11322_req45",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu20",
+      "control_name": "Compliance Authorisation Control",
+      "business_capability": "Regulatory Permission Governance",
+      "control_category": "Governance",
+      "verification_type": "Document Review",
+      "verification_platform": "Application",
+      "verification_mechanism": "Board / Committee Minutes Review",
+      "executable_command": "",
+      "command_parameters": "Access the Board Secretariat or corporate secretarial records system. Retrieve Board and Risk Committee meeting minutes for the relevant period.",
+      "expected_result": "Board has discussed and minuted relevant regulatory agenda items. Risk oversight Committee meeting held at prescribed frequency. Quorum requirements met.",
+      "evidence_required": [
+        "Board Meeting Minutes",
+        "Risk Committee Minutes",
+        "Board Attendance Register"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.82,
+      "reasoning": "Board and committee governance is verifiable through minutes, which are maintained by the Company Secretary independently of the implementing department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n22"
+      ],
+      "block_ids": [
+        "p6_b0",
+        "p6_b1",
+        "p6_b2",
+        "p6_b3",
+        "p6_b4"
+      ]
+    }
+  ]
+}

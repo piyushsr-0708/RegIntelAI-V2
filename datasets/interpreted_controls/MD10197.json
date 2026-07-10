@@ -1,0 +1,958 @@
+{
+  "document_id": "MD10197",
+  "title": "MD10197",
+  "document_status": "ACTIVE",
+  "interpreted_control_count": 19,
+  "interpreted_controls": [
+    {
+      "requirement_id": "MD10197_req6",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu5",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "control_objective": "To ensure that all applicable General requirements relating to 'Regulatory Compliance Obligation', thereby enabling Bank to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Applicable entities: Bank, Reserve Bank. Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Operational",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "Obligation fulfilment involves organisational processes and human decisions that cannot be fully automated.",
+      "business_rationale": "Failure to implement 'Regulatory Compliance Obligation' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[MEDIUM] Regulatory Compliance Obligation — Compliance Control is a operational control supporting the 'Regulatory Compliance Obligation' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "OBLIGATION",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n5"
+      ],
+      "block_ids": [
+        "p1_b20",
+        "p1_b21",
+        "p1_b22",
+        "p1_b23",
+        "p1_b24",
+        "p1_b25",
+        "p1_b26",
+        "p2_b1"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "requirement_id": "MD10197_req8",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu5",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "control_objective": "To ensure that all applicable General requirements relating to 'Regulatory Compliance Obligation', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Operational",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "Obligation fulfilment involves organisational processes and human decisions that cannot be fully automated.",
+      "business_rationale": "Failure to implement 'Regulatory Compliance Obligation' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[MEDIUM] Regulatory Compliance Obligation — Compliance Control is a operational control supporting the 'Regulatory Compliance Obligation' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "OBLIGATION",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n5"
+      ],
+      "block_ids": [
+        "p1_b20",
+        "p1_b21",
+        "p1_b22",
+        "p1_b23",
+        "p1_b24",
+        "p1_b25",
+        "p1_b26",
+        "p2_b1"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "requirement_id": "MD10197_req12",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu6",
+      "business_capability": "Foreign Exchange Compliance",
+      "control_name": "Foreign Exchange Compliance — Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable Foreign Exchange requirements relating to 'Foreign Exchange Compliance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Financial Risk exposure.",
+      "control_scope": "Responsible departments: Risk, Treasury. Regulatory domain: Foreign Exchange.",
+      "control_category": "Governance",
+      "control_owner": "Risk",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "FEMA violations attract compounding penalties and adverse regulatory attention. 'Foreign Exchange Compliance' ensures that all foreign exchange transactions are authorised, documented, and reported in accordance with RBI Master Directions, protecting the institution from financial and legal liability.",
+      "control_summary": "[LOW] Foreign Exchange Compliance — Authorisation Control is a governance control supporting the 'Foreign Exchange Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Risk function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Foreign Exchange"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n6"
+      ],
+      "block_ids": [
+        "p2_b2",
+        "p2_b3",
+        "p2_b4",
+        "p2_b5"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "MD10197_req19",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu7",
+      "business_capability": "Regulatory Definition & Scope",
+      "control_name": "Compliance Scope Definition",
+      "control_objective": "To formally establish the scope of all applicable General requirements relating to 'Regulatory Definition & Scope', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Governance",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Regulatory Definition & Scope' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Scope Definition is a governance control supporting the 'Regulatory Definition & Scope' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "DEFINITION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        2,
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n7",
+        "MD10197_n8",
+        "MD10197_n9",
+        "MD10197_n10",
+        "MD10197_n11",
+        "MD10197_n12",
+        "MD10197_n13",
+        "MD10197_n14"
+      ],
+      "block_ids": [
+        "p2_b6",
+        "p2_b7",
+        "p2_b8",
+        "p2_b9",
+        "p2_b10",
+        "p2_b11",
+        "p2_b12",
+        "p2_b13",
+        "p2_b14",
+        "p2_b15",
+        "p2_b16",
+        "p2_b17",
+        "p2_b18",
+        "p2_b19",
+        "p2_b20",
+        "p2_b21",
+        "p2_b22",
+        "p2_b23",
+        "p2_b24",
+        "p2_b25",
+        "p2_b26",
+        "p2_b27",
+        "p2_b28",
+        "p2_b29",
+        "p2_b30",
+        "p2_b0",
+        "p3_b1",
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "requirement_id": "MD10197_req21",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu8",
+      "business_capability": "Foreign Exchange Compliance",
+      "control_name": "Treasury Scope Definition",
+      "control_objective": "To formally establish the scope of all applicable Treasury requirements relating to 'Foreign Exchange Compliance', thereby enabling bank to demonstrate full regulatory adherence and reduce Operational Risk exposure.",
+      "control_scope": "Applicable entities: Bank. Responsible departments: Treasury, Risk, Operations. Regulatory domain: Treasury, Foreign Exchange.",
+      "control_category": "Governance",
+      "control_owner": "Treasury",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "FEMA violations attract compounding penalties and adverse regulatory attention. 'Foreign Exchange Compliance' ensures that all foreign exchange transactions are authorised, documented, and reported in accordance with RBI Master Directions, protecting the institution from financial and legal liability.",
+      "control_summary": "[LOW] Treasury Scope Definition is a governance control supporting the 'Foreign Exchange Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Treasury function. Compliance is verified through manual audit.",
+      "requirement_type": "DEFINITION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Treasury",
+        "Foreign Exchange",
+        "Governance",
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk",
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Treasury",
+        "Risk",
+        "Operations",
+        "Board",
+        "Compliance"
+      ],
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n8"
+      ],
+      "block_ids": [
+        "p2_b8",
+        "p2_b9",
+        "p2_b10",
+        "p2_b11",
+        "p2_b12",
+        "p2_b13"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "requirement_id": "MD10197_req22",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu9",
+      "business_capability": "Foreign Exchange Compliance",
+      "control_name": "Foreign Exchange Compliance — Scope Definition",
+      "control_objective": "To formally establish the scope of all applicable Foreign Exchange requirements relating to 'Foreign Exchange Compliance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Financial Risk exposure.",
+      "control_scope": "Responsible departments: Risk, Treasury. Regulatory domain: Foreign Exchange.",
+      "control_category": "Governance",
+      "control_owner": "Risk",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "FEMA violations attract compounding penalties and adverse regulatory attention. 'Foreign Exchange Compliance' ensures that all foreign exchange transactions are authorised, documented, and reported in accordance with RBI Master Directions, protecting the institution from financial and legal liability.",
+      "control_summary": "[LOW] Foreign Exchange Compliance — Scope Definition is a governance control supporting the 'Foreign Exchange Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Risk function. Compliance is verified through manual audit.",
+      "requirement_type": "DEFINITION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Foreign Exchange"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n9"
+      ],
+      "block_ids": [
+        "p2_b14",
+        "p2_b15"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "MD10197_req23",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu10",
+      "business_capability": "Regulatory Permission Governance",
+      "control_name": "Compliance Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable General requirements relating to 'Regulatory Permission Governance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Governance",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Regulatory Permission Governance' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Authorisation Control is a governance control supporting the 'Regulatory Permission Governance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n10"
+      ],
+      "block_ids": [
+        "p2_b16",
+        "p2_b17",
+        "p2_b18",
+        "p2_b19",
+        "p2_b20",
+        "p2_b21",
+        "p2_b22",
+        "p2_b23",
+        "p2_b24",
+        "p2_b25",
+        "p2_b26"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "requirement_id": "MD10197_req27",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu11",
+      "business_capability": "Regulatory Definition & Scope",
+      "control_name": "Compliance Scope Definition",
+      "control_objective": "To formally establish the scope of all applicable General requirements relating to 'Regulatory Definition & Scope', thereby enabling Authorised Dealer to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Applicable entities: Authorised Dealer. Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Governance",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Regulatory Definition & Scope' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Scope Definition is a governance control supporting the 'Regulatory Definition & Scope' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "DEFINITION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n12"
+      ],
+      "block_ids": [
+        "p3_b1",
+        "p3_b2"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "requirement_id": "MD10197_req31",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu15",
+      "business_capability": "Foreign Exchange Compliance",
+      "control_name": "Foreign Exchange Compliance — Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable Foreign Exchange requirements relating to 'Foreign Exchange Compliance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Financial Risk exposure.",
+      "control_scope": "Responsible departments: Risk, Treasury. Regulatory domain: Foreign Exchange.",
+      "control_category": "Governance",
+      "control_owner": "Risk",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "FEMA violations attract compounding penalties and adverse regulatory attention. 'Foreign Exchange Compliance' ensures that all foreign exchange transactions are authorised, documented, and reported in accordance with RBI Master Directions, protecting the institution from financial and legal liability.",
+      "control_summary": "[LOW] Foreign Exchange Compliance — Authorisation Control is a governance control supporting the 'Foreign Exchange Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Risk function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Foreign Exchange"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n16",
+        "MD10197_n17",
+        "MD10197_n18",
+        "MD10197_n19",
+        "MD10197_n20"
+      ],
+      "block_ids": [
+        "p3_b9",
+        "p3_b10",
+        "p3_b11",
+        "p3_b12",
+        "p3_b13",
+        "p3_b14",
+        "p3_b15",
+        "p3_b16",
+        "p3_b17",
+        "p3_b18",
+        "p3_b19",
+        "p3_b20",
+        "p3_b21",
+        "p3_b22",
+        "p3_b23",
+        "p3_b24",
+        "p3_b25"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "MD10197_req35",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu18",
+      "business_capability": "Foreign Exchange Compliance",
+      "control_name": "Foreign Exchange Compliance — Advisory Control",
+      "control_objective": "To promote adoption of all applicable Foreign Exchange requirements relating to 'Foreign Exchange Compliance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Financial Risk exposure.",
+      "control_scope": "Responsible departments: Risk, Treasury. Regulatory domain: Foreign Exchange.",
+      "control_category": "Advisory",
+      "control_owner": "Risk",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "FEMA violations attract compounding penalties and adverse regulatory attention. 'Foreign Exchange Compliance' ensures that all foreign exchange transactions are authorised, documented, and reported in accordance with RBI Master Directions, protecting the institution from financial and legal liability.",
+      "control_summary": "[LOW] Foreign Exchange Compliance — Advisory Control is a advisory control supporting the 'Foreign Exchange Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Risk function. Compliance is verified through manual audit.",
+      "requirement_type": "RECOMMENDATION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Foreign Exchange"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n19"
+      ],
+      "block_ids": [
+        "p3_b13",
+        "p3_b14",
+        "p3_b15",
+        "p3_b16",
+        "p3_b17",
+        "p3_b18"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "MD10197_req37",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu18",
+      "business_capability": "Foreign Exchange Compliance",
+      "control_name": "Foreign Exchange Compliance — Advisory Control",
+      "control_objective": "To promote adoption of all applicable Foreign Exchange requirements relating to 'Foreign Exchange Compliance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Financial Risk exposure.",
+      "control_scope": "Responsible departments: Compliance, Treasury, Risk. Regulatory domain: Foreign Exchange, Liquidity.",
+      "control_category": "Advisory",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "FEMA violations attract compounding penalties and adverse regulatory attention. 'Foreign Exchange Compliance' ensures that all foreign exchange transactions are authorised, documented, and reported in accordance with RBI Master Directions, protecting the institution from financial and legal liability.",
+      "control_summary": "[LOW] Foreign Exchange Compliance — Advisory Control is a advisory control supporting the 'Foreign Exchange Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "RECOMMENDATION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Liquidity",
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk"
+      ],
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n19"
+      ],
+      "block_ids": [
+        "p3_b13",
+        "p3_b14",
+        "p3_b15",
+        "p3_b16",
+        "p3_b17",
+        "p3_b18"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "MD10197_req40",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu20",
+      "business_capability": "Foreign Exchange Compliance",
+      "control_name": "Foreign Exchange Compliance — Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable Foreign Exchange requirements relating to 'Foreign Exchange Compliance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Financial Risk exposure.",
+      "control_scope": "Responsible departments: Compliance, Treasury, Risk. Regulatory domain: Foreign Exchange, Reporting.",
+      "control_category": "Governance",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "FEMA violations attract compounding penalties and adverse regulatory attention. 'Foreign Exchange Compliance' ensures that all foreign exchange transactions are authorised, documented, and reported in accordance with RBI Master Directions, protecting the institution from financial and legal liability.",
+      "control_summary": "[LOW] Foreign Exchange Compliance — Authorisation Control is a governance control supporting the 'Foreign Exchange Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk"
+      ],
+      "page_numbers": [
+        3,
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n21",
+        "MD10197_n22",
+        "MD10197_n23",
+        "MD10197_n24"
+      ],
+      "block_ids": [
+        "p3_b26",
+        "p3_b27",
+        "p3_b28",
+        "p3_b29",
+        "p3_b30",
+        "p3_b31",
+        "p3_b32",
+        "p3_b33",
+        "p3_b0",
+        "p4_b1",
+        "p4_b2",
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6",
+        "p4_b7",
+        "p4_b8",
+        "p4_b9",
+        "p4_b10",
+        "p4_b11",
+        "p4_b12",
+        "p4_b13",
+        "p4_b14",
+        "p4_b15",
+        "p4_b16"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "MD10197_req47",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu22",
+      "business_capability": "Regulatory Best Practice Advisory",
+      "control_name": "Compliance Advisory Control",
+      "control_objective": "To promote adoption of all applicable General requirements relating to 'Regulatory Best Practice Advisory', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Advisory",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Regulatory Best Practice Advisory' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Advisory Control is a advisory control supporting the 'Regulatory Best Practice Advisory' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "RECOMMENDATION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n23"
+      ],
+      "block_ids": [
+        "p4_b1",
+        "p4_b2",
+        "p4_b3"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "requirement_id": "MD10197_req50",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu23",
+      "business_capability": "Foreign Exchange Compliance",
+      "control_name": "Foreign Exchange Compliance — Advisory Control",
+      "control_objective": "To promote adoption of all applicable Foreign Exchange requirements relating to 'Foreign Exchange Compliance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Financial Risk exposure.",
+      "control_scope": "Responsible departments: Risk, Treasury. Regulatory domain: Foreign Exchange, Liquidity.",
+      "control_category": "Advisory",
+      "control_owner": "Risk",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "FEMA violations attract compounding penalties and adverse regulatory attention. 'Foreign Exchange Compliance' ensures that all foreign exchange transactions are authorised, documented, and reported in accordance with RBI Master Directions, protecting the institution from financial and legal liability.",
+      "control_summary": "[LOW] Foreign Exchange Compliance — Advisory Control is a advisory control supporting the 'Foreign Exchange Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Risk function. Compliance is verified through manual audit.",
+      "requirement_type": "RECOMMENDATION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Liquidity"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n24"
+      ],
+      "block_ids": [
+        "p4_b4",
+        "p4_b5",
+        "p4_b6",
+        "p4_b7",
+        "p4_b8",
+        "p4_b9",
+        "p4_b10",
+        "p4_b11",
+        "p4_b12",
+        "p4_b13",
+        "p4_b14",
+        "p4_b15",
+        "p4_b16"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "requirement_id": "MD10197_req51",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu23",
+      "business_capability": "Foreign Exchange Compliance",
+      "control_name": "Foreign Exchange Compliance — Advisory Control",
+      "control_objective": "To promote adoption of all applicable Foreign Exchange requirements relating to 'Foreign Exchange Compliance', thereby enabling Authorised Dealer to demonstrate full regulatory adherence and reduce Financial Risk exposure.",
+      "control_scope": "Applicable entities: Authorised Dealer. Responsible departments: Risk, Treasury. Regulatory domain: Foreign Exchange.",
+      "control_category": "Advisory",
+      "control_owner": "Risk",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "FEMA violations attract compounding penalties and adverse regulatory attention. 'Foreign Exchange Compliance' ensures that all foreign exchange transactions are authorised, documented, and reported in accordance with RBI Master Directions, protecting the institution from financial and legal liability.",
+      "control_summary": "[LOW] Foreign Exchange Compliance — Advisory Control is a advisory control supporting the 'Foreign Exchange Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Risk function. Compliance is verified through manual audit.",
+      "requirement_type": "RECOMMENDATION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Foreign Exchange"
+      ],
+      "risk_domain": [
+        "Financial Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n24"
+      ],
+      "block_ids": [
+        "p4_b4",
+        "p4_b5",
+        "p4_b6",
+        "p4_b7",
+        "p4_b8",
+        "p4_b9",
+        "p4_b10",
+        "p4_b11",
+        "p4_b12",
+        "p4_b13",
+        "p4_b14",
+        "p4_b15",
+        "p4_b16"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "requirement_id": "MD10197_req53",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu25",
+      "business_capability": "Foreign Exchange Compliance",
+      "control_name": "Foreign Exchange Compliance — Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable Foreign Exchange requirements relating to 'Foreign Exchange Compliance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Financial Risk exposure.",
+      "control_scope": "Responsible departments: Compliance, Treasury, Risk. Regulatory domain: Foreign Exchange, Reporting.",
+      "control_category": "Governance",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "FEMA violations attract compounding penalties and adverse regulatory attention. 'Foreign Exchange Compliance' ensures that all foreign exchange transactions are authorised, documented, and reported in accordance with RBI Master Directions, protecting the institution from financial and legal liability.",
+      "control_summary": "[LOW] Foreign Exchange Compliance — Authorisation Control is a governance control supporting the 'Foreign Exchange Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk"
+      ],
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n26"
+      ],
+      "block_ids": [
+        "p4_b18",
+        "p4_b19",
+        "p4_b20"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "MD10197_req57",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu29",
+      "business_capability": "Regulatory Permission Governance",
+      "control_name": "Compliance Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable General requirements relating to 'Regulatory Permission Governance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Governance",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Regulatory Permission Governance' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Authorisation Control is a governance control supporting the 'Regulatory Permission Governance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n30"
+      ],
+      "block_ids": [
+        "p4_b29",
+        "p4_b30",
+        "p4_b31",
+        "p4_b32",
+        "p4_b0"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "requirement_id": "MD10197_req60",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu30",
+      "business_capability": "Foreign Exchange Compliance",
+      "control_name": "Foreign Exchange Compliance — Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable Foreign Exchange requirements relating to 'Foreign Exchange Compliance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Financial Risk exposure.",
+      "control_scope": "Responsible departments: Compliance, Treasury, Risk. Regulatory domain: Foreign Exchange, Reporting.",
+      "control_category": "Governance",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "FEMA violations attract compounding penalties and adverse regulatory attention. 'Foreign Exchange Compliance' ensures that all foreign exchange transactions are authorised, documented, and reported in accordance with RBI Master Directions, protecting the institution from financial and legal liability.",
+      "control_summary": "[LOW] Foreign Exchange Compliance — Authorisation Control is a governance control supporting the 'Foreign Exchange Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk"
+      ],
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n31",
+        "MD10197_n32",
+        "MD10197_n33",
+        "MD10197_n34",
+        "MD10197_n35"
+      ],
+      "block_ids": [
+        "p5_b1",
+        "p5_b2",
+        "p5_b3",
+        "p5_b4",
+        "p5_b5",
+        "p5_b6",
+        "p5_b7",
+        "p5_b8",
+        "p5_b9",
+        "p5_b10",
+        "p5_b11",
+        "p5_b12",
+        "p5_b13",
+        "p5_b14",
+        "p5_b15",
+        "p5_b16",
+        "p5_b17",
+        "p5_b18",
+        "p5_b19",
+        "p5_b20",
+        "p5_b21",
+        "p5_b22",
+        "p5_b23"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "MD10197_req75",
+      "document_id": "MD10197",
+      "logical_unit_id": "MD10197_lu38",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "control_objective": "To ensure that all applicable General requirements relating to 'Regulatory Compliance Obligation', thereby enabling Authorised Dealers to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Operational",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "Obligation fulfilment involves organisational processes and human decisions that cannot be fully automated.",
+      "business_rationale": "Failure to implement 'Regulatory Compliance Obligation' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[MEDIUM] Regulatory Compliance Obligation — Compliance Control is a operational control supporting the 'Regulatory Compliance Obligation' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "OBLIGATION",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD10197_n39"
+      ],
+      "block_ids": [
+        "p6_b4",
+        "p6_b5",
+        "p6_b6",
+        "p6_b7",
+        "p6_b8",
+        "p6_b0"
+      ],
+      "confidence": 1.0
+    }
+  ]
+}

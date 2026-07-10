@@ -1,0 +1,666 @@
+{
+  "document_id": "MD11322",
+  "title": "MD11322",
+  "document_status": "ACTIVE",
+  "interpreted_control_count": 15,
+  "interpreted_controls": [
+    {
+      "requirement_id": "MD11322_req12",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu4",
+      "business_capability": "Regulatory Permission Governance",
+      "control_name": "Compliance Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable General requirements relating to 'Regulatory Permission Governance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance, Operations. Regulatory domain: General.",
+      "control_category": "Governance",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Regulatory Permission Governance' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Authorisation Control is a governance control supporting the 'Regulatory Permission Governance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Operations"
+      ],
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n6"
+      ],
+      "block_ids": [
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7",
+        "p3_b8"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "MD11322_req13",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu4",
+      "business_capability": "Regulatory Permission Governance",
+      "control_name": "Compliance Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable General requirements relating to 'Regulatory Permission Governance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Reporting",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Periodic Review",
+      "verification_pattern": "Evidence Upload",
+      "automation_feasibility": "Medium",
+      "automation_rationale": "Report generation and submission can be automated, but regulatory data quality validation requires human review.",
+      "business_rationale": "Failure to implement 'Regulatory Permission Governance' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Authorisation Control is a reporting control supporting the 'Regulatory Permission Governance' business capability. Implementation follows the 'Periodic Review' pattern and is owned by the Compliance function. Compliance is verified through evidence upload.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n6"
+      ],
+      "block_ids": [
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7",
+        "p3_b8"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "MD11322_req14",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu4",
+      "business_capability": "Regulatory Best Practice Advisory",
+      "control_name": "Compliance Advisory Control",
+      "control_objective": "To promote adoption of all applicable General requirements relating to 'Regulatory Best Practice Advisory', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Advisory",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Regulatory Best Practice Advisory' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Advisory Control is a advisory control supporting the 'Regulatory Best Practice Advisory' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "RECOMMENDATION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n6"
+      ],
+      "block_ids": [
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7",
+        "p3_b8"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "requirement_id": "MD11322_req17",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu5",
+      "business_capability": "Regulatory Best Practice Advisory",
+      "control_name": "Compliance Advisory Control",
+      "control_objective": "To promote adoption of all applicable General requirements relating to 'Regulatory Best Practice Advisory', thereby enabling RBI to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Applicable entities: RBI. Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Advisory",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Regulatory Best Practice Advisory' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Advisory Control is a advisory control supporting the 'Regulatory Best Practice Advisory' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "RECOMMENDATION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n7"
+      ],
+      "block_ids": [
+        "p3_b9",
+        "p3_b10",
+        "p3_b11",
+        "p3_b12",
+        "p3_b13",
+        "p3_b14",
+        "p3_b15",
+        "p3_b16",
+        "p3_b17"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "requirement_id": "MD11322_req18",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu6",
+      "business_capability": "Regulatory Permission Governance",
+      "control_name": "Compliance Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable General requirements relating to 'Regulatory Permission Governance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Governance",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Regulatory Permission Governance' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Authorisation Control is a governance control supporting the 'Regulatory Permission Governance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n8"
+      ],
+      "block_ids": [
+        "p3_b18",
+        "p3_b19",
+        "p3_b20",
+        "p3_b21",
+        "p3_b22"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "requirement_id": "MD11322_req22",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu8",
+      "business_capability": "Payment System Compliance",
+      "control_name": "Digital Payments Compliance Control",
+      "control_objective": "To ensure that all applicable Digital Payments requirements relating to 'Payment System Compliance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Operational Risk exposure.",
+      "control_scope": "Responsible departments: Risk, Operations. Regulatory domain: Digital Payments.",
+      "control_category": "Operational",
+      "control_owner": "Risk",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "Obligation fulfilment involves organisational processes and human decisions that cannot be fully automated.",
+      "business_rationale": "Failure to implement 'Payment System Compliance' creates uncontrolled Operational Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with Digital Payments requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[MEDIUM] Digital Payments Compliance Control is a operational control supporting the 'Payment System Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Risk function. Compliance is verified through manual audit.",
+      "requirement_type": "OBLIGATION",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n10"
+      ],
+      "block_ids": [
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "MD11322_req25",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu9",
+      "business_capability": "Regulatory Permission Governance",
+      "control_name": "Compliance Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable General requirements relating to 'Regulatory Permission Governance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Applicable entities: Customer. Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Governance",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Regulatory Permission Governance' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Authorisation Control is a governance control supporting the 'Regulatory Permission Governance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n11"
+      ],
+      "block_ids": [
+        "p4_b7",
+        "p4_b8",
+        "p4_b9",
+        "p4_b10",
+        "p4_b11",
+        "p4_b12",
+        "p4_b13",
+        "p4_b14",
+        "p4_b15",
+        "p4_b16",
+        "p4_b17",
+        "p4_b18",
+        "p4_b19",
+        "p4_b20",
+        "p4_b21"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "requirement_id": "MD11322_req29",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu10",
+      "business_capability": "Digital Payments Governance",
+      "control_name": "Digital Payments Governance — Exception Control",
+      "control_objective": "To govern permissible exceptions to all applicable Digital Payments requirements relating to 'Digital Payments Governance', thereby enabling the person to demonstrate full regulatory adherence and reduce Operational Risk exposure.",
+      "control_scope": "Responsible departments: Risk, Operations. Regulatory domain: Digital Payments.",
+      "control_category": "Corrective",
+      "control_owner": "Risk",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Digital Payments Governance' creates uncontrolled Operational Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with Digital Payments requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Digital Payments Governance — Exception Control is a corrective control supporting the 'Digital Payments Governance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Risk function. Compliance is verified through manual audit.",
+      "requirement_type": "EXCEPTION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n12"
+      ],
+      "block_ids": [
+        "p4_b22",
+        "p4_b23",
+        "p4_b24",
+        "p4_b25",
+        "p4_b26"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "requirement_id": "MD11322_req30",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu11",
+      "business_capability": "Regulatory Best Practice Advisory",
+      "control_name": "Compliance Advisory Control",
+      "control_objective": "To promote adoption of all applicable General requirements relating to 'Regulatory Best Practice Advisory', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Advisory",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Regulatory Best Practice Advisory' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Advisory Control is a advisory control supporting the 'Regulatory Best Practice Advisory' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "RECOMMENDATION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n13"
+      ],
+      "block_ids": [
+        "p4_b27"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "requirement_id": "MD11322_req31",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu12",
+      "business_capability": "Payment System Compliance",
+      "control_name": "Digital Payments Compliance Control",
+      "control_objective": "To ensure that all applicable Digital Payments requirements relating to 'Payment System Compliance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Operational Risk exposure.",
+      "control_scope": "Responsible departments: Risk, Operations. Regulatory domain: Digital Payments.",
+      "control_category": "Operational",
+      "control_owner": "Risk",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "Obligation fulfilment involves organisational processes and human decisions that cannot be fully automated.",
+      "business_rationale": "Failure to implement 'Payment System Compliance' creates uncontrolled Operational Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with Digital Payments requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[MEDIUM] Digital Payments Compliance Control is a operational control supporting the 'Payment System Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Risk function. Compliance is verified through manual audit.",
+      "requirement_type": "OBLIGATION",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n14"
+      ],
+      "block_ids": [
+        "p5_b0",
+        "p5_b1",
+        "p5_b2"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "requirement_id": "MD11322_req32",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu13",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "control_objective": "To ensure that all applicable General requirements relating to 'Regulatory Compliance Obligation', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Operational",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "Obligation fulfilment involves organisational processes and human decisions that cannot be fully automated.",
+      "business_rationale": "Failure to implement 'Regulatory Compliance Obligation' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[MEDIUM] Regulatory Compliance Obligation — Compliance Control is a operational control supporting the 'Regulatory Compliance Obligation' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "OBLIGATION",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n15"
+      ],
+      "block_ids": [
+        "p5_b3",
+        "p5_b4",
+        "p5_b5",
+        "p5_b6",
+        "p5_b7",
+        "p5_b8"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "requirement_id": "MD11322_req34",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu14",
+      "business_capability": "Regulatory Permission Governance",
+      "control_name": "Compliance Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable General requirements relating to 'Regulatory Permission Governance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Governance",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Regulatory Permission Governance' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Authorisation Control is a governance control supporting the 'Regulatory Permission Governance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n16"
+      ],
+      "block_ids": [
+        "p5_b9",
+        "p5_b10",
+        "p5_b11",
+        "p5_b12"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "MD11322_req37",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu17",
+      "business_capability": "Foreign Exchange Compliance",
+      "control_name": "Foreign Exchange Compliance — Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable Foreign Exchange requirements relating to 'Foreign Exchange Compliance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Financial Risk exposure.",
+      "control_scope": "Responsible departments: Risk, Treasury, Operations. Regulatory domain: Foreign Exchange, Digital Payments.",
+      "control_category": "Governance",
+      "control_owner": "Risk",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "FEMA violations attract compounding penalties and adverse regulatory attention. 'Foreign Exchange Compliance' ensures that all foreign exchange transactions are authorised, documented, and reported in accordance with RBI Master Directions, protecting the institution from financial and legal liability.",
+      "control_summary": "[LOW] Foreign Exchange Compliance — Authorisation Control is a governance control supporting the 'Foreign Exchange Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Risk function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Treasury",
+        "Operations"
+      ],
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n19",
+        "MD11322_n20",
+        "MD11322_n21"
+      ],
+      "block_ids": [
+        "p5_b16",
+        "p5_b17",
+        "p5_b18",
+        "p5_b19",
+        "p5_b20",
+        "p5_b21",
+        "p5_b22",
+        "p5_b23",
+        "p5_b24",
+        "p5_b25"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "requirement_id": "MD11322_req44",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu20",
+      "business_capability": "Know Your Customer (KYC) Compliance",
+      "control_name": "Kyc Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable KYC requirements relating to 'Know Your Customer (KYC) Compliance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: KYC.",
+      "control_category": "Governance",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Inadequate customer due diligence exposes the institution to exploitation by financial criminals. 'Know Your Customer (KYC) Compliance' ensures that customer identities are verified and risk-profiled before account opening, protecting the institution from being used as a conduit for money laundering, terrorist financing, or fraud — all of which carry severe regulatory and reputational consequences.",
+      "control_summary": "[LOW] Kyc Authorisation Control is a governance control supporting the 'Know Your Customer (KYC) Compliance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "KYC"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n22"
+      ],
+      "block_ids": [
+        "p6_b0",
+        "p6_b1",
+        "p6_b2",
+        "p6_b3",
+        "p6_b4"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "requirement_id": "MD11322_req45",
+      "document_id": "MD11322",
+      "logical_unit_id": "MD11322_lu20",
+      "business_capability": "Regulatory Permission Governance",
+      "control_name": "Compliance Authorisation Control",
+      "control_objective": "To establish authorised procedures for all applicable General requirements relating to 'Regulatory Permission Governance', thereby enabling the institution to demonstrate full regulatory adherence and reduce Compliance Risk exposure.",
+      "control_scope": "Responsible departments: Compliance. Regulatory domain: General.",
+      "control_category": "Governance",
+      "control_owner": "Compliance",
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "automation_feasibility": "Low",
+      "automation_rationale": "This control type relies primarily on human judgment and process adherence, limiting automation applicability.",
+      "business_rationale": "Failure to implement 'Regulatory Permission Governance' creates uncontrolled Compliance Risk exposure for the institution. Under RBI's supervisory framework, non-compliance with General requirements can result in regulatory censure, financial penalties, and reputational harm. This control operationalises the institution's commitment to regulatory adherence and risk management.",
+      "control_summary": "[LOW] Compliance Authorisation Control is a governance control supporting the 'Regulatory Permission Governance' business capability. Implementation follows the 'Workflow Creation' pattern and is owned by the Compliance function. Compliance is verified through manual audit.",
+      "requirement_type": "PERMISSION",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD11322_n22"
+      ],
+      "block_ids": [
+        "p6_b0",
+        "p6_b1",
+        "p6_b2",
+        "p6_b3",
+        "p6_b4"
+      ],
+      "confidence": 0.75
+    }
+  ]
+}

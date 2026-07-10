@@ -1,0 +1,1709 @@
+{
+  "document_id": "MD12648",
+  "title": "MD12648",
+  "document_status": "WITHDRAWN",
+  "rule_count": 32,
+  "verification_rules": [
+    {
+      "rule_id": "VR_MD12648_req9",
+      "requirement_id": "MD12648_req9",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu8",
+      "control_name": "Reporting Compliance Control",
+      "business_capability": "Regulatory Disclosure Obligation",
+      "control_category": "Operational",
+      "verification_type": "Log Analysis",
+      "verification_platform": "Application",
+      "verification_mechanism": "Payment Switch / Gateway Log Review",
+      "executable_command": "",
+      "command_parameters": "Access payment switch or gateway logs via SIEM or application logging system. Filter for transaction failure and exception events.",
+      "expected_result": "No unauthorised payment transactions. Success/failure ratios within threshold. All declined transactions appropriately logged and investigated.",
+      "evidence_required": [
+        "Payment Gateway Transaction Log Extract",
+        "Exception Report",
+        "Reconciliation Statement"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": true,
+      "confidence": 0.8,
+      "reasoning": "Payment system logs are independently accessible via the SIEM or log management platform without requiring the payments team to provide data.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Reporting",
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk",
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Risk",
+        "Operations"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n8"
+      ],
+      "block_ids": [
+        "p2_b4",
+        "p2_b5",
+        "p2_b6"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req10",
+      "requirement_id": "MD12648_req10",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu11",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Reporting",
+      "verification_type": "Document Review",
+      "verification_platform": "Browser",
+      "verification_mechanism": "RBI CIMS / Regulatory Portal Login",
+      "executable_command": "",
+      "command_parameters": "Log in to RBI CIMS / regulatory submission portal. Retrieve submission history for the relevant return type and verify submission timestamps.",
+      "expected_result": "All regulatory returns submitted within stipulated timelines. Submission acknowledgements present. No outstanding or overdue returns.",
+      "evidence_required": [
+        "Portal Submission History Screenshot",
+        "Acknowledgement Receipt PDF",
+        "Sign-off from Authorised Signatory"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.8,
+      "reasoning": "Regulatory return submission is verifiable through the RBI portal's submission history, which is independent of the submitting department. A reviewer can log in and confirm submission without asking the department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Periodic Review",
+      "verification_pattern": "Evidence Upload",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n11"
+      ],
+      "block_ids": [
+        "p2_b8",
+        "p2_b9"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req12",
+      "requirement_id": "MD12648_req12",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu12",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Reporting",
+      "verification_type": "Document Review",
+      "verification_platform": "Browser",
+      "verification_mechanism": "RBI CIMS / Regulatory Portal Login",
+      "executable_command": "",
+      "command_parameters": "Log in to RBI CIMS / regulatory submission portal. Retrieve submission history for the relevant return type and verify submission timestamps.",
+      "expected_result": "All regulatory returns submitted within stipulated timelines. Submission acknowledgements present. No outstanding or overdue returns.",
+      "evidence_required": [
+        "Portal Submission History Screenshot",
+        "Acknowledgement Receipt PDF",
+        "Sign-off from Authorised Signatory"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.8,
+      "reasoning": "Regulatory return submission is verifiable through the RBI portal's submission history, which is independent of the submitting department. A reviewer can log in and confirm submission without asking the department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Periodic Review",
+      "verification_pattern": "Evidence Upload",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n12"
+      ],
+      "block_ids": [
+        "p2_b10",
+        "p2_b11",
+        "p2_b12",
+        "p2_b13",
+        "p2_b14",
+        "p2_b15",
+        "p2_b16",
+        "p2_b17"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req14",
+      "requirement_id": "MD12648_req14",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu12",
+      "control_name": "Digital Payments Compliance Control",
+      "business_capability": "Payment System Compliance",
+      "control_category": "Reporting",
+      "verification_type": "Document Review",
+      "verification_platform": "Browser",
+      "verification_mechanism": "RBI CIMS / Regulatory Portal Login",
+      "executable_command": "",
+      "command_parameters": "Log in to RBI CIMS / regulatory submission portal. Retrieve submission history for the relevant return type and verify submission timestamps.",
+      "expected_result": "All regulatory returns submitted within stipulated timelines. Submission acknowledgements present. No outstanding or overdue returns.",
+      "evidence_required": [
+        "Portal Submission History Screenshot",
+        "Acknowledgement Receipt PDF",
+        "Sign-off from Authorised Signatory"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.8,
+      "reasoning": "Regulatory return submission is verifiable through the RBI portal's submission history, which is independent of the submitting department. A reviewer can log in and confirm submission without asking the department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Risk",
+        "Operations"
+      ],
+      "implementation_pattern": "Periodic Review",
+      "verification_pattern": "Evidence Upload",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n12"
+      ],
+      "block_ids": [
+        "p2_b10",
+        "p2_b11",
+        "p2_b12",
+        "p2_b13",
+        "p2_b14",
+        "p2_b15",
+        "p2_b16",
+        "p2_b17"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req15",
+      "requirement_id": "MD12648_req15",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu13",
+      "control_name": "Reporting Compliance Control",
+      "business_capability": "Regulatory Disclosure Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Disclosure Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        2
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n13"
+      ],
+      "block_ids": [
+        "p2_b18",
+        "p2_b19",
+        "p2_b20"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req17",
+      "requirement_id": "MD12648_req17",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu16",
+      "control_name": "Reporting Compliance Control",
+      "business_capability": "Regulatory Disclosure Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Disclosure Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n16"
+      ],
+      "block_ids": [
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req18",
+      "requirement_id": "MD12648_req18",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu16",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Compliance Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n16"
+      ],
+      "block_ids": [
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req19",
+      "requirement_id": "MD12648_req19",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu16",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Technical",
+      "verification_type": "Registry Check",
+      "verification_platform": "Windows",
+      "verification_mechanism": "reg query",
+      "executable_command": "reg query \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\"",
+      "command_parameters": "Adapt registry key path to the specific control being verified. Run with Administrator privileges.",
+      "expected_result": "Relevant registry keys exist and contain compliant values as specified by the control policy.",
+      "evidence_required": [
+        "Registry Export (.reg file)",
+        "reg query CMD Output"
+      ],
+      "machine_verifiable": true,
+      "automation_candidate": true,
+      "confidence": 0.85,
+      "reasoning": "Windows Registry keys are directly queryable and exportable without departmental involvement. Registry state reflects actual system configuration.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "IT"
+      ],
+      "implementation_pattern": "Configuration Change",
+      "verification_pattern": "PowerShell",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n16"
+      ],
+      "block_ids": [
+        "p3_b2",
+        "p3_b3",
+        "p3_b4",
+        "p3_b5",
+        "p3_b6",
+        "p3_b7"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req20",
+      "requirement_id": "MD12648_req20",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu17",
+      "control_name": "Reporting Compliance Control",
+      "business_capability": "Regulatory Disclosure Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Disclosure Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n17"
+      ],
+      "block_ids": [
+        "p3_b8",
+        "p3_b9"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req22",
+      "requirement_id": "MD12648_req22",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu18",
+      "control_name": "Reporting Compliance Control",
+      "business_capability": "Regulatory Disclosure Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Disclosure Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3,
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n18",
+        "MD12648_n19",
+        "MD12648_n20",
+        "MD12648_n21",
+        "MD12648_n22",
+        "MD12648_n23"
+      ],
+      "block_ids": [
+        "p3_b26",
+        "p3_b10",
+        "p3_b11",
+        "p3_b12",
+        "p3_b13",
+        "p3_b14",
+        "p3_b15",
+        "p3_b16",
+        "p3_b17",
+        "p3_b18",
+        "p3_b19",
+        "p3_b20",
+        "p3_b21",
+        "p3_b22",
+        "p3_b23",
+        "p3_b24",
+        "p3_b25",
+        "p4_b0",
+        "p4_b1",
+        "p4_b2",
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6",
+        "p4_b7",
+        "p4_b8",
+        "p4_b9",
+        "p4_b10"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req24",
+      "requirement_id": "MD12648_req24",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu18",
+      "control_name": "Foreign Exchange Compliance Control",
+      "business_capability": "FEMA Compliance Control",
+      "control_category": "Operational",
+      "verification_type": "Document Review",
+      "verification_platform": "Core Banking",
+      "verification_mechanism": "FEMA Transaction Register Review",
+      "executable_command": "",
+      "command_parameters": "Access the Treasury Management System or Core Banking FX module. Review transaction registers for the applicable period.",
+      "expected_result": "All FX transactions have: valid authorisation, A2/LRS declarations where applicable, correspondent bank confirmation, RBI reporting (Form A-2, FCGPR, etc.) filed within prescribed timelines.",
+      "evidence_required": [
+        "FX Transaction Register",
+        "A-2 Form Copies",
+        "RBI Return Submission Acknowledgement",
+        "Authorisation Records"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.78,
+      "reasoning": "FEMA compliance requires reviewing transaction-level documentation. An independent auditor can access TMS records without relying on the implementing team's self-certification.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Treasury",
+        "Operations"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3,
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n18",
+        "MD12648_n19",
+        "MD12648_n20",
+        "MD12648_n21",
+        "MD12648_n22",
+        "MD12648_n23"
+      ],
+      "block_ids": [
+        "p3_b26",
+        "p3_b10",
+        "p3_b11",
+        "p3_b12",
+        "p3_b13",
+        "p3_b14",
+        "p3_b15",
+        "p3_b16",
+        "p3_b17",
+        "p3_b18",
+        "p3_b19",
+        "p3_b20",
+        "p3_b21",
+        "p3_b22",
+        "p3_b23",
+        "p3_b24",
+        "p3_b25",
+        "p4_b0",
+        "p4_b1",
+        "p4_b2",
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6",
+        "p4_b7",
+        "p4_b8",
+        "p4_b9",
+        "p4_b10"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req26",
+      "requirement_id": "MD12648_req26",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu20",
+      "control_name": "Reporting Compliance Control",
+      "business_capability": "Regulatory Disclosure Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Disclosure Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3,
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n20",
+        "MD12648_n21",
+        "MD12648_n22"
+      ],
+      "block_ids": [
+        "p3_b18",
+        "p3_b19",
+        "p3_b20",
+        "p3_b21",
+        "p3_b22",
+        "p3_b23",
+        "p3_b24",
+        "p3_b25",
+        "p4_b0",
+        "p4_b1",
+        "p4_b2",
+        "p4_b3",
+        "p4_b4",
+        "p4_b5",
+        "p4_b6",
+        "p4_b7"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req29",
+      "requirement_id": "MD12648_req29",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu21",
+      "control_name": "Reporting Compliance Control",
+      "business_capability": "Regulatory Disclosure Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Disclosure Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        3
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n21"
+      ],
+      "block_ids": [
+        "p3_b21",
+        "p3_b22",
+        "p3_b23",
+        "p3_b24",
+        "p3_b25",
+        "p4_b0",
+        "p4_b1",
+        "p4_b2",
+        "p4_b3"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req30",
+      "requirement_id": "MD12648_req30",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu22",
+      "control_name": "Foreign Exchange Compliance Control",
+      "business_capability": "Fraud Risk Management",
+      "control_category": "Operational",
+      "verification_type": "Document Review",
+      "verification_platform": "Core Banking",
+      "verification_mechanism": "FEMA Transaction Register Review",
+      "executable_command": "",
+      "command_parameters": "Access the Treasury Management System or Core Banking FX module. Review transaction registers for the applicable period.",
+      "expected_result": "All FX transactions have: valid authorisation, A2/LRS declarations where applicable, correspondent bank confirmation, RBI reporting (Form A-2, FCGPR, etc.) filed within prescribed timelines.",
+      "evidence_required": [
+        "FX Transaction Register",
+        "A-2 Form Copies",
+        "RBI Return Submission Acknowledgement",
+        "Authorisation Records"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.78,
+      "reasoning": "FEMA compliance requires reviewing transaction-level documentation. An independent auditor can access TMS records without relying on the implementing team's self-certification.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Fraud Risk"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n22"
+      ],
+      "block_ids": [
+        "p4_b4",
+        "p4_b5",
+        "p4_b6",
+        "p4_b7"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req31",
+      "requirement_id": "MD12648_req31",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu23",
+      "control_name": "Foreign Exchange Compliance Control",
+      "business_capability": "Fraud Risk Management",
+      "control_category": "Operational",
+      "verification_type": "Document Review",
+      "verification_platform": "Core Banking",
+      "verification_mechanism": "FEMA Transaction Register Review",
+      "executable_command": "",
+      "command_parameters": "Access the Treasury Management System or Core Banking FX module. Review transaction registers for the applicable period.",
+      "expected_result": "All FX transactions have: valid authorisation, A2/LRS declarations where applicable, correspondent bank confirmation, RBI reporting (Form A-2, FCGPR, etc.) filed within prescribed timelines.",
+      "evidence_required": [
+        "FX Transaction Register",
+        "A-2 Form Copies",
+        "RBI Return Submission Acknowledgement",
+        "Authorisation Records"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.78,
+      "reasoning": "FEMA compliance requires reviewing transaction-level documentation. An independent auditor can access TMS records without relying on the implementing team's self-certification.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Fraud Risk"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Treasury"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n23"
+      ],
+      "block_ids": [
+        "p4_b8",
+        "p4_b9",
+        "p4_b10"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req33",
+      "requirement_id": "MD12648_req33",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu26",
+      "control_name": "Foreign Exchange Restriction Enforcement — Restriction Control",
+      "business_capability": "Foreign Exchange Restriction Enforcement",
+      "control_category": "Preventive",
+      "verification_type": "Document Review",
+      "verification_platform": "Core Banking",
+      "verification_mechanism": "FEMA Transaction Register Review",
+      "executable_command": "",
+      "command_parameters": "Access the Treasury Management System or Core Banking FX module. Review transaction registers for the applicable period.",
+      "expected_result": "All FX transactions have: valid authorisation, A2/LRS declarations where applicable, correspondent bank confirmation, RBI reporting (Form A-2, FCGPR, etc.) filed within prescribed timelines.",
+      "evidence_required": [
+        "FX Transaction Register",
+        "A-2 Form Copies",
+        "RBI Return Submission Acknowledgement",
+        "Authorisation Records"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.78,
+      "reasoning": "FEMA compliance requires reviewing transaction-level documentation. An independent auditor can access TMS records without relying on the implementing team's self-certification.",
+      "criticality": "HIGH",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk"
+      ],
+      "implementation_pattern": "Policy Update",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n26"
+      ],
+      "block_ids": [
+        "p4_b13",
+        "p4_b14",
+        "p4_b15",
+        "p4_b16"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req34",
+      "requirement_id": "MD12648_req34",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu26",
+      "control_name": "Foreign Exchange Compliance Control",
+      "business_capability": "FEMA Compliance Control",
+      "control_category": "Operational",
+      "verification_type": "Document Review",
+      "verification_platform": "Core Banking",
+      "verification_mechanism": "FEMA Transaction Register Review",
+      "executable_command": "",
+      "command_parameters": "Access the Treasury Management System or Core Banking FX module. Review transaction registers for the applicable period.",
+      "expected_result": "All FX transactions have: valid authorisation, A2/LRS declarations where applicable, correspondent bank confirmation, RBI reporting (Form A-2, FCGPR, etc.) filed within prescribed timelines.",
+      "evidence_required": [
+        "FX Transaction Register",
+        "A-2 Form Copies",
+        "RBI Return Submission Acknowledgement",
+        "Authorisation Records"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.78,
+      "reasoning": "FEMA compliance requires reviewing transaction-level documentation. An independent auditor can access TMS records without relying on the implementing team's self-certification.",
+      "criticality": "CRITICAL",
+      "compliance_domain": [
+        "Foreign Exchange",
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Financial Risk",
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Treasury",
+        "Risk"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n26"
+      ],
+      "block_ids": [
+        "p4_b13",
+        "p4_b14",
+        "p4_b15",
+        "p4_b16"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req36",
+      "requirement_id": "MD12648_req36",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu27",
+      "control_name": "Compliance Advisory Control",
+      "business_capability": "Regulatory Best Practice Advisory",
+      "control_category": "Advisory",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Best Practice Advisory' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of recommendation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Advisory' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n27"
+      ],
+      "block_ids": [
+        "p4_b17",
+        "p4_b18",
+        "p4_b19",
+        "p4_b20",
+        "p4_b21",
+        "p4_b22"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req37",
+      "requirement_id": "MD12648_req37",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu27",
+      "control_name": "Compliance Advisory Control",
+      "business_capability": "Regulatory Best Practice Advisory",
+      "control_category": "Advisory",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Best Practice Advisory' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of recommendation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Advisory' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n27"
+      ],
+      "block_ids": [
+        "p4_b17",
+        "p4_b18",
+        "p4_b19",
+        "p4_b20",
+        "p4_b21",
+        "p4_b22"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req38",
+      "requirement_id": "MD12648_req38",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu27",
+      "control_name": "Digital Payments Governance — Advisory Control",
+      "business_capability": "Digital Payments Governance",
+      "control_category": "Advisory",
+      "verification_type": "Log Analysis",
+      "verification_platform": "Application",
+      "verification_mechanism": "Payment Switch / Gateway Log Review",
+      "executable_command": "",
+      "command_parameters": "Access payment switch or gateway logs via SIEM or application logging system. Filter for transaction failure and exception events.",
+      "expected_result": "No unauthorised payment transactions. Success/failure ratios within threshold. All declined transactions appropriately logged and investigated.",
+      "evidence_required": [
+        "Payment Gateway Transaction Log Extract",
+        "Exception Report",
+        "Reconciliation Statement"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": true,
+      "confidence": 0.8,
+      "reasoning": "Payment system logs are independently accessible via the SIEM or log management platform without requiring the payments team to provide data.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk"
+      ],
+      "candidate_departments": [
+        "Risk",
+        "Operations"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n27"
+      ],
+      "block_ids": [
+        "p4_b17",
+        "p4_b18",
+        "p4_b19",
+        "p4_b20",
+        "p4_b21",
+        "p4_b22"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req39",
+      "requirement_id": "MD12648_req39",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu27",
+      "control_name": "Reporting Compliance Control",
+      "business_capability": "Regulatory Disclosure Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Disclosure Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "CRITICAL",
+      "compliance_domain": [
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        4
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n27"
+      ],
+      "block_ids": [
+        "p4_b17",
+        "p4_b18",
+        "p4_b19",
+        "p4_b20",
+        "p4_b21",
+        "p4_b22"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req40",
+      "requirement_id": "MD12648_req40",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu28",
+      "control_name": "Regulatory Reporting Governance — Restriction Control",
+      "business_capability": "Regulatory Reporting Governance",
+      "control_category": "Preventive",
+      "verification_type": "Document Review",
+      "verification_platform": "Browser",
+      "verification_mechanism": "RBI CIMS / Regulatory Portal Login",
+      "executable_command": "",
+      "command_parameters": "Log in to RBI CIMS / regulatory submission portal. Retrieve submission history for the relevant return type and verify submission timestamps.",
+      "expected_result": "All regulatory returns submitted within stipulated timelines. Submission acknowledgements present. No outstanding or overdue returns.",
+      "evidence_required": [
+        "Portal Submission History Screenshot",
+        "Acknowledgement Receipt PDF",
+        "Sign-off from Authorised Signatory"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.8,
+      "reasoning": "Regulatory return submission is verifiable through the RBI portal's submission history, which is independent of the submitting department. A reviewer can log in and confirm submission without asking the department.",
+      "criticality": "HIGH",
+      "compliance_domain": [
+        "Reporting",
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk",
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Risk",
+        "Operations"
+      ],
+      "implementation_pattern": "Policy Update",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n28"
+      ],
+      "block_ids": [
+        "p5_b0",
+        "p5_b1",
+        "p5_b2",
+        "p5_b3",
+        "p5_b4",
+        "p5_b5"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req41",
+      "requirement_id": "MD12648_req41",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu28",
+      "control_name": "Reporting Compliance Control",
+      "business_capability": "Regulatory Disclosure Obligation",
+      "control_category": "Operational",
+      "verification_type": "Log Analysis",
+      "verification_platform": "Application",
+      "verification_mechanism": "Payment Switch / Gateway Log Review",
+      "executable_command": "",
+      "command_parameters": "Access payment switch or gateway logs via SIEM or application logging system. Filter for transaction failure and exception events.",
+      "expected_result": "No unauthorised payment transactions. Success/failure ratios within threshold. All declined transactions appropriately logged and investigated.",
+      "evidence_required": [
+        "Payment Gateway Transaction Log Extract",
+        "Exception Report",
+        "Reconciliation Statement"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": true,
+      "confidence": 0.8,
+      "reasoning": "Payment system logs are independently accessible via the SIEM or log management platform without requiring the payments team to provide data.",
+      "criticality": "CRITICAL",
+      "compliance_domain": [
+        "Reporting",
+        "Digital Payments"
+      ],
+      "risk_domain": [
+        "Operational Risk",
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Risk",
+        "Operations"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n28"
+      ],
+      "block_ids": [
+        "p5_b0",
+        "p5_b1",
+        "p5_b2",
+        "p5_b3",
+        "p5_b4",
+        "p5_b5"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req42",
+      "requirement_id": "MD12648_req42",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu29",
+      "control_name": "Reporting Compliance Control",
+      "business_capability": "Regulatory Disclosure Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Disclosure Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n29"
+      ],
+      "block_ids": [
+        "p5_b6",
+        "p5_b7",
+        "p5_b8"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req45",
+      "requirement_id": "MD12648_req45",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu31",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Compliance Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "MEDIUM",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n31"
+      ],
+      "block_ids": [
+        "p5_b24",
+        "p5_b10",
+        "p5_b11",
+        "p5_b12",
+        "p5_b13",
+        "p5_b14",
+        "p5_b15",
+        "p5_b16",
+        "p5_b17",
+        "p5_b18"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req49",
+      "requirement_id": "MD12648_req49",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu33",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Compliance Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "CRITICAL",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        5
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n33"
+      ],
+      "block_ids": [
+        "p5_b20",
+        "p5_b21",
+        "p5_b22",
+        "p5_b23"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req50",
+      "requirement_id": "MD12648_req50",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu35",
+      "control_name": "Compliance Advisory Control",
+      "business_capability": "Regulatory Best Practice Advisory",
+      "control_category": "Advisory",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Best Practice Advisory' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of recommendation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Advisory' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n35"
+      ],
+      "block_ids": [
+        "p6_b1",
+        "p6_b2",
+        "p6_b3",
+        "p6_b4",
+        "p6_b5",
+        "p6_b6",
+        "p6_b7"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req51",
+      "requirement_id": "MD12648_req51",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu35",
+      "control_name": "Corporate Governance Framework — Authorisation Control",
+      "business_capability": "Corporate Governance Framework",
+      "control_category": "Governance",
+      "verification_type": "Document Review",
+      "verification_platform": "Application",
+      "verification_mechanism": "Board / Committee Minutes Review",
+      "executable_command": "",
+      "command_parameters": "Access the Board Secretariat or corporate secretarial records system. Retrieve Board and Risk Committee meeting minutes for the relevant period.",
+      "expected_result": "Board has discussed and minuted relevant regulatory agenda items. Risk oversight Committee meeting held at prescribed frequency. Quorum requirements met.",
+      "evidence_required": [
+        "Board Meeting Minutes",
+        "Risk Committee Minutes",
+        "Board Attendance Register"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.82,
+      "reasoning": "Board and committee governance is verifiable through minutes, which are maintained by the Company Secretary independently of the implementing department.",
+      "criticality": "LOW",
+      "compliance_domain": [
+        "Governance"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance",
+        "Board"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n35"
+      ],
+      "block_ids": [
+        "p6_b1",
+        "p6_b2",
+        "p6_b3",
+        "p6_b4",
+        "p6_b5",
+        "p6_b6",
+        "p6_b7"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req52",
+      "requirement_id": "MD12648_req52",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu36",
+      "control_name": "Regulatory Compliance Obligation — Compliance Control",
+      "business_capability": "Regulatory Compliance Obligation",
+      "control_category": "Operational",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Compliance Obligation' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of obligation fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Operational' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "CRITICAL",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Workflow Creation",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n36"
+      ],
+      "block_ids": [
+        "p6_b8",
+        "p6_b9",
+        "p6_b10"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req53",
+      "requirement_id": "MD12648_req53",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu36",
+      "control_name": "Compliance Restriction Control",
+      "business_capability": "Regulatory Prohibition Enforcement",
+      "control_category": "Preventive",
+      "verification_type": "Manual Inspection",
+      "verification_platform": "Unknown",
+      "verification_mechanism": "Structured Compliance Walkthrough",
+      "executable_command": "",
+      "command_parameters": "Internal Audit or Compliance Officer to conduct a structured walkthrough of the 'Regulatory Prohibition Enforcement' control implementation. Inspect documentation, interview relevant staff, and observe process execution. Do NOT rely solely on the implementing department's assertions.",
+      "expected_result": "Evidence of implementation consistent with the control objective. Documentary proof of prohibition fulfilment. No contradictory evidence found during walkthrough.",
+      "evidence_required": [
+        "Compliance Walkthrough Checklist (completed)",
+        "Supporting Documentation",
+        "Interview Notes",
+        "Auditor Sign-Off"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.65,
+      "reasoning": "No deterministic machine-executable command is available for this 'Preventive' control. A structured manual inspection by an independent reviewer (Internal Audit or Compliance Officer) provides the best independent verification outside the implementing department.",
+      "criticality": "HIGH",
+      "compliance_domain": [
+        "General"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Policy Update",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n36"
+      ],
+      "block_ids": [
+        "p6_b8",
+        "p6_b9",
+        "p6_b10"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req54",
+      "requirement_id": "MD12648_req54",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu38",
+      "control_name": "Regulatory Reporting Governance — Restriction Control",
+      "business_capability": "Regulatory Reporting Governance",
+      "control_category": "Preventive",
+      "verification_type": "Document Review",
+      "verification_platform": "Browser",
+      "verification_mechanism": "RBI CIMS / Regulatory Portal Login",
+      "executable_command": "",
+      "command_parameters": "Log in to RBI CIMS / regulatory submission portal. Retrieve submission history for the relevant return type and verify submission timestamps.",
+      "expected_result": "All regulatory returns submitted within stipulated timelines. Submission acknowledgements present. No outstanding or overdue returns.",
+      "evidence_required": [
+        "Portal Submission History Screenshot",
+        "Acknowledgement Receipt PDF",
+        "Sign-off from Authorised Signatory"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.8,
+      "reasoning": "Regulatory return submission is verifiable through the RBI portal's submission history, which is independent of the submitting department. A reviewer can log in and confirm submission without asking the department.",
+      "criticality": "HIGH",
+      "compliance_domain": [
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Policy Update",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n38"
+      ],
+      "block_ids": [
+        "p6_b11",
+        "p6_b12"
+      ]
+    },
+    {
+      "rule_id": "VR_MD12648_req55",
+      "requirement_id": "MD12648_req55",
+      "document_id": "MD12648",
+      "logical_unit_id": "MD12648_lu39",
+      "control_name": "Regulatory Reporting Governance — Restriction Control",
+      "business_capability": "Regulatory Reporting Governance",
+      "control_category": "Preventive",
+      "verification_type": "Document Review",
+      "verification_platform": "Browser",
+      "verification_mechanism": "RBI CIMS / Regulatory Portal Login",
+      "executable_command": "",
+      "command_parameters": "Log in to RBI CIMS / regulatory submission portal. Retrieve submission history for the relevant return type and verify submission timestamps.",
+      "expected_result": "All regulatory returns submitted within stipulated timelines. Submission acknowledgements present. No outstanding or overdue returns.",
+      "evidence_required": [
+        "Portal Submission History Screenshot",
+        "Acknowledgement Receipt PDF",
+        "Sign-off from Authorised Signatory"
+      ],
+      "machine_verifiable": false,
+      "automation_candidate": false,
+      "confidence": 0.8,
+      "reasoning": "Regulatory return submission is verifiable through the RBI portal's submission history, which is independent of the submitting department. A reviewer can log in and confirm submission without asking the department.",
+      "criticality": "CRITICAL",
+      "compliance_domain": [
+        "Reporting"
+      ],
+      "risk_domain": [
+        "Compliance Risk"
+      ],
+      "candidate_departments": [
+        "Compliance"
+      ],
+      "implementation_pattern": "Policy Update",
+      "verification_pattern": "Manual Audit",
+      "page_numbers": [
+        6
+      ],
+      "hierarchy_node_ids": [
+        "MD12648_n39"
+      ],
+      "block_ids": [
+        "p6_b13",
+        "p6_b14",
+        "p6_b15",
+        "p6_b16",
+        "p6_b17",
+        "p6_b18",
+        "p6_b19",
+        "p6_b20"
+      ]
+    }
+  ]
+}
