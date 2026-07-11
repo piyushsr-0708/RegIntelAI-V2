@@ -80,9 +80,9 @@ export default function AssignmentCenter() {
         ))}
       </div>
 
-      <div style={{ marginTop: 20, padding: "14px 18px", background: "rgba(167,139,250,0.07)", border: "1px solid rgba(167,139,250,0.2)", borderRadius: 10, fontSize: 12, color: "#94a3b8" }}>
-        <strong style={{ color: "#a78bfa" }}>Milestone 1 stub.</strong>{" "}
-        The Publish/Assign workflow with per-MAP requirement previews will be implemented in Milestone 2.
+      <div style={{ marginTop: 20, padding: "12px 16px", background: "rgba(96,165,250,0.06)", border: "1px solid rgba(96,165,250,0.15)", borderRadius: 9, fontSize: 12, color: "#64748b", lineHeight: 1.6 }}>
+        <strong style={{ color: "#60a5fa" }}>Note:</strong>{" "}
+        The Publish/Assign workflow with per-MAP requirement previews will be available once the aggregator emits task assignment data.
       </div>
     </div>
   );

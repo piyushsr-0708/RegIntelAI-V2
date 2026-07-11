@@ -31,7 +31,7 @@ export default function Breadcrumbs() {
     <nav style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 20, fontSize: 12, flexWrap: "wrap" }}>
       {crumbs.map((c, i) => (
         <span key={c.path} style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          {i > 0 && <span style={{ color: "#334155" }}>›</span>}
+          {i > 0 && <span style={{ color: "#475569" }}>›</span>}
           {i < crumbs.length - 1 ? (
             <NavLink to={c.path} style={{ color: "#64748b", textDecoration: "none", fontWeight: 600, transition: "color 0.15s" }}
               onMouseEnter={e => e.currentTarget.style.color = "#94a3b8"}

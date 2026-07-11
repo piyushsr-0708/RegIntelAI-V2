@@ -33,7 +33,7 @@ export default function Departments() {
       </div>
 
       {/* Top 3 alert cards */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14, marginBottom: 22 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14, marginBottom: 22 }}>
         {sorted.slice(0, 3).map((d, i) => {
           const color = RISK_COLOR(d.risk);
           return (
@@ -81,7 +81,7 @@ export default function Departments() {
       <div className="card" style={{ padding: 22, marginBottom: 18 }}>
         <div style={{ fontWeight: 700, color: "#f1f5f9", fontSize: 14, marginBottom: 4 }}>Priority Heatmap</div>
         <div style={{ fontSize: 11.5, color: "#64748b", marginBottom: 16 }}>MAP counts by department and compliance status</div>
-        <div style={{ overflowX: "auto" }}>
+        <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
           <table style={{ width: "100%", borderCollapse: "separate", borderSpacing: "3px", minWidth: 520 }}>
             <thead>
               <tr>

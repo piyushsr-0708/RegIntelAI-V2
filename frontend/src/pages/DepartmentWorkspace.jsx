@@ -131,7 +131,7 @@ export default function DepartmentWorkspace() {
       </div>
 
       {/* Department summary cards */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(5, minmax(0, 1fr))", gap: 12, marginBottom: 20 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12, marginBottom: 20 }}>
         {summaryCards.map((item) => (
           <div key={item.label} className="card animate-fade-up" style={{ padding: "16px 18px" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, marginBottom: 8 }}>
@@ -150,7 +150,9 @@ export default function DepartmentWorkspace() {
             value={searchQuery}
             onChange={(event) => setSearchQuery(event.target.value)}
             placeholder="Search assignments"
-            style={{ flex: 1, background: "#0f172a", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 8, color: "#e2e8f0", padding: "8px 10px", fontSize: 13 }}
+            style={{ flex: 1, background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, color: "#e2e8f0", padding: "9px 12px", fontSize: 12.5, outline: "none" }}
+            onFocus={e => e.target.style.borderColor = "#60a5fa"}
+            onBlur={e  => e.target.style.borderColor = "rgba(255,255,255,0.07)"}
           />
         </div>
 
@@ -185,7 +187,7 @@ export default function DepartmentWorkspace() {
               const isExpanded = expandedMapId === m.map_id;
               return (
                 <>
-                  <tr key={m.map_id} onClick={() => toggleExpanded(m.map_id)} style={{ cursor: "pointer" }}>
+                  <tr key={`row-${m.map_id}`} onClick={() => toggleExpanded(m.map_id)} style={{ cursor: "pointer" }}>
                     <td><span style={{ fontFamily: "monospace", fontSize: 11, fontWeight: 700, color: "#34d399", background: "rgba(52,211,153,0.1)", padding: "3px 7px", borderRadius: 5 }}>{m.map_id}</span></td>
                     <td style={{ maxWidth: 340, color: "#d1d5db", lineHeight: 1.4 }}>{m.title.length > 90 ? m.title.substring(0, 90) + "…" : m.title}</td>
                     <td><PriorityBadge priority={m.priority.charAt(0) + m.priority.slice(1).toLowerCase()} /></td>
@@ -196,7 +198,7 @@ export default function DepartmentWorkspace() {
                     </td>
                   </tr>
                   {isExpanded && (
-                    <tr key={`${m.map_id}-details`}>
+                    <tr key={`detail-${m.map_id}`}>
                       <td colSpan={6} style={{ padding: "0 16px 16px" }}>
                         <div style={{ background: "rgba(96,165,250,0.06)", border: "1px solid rgba(96,165,250,0.16)", borderRadius: 10, padding: 16 }}>
                           <div style={{ fontSize: 11, fontWeight: 800, color: "#60a5fa", marginBottom: 12, letterSpacing: "0.08em" }}>TASK DETAIL</div>
@@ -245,9 +247,9 @@ export default function DepartmentWorkspace() {
         <div style={{ padding: "11px 18px", background: "#162030", borderTop: "1px solid rgba(255,255,255,0.04)", fontSize: 11.5, color: "#475569", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <span>{sortedMaps.length.toLocaleString()} assignments</span>
           <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-            <button onClick={() => setPage(p => Math.max(1, p - 1))} disabled={page === 1} style={{ background: "#1a2332", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "5px 10px", color: "#e2e8f0", cursor: page === 1 ? "not-allowed" : "pointer", opacity: page === 1 ? 0.4 : 1 }}>Prev</button>
+            <button onClick={() => setPage(p => Math.max(1, p - 1))} disabled={page === 1} style={{ background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "5px 10px", color: "#e2e8f0", cursor: page === 1 ? "not-allowed" : "pointer", opacity: page === 1 ? 0.4 : 1 }}>Prev</button>
             <span>Page {page} / {totalPages}</span>
-            <button onClick={() => setPage(p => Math.min(totalPages, p + 1))} disabled={page >= totalPages} style={{ background: "#1a2332", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "5px 10px", color: "#e2e8f0", cursor: page >= totalPages ? "not-allowed" : "pointer", opacity: page >= totalPages ? 0.4 : 1 }}>Next</button>
+            <button onClick={() => setPage(p => Math.min(totalPages, p + 1))} disabled={page >= totalPages} style={{ background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "5px 10px", color: "#e2e8f0", cursor: page >= totalPages ? "not-allowed" : "pointer", opacity: page >= totalPages ? 0.4 : 1 }}>Next</button>
           </div>
         </div>
       </div>

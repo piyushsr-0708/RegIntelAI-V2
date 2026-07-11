@@ -89,23 +89,25 @@ export default function Maps() {
         <input
           type="text"
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => { setSearch(e.target.value); setPage(1); }}
           placeholder="Search MAP ID, Document ID, Department, Title"
-          style={{ flex: 1, minWidth: 220, background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "9px 12px", fontSize: 12.5, color: "#e2e8f0", outline: "none" }}
+          style={{ flex: 1, minWidth: 220, background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "9px 12px", fontSize: 12.5, color: "#e2e8f0", outline: "none", transition: "border-color 0.15s" }}
+          onFocus={e => e.target.style.borderColor = "#a78bfa"}
+          onBlur={e  => e.target.style.borderColor = "rgba(255,255,255,0.07)"}
         />
-        <select value={department} onChange={(e) => setDepartment(e.target.value)} style={{ background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "9px 12px", fontSize: 12.5, color: "#e2e8f0", outline: "none", minWidth: 160 }}>
+        <select value={department} onChange={(e) => { setDepartment(e.target.value); setPage(1); }} style={{ background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "9px 12px", fontSize: 12.5, color: "#e2e8f0", outline: "none", minWidth: 160 }}>
           <option value="">All Departments</option>
           {departments.map((item) => (
             <option key={item} value={item}>{item}</option>
           ))}
         </select>
-        <select value={complianceStatus} onChange={(e) => setComplianceStatus(e.target.value)} style={{ background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "9px 12px", fontSize: 12.5, color: "#e2e8f0", outline: "none", minWidth: 170 }}>
+        <select value={complianceStatus} onChange={(e) => { setComplianceStatus(e.target.value); setPage(1); }} style={{ background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "9px 12px", fontSize: 12.5, color: "#e2e8f0", outline: "none", minWidth: 170 }}>
           <option value="">All Compliance Statuses</option>
           {complianceStatuses.map((item) => (
             <option key={item} value={item}>{item}</option>
           ))}
         </select>
-        <select value={priority} onChange={(e) => setPriority(e.target.value)} style={{ background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "9px 12px", fontSize: 12.5, color: "#e2e8f0", outline: "none", minWidth: 140 }}>
+        <select value={priority} onChange={(e) => { setPriority(e.target.value); setPage(1); }} style={{ background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "9px 12px", fontSize: 12.5, color: "#e2e8f0", outline: "none", minWidth: 140 }}>
           <option value="">All Priorities</option>
           {priorities.map((item) => (
             <option key={item} value={item}>{item}</option>
@@ -113,7 +115,7 @@ export default function Maps() {
         </select>
       </div>
 
-      <div className="card" style={{ overflow: "hidden" }}>
+      <div className="card" style={{ overflow: "hidden", overflowX: "auto" }}>
         <table className="data-table">
           <thead>
             <tr>

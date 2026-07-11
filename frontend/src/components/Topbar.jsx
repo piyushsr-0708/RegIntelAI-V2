@@ -57,9 +57,9 @@ export default function Topbar() {
 
         {/* Pipeline timestamp (from FrontendStateContext) */}
         {metadata && (
-          <div style={{ fontSize: 11, color: "#334155", fontFamily: "monospace", display: "flex", gap: 16, alignItems: "center" }}>
+          <div style={{ fontSize: 11, color: "#64748b", fontFamily: "monospace", display: "flex", gap: 16, alignItems: "center" }}>
             <span>
-              <span style={{ color: "#475569" }}>Last pipeline run: </span>
+              <span style={{ color: "#475569" }}>Last run: </span>
               <span style={{ color: "#64748b" }}>
                 {new Date(metadata.generated_timestamp).toLocaleString("en-IN", {
                   day: "2-digit", month: "short", year: "numeric",
@@ -67,11 +67,8 @@ export default function Topbar() {
                 })}
               </span>
             </span>
-            <span style={{ color: "#1e3040" }}>|</span>
-            <span>
-              <span style={{ color: "#475569" }}>v</span>
-              <span style={{ color: "#64748b" }}>{metadata.pipeline_version}</span>
-            </span>
+            <span style={{ color: "#2a3a4f" }}>|</span>
+            <span style={{ color: "#475569" }}>v{metadata.pipeline_version}</span>
           </div>
         )}
 
