@@ -1,0 +1,1539 @@
+{
+  "document_id": "MD13038",
+  "execution_timestamp": "2026-07-10T08:26:59.121609+00:00",
+  "overall_document_verdict": "PENDING",
+  "compliance_percentage": 0.0,
+  "failed_blocker_list": [],
+  "pending_manual_checks": [
+    "CVP_VR_MD13038_req27_C01",
+    "CVP_VR_MD13038_req27_C02",
+    "CVP_VR_MD13038_req27_C03",
+    "CVP_VR_MD13038_req55_C01",
+    "CVP_VR_MD13038_req55_C02",
+    "CVP_VR_MD13038_req55_C03",
+    "CVP_VR_MD13038_req56_C01",
+    "CVP_VR_MD13038_req56_C02",
+    "CVP_VR_MD13038_req56_C03",
+    "CVP_VR_MD13038_req57_C01",
+    "CVP_VR_MD13038_req57_C02",
+    "CVP_VR_MD13038_req57_C03",
+    "CVP_VR_MD13038_req59_C01",
+    "CVP_VR_MD13038_req59_C02",
+    "CVP_VR_MD13038_req59_C03",
+    "CVP_VR_MD13038_req60_C01",
+    "CVP_VR_MD13038_req60_C02",
+    "CVP_VR_MD13038_req60_C03",
+    "CVP_VR_MD13038_req62_C01",
+    "CVP_VR_MD13038_req62_C02",
+    "CVP_VR_MD13038_req62_C03",
+    "CVP_VR_MD13038_req64_C01",
+    "CVP_VR_MD13038_req64_C02",
+    "CVP_VR_MD13038_req64_C03",
+    "CVP_VR_MD13038_req68_C01",
+    "CVP_VR_MD13038_req68_C02",
+    "CVP_VR_MD13038_req68_C03",
+    "CVP_VR_MD13038_req68_C04",
+    "CVP_VR_MD13038_req72_C01",
+    "CVP_VR_MD13038_req72_C02",
+    "CVP_VR_MD13038_req72_C03",
+    "CVP_VR_MD13038_req73_C01",
+    "CVP_VR_MD13038_req73_C02",
+    "CVP_VR_MD13038_req73_C03",
+    "CVP_VR_MD13038_req74_C01",
+    "CVP_VR_MD13038_req74_C02",
+    "CVP_VR_MD13038_req74_C03",
+    "CVP_VR_MD13038_req75_C01",
+    "CVP_VR_MD13038_req75_C02",
+    "CVP_VR_MD13038_req75_C03",
+    "CVP_VR_MD13038_req76_C01",
+    "CVP_VR_MD13038_req76_C02",
+    "CVP_VR_MD13038_req76_C03",
+    "CVP_VR_MD13038_req77_C01",
+    "CVP_VR_MD13038_req77_C02",
+    "CVP_VR_MD13038_req77_C03",
+    "CVP_VR_MD13038_req78_C01",
+    "CVP_VR_MD13038_req78_C02",
+    "CVP_VR_MD13038_req78_C03",
+    "CVP_VR_MD13038_req80_C01",
+    "CVP_VR_MD13038_req80_C02",
+    "CVP_VR_MD13038_req80_C03",
+    "CVP_VR_MD13038_req81_C01",
+    "CVP_VR_MD13038_req81_C02",
+    "CVP_VR_MD13038_req81_C03",
+    "CVP_VR_MD13038_req82_C01",
+    "CVP_VR_MD13038_req82_C02",
+    "CVP_VR_MD13038_req82_C03",
+    "CVP_VR_MD13038_req84_C01",
+    "CVP_VR_MD13038_req84_C02",
+    "CVP_VR_MD13038_req84_C03",
+    "CVP_VR_MD13038_req85_C01",
+    "CVP_VR_MD13038_req85_C02",
+    "CVP_VR_MD13038_req85_C03",
+    "CVP_VR_MD13038_req86_C01",
+    "CVP_VR_MD13038_req86_C02",
+    "CVP_VR_MD13038_req86_C03",
+    "CVP_VR_MD13038_req87_C01",
+    "CVP_VR_MD13038_req87_C02",
+    "CVP_VR_MD13038_req87_C03",
+    "CVP_VR_MD13038_req88_C01",
+    "CVP_VR_MD13038_req88_C02",
+    "CVP_VR_MD13038_req88_C03",
+    "CVP_VR_MD13038_req89_C01",
+    "CVP_VR_MD13038_req89_C02",
+    "CVP_VR_MD13038_req89_C03",
+    "CVP_VR_MD13038_req90_C01",
+    "CVP_VR_MD13038_req90_C02",
+    "CVP_VR_MD13038_req90_C03",
+    "CVP_VR_MD13038_req91_C01",
+    "CVP_VR_MD13038_req91_C02",
+    "CVP_VR_MD13038_req91_C03",
+    "CVP_VR_MD13038_req92_C01",
+    "CVP_VR_MD13038_req92_C02",
+    "CVP_VR_MD13038_req92_C03",
+    "CVP_VR_MD13038_req93_C01",
+    "CVP_VR_MD13038_req93_C02",
+    "CVP_VR_MD13038_req93_C03",
+    "CVP_VR_MD13038_req94_C01",
+    "CVP_VR_MD13038_req94_C02",
+    "CVP_VR_MD13038_req94_C03",
+    "CVP_VR_MD13038_req95_C01",
+    "CVP_VR_MD13038_req95_C02",
+    "CVP_VR_MD13038_req95_C03",
+    "CVP_VR_MD13038_req96_C01",
+    "CVP_VR_MD13038_req96_C02",
+    "CVP_VR_MD13038_req96_C03",
+    "CVP_VR_MD13038_req97_C01",
+    "CVP_VR_MD13038_req97_C02",
+    "CVP_VR_MD13038_req97_C03",
+    "CVP_VR_MD13038_req98_C01",
+    "CVP_VR_MD13038_req98_C02",
+    "CVP_VR_MD13038_req98_C03",
+    "CVP_VR_MD13038_req99_C01",
+    "CVP_VR_MD13038_req99_C02",
+    "CVP_VR_MD13038_req99_C03",
+    "CVP_VR_MD13038_req101_C01",
+    "CVP_VR_MD13038_req101_C02",
+    "CVP_VR_MD13038_req101_C03",
+    "CVP_VR_MD13038_req103_C01",
+    "CVP_VR_MD13038_req103_C02",
+    "CVP_VR_MD13038_req103_C03",
+    "CVP_VR_MD13038_req104_C01",
+    "CVP_VR_MD13038_req104_C02",
+    "CVP_VR_MD13038_req104_C03",
+    "CVP_VR_MD13038_req105_C01",
+    "CVP_VR_MD13038_req105_C02",
+    "CVP_VR_MD13038_req105_C03",
+    "CVP_VR_MD13038_req106_C01",
+    "CVP_VR_MD13038_req106_C02",
+    "CVP_VR_MD13038_req106_C03",
+    "CVP_VR_MD13038_req107_C01",
+    "CVP_VR_MD13038_req107_C02",
+    "CVP_VR_MD13038_req107_C03",
+    "CVP_VR_MD13038_req108_C01",
+    "CVP_VR_MD13038_req108_C02",
+    "CVP_VR_MD13038_req108_C03",
+    "CVP_VR_MD13038_req109_C01",
+    "CVP_VR_MD13038_req109_C02",
+    "CVP_VR_MD13038_req109_C03",
+    "CVP_VR_MD13038_req110_C01",
+    "CVP_VR_MD13038_req110_C02",
+    "CVP_VR_MD13038_req110_C03",
+    "CVP_VR_MD13038_req112_C01",
+    "CVP_VR_MD13038_req112_C02",
+    "CVP_VR_MD13038_req112_C03",
+    "CVP_VR_MD13038_req113_C01",
+    "CVP_VR_MD13038_req113_C02",
+    "CVP_VR_MD13038_req113_C03",
+    "CVP_VR_MD13038_req114_C01",
+    "CVP_VR_MD13038_req114_C02",
+    "CVP_VR_MD13038_req114_C03",
+    "CVP_VR_MD13038_req115_C01",
+    "CVP_VR_MD13038_req115_C02",
+    "CVP_VR_MD13038_req115_C03",
+    "CVP_VR_MD13038_req116_C01",
+    "CVP_VR_MD13038_req116_C02",
+    "CVP_VR_MD13038_req116_C03",
+    "CVP_VR_MD13038_req117_C01",
+    "CVP_VR_MD13038_req117_C02",
+    "CVP_VR_MD13038_req117_C03",
+    "CVP_VR_MD13038_req119_C01",
+    "CVP_VR_MD13038_req119_C02",
+    "CVP_VR_MD13038_req119_C03",
+    "CVP_VR_MD13038_req120_C01",
+    "CVP_VR_MD13038_req120_C02",
+    "CVP_VR_MD13038_req120_C03",
+    "CVP_VR_MD13038_req123_C01",
+    "CVP_VR_MD13038_req123_C02",
+    "CVP_VR_MD13038_req123_C03",
+    "CVP_VR_MD13038_req126_C01",
+    "CVP_VR_MD13038_req126_C02",
+    "CVP_VR_MD13038_req126_C03",
+    "CVP_VR_MD13038_req127_C01",
+    "CVP_VR_MD13038_req127_C02",
+    "CVP_VR_MD13038_req127_C03",
+    "CVP_VR_MD13038_req128_C01",
+    "CVP_VR_MD13038_req128_C02",
+    "CVP_VR_MD13038_req128_C03",
+    "CVP_VR_MD13038_req129_C01",
+    "CVP_VR_MD13038_req129_C02",
+    "CVP_VR_MD13038_req129_C03",
+    "CVP_VR_MD13038_req130_C01",
+    "CVP_VR_MD13038_req130_C02",
+    "CVP_VR_MD13038_req130_C03",
+    "CVP_VR_MD13038_req131_C01",
+    "CVP_VR_MD13038_req131_C02",
+    "CVP_VR_MD13038_req131_C03",
+    "CVP_VR_MD13038_req132_C01",
+    "CVP_VR_MD13038_req132_C02",
+    "CVP_VR_MD13038_req132_C03",
+    "CVP_VR_MD13038_req133_C01",
+    "CVP_VR_MD13038_req133_C02",
+    "CVP_VR_MD13038_req133_C03",
+    "CVP_VR_MD13038_req135_C01",
+    "CVP_VR_MD13038_req135_C02",
+    "CVP_VR_MD13038_req135_C03",
+    "CVP_VR_MD13038_req136_C01",
+    "CVP_VR_MD13038_req136_C02",
+    "CVP_VR_MD13038_req136_C03",
+    "CVP_VR_MD13038_req137_C01",
+    "CVP_VR_MD13038_req137_C02",
+    "CVP_VR_MD13038_req137_C03",
+    "CVP_VR_MD13038_req138_C01",
+    "CVP_VR_MD13038_req138_C02",
+    "CVP_VR_MD13038_req138_C03",
+    "CVP_VR_MD13038_req139_C01",
+    "CVP_VR_MD13038_req139_C02",
+    "CVP_VR_MD13038_req139_C03",
+    "CVP_VR_MD13038_req140_C01",
+    "CVP_VR_MD13038_req140_C02",
+    "CVP_VR_MD13038_req140_C03",
+    "CVP_VR_MD13038_req141_C01",
+    "CVP_VR_MD13038_req141_C02",
+    "CVP_VR_MD13038_req141_C03",
+    "CVP_VR_MD13038_req142_C01",
+    "CVP_VR_MD13038_req142_C02",
+    "CVP_VR_MD13038_req142_C03",
+    "CVP_VR_MD13038_req143_C01",
+    "CVP_VR_MD13038_req143_C02",
+    "CVP_VR_MD13038_req143_C03",
+    "CVP_VR_MD13038_req146_C01",
+    "CVP_VR_MD13038_req146_C02",
+    "CVP_VR_MD13038_req146_C03",
+    "CVP_VR_MD13038_req147_C01",
+    "CVP_VR_MD13038_req147_C02",
+    "CVP_VR_MD13038_req147_C03",
+    "CVP_VR_MD13038_req148_C01",
+    "CVP_VR_MD13038_req148_C02",
+    "CVP_VR_MD13038_req148_C03",
+    "CVP_VR_MD13038_req149_C01",
+    "CVP_VR_MD13038_req149_C02",
+    "CVP_VR_MD13038_req149_C03",
+    "CVP_VR_MD13038_req150_C01",
+    "CVP_VR_MD13038_req150_C02",
+    "CVP_VR_MD13038_req150_C03",
+    "CVP_VR_MD13038_req151_C01",
+    "CVP_VR_MD13038_req151_C02",
+    "CVP_VR_MD13038_req151_C03",
+    "CVP_VR_MD13038_req152_C01",
+    "CVP_VR_MD13038_req152_C02",
+    "CVP_VR_MD13038_req152_C03",
+    "CVP_VR_MD13038_req153_C01",
+    "CVP_VR_MD13038_req153_C02",
+    "CVP_VR_MD13038_req153_C03",
+    "CVP_VR_MD13038_req154_C01",
+    "CVP_VR_MD13038_req154_C02",
+    "CVP_VR_MD13038_req154_C03",
+    "CVP_VR_MD13038_req157_C01",
+    "CVP_VR_MD13038_req157_C02",
+    "CVP_VR_MD13038_req157_C03",
+    "CVP_VR_MD13038_req159_C01",
+    "CVP_VR_MD13038_req159_C02",
+    "CVP_VR_MD13038_req159_C03",
+    "CVP_VR_MD13038_req160_C01",
+    "CVP_VR_MD13038_req160_C02",
+    "CVP_VR_MD13038_req160_C03",
+    "CVP_VR_MD13038_req164_C01",
+    "CVP_VR_MD13038_req164_C02",
+    "CVP_VR_MD13038_req164_C03",
+    "CVP_VR_MD13038_req166_C01",
+    "CVP_VR_MD13038_req166_C02",
+    "CVP_VR_MD13038_req166_C03",
+    "CVP_VR_MD13038_req167_C01",
+    "CVP_VR_MD13038_req167_C02",
+    "CVP_VR_MD13038_req167_C03",
+    "CVP_VR_MD13038_req168_C01",
+    "CVP_VR_MD13038_req168_C02",
+    "CVP_VR_MD13038_req168_C03",
+    "CVP_VR_MD13038_req169_C01",
+    "CVP_VR_MD13038_req169_C02",
+    "CVP_VR_MD13038_req169_C03",
+    "CVP_VR_MD13038_req170_C01",
+    "CVP_VR_MD13038_req170_C02",
+    "CVP_VR_MD13038_req170_C03",
+    "CVP_VR_MD13038_req172_C01",
+    "CVP_VR_MD13038_req172_C02",
+    "CVP_VR_MD13038_req172_C03",
+    "CVP_VR_MD13038_req174_C01",
+    "CVP_VR_MD13038_req174_C02",
+    "CVP_VR_MD13038_req174_C03",
+    "CVP_VR_MD13038_req176_C01",
+    "CVP_VR_MD13038_req176_C02",
+    "CVP_VR_MD13038_req176_C03",
+    "CVP_VR_MD13038_req177_C01",
+    "CVP_VR_MD13038_req177_C02",
+    "CVP_VR_MD13038_req177_C03",
+    "CVP_VR_MD13038_req180_C01",
+    "CVP_VR_MD13038_req180_C02",
+    "CVP_VR_MD13038_req180_C03",
+    "CVP_VR_MD13038_req182_C01",
+    "CVP_VR_MD13038_req182_C02",
+    "CVP_VR_MD13038_req182_C03",
+    "CVP_VR_MD13038_req186_C01",
+    "CVP_VR_MD13038_req186_C02",
+    "CVP_VR_MD13038_req186_C03",
+    "CVP_VR_MD13038_req188_C01",
+    "CVP_VR_MD13038_req188_C02",
+    "CVP_VR_MD13038_req188_C03",
+    "CVP_VR_MD13038_req189_C01",
+    "CVP_VR_MD13038_req189_C02",
+    "CVP_VR_MD13038_req189_C03",
+    "CVP_VR_MD13038_req190_C01",
+    "CVP_VR_MD13038_req190_C02",
+    "CVP_VR_MD13038_req190_C03",
+    "CVP_VR_MD13038_req191_C01",
+    "CVP_VR_MD13038_req191_C02",
+    "CVP_VR_MD13038_req191_C03",
+    "CVP_VR_MD13038_req193_C01",
+    "CVP_VR_MD13038_req193_C02",
+    "CVP_VR_MD13038_req193_C03",
+    "CVP_VR_MD13038_req196_C01",
+    "CVP_VR_MD13038_req196_C02",
+    "CVP_VR_MD13038_req196_C03",
+    "CVP_VR_MD13038_req201_C01",
+    "CVP_VR_MD13038_req201_C02",
+    "CVP_VR_MD13038_req201_C03",
+    "CVP_VR_MD13038_req202_C01",
+    "CVP_VR_MD13038_req202_C02",
+    "CVP_VR_MD13038_req202_C03",
+    "CVP_VR_MD13038_req204_C01",
+    "CVP_VR_MD13038_req204_C02",
+    "CVP_VR_MD13038_req204_C03",
+    "CVP_VR_MD13038_req209_C01",
+    "CVP_VR_MD13038_req209_C02",
+    "CVP_VR_MD13038_req209_C03",
+    "CVP_VR_MD13038_req224_C01",
+    "CVP_VR_MD13038_req224_C02",
+    "CVP_VR_MD13038_req224_C03",
+    "CVP_VR_MD13038_req225_C01",
+    "CVP_VR_MD13038_req225_C02",
+    "CVP_VR_MD13038_req225_C03",
+    "CVP_VR_MD13038_req226_C01",
+    "CVP_VR_MD13038_req226_C02",
+    "CVP_VR_MD13038_req226_C03",
+    "CVP_VR_MD13038_req227_C01",
+    "CVP_VR_MD13038_req227_C02",
+    "CVP_VR_MD13038_req227_C03",
+    "CVP_VR_MD13038_req228_C01",
+    "CVP_VR_MD13038_req228_C02",
+    "CVP_VR_MD13038_req228_C03",
+    "CVP_VR_MD13038_req229_C01",
+    "CVP_VR_MD13038_req229_C02",
+    "CVP_VR_MD13038_req229_C03",
+    "CVP_VR_MD13038_req230_C01",
+    "CVP_VR_MD13038_req230_C02",
+    "CVP_VR_MD13038_req230_C03",
+    "CVP_VR_MD13038_req231_C01",
+    "CVP_VR_MD13038_req231_C02",
+    "CVP_VR_MD13038_req231_C03",
+    "CVP_VR_MD13038_req236_C01",
+    "CVP_VR_MD13038_req236_C02",
+    "CVP_VR_MD13038_req236_C03",
+    "CVP_VR_MD13038_req237_C01",
+    "CVP_VR_MD13038_req237_C02",
+    "CVP_VR_MD13038_req237_C03",
+    "CVP_VR_MD13038_req238_C01",
+    "CVP_VR_MD13038_req238_C02",
+    "CVP_VR_MD13038_req238_C03",
+    "CVP_VR_MD13038_req240_C01",
+    "CVP_VR_MD13038_req240_C02",
+    "CVP_VR_MD13038_req240_C03",
+    "CVP_VR_MD13038_req241_C01",
+    "CVP_VR_MD13038_req241_C02",
+    "CVP_VR_MD13038_req241_C03",
+    "CVP_VR_MD13038_req242_C01",
+    "CVP_VR_MD13038_req242_C02",
+    "CVP_VR_MD13038_req242_C03",
+    "CVP_VR_MD13038_req244_C01",
+    "CVP_VR_MD13038_req244_C02",
+    "CVP_VR_MD13038_req244_C03",
+    "CVP_VR_MD13038_req245_C01",
+    "CVP_VR_MD13038_req245_C02",
+    "CVP_VR_MD13038_req245_C03",
+    "CVP_VR_MD13038_req246_C01",
+    "CVP_VR_MD13038_req246_C02",
+    "CVP_VR_MD13038_req246_C03",
+    "CVP_VR_MD13038_req247_C01",
+    "CVP_VR_MD13038_req247_C02",
+    "CVP_VR_MD13038_req247_C03",
+    "CVP_VR_MD13038_req247_C04",
+    "CVP_VR_MD13038_req248_C01",
+    "CVP_VR_MD13038_req248_C02",
+    "CVP_VR_MD13038_req248_C03",
+    "CVP_VR_MD13038_req249_C01",
+    "CVP_VR_MD13038_req249_C02",
+    "CVP_VR_MD13038_req249_C03",
+    "CVP_VR_MD13038_req250_C01",
+    "CVP_VR_MD13038_req250_C02",
+    "CVP_VR_MD13038_req250_C03",
+    "CVP_VR_MD13038_req251_C01",
+    "CVP_VR_MD13038_req251_C02",
+    "CVP_VR_MD13038_req251_C03",
+    "CVP_VR_MD13038_req252_C01",
+    "CVP_VR_MD13038_req252_C02",
+    "CVP_VR_MD13038_req252_C03",
+    "CVP_VR_MD13038_req255_C01",
+    "CVP_VR_MD13038_req255_C02",
+    "CVP_VR_MD13038_req255_C03",
+    "CVP_VR_MD13038_req258_C01",
+    "CVP_VR_MD13038_req258_C02",
+    "CVP_VR_MD13038_req258_C03",
+    "CVP_VR_MD13038_req259_C01",
+    "CVP_VR_MD13038_req259_C02",
+    "CVP_VR_MD13038_req259_C03",
+    "CVP_VR_MD13038_req260_C01",
+    "CVP_VR_MD13038_req260_C02",
+    "CVP_VR_MD13038_req260_C03",
+    "CVP_VR_MD13038_req261_C01",
+    "CVP_VR_MD13038_req261_C02",
+    "CVP_VR_MD13038_req261_C03",
+    "CVP_VR_MD13038_req262_C01",
+    "CVP_VR_MD13038_req262_C02",
+    "CVP_VR_MD13038_req262_C03",
+    "CVP_VR_MD13038_req263_C01",
+    "CVP_VR_MD13038_req263_C02",
+    "CVP_VR_MD13038_req263_C03",
+    "CVP_VR_MD13038_req264_C01",
+    "CVP_VR_MD13038_req264_C02",
+    "CVP_VR_MD13038_req264_C03",
+    "CVP_VR_MD13038_req265_C01",
+    "CVP_VR_MD13038_req265_C02",
+    "CVP_VR_MD13038_req265_C03",
+    "CVP_VR_MD13038_req267_C01",
+    "CVP_VR_MD13038_req267_C02",
+    "CVP_VR_MD13038_req267_C03",
+    "CVP_VR_MD13038_req269_C01",
+    "CVP_VR_MD13038_req269_C02",
+    "CVP_VR_MD13038_req269_C03",
+    "CVP_VR_MD13038_req270_C01",
+    "CVP_VR_MD13038_req270_C02",
+    "CVP_VR_MD13038_req270_C03",
+    "CVP_VR_MD13038_req271_C01",
+    "CVP_VR_MD13038_req271_C02",
+    "CVP_VR_MD13038_req271_C03",
+    "CVP_VR_MD13038_req272_C01",
+    "CVP_VR_MD13038_req272_C02",
+    "CVP_VR_MD13038_req272_C03",
+    "CVP_VR_MD13038_req275_C01",
+    "CVP_VR_MD13038_req275_C02",
+    "CVP_VR_MD13038_req275_C03",
+    "CVP_VR_MD13038_req277_C01",
+    "CVP_VR_MD13038_req277_C02",
+    "CVP_VR_MD13038_req277_C03",
+    "CVP_VR_MD13038_req278_C01",
+    "CVP_VR_MD13038_req278_C02",
+    "CVP_VR_MD13038_req278_C03",
+    "CVP_VR_MD13038_req281_C01",
+    "CVP_VR_MD13038_req281_C02",
+    "CVP_VR_MD13038_req281_C03",
+    "CVP_VR_MD13038_req300_C01",
+    "CVP_VR_MD13038_req300_C02",
+    "CVP_VR_MD13038_req300_C03",
+    "CVP_VR_MD13038_req301_C01",
+    "CVP_VR_MD13038_req301_C02",
+    "CVP_VR_MD13038_req301_C03",
+    "CVP_VR_MD13038_req321_C01",
+    "CVP_VR_MD13038_req321_C02",
+    "CVP_VR_MD13038_req321_C03",
+    "CVP_VR_MD13038_req347_C01",
+    "CVP_VR_MD13038_req347_C02",
+    "CVP_VR_MD13038_req347_C03",
+    "CVP_VR_MD13038_req368_C01",
+    "CVP_VR_MD13038_req368_C02",
+    "CVP_VR_MD13038_req368_C03",
+    "CVP_VR_MD13038_req371_C01",
+    "CVP_VR_MD13038_req371_C02",
+    "CVP_VR_MD13038_req371_C03"
+  ],
+  "execution_summary": {
+    "total_plans": 152,
+    "total_checks": 458,
+    "passed_checks": 0
+  },
+  "plan_verdicts": [
+    {
+      "plan_id": "CVP_VR_MD13038_req27",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Restriction Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req55",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req56",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req57",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req59",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req60",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Scope Definition"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req62",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req64",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req68",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req72",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Governance Obligation Compliance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req73",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req74",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Scope Definition"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req75",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Scope Definition"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req76",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Scope Definition"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req77",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req78",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req80",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req81",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req82",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req84",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req85",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Restriction Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req86",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req87",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req88",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req89",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req90",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req91",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req92",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req93",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req94",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req95",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req96",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req97",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Governance Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req98",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req99",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req101",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req103",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req104",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req105",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req106",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Restriction Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req107",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req108",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req109",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req110",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req112",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req113",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req114",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req115",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req116",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req117",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req119",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req120",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req123",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req126",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req127",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Internal Audit Compliance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req128",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Kyc Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req129",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req130",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req131",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req132",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req133",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req135",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Audit Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req136",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req137",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Audit Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req138",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Internal Audit Compliance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req139",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Audit Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req140",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req141",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Internal Audit Compliance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req142",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Internal Audit Compliance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req143",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req146",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req147",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req148",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Audit Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req149",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Audit Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req150",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Audit Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req151",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Audit Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req152",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req153",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req154",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Governance Obligation Compliance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req157",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req159",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req160",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req164",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req166",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req167",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req168",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req169",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req170",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req172",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Restriction Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req174",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Kyc Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req176",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req177",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Restriction Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req180",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Restriction Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req182",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Restriction Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req186",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req188",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req189",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req190",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req191",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req193",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Restriction Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req196",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req201",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req202",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req204",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req209",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req224",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req225",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req226",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Exception Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req227",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req228",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req229",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req230",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req231",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Treasury Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req236",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req237",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req238",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req240",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req241",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req242",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req244",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Governance Obligation Compliance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req245",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req246",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Governance Obligation Compliance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req247",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req248",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Outsourcing Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req249",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Governance Obligation Compliance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req250",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req251",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req252",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req255",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req258",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req259",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req260",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req261",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req262",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req263",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req264",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Vendor & Outsourcing Governance \u2014 Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req265",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req267",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req269",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req270",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req271",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req272",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req275",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req277",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req278",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req281",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req300",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req301",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req321",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req347",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req368",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD13038_req371",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    }
+  ],
+  "evidence_summary": "Analyzed 152 plans. Machine checks passed: 0/458."
+}

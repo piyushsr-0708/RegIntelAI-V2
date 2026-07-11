@@ -1,0 +1,47 @@
+{
+  "document_id": "MD11328",
+  "execution_timestamp": "2026-07-10T08:26:54.839465+00:00",
+  "overall_document_verdict": "PENDING",
+  "compliance_percentage": 0.0,
+  "failed_blocker_list": [],
+  "pending_manual_checks": [
+    "CVP_VR_MD11328_req18_C01",
+    "CVP_VR_MD11328_req18_C02",
+    "CVP_VR_MD11328_req18_C03",
+    "CVP_VR_MD11328_req19_C01",
+    "CVP_VR_MD11328_req19_C02",
+    "CVP_VR_MD11328_req19_C03",
+    "CVP_VR_MD11328_req25_C01",
+    "CVP_VR_MD11328_req25_C02",
+    "CVP_VR_MD11328_req25_C03"
+  ],
+  "execution_summary": {
+    "total_plans": 3,
+    "total_checks": 9,
+    "passed_checks": 0
+  },
+  "plan_verdicts": [
+    {
+      "plan_id": "CVP_VR_MD11328_req18",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD11328_req19",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD11328_req25",
+      "verdict": "PENDING",
+      "rationale": "Machine checks passed or are NA, but manual/skipped gates remain.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    }
+  ],
+  "evidence_summary": "Analyzed 3 plans. Machine checks passed: 0/9."
+}

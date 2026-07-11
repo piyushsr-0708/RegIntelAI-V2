@@ -1,0 +1,1465 @@
+{
+  "document_id": "MD12980",
+  "execution_timestamp": "2026-07-10T11:22:49.068084+00:00",
+  "overall_document_verdict": "PENDING",
+  "compliance_percentage": 0.0,
+  "failed_blocker_list": [],
+  "pending_manual_checks": [
+    "CVP_VR_MD12980_req36_C01",
+    "CVP_VR_MD12980_req36_C02",
+    "CVP_VR_MD12980_req36_C03",
+    "CVP_VR_MD12980_req37_C01",
+    "CVP_VR_MD12980_req37_C02",
+    "CVP_VR_MD12980_req37_C03",
+    "CVP_VR_MD12980_req38_C01",
+    "CVP_VR_MD12980_req38_C02",
+    "CVP_VR_MD12980_req38_C03",
+    "CVP_VR_MD12980_req39_C01",
+    "CVP_VR_MD12980_req39_C02",
+    "CVP_VR_MD12980_req39_C03",
+    "CVP_VR_MD12980_req40_C01",
+    "CVP_VR_MD12980_req40_C02",
+    "CVP_VR_MD12980_req40_C03",
+    "CVP_VR_MD12980_req46_C01",
+    "CVP_VR_MD12980_req46_C02",
+    "CVP_VR_MD12980_req46_C03",
+    "CVP_VR_MD12980_req48_C01",
+    "CVP_VR_MD12980_req48_C02",
+    "CVP_VR_MD12980_req48_C03",
+    "CVP_VR_MD12980_req49_C01",
+    "CVP_VR_MD12980_req49_C02",
+    "CVP_VR_MD12980_req49_C03",
+    "CVP_VR_MD12980_req51_C01",
+    "CVP_VR_MD12980_req51_C02",
+    "CVP_VR_MD12980_req51_C03",
+    "CVP_VR_MD12980_req52_C01",
+    "CVP_VR_MD12980_req52_C02",
+    "CVP_VR_MD12980_req52_C03",
+    "CVP_VR_MD12980_req53_C01",
+    "CVP_VR_MD12980_req53_C02",
+    "CVP_VR_MD12980_req53_C03",
+    "CVP_VR_MD12980_req55_C01",
+    "CVP_VR_MD12980_req55_C02",
+    "CVP_VR_MD12980_req55_C03",
+    "CVP_VR_MD12980_req56_C01",
+    "CVP_VR_MD12980_req56_C02",
+    "CVP_VR_MD12980_req56_C03",
+    "CVP_VR_MD12980_req60_C01",
+    "CVP_VR_MD12980_req60_C02",
+    "CVP_VR_MD12980_req60_C03",
+    "CVP_VR_MD12980_req61_C01",
+    "CVP_VR_MD12980_req61_C02",
+    "CVP_VR_MD12980_req61_C03",
+    "CVP_VR_MD12980_req62_C01",
+    "CVP_VR_MD12980_req62_C02",
+    "CVP_VR_MD12980_req62_C03",
+    "CVP_VR_MD12980_req63_C01",
+    "CVP_VR_MD12980_req63_C02",
+    "CVP_VR_MD12980_req63_C03",
+    "CVP_VR_MD12980_req64_C01",
+    "CVP_VR_MD12980_req64_C02",
+    "CVP_VR_MD12980_req64_C03",
+    "CVP_VR_MD12980_req65_C01",
+    "CVP_VR_MD12980_req65_C02",
+    "CVP_VR_MD12980_req65_C03",
+    "CVP_VR_MD12980_req66_C01",
+    "CVP_VR_MD12980_req66_C02",
+    "CVP_VR_MD12980_req66_C03",
+    "CVP_VR_MD12980_req67_C01",
+    "CVP_VR_MD12980_req67_C02",
+    "CVP_VR_MD12980_req67_C03",
+    "CVP_VR_MD12980_req70_C01",
+    "CVP_VR_MD12980_req70_C02",
+    "CVP_VR_MD12980_req70_C03",
+    "CVP_VR_MD12980_req74_C01",
+    "CVP_VR_MD12980_req74_C02",
+    "CVP_VR_MD12980_req74_C03",
+    "CVP_VR_MD12980_req75_C01",
+    "CVP_VR_MD12980_req75_C02",
+    "CVP_VR_MD12980_req75_C03",
+    "CVP_VR_MD12980_req76_C01",
+    "CVP_VR_MD12980_req76_C02",
+    "CVP_VR_MD12980_req76_C03",
+    "CVP_VR_MD12980_req77_C01",
+    "CVP_VR_MD12980_req77_C02",
+    "CVP_VR_MD12980_req77_C03",
+    "CVP_VR_MD12980_req79_C01",
+    "CVP_VR_MD12980_req79_C02",
+    "CVP_VR_MD12980_req79_C03",
+    "CVP_VR_MD12980_req80_C01",
+    "CVP_VR_MD12980_req80_C02",
+    "CVP_VR_MD12980_req80_C03",
+    "CVP_VR_MD12980_req81_C01",
+    "CVP_VR_MD12980_req81_C02",
+    "CVP_VR_MD12980_req81_C03",
+    "CVP_VR_MD12980_req82_C01",
+    "CVP_VR_MD12980_req82_C02",
+    "CVP_VR_MD12980_req82_C03",
+    "CVP_VR_MD12980_req83_C01",
+    "CVP_VR_MD12980_req83_C02",
+    "CVP_VR_MD12980_req83_C03",
+    "CVP_VR_MD12980_req85_C01",
+    "CVP_VR_MD12980_req85_C02",
+    "CVP_VR_MD12980_req85_C03",
+    "CVP_VR_MD12980_req86_C01",
+    "CVP_VR_MD12980_req86_C02",
+    "CVP_VR_MD12980_req86_C03",
+    "CVP_VR_MD12980_req88_C01",
+    "CVP_VR_MD12980_req88_C02",
+    "CVP_VR_MD12980_req88_C03",
+    "CVP_VR_MD12980_req92_C01",
+    "CVP_VR_MD12980_req92_C02",
+    "CVP_VR_MD12980_req92_C03",
+    "CVP_VR_MD12980_req93_C01",
+    "CVP_VR_MD12980_req93_C02",
+    "CVP_VR_MD12980_req93_C03",
+    "CVP_VR_MD12980_req94_C01",
+    "CVP_VR_MD12980_req94_C02",
+    "CVP_VR_MD12980_req94_C03",
+    "CVP_VR_MD12980_req94_C04",
+    "CVP_VR_MD12980_req95_C01",
+    "CVP_VR_MD12980_req95_C02",
+    "CVP_VR_MD12980_req95_C03",
+    "CVP_VR_MD12980_req95_C04",
+    "CVP_VR_MD12980_req98_C01",
+    "CVP_VR_MD12980_req98_C02",
+    "CVP_VR_MD12980_req98_C03",
+    "CVP_VR_MD12980_req99_C01",
+    "CVP_VR_MD12980_req99_C02",
+    "CVP_VR_MD12980_req99_C03",
+    "CVP_VR_MD12980_req100_C01",
+    "CVP_VR_MD12980_req100_C02",
+    "CVP_VR_MD12980_req100_C03",
+    "CVP_VR_MD12980_req101_C01",
+    "CVP_VR_MD12980_req101_C02",
+    "CVP_VR_MD12980_req101_C03",
+    "CVP_VR_MD12980_req102_C01",
+    "CVP_VR_MD12980_req102_C02",
+    "CVP_VR_MD12980_req102_C03",
+    "CVP_VR_MD12980_req104_C01",
+    "CVP_VR_MD12980_req104_C02",
+    "CVP_VR_MD12980_req104_C03",
+    "CVP_VR_MD12980_req105_C01",
+    "CVP_VR_MD12980_req105_C02",
+    "CVP_VR_MD12980_req105_C03",
+    "CVP_VR_MD12980_req106_C01",
+    "CVP_VR_MD12980_req106_C02",
+    "CVP_VR_MD12980_req106_C03",
+    "CVP_VR_MD12980_req108_C01",
+    "CVP_VR_MD12980_req108_C02",
+    "CVP_VR_MD12980_req108_C03",
+    "CVP_VR_MD12980_req110_C01",
+    "CVP_VR_MD12980_req110_C02",
+    "CVP_VR_MD12980_req110_C03",
+    "CVP_VR_MD12980_req114_C01",
+    "CVP_VR_MD12980_req114_C02",
+    "CVP_VR_MD12980_req114_C03",
+    "CVP_VR_MD12980_req116_C01",
+    "CVP_VR_MD12980_req116_C02",
+    "CVP_VR_MD12980_req116_C03",
+    "CVP_VR_MD12980_req117_C01",
+    "CVP_VR_MD12980_req117_C02",
+    "CVP_VR_MD12980_req117_C03",
+    "CVP_VR_MD12980_req118_C01",
+    "CVP_VR_MD12980_req118_C02",
+    "CVP_VR_MD12980_req118_C03",
+    "CVP_VR_MD12980_req119_C01",
+    "CVP_VR_MD12980_req119_C02",
+    "CVP_VR_MD12980_req119_C03",
+    "CVP_VR_MD12980_req122_C01",
+    "CVP_VR_MD12980_req122_C02",
+    "CVP_VR_MD12980_req122_C03",
+    "CVP_VR_MD12980_req124_C01",
+    "CVP_VR_MD12980_req124_C02",
+    "CVP_VR_MD12980_req124_C03",
+    "CVP_VR_MD12980_req126_C01",
+    "CVP_VR_MD12980_req126_C02",
+    "CVP_VR_MD12980_req126_C03",
+    "CVP_VR_MD12980_req129_C01",
+    "CVP_VR_MD12980_req129_C02",
+    "CVP_VR_MD12980_req129_C03",
+    "CVP_VR_MD12980_req130_C01",
+    "CVP_VR_MD12980_req130_C02",
+    "CVP_VR_MD12980_req130_C03",
+    "CVP_VR_MD12980_req130_C04",
+    "CVP_VR_MD12980_req133_C01",
+    "CVP_VR_MD12980_req133_C02",
+    "CVP_VR_MD12980_req133_C03",
+    "CVP_VR_MD12980_req134_C01",
+    "CVP_VR_MD12980_req134_C02",
+    "CVP_VR_MD12980_req134_C03",
+    "CVP_VR_MD12980_req135_C01",
+    "CVP_VR_MD12980_req135_C02",
+    "CVP_VR_MD12980_req135_C03",
+    "CVP_VR_MD12980_req136_C01",
+    "CVP_VR_MD12980_req136_C02",
+    "CVP_VR_MD12980_req136_C03",
+    "CVP_VR_MD12980_req138_C01",
+    "CVP_VR_MD12980_req138_C02",
+    "CVP_VR_MD12980_req138_C03",
+    "CVP_VR_MD12980_req140_C01",
+    "CVP_VR_MD12980_req140_C02",
+    "CVP_VR_MD12980_req140_C03",
+    "CVP_VR_MD12980_req141_C01",
+    "CVP_VR_MD12980_req141_C02",
+    "CVP_VR_MD12980_req141_C03",
+    "CVP_VR_MD12980_req143_C01",
+    "CVP_VR_MD12980_req143_C02",
+    "CVP_VR_MD12980_req143_C03",
+    "CVP_VR_MD12980_req144_C01",
+    "CVP_VR_MD12980_req144_C02",
+    "CVP_VR_MD12980_req144_C03",
+    "CVP_VR_MD12980_req145_C01",
+    "CVP_VR_MD12980_req145_C02",
+    "CVP_VR_MD12980_req145_C03",
+    "CVP_VR_MD12980_req146_C01",
+    "CVP_VR_MD12980_req146_C02",
+    "CVP_VR_MD12980_req146_C03",
+    "CVP_VR_MD12980_req147_C01",
+    "CVP_VR_MD12980_req147_C02",
+    "CVP_VR_MD12980_req147_C03",
+    "CVP_VR_MD12980_req148_C01",
+    "CVP_VR_MD12980_req148_C02",
+    "CVP_VR_MD12980_req148_C03",
+    "CVP_VR_MD12980_req149_C01",
+    "CVP_VR_MD12980_req149_C02",
+    "CVP_VR_MD12980_req149_C03",
+    "CVP_VR_MD12980_req150_C01",
+    "CVP_VR_MD12980_req150_C02",
+    "CVP_VR_MD12980_req150_C03",
+    "CVP_VR_MD12980_req151_C01",
+    "CVP_VR_MD12980_req151_C02",
+    "CVP_VR_MD12980_req151_C03",
+    "CVP_VR_MD12980_req154_C01",
+    "CVP_VR_MD12980_req154_C02",
+    "CVP_VR_MD12980_req154_C03",
+    "CVP_VR_MD12980_req155_C01",
+    "CVP_VR_MD12980_req155_C02",
+    "CVP_VR_MD12980_req155_C03",
+    "CVP_VR_MD12980_req157_C01",
+    "CVP_VR_MD12980_req157_C02",
+    "CVP_VR_MD12980_req157_C03",
+    "CVP_VR_MD12980_req159_C01",
+    "CVP_VR_MD12980_req159_C02",
+    "CVP_VR_MD12980_req159_C03",
+    "CVP_VR_MD12980_req160_C01",
+    "CVP_VR_MD12980_req160_C02",
+    "CVP_VR_MD12980_req160_C03",
+    "CVP_VR_MD12980_req161_C01",
+    "CVP_VR_MD12980_req161_C02",
+    "CVP_VR_MD12980_req161_C03",
+    "CVP_VR_MD12980_req163_C01",
+    "CVP_VR_MD12980_req163_C02",
+    "CVP_VR_MD12980_req163_C03",
+    "CVP_VR_MD12980_req164_C01",
+    "CVP_VR_MD12980_req164_C02",
+    "CVP_VR_MD12980_req164_C03",
+    "CVP_VR_MD12980_req166_C01",
+    "CVP_VR_MD12980_req166_C02",
+    "CVP_VR_MD12980_req166_C03",
+    "CVP_VR_MD12980_req167_C01",
+    "CVP_VR_MD12980_req167_C02",
+    "CVP_VR_MD12980_req167_C03",
+    "CVP_VR_MD12980_req168_C01",
+    "CVP_VR_MD12980_req168_C02",
+    "CVP_VR_MD12980_req168_C03",
+    "CVP_VR_MD12980_req170_C01",
+    "CVP_VR_MD12980_req170_C02",
+    "CVP_VR_MD12980_req170_C03",
+    "CVP_VR_MD12980_req171_C01",
+    "CVP_VR_MD12980_req171_C02",
+    "CVP_VR_MD12980_req171_C03",
+    "CVP_VR_MD12980_req172_C01",
+    "CVP_VR_MD12980_req172_C02",
+    "CVP_VR_MD12980_req172_C03",
+    "CVP_VR_MD12980_req175_C01",
+    "CVP_VR_MD12980_req175_C02",
+    "CVP_VR_MD12980_req175_C03",
+    "CVP_VR_MD12980_req176_C01",
+    "CVP_VR_MD12980_req176_C02",
+    "CVP_VR_MD12980_req176_C03",
+    "CVP_VR_MD12980_req177_C01",
+    "CVP_VR_MD12980_req177_C02",
+    "CVP_VR_MD12980_req177_C03",
+    "CVP_VR_MD12980_req178_C01",
+    "CVP_VR_MD12980_req178_C02",
+    "CVP_VR_MD12980_req178_C03",
+    "CVP_VR_MD12980_req182_C01",
+    "CVP_VR_MD12980_req182_C02",
+    "CVP_VR_MD12980_req182_C03",
+    "CVP_VR_MD12980_req183_C01",
+    "CVP_VR_MD12980_req183_C02",
+    "CVP_VR_MD12980_req183_C03",
+    "CVP_VR_MD12980_req184_C01",
+    "CVP_VR_MD12980_req184_C02",
+    "CVP_VR_MD12980_req184_C03",
+    "CVP_VR_MD12980_req185_C01",
+    "CVP_VR_MD12980_req185_C02",
+    "CVP_VR_MD12980_req185_C03",
+    "CVP_VR_MD12980_req186_C01",
+    "CVP_VR_MD12980_req186_C02",
+    "CVP_VR_MD12980_req186_C03",
+    "CVP_VR_MD12980_req189_C01",
+    "CVP_VR_MD12980_req189_C02",
+    "CVP_VR_MD12980_req189_C03",
+    "CVP_VR_MD12980_req191_C01",
+    "CVP_VR_MD12980_req191_C02",
+    "CVP_VR_MD12980_req191_C03",
+    "CVP_VR_MD12980_req194_C01",
+    "CVP_VR_MD12980_req194_C02",
+    "CVP_VR_MD12980_req194_C03",
+    "CVP_VR_MD12980_req195_C01",
+    "CVP_VR_MD12980_req195_C02",
+    "CVP_VR_MD12980_req195_C03",
+    "CVP_VR_MD12980_req196_C01",
+    "CVP_VR_MD12980_req196_C02",
+    "CVP_VR_MD12980_req196_C03",
+    "CVP_VR_MD12980_req197_C01",
+    "CVP_VR_MD12980_req197_C02",
+    "CVP_VR_MD12980_req197_C03",
+    "CVP_VR_MD12980_req201_C01",
+    "CVP_VR_MD12980_req201_C02",
+    "CVP_VR_MD12980_req201_C03",
+    "CVP_VR_MD12980_req203_C01",
+    "CVP_VR_MD12980_req203_C02",
+    "CVP_VR_MD12980_req203_C03",
+    "CVP_VR_MD12980_req204_C01",
+    "CVP_VR_MD12980_req204_C02",
+    "CVP_VR_MD12980_req204_C03",
+    "CVP_VR_MD12980_req212_C01",
+    "CVP_VR_MD12980_req212_C02",
+    "CVP_VR_MD12980_req212_C03",
+    "CVP_VR_MD12980_req216_C01",
+    "CVP_VR_MD12980_req216_C02",
+    "CVP_VR_MD12980_req216_C03",
+    "CVP_VR_MD12980_req217_C01",
+    "CVP_VR_MD12980_req217_C02",
+    "CVP_VR_MD12980_req217_C03",
+    "CVP_VR_MD12980_req219_C01",
+    "CVP_VR_MD12980_req219_C02",
+    "CVP_VR_MD12980_req219_C03",
+    "CVP_VR_MD12980_req221_C01",
+    "CVP_VR_MD12980_req221_C02",
+    "CVP_VR_MD12980_req221_C03",
+    "CVP_VR_MD12980_req226_C01",
+    "CVP_VR_MD12980_req226_C02",
+    "CVP_VR_MD12980_req226_C03",
+    "CVP_VR_MD12980_req235_C01",
+    "CVP_VR_MD12980_req235_C02",
+    "CVP_VR_MD12980_req235_C03",
+    "CVP_VR_MD12980_req238_C01",
+    "CVP_VR_MD12980_req238_C02",
+    "CVP_VR_MD12980_req238_C03",
+    "CVP_VR_MD12980_req242_C01",
+    "CVP_VR_MD12980_req242_C02",
+    "CVP_VR_MD12980_req242_C03",
+    "CVP_VR_MD12980_req244_C01",
+    "CVP_VR_MD12980_req244_C02",
+    "CVP_VR_MD12980_req244_C03",
+    "CVP_VR_MD12980_req268_C01",
+    "CVP_VR_MD12980_req268_C02",
+    "CVP_VR_MD12980_req268_C03",
+    "CVP_VR_MD12980_req269_C01",
+    "CVP_VR_MD12980_req269_C02",
+    "CVP_VR_MD12980_req269_C03",
+    "CVP_VR_MD12980_req270_C01",
+    "CVP_VR_MD12980_req270_C02",
+    "CVP_VR_MD12980_req270_C03",
+    "CVP_VR_MD12980_req274_C01",
+    "CVP_VR_MD12980_req274_C02",
+    "CVP_VR_MD12980_req274_C03",
+    "CVP_VR_MD12980_req276_C01",
+    "CVP_VR_MD12980_req276_C02",
+    "CVP_VR_MD12980_req276_C03",
+    "CVP_VR_MD12980_req277_C01",
+    "CVP_VR_MD12980_req277_C02",
+    "CVP_VR_MD12980_req277_C03",
+    "CVP_VR_MD12980_req284_C01",
+    "CVP_VR_MD12980_req284_C02",
+    "CVP_VR_MD12980_req284_C03",
+    "CVP_VR_MD12980_req298_C01",
+    "CVP_VR_MD12980_req298_C02",
+    "CVP_VR_MD12980_req298_C03",
+    "CVP_VR_MD12980_req301_C01",
+    "CVP_VR_MD12980_req301_C02",
+    "CVP_VR_MD12980_req301_C03",
+    "CVP_VR_MD12980_req303_C01",
+    "CVP_VR_MD12980_req303_C02",
+    "CVP_VR_MD12980_req303_C03",
+    "CVP_VR_MD12980_req330_C01",
+    "CVP_VR_MD12980_req330_C02",
+    "CVP_VR_MD12980_req330_C03",
+    "CVP_VR_MD12980_req332_C01",
+    "CVP_VR_MD12980_req332_C02",
+    "CVP_VR_MD12980_req332_C03",
+    "CVP_VR_MD12980_req333_C01",
+    "CVP_VR_MD12980_req333_C02",
+    "CVP_VR_MD12980_req333_C03",
+    "CVP_VR_MD12980_req345_C01",
+    "CVP_VR_MD12980_req345_C02",
+    "CVP_VR_MD12980_req345_C03",
+    "CVP_VR_MD12980_req346_C01",
+    "CVP_VR_MD12980_req346_C02",
+    "CVP_VR_MD12980_req346_C03",
+    "CVP_VR_MD12980_req348_C01",
+    "CVP_VR_MD12980_req348_C02",
+    "CVP_VR_MD12980_req348_C03",
+    "CVP_VR_MD12980_req350_C01",
+    "CVP_VR_MD12980_req350_C02",
+    "CVP_VR_MD12980_req350_C03",
+    "CVP_VR_MD12980_req352_C01",
+    "CVP_VR_MD12980_req352_C02",
+    "CVP_VR_MD12980_req352_C03",
+    "CVP_VR_MD12980_req353_C01",
+    "CVP_VR_MD12980_req353_C02",
+    "CVP_VR_MD12980_req353_C03",
+    "CVP_VR_MD12980_req355_C01",
+    "CVP_VR_MD12980_req355_C02",
+    "CVP_VR_MD12980_req355_C03",
+    "CVP_VR_MD12980_req370_C01",
+    "CVP_VR_MD12980_req370_C02",
+    "CVP_VR_MD12980_req370_C03",
+    "CVP_VR_MD12980_req372_C01",
+    "CVP_VR_MD12980_req372_C02",
+    "CVP_VR_MD12980_req372_C03",
+    "CVP_VR_MD12980_req394_C01",
+    "CVP_VR_MD12980_req394_C02",
+    "CVP_VR_MD12980_req394_C03",
+    "CVP_VR_MD12980_req418_C01",
+    "CVP_VR_MD12980_req418_C02",
+    "CVP_VR_MD12980_req418_C03",
+    "CVP_VR_MD12980_req423_C01",
+    "CVP_VR_MD12980_req423_C02",
+    "CVP_VR_MD12980_req423_C03",
+    "CVP_VR_MD12980_req424_C01",
+    "CVP_VR_MD12980_req424_C02",
+    "CVP_VR_MD12980_req424_C03",
+    "CVP_VR_MD12980_req425_C01",
+    "CVP_VR_MD12980_req425_C02",
+    "CVP_VR_MD12980_req425_C03"
+  ],
+  "document_statistics": {
+    "plans": 143,
+    "checks": 432,
+    "machine_checks": 27,
+    "manual_checks": 405,
+    "passed": 0,
+    "failed": 0,
+    "errored": 0,
+    "skipped": 0,
+    "pending": 432,
+    "automation_percentage": 6.25
+  },
+  "execution_summary": {
+    "machine_passed": 0,
+    "machine_failed": 0,
+    "machine_errored": 0,
+    "machine_skipped": 0,
+    "manual_pending": 432,
+    "blocker_failures": 0,
+    "overall_verdict": "PENDING"
+  },
+  "plan_verdicts": [
+    {
+      "plan_id": "CVP_VR_MD12980_req36",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req37",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req38",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Foreign Exchange Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req39",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req40",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Scope Definition"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req46",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req48",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req49",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req51",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req52",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Restriction Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req53",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Restriction Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req55",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req56",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Protection Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req60",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req61",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req62",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req63",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req64",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req65",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req66",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req67",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req70",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req74",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Governance Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req75",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req76",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Liquidity Risk Management \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req77",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req79",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Restriction Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req80",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req81",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req82",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req83",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req85",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req86",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req88",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req92",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req93",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Protection Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req94",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req95",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Governance Obligation Compliance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req98",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req99",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req100",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Governance Obligation Compliance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req101",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req102",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req104",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req105",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Cyber Security Governance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req106",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req108",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req110",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req114",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req116",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Cyber Security Governance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req117",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req118",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req119",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Prudential Regulation Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req122",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Cyber Security Governance \u2014 Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req124",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req126",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Treasury Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req129",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req130",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req133",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req134",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req135",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req136",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req138",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req140",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Reporting Governance \u2014 Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req141",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req143",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req144",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req145",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req146",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req147",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req148",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req149",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req150",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req151",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req154",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Rights & Protection \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req155",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req157",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req159",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Rights & Protection \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req160",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req161",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req163",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req164",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Rights & Protection \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req166",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Rights & Protection \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req167",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req168",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Governance Obligation Compliance \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req170",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Rights & Protection \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req171",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req172",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Rights & Protection \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req175",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Rights & Protection \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req176",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Rights & Protection \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req177",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Rights & Protection \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req178",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req182",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Governance Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req183",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Grievance & Protection Governance \u2014 Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req184",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Grievance & Protection Governance \u2014 Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req185",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Grievance & Protection Governance \u2014 Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req186",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req189",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req191",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Governance Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req194",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req195",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req196",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req197",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Restriction Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req201",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Governance \u2014 Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req203",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req204",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req212",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req216",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req217",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req219",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req221",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req226",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Outsourcing Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req235",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Rights & Protection \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req238",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req242",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Scope Definition"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req244",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Rights & Protection \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req268",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req269",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req270",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req274",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req276",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req277",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req284",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Customer Grievance & Protection Governance \u2014 Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req298",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req301",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req303",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req330",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulation Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req332",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Kyc Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req333",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Kyc Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req345",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req346",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req348",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req350",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Digital Payments Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req352",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req353",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req355",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req370",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulation Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req372",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Kyc Authorisation Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req394",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Compliance Advisory Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req418",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req423",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req424",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Reporting Compliance Control"
+    },
+    {
+      "plan_id": "CVP_VR_MD12980_req425",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Regulatory Compliance Obligation \u2014 Compliance Control"
+    }
+  ]
+}
