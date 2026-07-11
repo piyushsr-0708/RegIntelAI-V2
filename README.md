@@ -1,7 +1,7 @@
 # RegIntel AI
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Status-Phase_1_Complete-brightgreen" alt="Status" />
+  <img src="https://img.shields.io/badge/Status-Implemented_and_Verified-brightgreen" alt="Status" />
   <img src="https://img.shields.io/badge/Python-3.13-blue" alt="Python Version" />
   <img src="https://img.shields.io/badge/Architecture-Agentic-orange" alt="Architecture" />
   <img src="https://img.shields.io/badge/License-MIT-gray" alt="License" />
@@ -44,19 +44,26 @@ graph TD
     F --> G[Requirement Enricher]
     G --> H[Compliance Control Deriver]
     H --> I[Compliance Interpreter <br/>(SSOT)]
-    I --> J[Compliance Reasoning Engine <br/>(Semantic Inference)]
+    I --> J[Compliance Reasoning Engine]
     J --> K[Verification Rule Generator]
     K --> L[Verification Planner]
     L --> M[Compliance Verification Executor]
-    M -.-> N[Compliance Decision Engine]
-    
+    M --> N[Compliance Decision Engine]
+    N --> O[Dashboard Aggregator]
+    O --> P[Frontend State JSON]
+    P --> Q[React/Vite Dashboard]
+
+    style I fill:#d4edda,stroke:#28a745,stroke-width:2px
     style J fill:#d4edda,stroke:#28a745,stroke-width:2px
     style K fill:#d4edda,stroke:#28a745,stroke-width:2px
     style L fill:#d4edda,stroke:#28a745,stroke-width:2px
     style M fill:#d4edda,stroke:#28a745,stroke-width:2px
-    style N fill:#f8d7da,stroke:#dc3545,stroke-dasharray: 5 5
+    style N fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style O fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style P fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style Q fill:#d4edda,stroke:#28a745,stroke-width:2px
 ```
-*(Green indicates the current boundary of Phase 1 completion. Red dashed lines indicate planned downstream modules).*
+*(Green indicates the currently implemented and verified modules in the repository.)*
 
 ### Design Principles
 1. **Modularity:** The pipeline is strictly decoupled. Each module performs a single transformation and outputs structured JSON.
@@ -135,17 +142,25 @@ pip install -r requirements.txt
 ```
 
 ### Usage
-Execute the pipeline stages sequentially. (Assuming upstream JSONs are populated in `/datasets`):
+Execute the pipeline stages and then generate the dashboard state. (Assuming upstream JSONs are already populated in `/datasets`):
 
 ```bash
-# Run the Compliance Interpreter to establish the SSOT
-python -m pipeline.interpreter.compliance_interpreter
+# Generate compliance decisions
+python -m pipeline.decision.compliance_decision_engine
 
-# Run the Compliance Reasoning Engine to generate execution telemetry
-python -m pipeline.reasoning.compliance_reasoning_engine
+# Generate the frontend dashboard state
+python -m pipeline.aggregator.dashboard_aggregator
 ```
 
-Outputs will be generated in `datasets/interpreted_controls/` and `datasets/reasoned_controls/`.
+Then start the frontend:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Outputs are generated in `datasets/compliance_decisions/` and `datasets/frontend/frontend_state.json`.
 
 ---
 
@@ -154,48 +169,105 @@ Outputs will be generated in `datasets/interpreted_controls/` and `datasets/reas
 ```text
 RegIntelAI-V2/
 ├── datasets/
-│   ├── interpreted_controls/      # SSOT JSON files
-│   ├── reasoned_controls/         # CRE output with telemetry vectors
+│   ├── compliance_decisions/      # Compliance decision outputs
+│   ├── frontend/                  # Generated frontend state payload
+│   ├── maps/                      # MAP dataset files
+│   ├── verification_plans/        # Verification plan outputs
+│   ├── verification_results/      # Execution results
 │   └── (upstream_data_folders)
+├── frontend/                      # React + Vite read-only dashboard UI
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   └── pages/
+│   └── package.json
 ├── logs/                          # Execution logs
 ├── pipeline/
-│   ├── interpreter/               # Compliance Interpreter module
-│   ├── reasoning/                 # Compliance Reasoning Engine
-│   └── (upstream_modules)
+│   ├── acquisition/
+│   ├── aggregator/
+│   ├── decision/
+│   ├── derivation/
+│   ├── enrichment/
+│   ├── executor/
+│   ├── extractor/
+│   ├── hierarchy/
+│   ├── interpreter/
+│   ├── logical_units/
+│   ├── map_generator/
+│   ├── normalizer/
+│   ├── parser/
+│   ├── reasoning/
+│   ├── verification/
+│   └── verification_planner/
 ├── .gitignore
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── verify_database.py
 ```
 
 ---
 
 ## 🛣️ Current Status & Agentic Roadmap
 
-**Current Status:** Phase 1 is complete. The pipeline successfully ingests RBI documents and processes them through the Compliance Reasoning Engine. The system now possesses the semantic intelligence required to identify exactly *which* banking system holds the evidence for *which* regulation.
+**Current Status:** The repository now includes a verified end-to-end flow from RBI input data through compliance decisioning and dashboard aggregation to a read-only React/Vite frontend. The currently completed and verified surface includes the Executive Dashboard, Compliance Register, Department Workspace, Dashboard Aggregator, and Compliance Decision Engine.
 
-### Planned: The Verification Pipeline
+### Completed Modules
+- Acquisition and document parsing
+- Normalization and hierarchy building
+- Logical unit generation and requirement extraction
+- Requirement enrichment and compliance control derivation
+- Compliance interpretation and reasoning
+- Verification planning and execution
+- Compliance decision engine
+- Dashboard aggregation and frontend state generation
+
+### Frontend Architecture
+- The frontend is a read-only React + Vite application with demo authentication and route-based pages.
+- Pages consume a single generated payload from `datasets/frontend/frontend_state.json` through `FrontendStateContext`.
+- The current verified pages are the Executive Dashboard, Compliance Register, and Department Workspace.
+
+### Dashboard Architecture
+- The Dashboard Aggregator consolidates KPI, department, compliance register, and verification metadata into a single frontend state payload.
+- The dashboard pages render directly from that state without any backend API or database dependency.
+
+### Current Screenshots Placeholder
+- Dashboard view: placeholder for the executive dashboard screenshot
+- Compliance Register view: placeholder for the compliance register screenshot
+- Department Workspace view: placeholder for the department workspace screenshot
+- No screenshot assets are committed in the repository yet; these remain placeholders for the current implementation snapshot.
+
+### Demo Login Credentials
+The frontend includes demo authentication for the following users:
+
+- `admin` / `admin123`
+- `compliance` / `compliance123`
+- `risk` / `risk123`
+- `it` / `it123`
+- `treasury` / `treasury123`
+- `audit` / `audit123`
+
+### Agentic Pipeline
 
 ```mermaid
 graph TD
-    A[Reasoned Controls] -->|Telemetry Vectors| B[Verification Rule Generator]
-    B --> C[Rule Definitions]
-    C --> D[Verification Planner]
-    D -->|Execution DAG| E[Verification Tasks]
+    A[Raw RBI Documents] --> B[Parser]
+    B --> C[Normalizer]
+    C --> D[Hierarchy + Logical Units]
+    D --> E[Requirement Extractor + Enricher]
+    E --> F[Compliance Interpreter]
+    F --> G[Compliance Reasoning]
+    G --> H[Verification Planner + Executor]
+    H --> I[Compliance Decision Engine]
+    I --> J[Dashboard Aggregator]
+    J --> K[Frontend State JSON]
+    K --> L[Executive Dashboard / Register / Workspace]
 ```
 
-### Planned: Autonomous Execution Pipeline
-
-```mermaid
-graph TD
-    A[Execution DAG] --> B[Evidence Collection Agent]
-    B --> C{Trust Assessment}
-    C -->|HIGH_IMMUTABLE| D[Target System <br/>(CBS, SIEM, AD)]
-    C -->|LOW_HUMAN| E[Human Attestation <br/>(Jira/Workflow)]
-    D --> F[(Evidence Vault)]
-    E --> F
-    F --> G[Compliance Status Agent]
-    G --> H[Executive Dashboard]
-```
+### Remaining Roadmap Modules
+- Assignment Center
+- Requirement Search
+- Knowledge Graph
+- MAP Detail
 
 ---
 

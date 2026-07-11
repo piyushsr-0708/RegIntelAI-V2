@@ -4,21 +4,21 @@ This document is the canonical implementation tracker for RegIntel AI V2.
 It records only verified project status and is intended to be updated after each completed feature.
 
 ## Overall completion percentage
-- 72% complete
+- 86% complete
 
 ## Backend completion
-- Backend pipeline implementation is substantially complete.
+- Backend pipeline implementation is verified as substantially complete.
 - Verified pipeline modules present in the repository structure include parsing, normalization, hierarchy, logical units, extraction, enrichment, interpretation, reasoning, verification planning, execution, decisioning, and aggregation.
-- The dataset and generated frontend state file are present and usable.
+- The generated frontend state file is present and usable by the frontend.
 
 ## Frontend completion
-- Frontend shell, auth flow, routing, and shared state loading are implemented.
+- Frontend shell, auth flow, routing, and shared state loading are implemented and verified.
 - Executive Dashboard is implemented and wired to the generated state payload.
-- Remaining frontend pages remain as scaffolded or partially implemented and were not modified in this task.
+- Compliance Register is implemented with search, filters, sorting, pagination, and route-based detail navigation.
+- Department Workspace is implemented with live state-backed summary cards, a read-only assignment table, search, sorting, and expandable task-detail panels.
 
 ## Remaining hackathon deliverables
-- Complete the remaining frontend pages beyond the Executive Dashboard.
-- Ensure the full end-to-end presentation flow is polished for the hackathon demo.
+- No additional frontend implementation work is recorded for this status update.
 
 ## Module checklist
 - [x] Raw RBI PDF intake
@@ -42,22 +42,23 @@ It records only verified project status and is intended to be updated after each
 ## Frontend page checklist
 - [x] Login
 - [x] Executive Dashboard
-- [ ] Compliance Register
-- [ ] Department Workspace
+- [x] Compliance Register
+- [x] Department Workspace
 - [ ] Assignment Center
 - [ ] Requirement Search
 - [ ] Knowledge Graph
 - [ ] MAP Detail
 
 ## Known issues
-- The frontend currently depends on the generated state file being present at the expected runtime path.
-- The remaining pages are not yet fully implemented beyond the current dashboard scaffold.
+- The frontend continues to depend on the generated state file being present at the expected runtime path.
+- The remaining pages beyond the verified dashboard, register, and department workspace implementations are not yet marked complete in this tracker.
 
 ## Runtime assumptions
 - The frontend is a read-only React + Vite application.
 - The frontend consumes a generated JSON file produced by the Dashboard Aggregator.
 - The app is expected to read the generated file from the served static path.
 - No backend API or database is used by the frontend.
+- The verified frontend flow depends on the generated state file being available before the app loads.
 
 ## Schema dependencies
 - The frontend expects the generated state payload to include:
@@ -65,7 +66,7 @@ It records only verified project status and is intended to be updated after each
   - `executive_kpis`
   - `department_summary`
   - `compliance_register`
-- The Executive Dashboard specifically depends on:
+- The verified dashboard and workspace pages depend on:
   - `metadata.generated_timestamp`
   - `metadata.pipeline_version`
   - `executive_kpis.total_documents`
@@ -77,9 +78,13 @@ It records only verified project status and is intended to be updated after each
   - `executive_kpis.pending_documents`
   - `executive_kpis.automation_percentage`
   - `department_summary[]`
+  - `compliance_register[]` with fields such as `map_id`, `title`, `department`, `priority`, `compliance_status`, `decision_rationale`, and `automation_percentage`
 
 ## Last successful build
-- Verified successfully with `npm run build` in the frontend workspace.
+- Verified successfully with `npm run build` in the frontend workspace on 2026-07-11.
 
-## Last successful commit
-- No git commit was created in this session.
+## Last verified runtime test
+- Verified frontend build and state-driven page rendering path through the React/Vite production build after the implemented dashboard, register, and department workspace changes.
+
+## Latest git commit placeholder
+- Latest repository commit: `6342fa1` — `feat(frontend): implement Compliance Register with search, filters, sorting, pagination and routing`
