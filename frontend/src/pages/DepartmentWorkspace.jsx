@@ -1,119 +1,67 @@
 /**
  * DepartmentWorkspace.jsx — RegIntel AI V2
- * Milestone 1 stub: filters compliance_register to current user's department.
- * Full implementation in Milestone 3.
+ * Fetches real assignments from the FastAPI backend.
  */
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useAuth } from "../context/AuthContext";
-import { useComplianceRegister, useMapDetail } from "../context/FrontendStateContext";
-import { PriorityBadge, StatusBadge } from "../components/Badges";
+import { apiFetch } from "../utils/api";
+import { StatusBadge } from "../components/Badges";
 import Breadcrumbs from "../components/Breadcrumbs";
 
-const ITEMS_PER_PAGE = 30;
-
 export default function DepartmentWorkspace() {
-  const { user, isAdmin } = useAuth();
-  const register = useComplianceRegister();
+  const { user, can } = useAuth();
+  
+  const [assignments, setAssignments] = useState([]);
+  const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
+  const [pageSize] = useState(30);
   const [searchQuery, setSearchQuery] = useState("");
-  const [sortConfig, setSortConfig] = useState({ key: "title", direction: "asc" });
-  const [expandedMapId, setExpandedMapId] = useState(null);
+  const [stats, setStats] = useState({ ACTIVE: 0, COMPLETED: 0 });
+  const [loading, setLoading] = useState(true);
+  const [expandedId, setExpandedId] = useState(null);
+  
+  const [evidenceNote, setEvidenceNote] = useState("");
 
-  const activeDepartment = useMemo(() => {
-    if (isAdmin || user?.role === "head_office") return null;
-    return user?.department ?? null;
-  }, [isAdmin, user]);
-
-  const visibleMaps = useMemo(() => {
-    if (!activeDepartment) return register;
-    return register.filter((map) => map.department === activeDepartment);
-  }, [register, activeDepartment]);
-
-  const filteredMaps = useMemo(() => {
-    const query = searchQuery.trim().toLowerCase();
-    if (!query) return visibleMaps;
-
-    return visibleMaps.filter((map) => {
-      const haystack = [map.map_id, map.title, map.department, map.compliance_status, map.priority, map.decision_rationale]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      return haystack.includes(query);
-    });
-  }, [visibleMaps, searchQuery]);
-
-  const sortedMaps = useMemo(() => {
-    const items = [...filteredMaps];
-    const direction = sortConfig.direction === "asc" ? 1 : -1;
-
-    items.sort((a, b) => {
-      const valueA = a[sortConfig.key];
-      const valueB = b[sortConfig.key];
-
-      if (sortConfig.key === "priority") {
-        const priorityOrder = { Critical: 4, High: 3, Medium: 2, Low: 1 };
-        return ((priorityOrder[valueA] || 0) - (priorityOrder[valueB] || 0)) * direction;
-      }
-
-      if (sortConfig.key === "automation_percentage") {
-        return ((Number(valueA) || 0) - (Number(valueB) || 0)) * direction;
-      }
-
-      if (sortConfig.key === "compliance_status") {
-        const statusOrder = { COMPLIANT: 3, NON_COMPLIANT: 2, PENDING: 1 };
-        return ((statusOrder[valueA] || 0) - (statusOrder[valueB] || 0)) * direction;
-      }
-
-      if (typeof valueA === "string" && typeof valueB === "string") {
-        return valueA.localeCompare(valueB) * direction;
-      }
-
-      return ((valueA || 0) - (valueB || 0)) * direction;
-    });
-
-    return items;
-  }, [filteredMaps, sortConfig]);
+  const fetchAssignments = useCallback(async () => {
+    setLoading(true);
+    try {
+      const data = await apiFetch(`/assignments?page=${page}&page_size=${pageSize}&search=${searchQuery}`);
+      setAssignments(data.items || []);
+      setTotal(data.total || 0);
+      
+      const statsData = await apiFetch(`/assignments/stats/summary`);
+      const mergedStats = { ACTIVE: 0, COMPLETED: 0, ...statsData };
+      setStats(mergedStats);
+    } catch (err) {
+      console.error("Failed to fetch assignments:", err);
+    } finally {
+      setLoading(false);
+    }
+  }, [page, pageSize, searchQuery]);
 
   useEffect(() => {
-    setPage(1);
-  }, [searchQuery, sortConfig]);
+    fetchAssignments();
+  }, [fetchAssignments]);
 
-  const paginated = sortedMaps.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
-  const totalPages = Math.ceil(sortedMaps.length / ITEMS_PER_PAGE) || 1;
-
-  const stats = useMemo(() => {
-    const compliant = visibleMaps.filter((map) => map.compliance_status === "COMPLIANT").length;
-    const nonCompliant = visibleMaps.filter((map) => map.compliance_status === "NON_COMPLIANT").length;
-    const pending = visibleMaps.filter((map) => map.compliance_status === "PENDING").length;
-    const openTasks = nonCompliant + pending;
-    const automation = visibleMaps.length
-      ? visibleMaps.reduce((sum, map) => sum + (Number(map.automation_percentage) || 0), 0) / visibleMaps.length
-      : 0;
-
-    return {
-      total: visibleMaps.length,
-      compliant,
-      nonCompliant,
-      pending,
-      openTasks,
-      automation,
-    };
-  }, [visibleMaps]);
-
-  const summaryCards = [
-    { label: "Open Tasks", value: stats.openTasks.toLocaleString(), color: "#fbbf24", badge: <StatusBadge status="PENDING" /> },
-    { label: "Compliant", value: stats.compliant.toLocaleString(), color: "#34d399", badge: <StatusBadge status="COMPLIANT" /> },
-    { label: "Non-Compliant", value: stats.nonCompliant.toLocaleString(), color: "#f87171", badge: <StatusBadge status="NON_COMPLIANT" /> },
-    { label: "Pending", value: stats.pending.toLocaleString(), color: "#94a3b8", badge: <StatusBadge status="PENDING" /> },
-    { label: "Automation %", value: `${stats.automation.toFixed(1)}%`, color: "#60a5fa", badge: <PriorityBadge priority="Medium" /> },
-  ];
-
-  const detail = useMapDetail(expandedMapId);
-  const expandedItem = useMemo(() => visibleMaps.find((map) => map.map_id === expandedMapId) ?? null, [visibleMaps, expandedMapId]);
-
-  const toggleExpanded = (mapId) => {
-    setExpandedMapId((current) => (current === mapId ? null : mapId));
+  // Handle completion
+  const handleComplete = async (assignmentId) => {
+    try {
+      await apiFetch(`/assignments/${assignmentId}`, {
+        method: 'PATCH',
+        body: JSON.stringify({
+          status: 'COMPLETED',
+          evidence_note: evidenceNote || undefined
+        })
+      });
+      setEvidenceNote("");
+      setExpandedId(null);
+      fetchAssignments();
+    } catch (err) {
+      alert("Error completing assignment: " + err.message);
+    }
   };
+
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
   return (
     <div>
@@ -124,32 +72,38 @@ export default function DepartmentWorkspace() {
           <h1 className="page-title">My Assignments</h1>
         </div>
         <p className="page-subtitle" style={{ paddingLeft: 14 }}>
-          {activeDepartment
-            ? <><strong style={{ color: "#f1f5f9" }}>{activeDepartment}</strong> Department · {visibleMaps.length.toLocaleString()} MAPs assigned</>
-            : "All MAPs (Admin view)"}
+          {user?.department_name
+            ? <><strong style={{ color: "#f1f5f9" }}>{user.department_name}</strong> Department · {total.toLocaleString()} total assignments</>
+            : "All Assignments (Admin view)"}
         </p>
       </div>
 
-      {/* Department summary cards */}
+      {/* Summary cards */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12, marginBottom: 20 }}>
-        {summaryCards.map((item) => (
-          <div key={item.label} className="card animate-fade-up" style={{ padding: "16px 18px" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, marginBottom: 8 }}>
-              <div style={{ fontSize: 11, color: "#64748b", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em" }}>{item.label}</div>
-              {item.badge}
-            </div>
-            <div style={{ fontSize: 28, fontWeight: 900, color: item.color, lineHeight: 1 }}>{item.value}</div>
+        <div className="card animate-fade-up" style={{ padding: "16px 18px" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, marginBottom: 8 }}>
+            <div style={{ fontSize: 11, color: "#64748b", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em" }}>Active Tasks</div>
+            <StatusBadge status="ACTIVE" />
           </div>
-        ))}
+          <div style={{ fontSize: 28, fontWeight: 900, color: "#fbbf24", lineHeight: 1 }}>{stats.ACTIVE || 0}</div>
+        </div>
+        <div className="card animate-fade-up" style={{ padding: "16px 18px" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, marginBottom: 8 }}>
+            <div style={{ fontSize: 11, color: "#64748b", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em" }}>Completed</div>
+            <StatusBadge status="COMPLETED" />
+          </div>
+          <div style={{ fontSize: 28, fontWeight: 900, color: "#34d399", lineHeight: 1 }}>{stats.COMPLETED || 0}</div>
+        </div>
       </div>
 
-      {/* MAP list */}
+      {/* Assignment list */}
       <div className="card" style={{ overflow: "hidden" }}>
         <div style={{ padding: "14px 16px", borderBottom: "1px solid rgba(255,255,255,0.06)", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
           <input
             value={searchQuery}
-            onChange={(event) => setSearchQuery(event.target.value)}
-            placeholder="Search assignments"
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && fetchAssignments()}
+            placeholder="Search assignments (press Enter)"
             style={{ flex: 1, background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, color: "#e2e8f0", padding: "9px 12px", fontSize: 12.5, outline: "none" }}
             onFocus={e => e.target.style.borderColor = "#60a5fa"}
             onBlur={e  => e.target.style.borderColor = "rgba(255,255,255,0.07)"}
@@ -159,93 +113,75 @@ export default function DepartmentWorkspace() {
         <table className="data-table">
           <thead>
             <tr>
-              {[
-                { key: "map_id", label: "MAP ID" },
-                { key: "title", label: "Title" },
-                { key: "priority", label: "Priority" },
-                { key: "compliance_status", label: "Status" },
-                { key: "automation_percentage", label: "Automation %" },
-                { key: "decision_rationale", label: "Decision" },
-              ].map((header) => (
-                <th key={header.key}>
-                  <button
-                    onClick={() => setSortConfig((current) => ({
-                      key: header.key,
-                      direction: current.key === header.key && current.direction === "asc" ? "desc" : "asc",
-                    }))}
-                    style={{ background: "transparent", border: 0, color: "inherit", padding: 0, cursor: "pointer", font: "inherit" }}
-                  >
-                    {header.label}
-                    {sortConfig.key === header.key ? (sortConfig.direction === "asc" ? " ↑" : " ↓") : ""}
-                  </button>
-                </th>
-              ))}
+              <th>Assignment ID</th>
+              <th>Control Name</th>
+              <th>Department</th>
+              <th>Status</th>
+              <th>Created At</th>
             </tr>
           </thead>
           <tbody>
-            {paginated.map((m) => {
-              const isExpanded = expandedMapId === m.map_id;
+            {loading ? (
+              <tr><td colSpan={5} style={{ textAlign: "center", padding: "40px" }}>Loading...</td></tr>
+            ) : assignments.map((a) => {
+              const isExpanded = expandedId === a.id;
               return (
-                <>
-                  <tr key={`row-${m.map_id}`} onClick={() => toggleExpanded(m.map_id)} style={{ cursor: "pointer" }}>
-                    <td><span style={{ fontFamily: "monospace", fontSize: 11, fontWeight: 700, color: "#34d399", background: "rgba(52,211,153,0.1)", padding: "3px 7px", borderRadius: 5 }}>{m.map_id}</span></td>
-                    <td style={{ maxWidth: 340, color: "#d1d5db", lineHeight: 1.4 }}>{m.title.length > 90 ? m.title.substring(0, 90) + "…" : m.title}</td>
-                    <td><PriorityBadge priority={m.priority.charAt(0) + m.priority.slice(1).toLowerCase()} /></td>
-                    <td><StatusBadge status={m.compliance_status} /></td>
-                    <td style={{ fontFamily: "monospace", color: "#64748b" }}>{(Number(m.automation_percentage) || 0).toFixed(1)}%</td>
-                    <td style={{ maxWidth: 220, color: "#94a3b8", lineHeight: 1.4 }}>
-                      {m.decision_rationale ? (m.decision_rationale.length > 70 ? `${m.decision_rationale.substring(0, 70)}…` : m.decision_rationale) : "Pending review"}
-                    </td>
+                <key-wrapper key={a.id}>
+                  <tr onClick={() => setExpandedId(isExpanded ? null : a.id)} style={{ cursor: "pointer" }}>
+                    <td><span style={{ fontFamily: "monospace", fontSize: 11, fontWeight: 700, color: "#34d399", background: "rgba(52,211,153,0.1)", padding: "3px 7px", borderRadius: 5 }}>{a.id.split('-')[0]}</span></td>
+                    <td style={{ color: "#d1d5db" }}>{a.control_name || "Unknown Control"}</td>
+                    <td style={{ color: "#94a3b8" }}>{a.department_name}</td>
+                    <td><StatusBadge status={a.status} /></td>
+                    <td style={{ color: "#64748b" }}>{new Date(a.created_at).toLocaleDateString()}</td>
                   </tr>
                   {isExpanded && (
-                    <tr key={`detail-${m.map_id}`}>
-                      <td colSpan={6} style={{ padding: "0 16px 16px" }}>
+                    <tr>
+                      <td colSpan={5} style={{ padding: "0 16px 16px" }}>
                         <div style={{ background: "rgba(96,165,250,0.06)", border: "1px solid rgba(96,165,250,0.16)", borderRadius: 10, padding: 16 }}>
-                          <div style={{ fontSize: 11, fontWeight: 800, color: "#60a5fa", marginBottom: 12, letterSpacing: "0.08em" }}>TASK DETAIL</div>
-                          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 12 }}>
-                            {[
-                              ["Requirement", detail?.requirement?.text || detail?.requirement_text || detail?.requirement || expandedItem?.title || "Requirement details will appear when detailed map metadata is available."],
-                              ["Reasoning summary", detail?.reasoning_summary || detail?.reasoning || detail?.summary || expandedItem?.decision_rationale || "Reasoning summary will appear when detailed map metadata is available."],
-                              ["Department", expandedItem?.department || "Department not available"],
-                              ["Compliance decision", expandedItem?.compliance_status || "Decision not available"],
-                            ].map(([label, value]) => (
-                              <div key={label} style={{ background: "rgba(15,23,42,0.5)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 8, padding: 12 }}>
-                                <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 6, letterSpacing: "0.06em", textTransform: "uppercase" }}>{label}</div>
-                                <div style={{ fontSize: 13, color: "#e2e8f0", lineHeight: 1.5, whiteSpace: "pre-wrap" }}>{value}</div>
-                              </div>
-                            ))}
-                            <div style={{ gridColumn: "1 / -1", background: "rgba(15,23,42,0.5)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 8, padding: 12 }}>
-                              <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 6, letterSpacing: "0.06em", textTransform: "uppercase" }}>Evidence summary</div>
-                              <div style={{ fontSize: 13, color: "#e2e8f0", lineHeight: 1.5, whiteSpace: "pre-wrap" }}>
-                                {detail?.evidence_summary || detail?.evidence || detail?.evidence_text || "Evidence summary will appear when detailed map metadata is available."}
-                              </div>
+                          <div style={{ fontSize: 11, fontWeight: 800, color: "#60a5fa", marginBottom: 12, letterSpacing: "0.08em" }}>ASSIGNMENT DETAIL</div>
+                          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                            <div style={{ background: "rgba(15,23,42,0.5)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 8, padding: 12 }}>
+                              <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 6, letterSpacing: "0.06em", textTransform: "uppercase" }}>Control Required</div>
+                              <div style={{ fontSize: 13, color: "#e2e8f0" }}>{a.control_name}</div>
                             </div>
+                            
+                            {a.status === 'ACTIVE' && can('assign:complete') && (
+                              <div style={{ background: "rgba(15,23,42,0.5)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 8, padding: 12 }}>
+                                <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 6, letterSpacing: "0.06em", textTransform: "uppercase" }}>Evidence & Completion</div>
+                                <textarea 
+                                  value={evidenceNote}
+                                  onChange={e => setEvidenceNote(e.target.value)}
+                                  placeholder="Enter evidence notes or reference IDs before completing..."
+                                  style={{ width: "100%", height: 60, background: "#0f172a", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 6, color: "#e2e8f0", padding: "8px", fontSize: 12, marginBottom: 10, resize: "none" }}
+                                />
+                                <button 
+                                  onClick={() => handleComplete(a.id)}
+                                  style={{ background: "#10b981", color: "#fff", border: "none", padding: "6px 12px", borderRadius: 5, fontSize: 12, fontWeight: 600, cursor: "pointer" }}
+                                >
+                                  Mark as Completed
+                                </button>
+                              </div>
+                            )}
                           </div>
-                          {!detail && (
-                            <div style={{ marginTop: 12, padding: "10px 12px", background: "rgba(16,185,129,0.07)", border: "1px solid rgba(16,185,129,0.16)", borderRadius: 8, color: "#94a3b8", fontSize: 12 }}>
-                              <strong style={{ color: "#34d399" }}>Detailed map data is not available.</strong> A professional placeholder is shown until the aggregator provides richer task detail.
-                            </div>
-                          )}
                         </div>
                       </td>
                     </tr>
                   )}
-                </>
+                </key-wrapper>
               );
             })}
           </tbody>
         </table>
 
-        {sortedMaps.length === 0 && (
+        {!loading && assignments.length === 0 && (
           <div style={{ padding: "52px 40px", textAlign: "center" }}>
             <div style={{ fontSize: 34, marginBottom: 10 }}>📭</div>
-            <div style={{ fontSize: 15, fontWeight: 700, color: "#94a3b8" }}>No assignments found for your department</div>
+            <div style={{ fontSize: 15, fontWeight: 700, color: "#94a3b8" }}>No assignments found</div>
           </div>
         )}
 
-        {/* Pagination */}
         <div style={{ padding: "11px 18px", background: "#162030", borderTop: "1px solid rgba(255,255,255,0.04)", fontSize: 11.5, color: "#475569", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <span>{sortedMaps.length.toLocaleString()} assignments</span>
+          <span>{total.toLocaleString()} total</span>
           <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
             <button onClick={() => setPage(p => Math.max(1, p - 1))} disabled={page === 1} style={{ background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "5px 10px", color: "#e2e8f0", cursor: page === 1 ? "not-allowed" : "pointer", opacity: page === 1 ? 0.4 : 1 }}>Prev</button>
             <span>Page {page} / {totalPages}</span>
@@ -253,7 +189,6 @@ export default function DepartmentWorkspace() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }

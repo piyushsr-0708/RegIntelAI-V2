@@ -11,6 +11,9 @@ const CRUMB_MAP = {
   "/graph":         "Knowledge Graph",
   "/assignment-center": "Assignment Center",
   "/workspace":     "My Assignments",
+  "/pipeline":      "Analysis Pipeline",
+  "/session":       "Session Dashboard",
+  "/registry":      "MAP Detail",
 };
 
 export default function Breadcrumbs() {
@@ -19,7 +22,12 @@ export default function Breadcrumbs() {
 
   const crumbs = [{ label: "Dashboard", path: "/" }];
 
-  if (segments[0]) {
+  // /session/:id/map/:mapId  → 3 segments
+  if (segments[0] === "session" && segments[2] === "map") {
+    crumbs.push({ label: "Analysis Pipeline", path: "/pipeline" });
+    crumbs.push({ label: "Session", path: `/session/${segments[1]}` });
+    crumbs.push({ label: "MAP Detail", path: pathname });
+  } else if (segments[0]) {
     const label = CRUMB_MAP[`/${segments[0]}`] || segments[0];
     crumbs.push({ label, path: `/${segments[0]}` });
     if (segments[1]) crumbs.push({ label: segments[1], path: pathname });

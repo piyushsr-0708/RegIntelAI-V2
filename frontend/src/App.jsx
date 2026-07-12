@@ -14,6 +14,7 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate, useLocation } from
 import { Suspense, lazy } from "react";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import { FrontendStateProvider, useFrontendState } from "./context/FrontendStateContext";
+import { SessionProvider } from "./context/SessionContext";
 import LoadingScreen from "./components/LoadingScreen";
 import Topbar from "./components/Topbar";
 import Sidebar from "./components/Sidebar";
@@ -28,6 +29,9 @@ const Requirements       = lazy(() => import("./pages/Requirements"));
 const Graph              = lazy(() => import("./pages/Graph"));
 const AssignmentCenter   = lazy(() => import("./pages/AssignmentCenter"));
 const DepartmentWorkspace= lazy(() => import("./pages/DepartmentWorkspace"));
+const Pipeline           = lazy(() => import("./pages/Pipeline"));
+const SessionDashboard   = lazy(() => import("./pages/SessionDashboard"));
+const SessionMapDetail   = lazy(() => import("./pages/SessionMapDetail"));
 
 // ─── Suspense fallback ─────────────────────────────────────────────────────────
 const PageLoader = () => (
@@ -89,30 +93,35 @@ function AppRoutes() {
         }
       />
 
-      {/* Protected — all wrapped inside FrontendStateProvider */}
+      {/* Protected — all wrapped inside FrontendStateProvider + SessionProvider */}
       <Route
         path="/*"
         element={
           <AuthGate>
             <FrontendStateProvider>
               <StateGate>
-                <AppShell>
-                  <Suspense fallback={<PageLoader />}>
-                    <Routes>
-                      <Route path="/"                  element={<Dashboard />} />
-                      <Route path="/maps"              element={<Maps />} />
-                      <Route path="/registry/:id"      element={<MapDetail />} />
-                      <Route path="/maps/:id"          element={<MapDetail />} />
-                      <Route path="/departments"       element={<Departments />} />
-                      <Route path="/requirements"      element={<Requirements />} />
-                      <Route path="/graph"             element={<Graph />} />
-                      <Route path="/assignment-center" element={<AssignmentCenter />} />
-                      <Route path="/workspace"         element={<DepartmentWorkspace />} />
-                      {/* Catch-all */}
-                      <Route path="*"                  element={<Navigate to="/" replace />} />
-                    </Routes>
-                  </Suspense>
-                </AppShell>
+                <SessionProvider>
+                  <AppShell>
+                    <Suspense fallback={<PageLoader />}>
+                      <Routes>
+                        <Route path="/"                  element={<Dashboard />} />
+                        <Route path="/maps"              element={<Maps />} />
+                        <Route path="/registry/:id"      element={<MapDetail />} />
+                        <Route path="/maps/:id"          element={<MapDetail />} />
+                        <Route path="/departments"       element={<Departments />} />
+                        <Route path="/requirements"      element={<Requirements />} />
+                        <Route path="/graph"             element={<Graph />} />
+                        <Route path="/assignment-center" element={<AssignmentCenter />} />
+                        <Route path="/workspace"         element={<DepartmentWorkspace />} />
+                        <Route path="/pipeline"                    element={<Pipeline />} />
+                        <Route path="/session/:id"                 element={<SessionDashboard />} />
+                        <Route path="/session/:sessionId/map/:mapId" element={<SessionMapDetail />} />
+                        {/* Catch-all */}
+                        <Route path="*"                  element={<Navigate to="/" replace />} />
+                      </Routes>
+                    </Suspense>
+                  </AppShell>
+                </SessionProvider>
               </StateGate>
             </FrontendStateProvider>
           </AuthGate>

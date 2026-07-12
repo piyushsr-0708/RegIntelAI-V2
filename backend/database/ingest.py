@@ -18,9 +18,17 @@ def ingest():
         if controls_dir.exists():
             print(f"Ingesting controls from {controls_dir}...")
             service.ingest_directory(controls_dir)
-            print("Ingestion complete.")
+            print("Control ingestion complete.")
         else:
             print(f"Directory {controls_dir} not found.")
+
+        maps_dir = project_root / "datasets" / "maps"
+        if maps_dir.exists():
+            print(f"Ingesting MAPs from {maps_dir}...")
+            service.ingest_maps_directory(maps_dir)
+            print("MAP ingestion complete.")
+        else:
+            print(f"Directory {maps_dir} not found.")
     finally:
         db.close()
 

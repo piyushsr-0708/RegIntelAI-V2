@@ -3,7 +3,7 @@ from sqlalchemy import String, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from backend.database.base import Base, generate_uuid
 from sqlalchemy.dialects.postgresql import JSONB
-from sqlalchemy.types import JSON
+from sqlalchemy.types import JSON, Boolean
 
 JsonType = JSON().with_variant(JSONB, "postgresql")
 
@@ -22,6 +22,9 @@ class User(Base):
     id: Mapped[str] = mapped_column(String(36), primary_key=True, default=generate_uuid)
     username: Mapped[str] = mapped_column(String(255), unique=True, index=True)
     email: Mapped[str] = mapped_column(String(255), unique=True, index=True)
+    full_name: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
+    password_hash: Mapped[Optional[str]] = mapped_column(String(512), nullable=True)
+    is_active: Mapped[bool] = mapped_column(Boolean, default=True)
     department_id: Mapped[Optional[str]] = mapped_column(String(36), ForeignKey("departments.id"), nullable=True)
     role_id: Mapped[Optional[str]] = mapped_column(String(36), ForeignKey("roles.id"), nullable=True)
     

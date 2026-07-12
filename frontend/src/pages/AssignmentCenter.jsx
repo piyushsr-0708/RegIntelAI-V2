@@ -1,88 +1,215 @@
 /**
  * AssignmentCenter.jsx — RegIntel AI V2
- * Milestone 1 stub: Shows department-level compliance summary from FrontendStateContext.
- * Full publish/assign workflow in Milestone 2.
+ * Admin-only. Review DRAFT MAPs, reassign departments, approve/reject, generate assignments.
+ * Uses live FastAPI backend endpoints.
  */
-import { useDepartmentSummary, useExecutiveKpis } from "../context/FrontendStateContext";
+import { useState, useEffect, useCallback } from "react";
+import { useAuth } from "../context/AuthContext";
+import { apiFetch } from "../utils/api";
 import Breadcrumbs from "../components/Breadcrumbs";
 
-export default function AssignmentCenter() {
-  const deptSummary = useDepartmentSummary();
-  const kpis = useExecutiveKpis();
+// ─── Main ─────────────────────────────────────────────────────────────────────
 
-  const totalPending = deptSummary.reduce((a, d) => a + (d.pending ?? 0), 0);
+export default function AssignmentCenter() {
+  const { can } = useAuth();
+  
+  const [maps, setMaps] = useState([]);
+  const [departments, setDepartments] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [page, setPage] = useState(1);
+  const [pageSize] = useState(50);
+  
+  const [loading, setLoading] = useState(true);
+  const [stats, setStats] = useState({});
+  const [busyMapId, setBusyMapId] = useState(null);
+
+  const fetchMaps = useCallback(async () => {
+    setLoading(true);
+    try {
+      const [data, statsData, departmentsData] = await Promise.all([
+        apiFetch(`/maps?status=DRAFT&page=${page}&page_size=${pageSize}`),
+        apiFetch(`/maps/stats/summary`),
+        apiFetch(`/departments`),
+      ]);
+      setMaps(data.items || []);
+      setTotal(data.total || 0);
+      setStats(statsData || {});
+      setDepartments(departmentsData || []);
+    } catch (err) {
+      console.error("Failed to fetch assignment center data:", err);
+    } finally {
+      setLoading(false);
+    }
+  }, [page, pageSize]);
+
+  useEffect(() => {
+    fetchMaps();
+  }, [fetchMaps]);
+
+  // Handle Updates
+  const handleUpdate = async (mapId, updates) => {
+    setBusyMapId(mapId);
+    try {
+      await apiFetch(`/maps/${mapId}`, {
+        method: 'PATCH',
+        body: JSON.stringify(updates),
+      });
+      await fetchMaps();
+    } catch (err) {
+      alert("Error updating MAP: " + err.message);
+    } finally {
+      setBusyMapId(null);
+    }
+  };
+
+  const handleApprove = async (mapId) => {
+    setBusyMapId(mapId);
+    try {
+      await apiFetch(`/maps/${mapId}/approve`, {
+        method: 'POST'
+      });
+      await fetchMaps();
+    } catch (err) {
+      alert("Error approving MAP: " + err.message);
+    } finally {
+      setBusyMapId(null);
+    }
+  };
+
+  const handleReject = async (mapId) => {
+    setBusyMapId(mapId);
+    try {
+      await apiFetch(`/maps/${mapId}/reject`, {
+        method: 'POST',
+        body: JSON.stringify({}),
+      });
+      await fetchMaps();
+    } catch (err) {
+      alert("Error rejecting MAP: " + err.message);
+    } finally {
+      setBusyMapId(null);
+    }
+  };
+
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  
+  if (!can('map:approve')) {
+    return (
+      <div style={{ padding: 40, textAlign: "center" }}>
+        <h2>Access Denied</h2>
+        <p>You do not have permission to access the Assignment Center.</p>
+      </div>
+    );
+  }
 
   return (
-    <div>
+    <div className="animate-fade-in">
       <Breadcrumbs />
+
+      {/* Header */}
       <div className="page-header">
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 5 }}>
           <div style={{ width: 4, height: 28, borderRadius: 2, background: "linear-gradient(180deg,#10b981,#059669)", boxShadow: "0 0 10px rgba(16,185,129,0.4)" }} />
           <h1 className="page-title">Assignment Center</h1>
         </div>
-        <p className="page-subtitle" style={{ paddingLeft: 14 }}>Review and track compliance assignments across departments</p>
+        <p className="page-subtitle" style={{ paddingLeft: 14 }}>
+          Review drafted MAPs, assign departments, and approve to create trackable assignments.
+        </p>
       </div>
 
-      {/* Summary card */}
-      <div style={{ background: "linear-gradient(135deg, #064e3b 0%, #065f46 100%)", borderRadius: 12, padding: 24, marginBottom: 24, border: "1px solid rgba(16,185,129,0.3)" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <div style={{ width: 48, height: 48, borderRadius: 10, background: "rgba(255,255,255,0.15)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24 }}>📋</div>
-          <div>
-            <div style={{ fontSize: 34, fontWeight: 900, color: "#fff", lineHeight: 1 }}>{totalPending.toLocaleString()}</div>
-            <div style={{ fontSize: 14, color: "rgba(255,255,255,0.8)", marginTop: 3 }}>
-              Pending MAPs Across {deptSummary.length} Departments
+      <div style={{ display: "grid", gridTemplateColumns: "300px 1fr", gap: 20, alignItems: "start" }}>
+
+        {/* ── Left: summary ─────────────────────────────────── */}
+        <div>
+          <div className="card" style={{ padding: "16px 18px", marginTop: 14 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, color: "#475569", letterSpacing: 0.6, textTransform: "uppercase", marginBottom: 12 }}>
+              System MAP Summary
             </div>
+            {[
+              ["Draft",         stats.DRAFT || 0,        "#fbbf24"],
+              ["Approved",      stats.APPROVED || 0,     "#34d399"],
+              ["Rejected",      stats.REJECTED || 0,     "#f87171"],
+            ].map(([lbl, val, c]) => (
+              <div key={lbl} style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
+                <span style={{ fontSize: 12, color: "#64748b" }}>{lbl}</span>
+                <span style={{ fontSize: 13, fontWeight: 700, color: c }}>{val}</span>
+              </div>
+            ))}
           </div>
-          {kpis && (
-            <div style={{ marginLeft: "auto", textAlign: "right" }}>
-              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 4 }}>Total MAPs</div>
-              <div style={{ fontSize: 20, fontWeight: 900, color: "#34d399" }}>{kpis.total_maps.toLocaleString()}</div>
-            </div>
-          )}
         </div>
-      </div>
 
-      {/* Department assignment cards */}
-      <div style={{ display: "grid", gap: 14 }}>
-        {deptSummary.map((dept, i) => (
-          <div key={dept.department} className="card animate-fade-up" style={{ padding: 22, animationDelay: `${i * 30}ms` }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-              <div style={{ flex: 1 }}>
-                <h3 style={{ fontSize: 17, fontWeight: 700, color: "#f1f5f9", marginBottom: 12 }}>{dept.department}</h3>
-                <div style={{ display: "flex", gap: 20 }}>
-                  {[
-                    ["Total", dept.total_maps, "#a78bfa"],
-                    ["Compliant", dept.compliant, "#34d399"],
-                    ["Partial", dept.partial, "#fbbf24"],
-                    ["Non-Compliant", dept.non_compliant, "#f87171"],
-                    ["Pending", dept.pending, "#94a3b8"],
-                  ].map(([lbl, val, c]) => (
-                    <div key={lbl}>
-                      <div style={{ fontSize: 22, fontWeight: 900, color: c, lineHeight: 1 }}>{val?.toLocaleString() ?? 0}</div>
-                      <div style={{ fontSize: 10, color: "#475569", marginTop: 3 }}>{lbl}</div>
+        {/* ── Right: MAP review table ────────────────────────────────── */}
+        <div>
+          <div className="card" style={{ padding: 0, overflow: "hidden" }}>
+            
+            {/* Table header */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 130px 110px 110px", gap: 10, padding: "8px 14px", background: "#162030", borderBottom: "1px solid rgba(255,255,255,0.06)", fontSize: 10, fontWeight: 700, color: "#475569", letterSpacing: 0.5, textTransform: "uppercase" }}>
+              <span>MAP Detail</span>
+              <span>Department</span>
+              <span>Status</span>
+              <span>Actions</span>
+            </div>
+
+            {/* Rows */}
+            <div style={{ maxHeight: 600, overflowY: "auto" }}>
+              {loading ? (
+                <div style={{ padding: "40px 24px", textAlign: "center", color: "#475569" }}>Loading DRAFT MAPs...</div>
+              ) : maps.length === 0 ? (
+                <div style={{ padding: "40px 24px", textAlign: "center", color: "#475569", fontSize: 13 }}>No pending MAPs to review.</div>
+              ) : (
+                maps.map((m) => (
+                  <div key={m.id} style={{
+                    display: "grid", gridTemplateColumns: "1fr 130px 110px 110px",
+                    alignItems: "center", gap: 10, padding: "10px 14px",
+                    borderBottom: "1px solid rgba(255,255,255,0.04)",
+                  }}>
+                    {/* Title + ID */}
+                    <div style={{ minWidth: 0 }}>
+                      <div style={{ fontSize: 12, fontWeight: 600, color: "#e2e8f0", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{m.control_name || "New Control"}</div>
+                      <div style={{ fontSize: 10, color: "#475569", fontFamily: "monospace", marginTop: 2 }}>{m.id.split('-')[0]}</div>
                     </div>
-                  ))}
-                </div>
-              </div>
 
-              {/* Progress bar */}
-              <div style={{ width: 180, flexShrink: 0 }}>
-                <div style={{ fontSize: 10.5, color: "#475569", fontWeight: 600, marginBottom: 6 }}>COMPLIANCE PROGRESS</div>
-                <div style={{ height: 8, background: "#162030", borderRadius: 4, overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: `${dept.total_maps ? (dept.compliant / dept.total_maps) * 100 : 0}%`, background: "linear-gradient(90deg,#10b981,#34d399)", borderRadius: 4, transition: "width 0.6s ease" }} />
-                </div>
-                <div style={{ fontSize: 11, color: "#34d399", fontWeight: 700, marginTop: 4 }}>
-                  {dept.total_maps ? ((dept.compliant / dept.total_maps) * 100).toFixed(1) : 0}% compliant
-                </div>
+                    {/* Department selector */}
+                    <select
+                      value={m.department_id || ""}
+                      onChange={(e) => handleUpdate(m.id, { department_id: e.target.value })}
+                      disabled={busyMapId === m.id || departments.length === 0 || !can('map:write')}
+                      style={{ fontSize: 11, background: "#162030", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 6, color: "#a78bfa", padding: "4px 6px" }}
+                    >
+                      {!m.department_id && <option value="">Select Dept</option>}
+                      {departments.map((department) => (
+                        <option key={department.id} value={department.id}>
+                          {department.name}
+                        </option>
+                      ))}
+                    </select>
+
+                    {/* Status */}
+                    <div style={{ fontSize: 11, fontWeight: 700, color: "#fbbf24" }}>
+                      {m.status}
+                    </div>
+
+                    {/* Actions */}
+                    <div style={{ display: "flex", gap: 5 }}>
+                      <button disabled={busyMapId === m.id} onClick={() => handleApprove(m.id)} style={{ fontSize: 10, fontWeight: 700, color: "#34d399", background: "rgba(52,211,153,0.1)", border: "1px solid rgba(52,211,153,0.25)", borderRadius: 5, padding: "4px 8px", cursor: busyMapId === m.id ? "wait" : "pointer", opacity: busyMapId === m.id ? 0.5 : 1 }}>Approve</button>
+                      <button disabled={busyMapId === m.id} onClick={() => handleReject(m.id)}  style={{ fontSize: 10, fontWeight: 700, color: "#f87171", background: "rgba(248,113,113,0.1)", border: "1px solid rgba(248,113,113,0.25)", borderRadius: 5, padding: "4px 8px", cursor: busyMapId === m.id ? "wait" : "pointer", opacity: busyMapId === m.id ? 0.5 : 1 }}>Reject</button>
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+            
+            {/* Pagination */}
+            <div style={{ padding: "11px 18px", background: "#162030", borderTop: "1px solid rgba(255,255,255,0.04)", fontSize: 11.5, color: "#475569", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span>{total.toLocaleString()} pending approvals</span>
+              <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+                <button onClick={() => setPage(p => Math.max(1, p - 1))} disabled={page === 1} style={{ background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "5px 10px", color: "#e2e8f0", cursor: page === 1 ? "not-allowed" : "pointer", opacity: page === 1 ? 0.4 : 1 }}>Prev</button>
+                <span>Page {page} / {totalPages}</span>
+                <button onClick={() => setPage(p => Math.min(totalPages, p + 1))} disabled={page >= totalPages} style={{ background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, padding: "5px 10px", color: "#e2e8f0", cursor: page >= totalPages ? "not-allowed" : "pointer", opacity: page >= totalPages ? 0.4 : 1 }}>Next</button>
               </div>
             </div>
           </div>
-        ))}
-      </div>
-
-      <div style={{ marginTop: 20, padding: "12px 16px", background: "rgba(96,165,250,0.06)", border: "1px solid rgba(96,165,250,0.15)", borderRadius: 9, fontSize: 12, color: "#64748b", lineHeight: 1.6 }}>
-        <strong style={{ color: "#60a5fa" }}>Note:</strong>{" "}
-        The Publish/Assign workflow with per-MAP requirement previews will be available once the aggregator emits task assignment data.
+        </div>
       </div>
     </div>
   );
