@@ -201,6 +201,20 @@ def get_map(
     return _serialize_map(m)
 
 
+@app.get("/maps/{map_id}/detail", tags=["MAPs"])
+def get_map_detail(
+    map_id: str,
+    current: CurrentUser = Depends(require_permission(Perm.MAP_READ)),
+    db: Session = Depends(get_db),
+):
+    """Get complete MAP detail including tasks and verification plan from pipeline JSONs."""
+    svc = AssignmentService(db)
+    detail = svc.get_map_detail(map_id)
+    if not detail:
+        raise HTTPException(status_code=404, detail="MAP detail not found")
+    return detail
+
+
 @app.patch("/maps/{map_id}", tags=["MAPs"])
 def update_map(
     map_id: str,

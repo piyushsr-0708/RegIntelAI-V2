@@ -1,10 +1,12 @@
 /**
  * MapDetail.jsx — RegIntel AI V2
- * Reads from: compliance_register, documents_table, timeline_metadata (all in frontend_state.json).
- * No backend. No detailed_maps (not emitted by aggregator).
+ * Reads from: compliance_register (frontend_state.json) for summary
+ * Fetches: /maps/{map_id}/detail API for complete MAP information
  */
 import { useParams, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { useFrontendState, useComplianceRegister } from "../context/FrontendStateContext";
+import { fetchMapDetail } from "../utils/api";
 import { PriorityBadge, StatusBadge } from "../components/Badges";
 import Breadcrumbs from "../components/Breadcrumbs";
 
@@ -43,9 +45,33 @@ export default function MapDetail() {
 
   const { state, loading } = useFrontendState();
   const register = useComplianceRegister();
+  
+  const [detailData, setDetailData] = useState(null);
+  const [detailLoading, setDetailLoading] = useState(true);
+  const [detailError, setDetailError] = useState(null);
+
+  // Fetch detailed MAP data from API
+  useEffect(() => {
+    async function loadDetail() {
+      try {
+        setDetailLoading(true);
+        const data = await fetchMapDetail(mapId);
+        setDetailData(data);
+        setDetailError(null);
+      } catch (err) {
+        setDetailError(err.message);
+      } finally {
+        setDetailLoading(false);
+      }
+    }
+    
+    if (mapId) {
+      loadDetail();
+    }
+  }, [mapId]);
 
   // ── Loading state ──────────────────────────────────────────────────────────
-  if (loading) return (
+  if (loading || detailLoading) return (
     <div style={{ textAlign: "center", padding: 80 }}>
       <svg width="36" height="36" viewBox="0 0 36 36" style={{ animation: "spin 1s linear infinite", marginBottom: 14 }}>
         <circle cx="18" cy="18" r="14" fill="none" stroke="rgba(16,185,129,0.15)" strokeWidth="3" />
@@ -172,14 +198,216 @@ export default function MapDetail() {
       )}
 
       {/* ── Requirement text note ──────────────────────────────────────────── */}
-      <div style={{ padding: "13px 16px", background: "rgba(96,165,250,0.05)", border: "1px solid rgba(96,165,250,0.12)", borderRadius: 9, fontSize: 12, color: "#64748b", lineHeight: 1.6 }}>
-        <span style={{ color: "#60a5fa", fontWeight: 700 }}>Full requirement text</span> is stored in{" "}
-        <code style={{ color: "#93c5fd", fontSize: 11 }}>datasets/requirements/</code> and{" "}
-        <code style={{ color: "#93c5fd", fontSize: 11 }}>datasets/reasoned_controls/</code>.
-        {" "}The MAP ID <code style={{ color: "#34d399", fontSize: 11 }}>{listItem.map_id}</code> maps to document{" "}
-        <code style={{ color: "#60a5fa", fontSize: 11 }}>{listItem.document_id}</code>.
-        {" "}Emit <code style={{ color: "#93c5fd", fontSize: 11 }}>detailed_maps</code> from the Dashboard Aggregator to surface requirement text inline.
-      </div>
+      {detailError && (
+        <div style={{ padding: "13px 16px", background: "rgba(248,113,113,0.05)", border: "1px solid rgba(248,113,113,0.12)", borderRadius: 9, fontSize: 12, color: "#f87171", lineHeight: 1.6, marginBottom: 14 }}>
+          <span style={{ fontWeight: 700 }}>Error loading detailed MAP data:</span> {detailError}
+        </div>
+      )}
+
+      {/* ── MAP Objective ──────────────────────────────────────────────────── */}
+      {detailData?.objective && (
+        <div className="card" style={{ padding: "16px 18px", marginBottom: 14 }}>
+          <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 8, letterSpacing: 0.5 }}>OBJECTIVE</div>
+          <div style={{ fontSize: 13, color: "#cbd5e1", lineHeight: 1.65 }}>{detailData.objective}</div>
+        </div>
+      )}
+
+      {/* ── Verification Plan ──────────────────────────────────────────────── */}
+      {detailData?.verification_plan && (
+        <div className="card" style={{ padding: "16px 18px", marginBottom: 14 }}>
+          <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 12, letterSpacing: 0.5 }}>VERIFICATION PLAN</div>
+          {detailData.verification_plan.plan_id && (
+            <div style={{ marginBottom: 12 }}>
+              <span style={{ fontFamily: "monospace", fontSize: 11.5, fontWeight: 800, color: "#a78bfa", background: "rgba(167,139,250,0.1)", padding: "3px 9px", borderRadius: 5, border: "1px solid rgba(167,139,250,0.2)" }}>
+                {detailData.verification_plan.plan_id}
+              </span>
+            </div>
+          )}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12, marginBottom: 12 }}>
+            {detailData.verification_plan.control_name && (
+              <div>
+                <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 4 }}>CONTROL NAME</div>
+                <div style={{ fontSize: 12, color: "#cbd5e1", fontWeight: 600 }}>{detailData.verification_plan.control_name}</div>
+              </div>
+            )}
+            {detailData.verification_plan.business_capability && (
+              <div>
+                <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 4 }}>BUSINESS CAPABILITY</div>
+                <div style={{ fontSize: 12, color: "#cbd5e1", fontWeight: 600 }}>{detailData.verification_plan.business_capability}</div>
+              </div>
+            )}
+            {detailData.verification_plan.control_category && (
+              <div>
+                <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 4 }}>CATEGORY</div>
+                <div style={{ fontSize: 12, color: "#cbd5e1", fontWeight: 600 }}>{detailData.verification_plan.control_category}</div>
+              </div>
+            )}
+          </div>
+          {(detailData.verification_plan.total_checks != null || detailData.verification_plan.automation_percentage != null) && (
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              {detailData.verification_plan.total_checks != null && (
+                <StatPill label="TOTAL CHECKS" value={detailData.verification_plan.total_checks} color="#60a5fa" />
+              )}
+              {detailData.verification_plan.mandatory_checks != null && (
+                <StatPill label="MANDATORY" value={detailData.verification_plan.mandatory_checks} color="#f87171" />
+              )}
+              {detailData.verification_plan.machine_verifiable_checks != null && (
+                <StatPill label="AUTOMATED" value={detailData.verification_plan.machine_verifiable_checks} color="#34d399" />
+              )}
+              {detailData.verification_plan.automation_percentage != null && (
+                <StatPill label="AUTOMATION %" value={`${detailData.verification_plan.automation_percentage.toFixed(1)}%`} color="#a78bfa" />
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* ── Verification Checks ─────────────────────────────────────────────── */}
+      {detailData?.verification_plan?.checks && detailData.verification_plan.checks.length > 0 && (
+        <div className="card" style={{ padding: "16px 18px", marginBottom: 14 }}>
+          <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 12, letterSpacing: 0.5 }}>
+            VERIFICATION CHECKS ({detailData.verification_plan.checks.length})
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {detailData.verification_plan.checks.map((check) => (
+              <div key={check.check_id} style={{ padding: "12px 14px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: 8 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontSize: 11, fontWeight: 700, color: "#34d399", marginBottom: 4, fontFamily: "monospace" }}>
+                      {check.check_id}
+                    </div>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: "#f1f5f9", marginBottom: 6 }}>
+                      {check.title}
+                    </div>
+                    <div style={{ fontSize: 12, color: "#94a3b8", lineHeight: 1.6, marginBottom: 8 }}>
+                      {check.description}
+                    </div>
+                  </div>
+                  <div style={{ display: "flex", gap: 6, flexShrink: 0, marginLeft: 12 }}>
+                    {check.mandatory && (
+                      <span style={{ fontSize: 10, fontWeight: 700, color: "#f87171", background: "rgba(248,113,113,0.1)", padding: "3px 8px", borderRadius: 4, border: "1px solid rgba(248,113,113,0.2)" }}>
+                        MANDATORY
+                      </span>
+                    )}
+                    {check.machine_verifiable && (
+                      <span style={{ fontSize: 10, fontWeight: 700, color: "#34d399", background: "rgba(52,211,153,0.1)", padding: "3px 8px", borderRadius: 4, border: "1px solid rgba(52,211,153,0.2)" }}>
+                        AUTOMATED
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 10, fontSize: 11 }}>
+                  <div>
+                    <span style={{ color: "#475569", fontWeight: 700 }}>PLATFORM: </span>
+                    <span style={{ color: "#94a3b8" }}>{check.verification_platform || "N/A"}</span>
+                  </div>
+                  <div>
+                    <span style={{ color: "#475569", fontWeight: 700 }}>MECHANISM: </span>
+                    <span style={{ color: "#94a3b8" }}>{check.verification_mechanism || "N/A"}</span>
+                  </div>
+                  <div>
+                    <span style={{ color: "#475569", fontWeight: 700 }}>IMPACT: </span>
+                    <span style={{ color: check.failure_impact === "BLOCKER" ? "#f87171" : check.failure_impact === "MAJOR" ? "#fbbf24" : "#94a3b8" }}>
+                      {check.failure_impact || "N/A"}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ── Implementation Tasks ────────────────────────────────────────────── */}
+      {detailData?.tasks && detailData.tasks.length > 0 && (
+        <div className="card" style={{ padding: "16px 18px", marginBottom: 14 }}>
+          <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 12, letterSpacing: 0.5 }}>
+            IMPLEMENTATION TASKS ({detailData.tasks.length})
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {detailData.tasks.map((task) => (
+              <div key={task.task_id} style={{ padding: "12px 14px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: 8 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                      <span style={{ fontSize: 11, fontWeight: 700, color: "#60a5fa", fontFamily: "monospace" }}>
+                        Task {task.task_number}
+                      </span>
+                      <span style={{ fontSize: 10, fontWeight: 700, color: "#a78bfa", background: "rgba(167,139,250,0.1)", padding: "2px 8px", borderRadius: 4 }}>
+                        {task.task_type}
+                      </span>
+                      {task.approval_required && (
+                        <span style={{ fontSize: 10, fontWeight: 700, color: "#fbbf24", background: "rgba(251,191,36,0.1)", padding: "2px 8px", borderRadius: 4 }}>
+                          APPROVAL REQ
+                        </span>
+                      )}
+                    </div>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: "#f1f5f9", marginBottom: 6 }}>
+                      {task.title}
+                    </div>
+                    <div style={{ fontSize: 12, color: "#94a3b8", lineHeight: 1.6, marginBottom: 8 }}>
+                      {task.description}
+                    </div>
+                  </div>
+                  <PriorityBadge priority={task.priority.charAt(0) + task.priority.slice(1).toLowerCase()} size="sm" />
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 10, fontSize: 11 }}>
+                  <div>
+                    <span style={{ color: "#475569", fontWeight: 700 }}>DEPARTMENT: </span>
+                    <span style={{ color: "#94a3b8" }}>{task.assigned_department}</span>
+                  </div>
+                  <div>
+                    <span style={{ color: "#475569", fontWeight: 700 }}>EFFORT: </span>
+                    <span style={{ color: "#94a3b8" }}>{task.estimated_effort_hours}h</span>
+                  </div>
+                  <div>
+                    <span style={{ color: "#475569", fontWeight: 700 }}>STATUS: </span>
+                    <span style={{ color: task.status === "COMPLETED" ? "#34d399" : task.status === "IN_PROGRESS" ? "#60a5fa" : "#94a3b8" }}>
+                      {task.status}
+                    </span>
+                  </div>
+                  {task.deliverable && (
+                    <div>
+                      <span style={{ color: "#475569", fontWeight: 700 }}>DELIVERABLE: </span>
+                      <span style={{ color: "#94a3b8" }}>{task.deliverable}</span>
+                    </div>
+                  )}
+                </div>
+                {task.dependencies && task.dependencies.length > 0 && (
+                  <div style={{ marginTop: 8, fontSize: 11 }}>
+                    <span style={{ color: "#475569", fontWeight: 700 }}>DEPENDS ON: </span>
+                    <span style={{ color: "#94a3b8", fontFamily: "monospace" }}>{task.dependencies.join(", ")}</span>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ── Compliance Decision ─────────────────────────────────────────────── */}
+      {detailData?.compliance_decision && (
+        <div className="card" style={{ padding: "16px 18px", marginBottom: 14 }}>
+          <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 8, letterSpacing: 0.5 }}>COMPLIANCE DECISION</div>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+            <div>
+              <span style={{ fontSize: 10, color: "#475569", fontWeight: 700 }}>VERDICT: </span>
+              <span style={{ fontSize: 12, color: detailData.compliance_decision.verdict === "COMPLIANT" ? "#34d399" : detailData.compliance_decision.verdict === "NON_COMPLIANT" ? "#f87171" : "#fbbf24", fontWeight: 700 }}>
+                {detailData.compliance_decision.verdict}
+              </span>
+            </div>
+            {detailData.compliance_decision.department && (
+              <div>
+                <span style={{ fontSize: 10, color: "#475569", fontWeight: 700 }}>DEPARTMENT: </span>
+                <span style={{ fontSize: 12, color: "#94a3b8", fontWeight: 600 }}>{detailData.compliance_decision.department}</span>
+              </div>
+            )}
+          </div>
+          {detailData.compliance_decision.rationale && (
+            <div style={{ fontSize: 12, color: "#cbd5e1", lineHeight: 1.6 }}>{detailData.compliance_decision.rationale}</div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

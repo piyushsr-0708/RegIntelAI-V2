@@ -1,5 +1,7 @@
 import logging
+import json
 from typing import Optional
+from pathlib import Path
 from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import or_, func
 
@@ -7,6 +9,9 @@ from backend.database.models import ManagementActionPlan, Department, ControlAss
 from backend.database.services.audit_service import AuditService
 
 logger = logging.getLogger(__name__)
+
+# Simple in-memory cache for parsed JSON documents
+_document_cache = {}
 
 
 class AssignmentService:
@@ -64,6 +69,121 @@ class AssignmentService:
             joinedload(ManagementActionPlan.department),
             joinedload(ManagementActionPlan.control),
         ).filter_by(id=map_id).first()
+
+    def get_map_detail(self, map_id: str) -> Optional[dict]:
+        """Get complete MAP detail including tasks and verification plan from pipeline JSONs."""
+        # First get base MAP from SQLite
+        map_record = self.get_map_by_id(map_id)
+        if not map_record:
+            return None
+        
+        document_id = map_record.source_document_id
+        if not document_id:
+            logger.warning(f"MAP {map_id} has no source_document_id")
+            return None
+        
+        # Get project root
+        from pathlib import Path
+        import sys
+        current_file = Path(__file__).resolve()
+        project_root = current_file.parents[3]
+        
+        # Load MAP JSON (with caching)
+        maps_file = project_root / "datasets" / "maps" / f"{document_id}.json"
+        if not maps_file.exists():
+            logger.warning(f"MAP file not found: {maps_file}")
+            return None
+        
+        cache_key_maps = f"maps_{document_id}"
+        if cache_key_maps not in _document_cache:
+            with open(maps_file, "r", encoding="utf-8") as f:
+                _document_cache[cache_key_maps] = json.load(f)
+        
+        maps_data = _document_cache[cache_key_maps]
+        
+        # Find the specific MAP
+        map_detail = None
+        for m in maps_data.get("maps", []):
+            if m.get("map_id") == map_id:
+                map_detail = m
+                break
+        
+        if not map_detail:
+            logger.warning(f"MAP {map_id} not found in {maps_file}")
+            return None
+        
+        # Load verification plan (with caching)
+        plans_file = project_root / "datasets" / "verification_plans" / f"{document_id}.json"
+        verification_plan = None
+        if plans_file.exists():
+            cache_key_plans = f"plans_{document_id}"
+            if cache_key_plans not in _document_cache:
+                with open(plans_file, "r", encoding="utf-8") as f:
+                    _document_cache[cache_key_plans] = json.load(f)
+            
+            plans_data = _document_cache[cache_key_plans]
+            
+            # Extract requirement_id from control_id
+            # Example: MD10190_ctrl_req5_1 -> MD10190_req5
+            control_id = map_detail.get("control_id", "")
+            req_id = None
+            if "_ctrl_req" in control_id:
+                parts = control_id.split("_ctrl_req")
+                if len(parts) == 2:
+                    doc_part = parts[0]
+                    req_num = parts[1].split("_")[0] if "_" in parts[1] else parts[1]
+                    req_id = f"{doc_part}_req{req_num}"
+            
+            # Find matching verification plan
+            if req_id:
+                matching_plan_id = f"CVP_VR_{req_id}"
+                for plan in plans_data.get("verification_plans", []):
+                    if plan.get("plan_id") == matching_plan_id:
+                        verification_plan = plan
+                        break
+        
+        # Load compliance decision (with caching) - get latest decision file
+        decisions_dir = project_root / "datasets" / "compliance_decisions"
+        compliance_decision = None
+        if decisions_dir.exists():
+            decision_files = sorted(decisions_dir.glob(f"{document_id}_*.json"), reverse=True)
+            if decision_files:
+                latest_decision_file = decision_files[0]
+                cache_key_decision = f"decision_{latest_decision_file.stem}"
+                if cache_key_decision not in _document_cache:
+                    with open(latest_decision_file, "r", encoding="utf-8") as f:
+                        _document_cache[cache_key_decision] = json.load(f)
+                
+                decision_data = _document_cache[cache_key_decision]
+                
+                # Find plan verdict for this MAP
+                if verification_plan:
+                    plan_id = verification_plan.get("plan_id")
+                    for pv in decision_data.get("plan_verdicts", []):
+                        if pv.get("plan_id") == plan_id:
+                            compliance_decision = pv
+                            break
+        
+        # Combine all data
+        return {
+            "map_id": map_detail.get("map_id"),
+            "control_id": map_detail.get("control_id"),
+            "document_id": map_detail.get("document_id"),
+            "title": map_detail.get("title"),
+            "objective": map_detail.get("objective"),
+            "priority": map_detail.get("priority"),
+            "criticality": map_detail.get("criticality"),
+            "status": map_detail.get("status"),
+            "owner_department": map_detail.get("owner_department"),
+            "compliance_domain": map_detail.get("compliance_domain"),
+            "risk_domain": map_detail.get("risk_domain"),
+            "estimated_total_effort_hours": map_detail.get("estimated_total_effort_hours"),
+            "task_count": map_detail.get("task_count"),
+            "generated_timestamp": map_detail.get("generated_timestamp"),
+            "tasks": map_detail.get("tasks", []),
+            "verification_plan": verification_plan,
+            "compliance_decision": compliance_decision,
+        }
 
     # ─── MAP Mutations ─────────────────────────────────────────────────────────
 

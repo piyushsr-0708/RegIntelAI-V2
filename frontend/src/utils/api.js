@@ -25,3 +25,7 @@ export async function apiFetch(endpoint, options = {}) {
   
   return response.json();
 }
+
+export async function fetchMapDetail(mapId) {
+  return apiFetch(`/maps/${mapId}/detail`);
+}

@@ -126,8 +126,8 @@ export default function DepartmentWorkspace() {
             ) : assignments.map((a) => {
               const isExpanded = expandedId === a.id;
               return (
-                <key-wrapper key={a.id}>
-                  <tr onClick={() => setExpandedId(isExpanded ? null : a.id)} style={{ cursor: "pointer" }}>
+                <>
+                  <tr key={a.id} onClick={() => setExpandedId(isExpanded ? null : a.id)} style={{ cursor: "pointer" }}>
                     <td><span style={{ fontFamily: "monospace", fontSize: 11, fontWeight: 700, color: "#34d399", background: "rgba(52,211,153,0.1)", padding: "3px 7px", borderRadius: 5 }}>{a.id.split('-')[0]}</span></td>
                     <td style={{ color: "#d1d5db" }}>{a.control_name || "Unknown Control"}</td>
                     <td style={{ color: "#94a3b8" }}>{a.department_name}</td>
@@ -167,7 +167,7 @@ export default function DepartmentWorkspace() {
                       </td>
                     </tr>
                   )}
-                </key-wrapper>
+                </>
               );
             })}
           </tbody>
