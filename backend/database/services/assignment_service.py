@@ -1,5 +1,6 @@
 import logging
 import json
+import argparse
 from typing import Optional
 from pathlib import Path
 from sqlalchemy.orm import Session, joinedload
@@ -354,6 +355,59 @@ class AssignmentService:
         self._audit.record("ASSIGNMENT", assignment_id, "COMPLETED",
                            user_id=actor_id, changes=changes)
         self.db.commit()
+        
+        # ─── PIPELINE EXECUTION CHAIN ───────────────────────────────────────────
+        # After successful database commit, trigger verification and decision.
+        # Failures in pipeline execution do NOT rollback assignment completion.
+        
+        # Extract document_id using existing pattern from get_map_detail()
+        document_id = None
+        if assignment.map_id:
+            map_record = self.db.query(ManagementActionPlan).filter_by(id=assignment.map_id).first()
+            if map_record:
+                document_id = map_record.source_document_id
+        
+        if not document_id:
+            logger.warning(f"Assignment {assignment_id} has no source_document_id, skipping verification")
+            return assignment
+        
+        # Get project root (same pattern as get_map_detail)
+        current_file = Path(__file__).resolve()
+        project_root = current_file.parents[3]
+        
+        # Locate verification plan
+        plan_file = project_root / "datasets" / "verification_plans" / f"{document_id}.json"
+        
+        if not plan_file.exists():
+            logger.warning(f"Verification plan not found: {plan_file}, skipping verification")
+            return assignment
+        
+        # Stage 1: Execute Verification (independently wrapped)
+        try:
+            from pipeline.executor.compliance_verification_executor import process_document
+            
+            # Create args namespace as expected by executor
+            args = argparse.Namespace(timeout=300, dry_run=False, document=None, plan=None)
+            
+            # Execute verification for the document
+            process_document(plan_file, args)
+            logger.info(f"✅ Verification executed successfully for document {document_id}")
+            
+        except Exception as e:
+            logger.error(f"❌ Verification execution failed for document {document_id}: {e}", exc_info=True)
+            # Continue to decision engine even if verification fails
+        
+        # Stage 2: Execute Decision Engine (independently wrapped)
+        try:
+            from pipeline.decision.compliance_decision_engine import process_document
+            
+            # Process document to generate compliance decision
+            process_document(document_id, plan_file)
+            logger.info(f"✅ Compliance decision generated successfully for document {document_id}")
+            
+        except Exception as e:
+            logger.error(f"❌ Decision engine failed for document {document_id}: {e}", exc_info=True)
+        
         return assignment
 
 
