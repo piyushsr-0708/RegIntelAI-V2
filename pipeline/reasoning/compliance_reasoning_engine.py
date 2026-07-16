@@ -98,6 +98,16 @@ class ReasonedComplianceControl:
     hierarchy_node_ids: List[str]
     block_ids: List[str]
 
+    # Pass-through semantic fields from InterpretedControl
+    control_name: str
+    control_objective: str
+    control_category: str
+    candidate_departments: List[str]
+    criticality: str
+    risk_domain: List[str]
+    compliance_domain: List[str]
+    implementation_category: List[str]
+
 
 # ---------------------------------------------------------------------------
 # Reasoning Knowledge Base (Deterministic Ontologies)
@@ -290,7 +300,15 @@ def reason_control(ctrl: Dict[str, Any]) -> ReasonedComplianceControl:
         confidence_metrics=metrics,
         page_numbers=ctrl.get("page_numbers", []),
         hierarchy_node_ids=ctrl.get("hierarchy_node_ids", []),
-        block_ids=ctrl.get("block_ids", [])
+        block_ids=ctrl.get("block_ids", []),
+        control_name=ctrl.get("control_name", ""),
+        control_objective=ctrl.get("control_objective", ""),
+        control_category=ctrl.get("control_category", ""),
+        candidate_departments=ctrl.get("candidate_departments", []),
+        criticality=ctrl.get("criticality", "UNKNOWN"),
+        risk_domain=ctrl.get("risk_domain", []),
+        compliance_domain=ctrl.get("compliance_domain", []),
+        implementation_category=ctrl.get("implementation_category", []),
     )
 
 

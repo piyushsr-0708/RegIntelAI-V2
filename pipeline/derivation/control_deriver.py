@@ -48,27 +48,35 @@ class BaseDeriver(ABC):
 
 class ControlObjectiveDeriver(BaseDeriver):
     def derive(self, requirement: Dict[str, Any], control_data: Dict[str, Any]) -> None:
-        action = requirement.get("action", "")
-        object_ = requirement.get("object", "")
-        req_type = requirement.get("requirement_type", "")
-        
-        # Simple heuristic to formulate objective and name
-        obj = f"To ensure {action} {object_}".strip()
-        obj = re.sub(r'\s+', ' ', obj)
-        if obj.endswith((".", ",", ";")):
-            obj = obj[:-1]
-            
-        control_data["control_objective"] = obj.capitalize()
-        
-        # Formulate a short name
-        name_base = action.split()[0] if action else req_type
-        if object_:
-            words = object_.split()
-            name_suffix = " ".join(words[:min(4, len(words))])
-            control_data["control_name"] = f"{name_base.capitalize()} {name_suffix}".strip()
-        else:
-            control_data["control_name"] = f"{name_base.capitalize()} Control"
-            
+        preserved_name = requirement.get("control_name", "")
+        preserved_objective = requirement.get("control_objective", "")
+
+        if preserved_name:
+            control_data["control_name"] = preserved_name
+        if preserved_objective:
+            control_data["control_objective"] = preserved_objective
+
+        if not preserved_name or not preserved_objective:
+            action = requirement.get("action", "")
+            object_ = requirement.get("object", "")
+            req_type = requirement.get("requirement_type", "")
+
+            if not preserved_objective:
+                obj = f"To ensure {action} {object_}".strip()
+                obj = re.sub(r'\s+', ' ', obj)
+                if obj.endswith((".", ",", ";")):
+                    obj = obj[:-1]
+                control_data["control_objective"] = obj.capitalize()
+
+            if not preserved_name:
+                name_base = action.split()[0] if action else req_type
+                if object_:
+                    words = object_.split()
+                    name_suffix = " ".join(words[:min(4, len(words))])
+                    control_data["control_name"] = f"{name_base.capitalize()} {name_suffix}".strip()
+                else:
+                    control_data["control_name"] = f"{name_base.capitalize()} Control"
+
         control_data["control_description"] = requirement.get("full_sentence", "")
 
 

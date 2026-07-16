@@ -64,6 +64,7 @@ class InterpretedControl:
     compliance_domain: List[str]
     risk_domain: List[str]
     candidate_departments: List[str]
+    implementation_category: List[str]
     page_numbers: List[int]
     hierarchy_node_ids: List[str]
     block_ids: List[str]
@@ -569,6 +570,7 @@ def interpret_requirement(req: Dict[str, Any]) -> InterpretedControl:
         compliance_domain=req.get("compliance_domain", []),
         risk_domain=req.get("risk_domain", []),
         candidate_departments=req.get("candidate_departments", []),
+        implementation_category=req.get("implementation_category", []),
         page_numbers=req.get("page_numbers", []),
         hierarchy_node_ids=req.get("hierarchy_node_ids", []),
         block_ids=req.get("block_ids", []),
