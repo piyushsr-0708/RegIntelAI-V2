@@ -3,10 +3,11 @@ import json
 import argparse
 from typing import Optional
 from pathlib import Path
+from datetime import timezone
 from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import or_, func
 
-from backend.database.models import ManagementActionPlan, Department, ControlAssignment
+from backend.database.models import ManagementActionPlan, Department, ControlAssignment, ComplianceControl
 from backend.database.services.audit_service import AuditService
 
 logger = logging.getLogger(__name__)
@@ -46,6 +47,9 @@ class AssignmentService:
                 or_(
                     ManagementActionPlan.id.ilike(term),
                     ManagementActionPlan.description.ilike(term),
+                    ManagementActionPlan.source_document_id.ilike(term),
+                    ManagementActionPlan.source_requirement_id.ilike(term),
+                    ManagementActionPlan.control.has(ComplianceControl.name.ilike(term)),
                 )
             )
 
@@ -163,7 +167,35 @@ class AssignmentService:
                     for pv in decision_data.get("plan_verdicts", []):
                         if pv.get("plan_id") == plan_id:
                             compliance_decision = pv
+                            
+                            # Calculate failed blocker count for this specific plan
+                            # Get check IDs from this plan
+                            plan_check_ids = {c["check_id"] for c in verification_plan.get("checks", [])}
+                            # Intersect with document's failed blocker list
+                            failed_blks = decision_data.get("failed_blocker_list", [])
+                            failed_blocker_count = len(set(failed_blks).intersection(plan_check_ids))
+                            
+                            # Add to compliance_decision
+                            compliance_decision["failed_blocker_count"] = failed_blocker_count
                             break
+        
+        # Load agent decision - get latest agent decision for this requirement
+        agent_decisions_dir = project_root / "datasets" / "agent_decisions"
+        agent_decision = None
+        if agent_decisions_dir.exists() and req_id:
+            agent_files = sorted(agent_decisions_dir.glob(f"{req_id}_*.json"), reverse=True)
+            if agent_files:
+                latest_agent_file = agent_files[0]
+                cache_key_agent = f"agent_{latest_agent_file.stem}"
+                if cache_key_agent not in _document_cache:
+                    try:
+                        with open(latest_agent_file, "r", encoding="utf-8") as f:
+                            _document_cache[cache_key_agent] = json.load(f)
+                    except Exception as e:
+                        logger.error(f"Failed to load agent decision {latest_agent_file}: {e}")
+                
+                if cache_key_agent in _document_cache:
+                    agent_decision = _document_cache[cache_key_agent]
         
         # Combine all data
         return {
@@ -184,6 +216,7 @@ class AssignmentService:
             "tasks": map_detail.get("tasks", []),
             "verification_plan": verification_plan,
             "compliance_decision": compliance_decision,
+            "agent_decision": agent_decision,
         }
 
     # ─── MAP Mutations ─────────────────────────────────────────────────────────
@@ -312,8 +345,13 @@ class AssignmentService:
             q = q.filter(ControlAssignment.status == status.upper())
         if search:
             term = f"%{search}%"
-            q = q.join(ControlAssignment.control).filter(
-                ControlAssignment.control.has(ControlAssignment.control.property.mapper.class_.name.ilike(term))
+            # Search in assignment ID, control name, or control ID
+            q = q.outerjoin(ComplianceControl, ControlAssignment.control_id == ComplianceControl.id).filter(
+                or_(
+                    ControlAssignment.id.ilike(term),
+                    ComplianceControl.name.ilike(term),
+                    ComplianceControl.control_id.ilike(term)
+                )
             )
 
         total = q.count()
@@ -343,6 +381,16 @@ class AssignmentService:
         if not assignment:
             raise ValueError(f"ControlAssignment '{assignment_id}' not found")
 
+        # TASK 2: Prevent duplicate completion
+        if assignment.status == "COMPLETED":
+            logger.warning(f"Assignment {assignment_id} already completed, rejecting duplicate request")
+            raise ValueError(f"Assignment '{assignment_id}' is already completed")
+        
+        # Additional safety check for any non-ACTIVE status
+        if assignment.status != "ACTIVE":
+            logger.warning(f"Assignment {assignment_id} has status {assignment.status}, cannot complete")
+            raise ValueError(f"Assignment '{assignment_id}' cannot be completed from status {assignment.status}")
+
         old_status = assignment.status
         assignment.status = "COMPLETED"
         if evidence_note:
@@ -362,14 +410,25 @@ class AssignmentService:
         
         # Extract document_id using existing pattern from get_map_detail()
         document_id = None
+        requirement_id = None
+        plan_id = None
         if assignment.map_id:
             map_record = self.db.query(ManagementActionPlan).filter_by(id=assignment.map_id).first()
             if map_record:
                 document_id = map_record.source_document_id
+                requirement_id = map_record.source_requirement_id
+                
+                # TASK 1: Derive plan_id from requirement_id to filter verification scope
+                if requirement_id:
+                    plan_id = f"CVP_VR_{requirement_id}"
+                    logger.info(f"📋 Scoping verification to plan: {plan_id}")
         
         if not document_id:
             logger.warning(f"Assignment {assignment_id} has no source_document_id, skipping verification")
             return assignment
+        
+        if not requirement_id:
+            logger.warning(f"Assignment {assignment_id} has no source_requirement_id, verification may process entire document")
         
         # Get project root (same pattern as get_map_detail)
         current_file = Path(__file__).resolve()
@@ -382,12 +441,100 @@ class AssignmentService:
             logger.warning(f"Verification plan not found: {plan_file}, skipping verification")
             return assignment
         
+        # ─── Stage 0: Verification Agent Decision ───
+        agent_decision_data = None  # Store for later persistence
+        try:
+            from backend.database.services.verification_agent_service import VerificationAgentService
+            
+            agent = VerificationAgentService(project_root)
+            decision = agent.decide_verification_strategy(
+                document_id=document_id,
+                requirement_id=requirement_id,
+                criticality=map_record.priority if map_record else None,
+                department=assignment.department.name if assignment.department else None
+            )
+            
+            logger.info(f"🤖 Verification Agent Analysis:")
+            logger.info(f"   Verdict: {decision.verdict}")
+            logger.info(f"   Reasoning: {decision.reasoning}")
+            logger.info(f"   Automated checks: {decision.automated_checks_available}/{decision.total_checks}")
+            logger.info(f"   Manual checks: {decision.manual_checks_required}/{decision.total_checks}")
+            logger.info(f"   Recommendation: {decision.recommended_action}")
+            
+            # Persist agent decision for later retrieval
+            from datetime import datetime
+            agent_decision_data = {
+                "document_id": document_id,
+                "requirement_id": requirement_id,
+                "assignment_id": assignment_id,
+                "verdict": decision.verdict,
+                "reasoning": decision.reasoning,
+                "confidence_score": decision.confidence_score,
+                "automated_checks_available": decision.automated_checks_available,
+                "manual_checks_required": decision.manual_checks_required,
+                "total_checks": decision.total_checks,
+                "execute_automated": decision.execute_automated,
+                "requires_manual_review": decision.requires_manual_review,
+                "recommended_action": decision.recommended_action,
+                "control_objective": decision.control_objective,
+                "regulatory_intent": decision.regulatory_intent,
+                "automation_feasibility": decision.automation_feasibility,
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "criticality": map_record.priority if map_record else None,
+                "department": assignment.department.name if assignment.department else None
+            }
+            
+            # Save to datasets/agent_decisions/
+            agent_decisions_dir = project_root / "datasets" / "agent_decisions"
+            agent_decisions_dir.mkdir(exist_ok=True)
+            
+            # Use requirement_id or document_id for filename
+            decision_file = agent_decisions_dir / f"{requirement_id or document_id}_{datetime.now().strftime('%Y%m%d%H%M%S')}.json"
+            with open(decision_file, "w", encoding="utf-8") as f:
+                json.dump(agent_decision_data, f, indent=2, ensure_ascii=False)
+            
+            if decision.verdict == "NO_GO":
+                logger.warning(f"⛔ Verification blocked: {decision.reasoning}")
+                logger.warning(f"   Action: {decision.recommended_action}")
+                return assignment
+            
+            if decision.verdict == "ESCALATE":
+                logger.warning(f"⚠️ Escalated for manual review: {decision.reasoning}")
+                logger.warning(f"   Action: {decision.recommended_action}")
+                
+                # KEY CHANGE: ESCALATE no longer terminates workflow
+                # If automated checks are available, execute them
+                if not decision.execute_automated:
+                    logger.info(f"   No automated checks available - routing to manual review only")
+                    # Future: Update assignment status to "ESCALATED" or similar
+                    return assignment
+                
+                logger.info(f"   Continuing with {decision.automated_checks_available} automated checks")
+                logger.info(f"   {decision.manual_checks_required} checks flagged for manual review")
+                # Fall through to verification execution
+            
+            if decision.verdict == "GO":
+                logger.info(f"✅ Agent approved: {decision.reasoning}")
+                logger.info(f"   Action: {decision.recommended_action}")
+                # Fall through to verification execution
+            
+        except Exception as e:
+            logger.error(f"❌ Verification agent failed for document {document_id}: {e}", exc_info=True)
+            # Fallback: Continue with verification (preserve existing behavior)
+            logger.warning("⚠️ Falling back to direct verification execution")
+        
         # Stage 1: Execute Verification (independently wrapped)
         try:
             from pipeline.executor.compliance_verification_executor import process_document
             
+            # TASK 1: Pass plan_id to filter verification to specific requirement
             # Create args namespace as expected by executor
-            args = argparse.Namespace(timeout=300, dry_run=False, document=None, plan=None)
+            args = argparse.Namespace(timeout=300, dry_run=False, document=None, plan=plan_id)
+            
+            if plan_id:
+                logger.info(f"🎯 Executing verification for specific plan: {plan_id}")
+            else:
+                logger.warning(f"⚠️ No plan_id available, executing all plans for document {document_id}")
             
             # Execute verification for the document
             process_document(plan_file, args)
@@ -401,15 +548,42 @@ class AssignmentService:
         try:
             from pipeline.decision.compliance_decision_engine import process_document
             
-            # Process document to generate compliance decision
-            process_document(document_id, plan_file)
-            logger.info(f"✅ Compliance decision generated successfully for document {document_id}")
+            # Pass plan_id so the decision engine evaluates only the same plan the executor ran
+            process_document(document_id, plan_file, plan_id)
+            logger.info(f"✅ Compliance decision generated successfully for plan {plan_id or document_id}")
+
             
         except Exception as e:
             logger.error(f"❌ Decision engine failed for document {document_id}: {e}", exc_info=True)
         
         return assignment
 
+    def reset_assignment_to_active(
+        self,
+        assignment_id: str,
+        actor_id: Optional[str] = None,
+    ) -> ControlAssignment:
+        """Reset a COMPLETED assignment back to ACTIVE for re-testing."""
+        assignment = self.db.query(ControlAssignment).filter_by(id=assignment_id).first()
+        if not assignment:
+            raise ValueError(f"ControlAssignment '{assignment_id}' not found")
+
+        if assignment.status != "COMPLETED":
+            raise ValueError(
+                f"Assignment '{assignment_id}' cannot be reset from status '{assignment.status}'. "
+                "Only COMPLETED assignments can be reset to ACTIVE."
+            )
+
+        assignment.status = "ACTIVE"
+
+        self._audit.record(
+            "ASSIGNMENT", assignment_id, "RESET_TO_ACTIVE",
+            user_id=actor_id,
+            changes=[{"field": "status", "old": "COMPLETED", "new": "ACTIVE"}],
+        )
+        self.db.commit()
+        logger.info(f"Assignment {assignment_id} reset to ACTIVE by {actor_id or 'SYSTEM'}")
+        return assignment
 
     # ─── Stats ────────────────────────────────────────────────────────────────
 

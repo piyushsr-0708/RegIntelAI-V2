@@ -16,10 +16,18 @@ PLANS_DIR = project_root / "datasets" / "verification_plans"
 RESULTS_DIR = project_root / "datasets" / "verification_results"
 OUTPUT_DIR = project_root / "datasets" / "compliance_decisions"
 
-def process_document(doc_id: str, plan_file: Path):
+def process_document(doc_id: str, plan_file: Path, plan_id: str = None):
     with open(plan_file, "r", encoding="utf-8") as f:
         plans_data = json.load(f).get("verification_plans", [])
-        
+
+    # Scope to a single plan when plan_id is provided (mirrors executor behaviour)
+    if plan_id:
+        plans_data = [p for p in plans_data if p.get("plan_id") == plan_id]
+        if not plans_data:
+            logger.warning(f"Decision engine: plan_id '{plan_id}' not found in {plan_file.name}, skipping")
+            return False
+        logger.info(f"Decision engine scoped to plan: {plan_id}")
+
     results_file = RESULTS_DIR / f"{doc_id}.json"
     results_dict = {}
     if results_file.exists():

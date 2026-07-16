@@ -5,8 +5,10 @@
  * 9 sections: Summary, Pipeline, MAPs, Dept Impact, Priority, Capability,
  *             Knowledge Graph, Verification Plans, Assignment Preview.
  */
+import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useSession } from "../context/SessionContext";
+import { apiFetch } from "../utils/api";
 import Breadcrumbs from "../components/Breadcrumbs";
 import SessionSummary from "../components/session/SessionSummary";
 import SessionMapTable from "../components/session/SessionMapTable";
@@ -48,6 +50,56 @@ export default function SessionDashboard() {
   const { id }   = useParams();
   const navigate = useNavigate();
   const session  = useSession(decodeURIComponent(id));
+  const [realData, setRealData] = React.useState(null);
+  const [loading, setLoading] = React.useState(true);
+
+  // Fetch real data from backend if this is an uploaded document
+  React.useEffect(() => {
+    if (!session) {
+      setLoading(false);
+      return;
+    }
+
+    // Check if document_id looks like an uploaded document (UP prefix)
+    const docId = session.document_id;
+    if (docId && docId.startsWith("UP")) {
+      console.log("[SessionDashboard] Fetching real data for uploaded document:", docId);
+      
+      apiFetch(`/documents/${docId}/session`)
+        .then(data => {
+          console.log("[SessionDashboard] ✓ Fetched real data:", data);
+          setRealData(data);
+          setLoading(false);
+        })
+        .catch(err => {
+          console.error("[SessionDashboard] Failed to fetch real data:", err);
+          setLoading(false);
+        });
+    } else {
+      setLoading(false);
+    }
+  }, [session]);
+
+  // Merge real data with session data if available
+  const displaySession = realData ? {
+    ...session,
+    filename: realData.original_filename || realData.filename,
+    pages: realData.page_count,
+    words: realData.word_count,
+    // Restore complete session data from backend
+    maps: realData.maps || [],
+    requirements: realData.requirements || [],
+    verification_plans: realData.verification_plans || [],
+    department_impact: realData.department_impact || [],
+    graph: realData.graph || { nodes: [], edges: [] },
+    stages: realData.stages || session.stages || [],
+    // Recalculate counts from actual arrays for consistency
+    requirements_found: (realData.requirements || []).length,
+    maps_generated: (realData.maps || []).length,
+    departments_impacted: (realData.department_impact || []).length,
+    knowledge_graph_nodes: (realData.graph?.nodes || []).length,
+    knowledge_graph_edges: (realData.graph?.edges || []).length,
+  } : session;
 
   if (!session) return (
     <div style={{ textAlign: "center", padding: 80 }}>
@@ -61,13 +113,15 @@ export default function SessionDashboard() {
     </div>
   );
 
-  if (session.status === "processing") return (
+  if (displaySession.status === "processing" || loading) return (
     <div style={{ textAlign: "center", padding: 80 }}>
       <svg width="40" height="40" viewBox="0 0 40 40" style={{ animation: "spin 1s linear infinite", marginBottom: 16 }}>
         <circle cx="20" cy="20" r="16" fill="none" stroke="rgba(16,185,129,0.15)" strokeWidth="4"/>
         <path d="M20 4a16 16 0 0 1 16 16" fill="none" stroke="#10b981" strokeWidth="4" strokeLinecap="round"/>
       </svg>
-      <div style={{ fontSize: 14, fontWeight: 700, color: "#10b981" }}>Pipeline still running…</div>
+      <div style={{ fontSize: 14, fontWeight: 700, color: "#10b981" }}>
+        {loading ? "Loading session data…" : "Pipeline still running…"}
+      </div>
     </div>
   );
 
@@ -92,13 +146,13 @@ export default function SessionDashboard() {
           <h1 className="page-title">Session Dashboard</h1>
         </div>
         <p className="page-subtitle" style={{ paddingLeft: 14 }}>
-          Analysis session · <span style={{ fontFamily: "monospace", color: "#64748b" }}>{session.session_id}</span>
+          Analysis session · <span style={{ fontFamily: "monospace", color: "#64748b" }}>{displaySession.session_id}</span>
         </p>
       </div>
 
       {/* 1 — Document Summary */}
       <Section title="Document Summary">
-        <SessionSummary session={session} />
+        <SessionSummary session={displaySession} />
       </Section>
 
       {/* 2 — Pipeline Summary */}
@@ -111,47 +165,47 @@ export default function SessionDashboard() {
               <span>Duration</span>
             </div>
           </div>
-          {session.stages.map((stage) => (
+          {displaySession.stages.map((stage) => (
             <StageSummaryRow key={stage.id} stage={stage} />
           ))}
           <div style={{ padding: "10px 14px", background: "#162030", borderTop: "1px solid rgba(255,255,255,0.05)", display: "flex", justifyContent: "space-between", fontSize: 11.5, color: "#34d399", fontWeight: 700 }}>
             <span>Total</span>
-            <span style={{ fontFamily: "monospace" }}>{(session.processing_duration / 1000).toFixed(1)}s</span>
+            <span style={{ fontFamily: "monospace" }}>{(displaySession.processing_duration / 1000).toFixed(1)}s</span>
           </div>
         </div>
       </Section>
 
       {/* 3 — MAP Summary */}
       <Section title="MAP Summary">
-        <SessionMapTable maps={session.maps} sessionId={session.session_id} />
+        <SessionMapTable maps={displaySession.maps} sessionId={displaySession.session_id} />
       </Section>
 
       {/* 4 — Department Impact */}
       <Section title="Department Impact">
-        <DepartmentImpact department_impact={session.department_impact} />
+        <DepartmentImpact department_impact={displaySession.department_impact} />
       </Section>
 
       {/* 5 + 6 — Charts side by side */}
       <Section title="Distributions">
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 16 }}>
-          <PriorityChart    maps={session.maps} />
-          <CapabilityChart  maps={session.maps} />
+          <PriorityChart    maps={displaySession.maps} />
+          <CapabilityChart  maps={displaySession.maps} />
         </div>
       </Section>
 
       {/* 7 — Knowledge Graph */}
       <Section title="Knowledge Graph">
-        <SessionKnowledgeGraph graph={session.graph} />
+        <SessionKnowledgeGraph graph={displaySession.graph} />
       </Section>
 
       {/* 8 — Verification Plans */}
       <Section title="Verification Plans">
-        <VerificationSummary verification_plans={session.verification_plans} />
+        <VerificationSummary verification_plans={displaySession.verification_plans} />
       </Section>
 
       {/* 9 — Assignment Preview */}
       <Section title="Assignment Preview">
-        <AssignmentPreview maps={session.maps} department_impact={session.department_impact} />
+        <AssignmentPreview maps={displaySession.maps} department_impact={displaySession.department_impact} />
       </Section>
     </div>
   );

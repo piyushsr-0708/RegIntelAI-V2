@@ -48,7 +48,7 @@ export async function run({ document_id, requirements, maps, verification_plans 
     nodes.push({
       id, label, type,
       color:    NODE_COLORS[type] ?? "#94a3b8",
-      shape:    SHAPE_FOR[type] ?? "rect",
+      shape:    "rect",
       expanded: false,
       ...extra,
     });
@@ -62,8 +62,8 @@ export async function run({ document_id, requirements, maps, verification_plans 
   };
 
   // Layer 0 — Document root (starts expanded to show requirements)
-  const docId = `doc:${document_id}`;
-  addNode(docId, document_id, "document", { expanded: true, layer: 0 });
+  const docId = `doc:${document_id ?? "unknown"}`;
+  addNode(docId, document_id ?? "(unknown)", "document", { expanded: true, layer: 0 });
 
   // Layer 1 — Requirements (children of document)
   for (const req of requirements) {

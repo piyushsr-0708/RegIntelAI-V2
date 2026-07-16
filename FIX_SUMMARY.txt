@@ -1,0 +1,82 @@
+SESSION DASHBOARD METADATA FIX
+================================
+
+RESULT: IMPLEMENTATION COMPLETE (TESTING REQUIRED)
+
+ROOT CAUSE:
+-----------
+The Session Dashboard was displaying data from a completely INDEPENDENT frontend mock pipeline simulation 
+that generates random fake data (pages: 8-128 random, words: random, requirements: random).
+
+The actual uploaded document IS processed correctly by the backend and stored in:
+- datasets/parsed/{document_id}.json (page_count: 20 ✓)
+- datasets/requirements/{document_id}.json (100 requirements ✓)
+- datasets/maps/{document_id}.json (100 MAPs ✓)
+
+BUT the dashboard was reading from the mock simulation, not the real backend data.
+
+Specific location of bug:
+  File: frontend/src/pipeline/stages/stageParser.js
+  Line: const pages = 8 + Math.floor(rng() * 120);  // Random 8-128 pages
+
+DATA FLOW (BEFORE FIX):
+-----------------------
+Upload (20-page PDF) → Backend processes ✓ → Datasets ✓ → Database ✓
+                                                            ↓ (NEVER DISPLAYED)
+
+[SEPARATE FLOW]
+Frontend mock pipeline → Random data (115 pages) → SessionContext → Dashboard ✗ WRONG
+
+DATA FLOW (AFTER FIX):
+----------------------
+Upload (20-page PDF) → Backend processes ✓ → Datasets ✓
+                                                ↓
+                                    API: /documents/{id}/session
+                                                ↓
+                                         SessionDashboard
+                                                ↓
+                                    Display REAL data ✓ CORRECT
+
+SOLUTION:
+---------
+1. Added backend API endpoint: GET /documents/{document_id}/session
+   - Returns actual page_count, requirements_count, maps_count from datasets
+   
+2. Modified SessionDashboard.jsx to:
+   - Detect uploaded documents (document_id starts with "UP")
+   - Fetch real data from backend API
+   - Display real metadata instead of mock simulation
+
+FILES MODIFIED:
+---------------
+1. backend/main.py
+   - Added /documents/{document_id}/session endpoint (~70 lines)
+   
+2. frontend/src/pages/SessionDashboard.jsx
+   - Added React.useEffect to fetch real data (~50 lines)
+   - Merged real data with session context
+
+VALIDATION REQUIRED:
+--------------------
+1. Upload a NEW PDF document
+2. Wait for backend processing to complete
+3. Navigate to Session Dashboard
+4. Verify:
+   ✓ Filename matches uploaded file (not random)
+   ✓ Page count matches PDF (not random 8-128)
+   ✓ Word count is reasonable (not random)
+   ✓ Requirements count matches extraction
+   ✓ MAPs count matches generation
+   ✓ Departments count is correct
+
+REGRESSION TESTING:
+-------------------
+✓ Existing (non-uploaded) documents should still work
+✓ No changes to Pipeline page
+✓ No changes to MAP approval workflow
+✓ Previous sessions remain unchanged
+
+TEST SCRIPT PROVIDED:
+---------------------
+Run: python validate_session_fix.py
+(Requires backend running on port 8000)

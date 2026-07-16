@@ -39,6 +39,9 @@ class Perm:
     EVIDENCE_UPLOAD = "evidence:upload"
     EVIDENCE_READ   = "evidence:read"
 
+    # Document upload
+    DOC_UPLOAD      = "doc:upload"
+
 
 # ─── Canonical Role → Permission Mapping ────────────────────────────────────────
 ROLE_PERMISSIONS: dict[str, list[str]] = {
@@ -51,6 +54,7 @@ ROLE_PERMISSIONS: dict[str, list[str]] = {
         Perm.AUDIT_READ,
         Perm.PIPELINE_READ, Perm.PIPELINE_RUN,
         Perm.EVIDENCE_READ,
+        Perm.DOC_UPLOAD,
     ],
     "Compliance Head": [
         Perm.MAP_READ, Perm.MAP_WRITE, Perm.MAP_APPROVE,
@@ -59,6 +63,7 @@ ROLE_PERMISSIONS: dict[str, list[str]] = {
         Perm.AUDIT_READ,
         Perm.PIPELINE_READ,
         Perm.EVIDENCE_UPLOAD, Perm.EVIDENCE_READ,
+        Perm.DOC_UPLOAD,
     ],
     "Risk Head": [
         Perm.MAP_READ,

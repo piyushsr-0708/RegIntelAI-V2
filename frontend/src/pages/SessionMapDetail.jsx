@@ -170,7 +170,7 @@ export default function SessionMapDetail() {
 
       {/* 3 — Verification Plan */}
       <Card title="Verification Plan" accent="#38bdf8">
-        {vp ? (
+        {vp && (
           <>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 10, marginBottom: 14 }}>
               {[
@@ -196,10 +196,6 @@ export default function SessionMapDetail() {
               </div>
             )}
           </>
-        ) : (
-          <div style={{ fontSize: 12, color: "#475569" }}>
-            No verification plan generated for this MAP. Plans are generated for the first 30 MAPs per session.
-          </div>
         )}
       </Card>
 

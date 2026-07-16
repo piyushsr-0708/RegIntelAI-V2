@@ -3,6 +3,7 @@
  * Fetches real assignments from the FastAPI backend.
  */
 import { useEffect, useState, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { apiFetch } from "../utils/api";
 import { StatusBadge } from "../components/Badges";
@@ -10,6 +11,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function DepartmentWorkspace() {
   const { user, can } = useAuth();
+  const navigate = useNavigate();
   
   const [assignments, setAssignments] = useState([]);
   const [total, setTotal] = useState(0);
@@ -19,8 +21,10 @@ export default function DepartmentWorkspace() {
   const [stats, setStats] = useState({ ACTIVE: 0, COMPLETED: 0 });
   const [loading, setLoading] = useState(true);
   const [expandedId, setExpandedId] = useState(null);
+  const [completingId, setCompletingId] = useState(null);
   
   const [evidenceNote, setEvidenceNote] = useState("");
+  const [busyId, setBusyId] = useState(null);
 
   const fetchAssignments = useCallback(async () => {
     setLoading(true);
@@ -45,6 +49,12 @@ export default function DepartmentWorkspace() {
 
   // Handle completion
   const handleComplete = async (assignmentId) => {
+    // TASK 2: Prevent duplicate submissions
+    if (completingId) {
+      return; // Already processing a completion
+    }
+    
+    setCompletingId(assignmentId);
     try {
       await apiFetch(`/assignments/${assignmentId}`, {
         method: 'PATCH',
@@ -58,6 +68,21 @@ export default function DepartmentWorkspace() {
       fetchAssignments();
     } catch (err) {
       alert("Error completing assignment: " + err.message);
+    } finally {
+      setCompletingId(null);
+    }
+  };
+
+  // Handle reset (dev/test — moves COMPLETED back to ACTIVE)
+  const handleReset = async (assignmentId) => {
+    setBusyId(assignmentId);
+    try {
+      await apiFetch(`/assignments/${assignmentId}/reset`, { method: 'POST' });
+      fetchAssignments();
+    } catch (err) {
+      alert("Error resetting assignment: " + err.message);
+    } finally {
+      setBusyId(null);
     }
   };
 
@@ -114,7 +139,7 @@ export default function DepartmentWorkspace() {
           <thead>
             <tr>
               <th>Assignment ID</th>
-              <th>Control Name</th>
+              <th>Title</th>
               <th>Department</th>
               <th>Status</th>
               <th>Created At</th>
@@ -129,7 +154,7 @@ export default function DepartmentWorkspace() {
                 <>
                   <tr key={a.id} onClick={() => setExpandedId(isExpanded ? null : a.id)} style={{ cursor: "pointer" }}>
                     <td><span style={{ fontFamily: "monospace", fontSize: 11, fontWeight: 700, color: "#34d399", background: "rgba(52,211,153,0.1)", padding: "3px 7px", borderRadius: 5 }}>{a.id.split('-')[0]}</span></td>
-                    <td style={{ color: "#d1d5db" }}>{a.control_name || "Unknown Control"}</td>
+                    <td style={{ color: "#d1d5db" }}>{a.title || a.control_name || "Unknown Assignment"}</td>
                     <td style={{ color: "#94a3b8" }}>{a.department_name}</td>
                     <td><StatusBadge status={a.status} /></td>
                     <td style={{ color: "#64748b" }}>{new Date(a.created_at).toLocaleDateString()}</td>
@@ -145,6 +170,27 @@ export default function DepartmentWorkspace() {
                               <div style={{ fontSize: 13, color: "#e2e8f0" }}>{a.control_name}</div>
                             </div>
                             
+                            {a.status === 'COMPLETED' && (
+                              <div style={{ background: "rgba(15,23,42,0.5)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 8, padding: 12 }}>
+                                <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 6, letterSpacing: "0.06em", textTransform: "uppercase" }}>Verification Agent</div>
+                                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                                  <button
+                                    onClick={() => navigate(`/maps/${a.map_id}`)}
+                                    style={{ background: "#3b82f6", color: "#fff", border: "none", padding: "6px 12px", borderRadius: 5, fontSize: 12, fontWeight: 600, cursor: "pointer" }}
+                                  >
+                                    View Verification
+                                  </button>
+                                  <button
+                                    disabled={busyId === a.id}
+                                    onClick={() => handleReset(a.id)}
+                                    style={{ background: "rgba(251,191,36,0.12)", color: "#fbbf24", border: "1px solid rgba(251,191,36,0.3)", padding: "6px 12px", borderRadius: 5, fontSize: 12, fontWeight: 600, cursor: busyId === a.id ? "wait" : "pointer", opacity: busyId === a.id ? 0.5 : 1 }}
+                                  >
+                                    {busyId === a.id ? "Resetting…" : "Reset Assignment"}
+                                  </button>
+                                </div>
+                              </div>
+                            )}
+                            
                             {a.status === 'ACTIVE' && can('assign:complete') && (
                               <div style={{ background: "rgba(15,23,42,0.5)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 8, padding: 12 }}>
                                 <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 6, letterSpacing: "0.06em", textTransform: "uppercase" }}>Evidence & Completion</div>
@@ -152,13 +198,15 @@ export default function DepartmentWorkspace() {
                                   value={evidenceNote}
                                   onChange={e => setEvidenceNote(e.target.value)}
                                   placeholder="Enter evidence notes or reference IDs before completing..."
-                                  style={{ width: "100%", height: 60, background: "#0f172a", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 6, color: "#e2e8f0", padding: "8px", fontSize: 12, marginBottom: 10, resize: "none" }}
+                                  disabled={completingId === a.id}
+                                  style={{ width: "100%", height: 60, background: "#0f172a", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 6, color: "#e2e8f0", padding: "8px", fontSize: 12, marginBottom: 10, resize: "none", opacity: completingId === a.id ? 0.6 : 1 }}
                                 />
                                 <button 
                                   onClick={() => handleComplete(a.id)}
-                                  style={{ background: "#10b981", color: "#fff", border: "none", padding: "6px 12px", borderRadius: 5, fontSize: 12, fontWeight: 600, cursor: "pointer" }}
+                                  disabled={completingId === a.id}
+                                  style={{ background: completingId === a.id ? "#6b7280" : "#10b981", color: "#fff", border: "none", padding: "6px 12px", borderRadius: 5, fontSize: 12, fontWeight: 600, cursor: completingId === a.id ? "not-allowed" : "pointer", opacity: completingId === a.id ? 0.6 : 1 }}
                                 >
-                                  Mark as Completed
+                                  {completingId === a.id ? "Processing..." : "Mark as Completed"}
                                 </button>
                               </div>
                             )}

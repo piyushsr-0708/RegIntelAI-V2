@@ -103,7 +103,22 @@ export default function MapDetail() {
   const pipelineRun = state?.timeline_metadata?.last_pipeline_run ?? null;
 
   const pColor = PRIORITY_COLOR[listItem.priority] ?? "#94a3b8";
-  const autoVal = listItem.automation_percentage != null ? listItem.automation_percentage.toFixed(1) : "N/A";
+  
+  // Use live API data for verification-related fields (compliance_status, decision_rationale, failed_blocker_count, automation_percentage)
+  // Fallback to cached register data if API hasn't loaded yet
+  const complianceStatus = detailData?.verification_plan ? 
+    (detailData.compliance_decision?.verdict || "PENDING") : 
+    listItem.compliance_status;
+  
+  const decisionRationale = detailData?.compliance_decision?.rationale || listItem.decision_rationale;
+  
+  const failedBlockerCount = detailData?.compliance_decision ? 
+    (detailData.compliance_decision.failed_blocker_count || 0) : 
+    (listItem.failed_blocker_count ?? 0);
+  
+  const autoVal = detailData?.verification_plan?.automation_percentage != null ? 
+    detailData.verification_plan.automation_percentage.toFixed(1) : 
+    (listItem.automation_percentage != null ? listItem.automation_percentage.toFixed(1) : "N/A");
 
   return (
     <div className="animate-fade-in">
@@ -127,7 +142,7 @@ export default function MapDetail() {
               {listItem.map_id}
             </span>
             <PriorityBadge priority={listItem.priority.charAt(0) + listItem.priority.slice(1).toLowerCase()} size="lg" />
-            <StatusBadge status={listItem.compliance_status} />
+            <StatusBadge status={complianceStatus} />
           </div>
           <h1 style={{ fontSize: 19, fontWeight: 800, color: "#f1f5f9", lineHeight: 1.4, margin: 0 }}>{listItem.title}</h1>
         </div>
@@ -142,15 +157,15 @@ export default function MapDetail() {
         <MetaCard label="DOCUMENT ID"   value={listItem.document_id}   color="#60a5fa" mono />
         <MetaCard label="DEPARTMENT"    value={listItem.department}     color="#a78bfa" />
         <MetaCard label="PRIORITY"      value={listItem.priority}       color={pColor} />
-        <MetaCard label="COMPLIANCE STATUS" value={listItem.compliance_status} color="#94a3b8" />
-        <MetaCard label="FAILED BLOCKERS"   value={listItem.failed_blocker_count ?? 0} color={listItem.failed_blocker_count > 0 ? "#f87171" : "#34d399"} />
+        <MetaCard label="COMPLIANCE STATUS" value={complianceStatus} color="#94a3b8" />
+        <MetaCard label="FAILED BLOCKERS"   value={failedBlockerCount} color={failedBlockerCount > 0 ? "#f87171" : "#34d399"} />
         <MetaCard label="AUTOMATION %"  value={`${autoVal}%`}          color={pColor} />
       </div>
 
       {/* ── Decision rationale ─────────────────────────────────────────────── */}
       <div className="card" style={{ padding: "16px 18px", marginBottom: 14 }}>
         <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 8, letterSpacing: 0.5 }}>DECISION RATIONALE</div>
-        <div style={{ fontSize: 13, color: "#cbd5e1", lineHeight: 1.65 }}>{listItem.decision_rationale}</div>
+        <div style={{ fontSize: 13, color: "#cbd5e1", lineHeight: 1.65 }}>{decisionRationale}</div>
       </div>
 
       {/* ── Business capabilities ──────────────────────────────────────────── */}
@@ -256,6 +271,115 @@ export default function MapDetail() {
               )}
               {detailData.verification_plan.automation_percentage != null && (
                 <StatPill label="AUTOMATION %" value={`${detailData.verification_plan.automation_percentage.toFixed(1)}%`} color="#a78bfa" />
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* ── Verification Agent ─────────────────────────────────────────────── */}
+      {detailData?.agent_decision && (
+        <div className="card" style={{ padding: "16px 18px", marginBottom: 14, background: "rgba(16,185,129,0.02)", border: "1px solid rgba(16,185,129,0.1)" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
+            <span style={{ fontSize: 18 }}>🤖</span>
+            <div style={{ fontSize: 10, color: "#10b981", fontWeight: 700, letterSpacing: 0.5 }}>VERIFICATION AGENT</div>
+          </div>
+          
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12, marginBottom: 14 }}>
+            <div>
+              <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 4 }}>VERDICT</div>
+              <span style={{ 
+                fontSize: 12, 
+                fontWeight: 700, 
+                color: detailData.agent_decision.verdict === "GO" ? "#34d399" : detailData.agent_decision.verdict === "ESCALATE" ? "#fbbf24" : "#f87171",
+                background: detailData.agent_decision.verdict === "GO" ? "rgba(52,211,153,0.1)" : detailData.agent_decision.verdict === "ESCALATE" ? "rgba(251,191,36,0.1)" : "rgba(248,113,113,0.1)",
+                padding: "4px 10px",
+                borderRadius: 5,
+                border: detailData.agent_decision.verdict === "GO" ? "1px solid rgba(52,211,153,0.2)" : detailData.agent_decision.verdict === "ESCALATE" ? "1px solid rgba(251,191,36,0.2)" : "1px solid rgba(248,113,113,0.2)"
+              }}>
+                {detailData.agent_decision.verdict}
+              </span>
+            </div>
+            
+            {detailData.agent_decision.confidence_score != null && (
+              <div>
+                <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 4 }}>CONFIDENCE</div>
+                <div style={{ fontSize: 12, color: "#cbd5e1", fontWeight: 600 }}>
+                  {(detailData.agent_decision.confidence_score * 100).toFixed(0)}%
+                </div>
+              </div>
+            )}
+            
+            {detailData.agent_decision.automation_feasibility && (
+              <div>
+                <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 4 }}>AUTOMATION</div>
+                <div style={{ fontSize: 12, color: "#cbd5e1", fontWeight: 600 }}>
+                  {detailData.agent_decision.automation_feasibility}
+                </div>
+              </div>
+            )}
+          </div>
+          
+          {detailData.agent_decision.reasoning && (
+            <div style={{ marginBottom: 14 }}>
+              <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 6 }}>REASONING</div>
+              <div style={{ fontSize: 12, color: "#cbd5e1", lineHeight: 1.6 }}>
+                {detailData.agent_decision.reasoning}
+              </div>
+            </div>
+          )}
+          
+          {detailData.agent_decision.recommended_action && (
+            <div style={{ marginBottom: 14 }}>
+              <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 6 }}>RECOMMENDATION</div>
+              <div style={{ fontSize: 12, color: "#10b981", lineHeight: 1.6, fontWeight: 600 }}>
+                {detailData.agent_decision.recommended_action}
+              </div>
+            </div>
+          )}
+          
+          {(detailData.agent_decision.automated_checks_available != null || detailData.agent_decision.manual_checks_required != null) && (
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+              {detailData.agent_decision.automated_checks_available != null && (
+                <div style={{ textAlign: "center", padding: "10px 16px", background: "rgba(52,211,153,0.1)", border: "1px solid rgba(52,211,153,0.2)", borderRadius: 7 }}>
+                  <div style={{ fontSize: 16, fontWeight: 800, color: "#34d399", lineHeight: 1 }}>
+                    {detailData.agent_decision.automated_checks_available}
+                  </div>
+                  <div style={{ fontSize: 9, color: "#64748b", marginTop: 3, fontWeight: 600 }}>AUTOMATED</div>
+                </div>
+              )}
+              {detailData.agent_decision.manual_checks_required != null && (
+                <div style={{ textAlign: "center", padding: "10px 16px", background: "rgba(251,191,36,0.1)", border: "1px solid rgba(251,191,36,0.2)", borderRadius: 7 }}>
+                  <div style={{ fontSize: 16, fontWeight: 800, color: "#fbbf24", lineHeight: 1 }}>
+                    {detailData.agent_decision.manual_checks_required}
+                  </div>
+                  <div style={{ fontSize: 9, color: "#64748b", marginTop: 3, fontWeight: 600 }}>MANUAL</div>
+                </div>
+              )}
+              {detailData.agent_decision.total_checks != null && (
+                <div style={{ textAlign: "center", padding: "10px 16px", background: "rgba(96,165,250,0.1)", border: "1px solid rgba(96,165,250,0.2)", borderRadius: 7 }}>
+                  <div style={{ fontSize: 16, fontWeight: 800, color: "#60a5fa", lineHeight: 1 }}>
+                    {detailData.agent_decision.total_checks}
+                  </div>
+                  <div style={{ fontSize: 9, color: "#64748b", marginTop: 3, fontWeight: 600 }}>TOTAL</div>
+                </div>
+              )}
+            </div>
+          )}
+          
+          {(detailData.agent_decision.regulatory_intent || detailData.agent_decision.control_objective) && (
+            <div style={{ marginTop: 14, padding: "12px", background: "rgba(255,255,255,0.02)", borderRadius: 6, border: "1px solid rgba(255,255,255,0.05)" }}>
+              {detailData.agent_decision.regulatory_intent && (
+                <div style={{ marginBottom: 8 }}>
+                  <span style={{ fontSize: 10, color: "#475569", fontWeight: 700 }}>REGULATORY INTENT: </span>
+                  <span style={{ fontSize: 11, color: "#94a3b8" }}>{detailData.agent_decision.regulatory_intent}</span>
+                </div>
+              )}
+              {detailData.agent_decision.control_objective && (
+                <div>
+                  <span style={{ fontSize: 10, color: "#475569", fontWeight: 700 }}>CONTROL OBJECTIVE: </span>
+                  <span style={{ fontSize: 11, color: "#94a3b8" }}>{detailData.agent_decision.control_objective}</span>
+                </div>
               )}
             </div>
           )}

@@ -8,8 +8,67 @@ import { createContext, useContext, useState, useCallback } from "react";
 
 const SessionContext = createContext(null);
 
+// ─── Persistence helpers ──────────────────────────────────────────────────────
+
+/** Extract lightweight metadata for localStorage persistence. */
+function extractMetadata(session) {
+  return {
+    session_id: session.session_id,
+    filename: session.filename,
+    document_id: session.document_id,
+    upload_timestamp: session.upload_timestamp,
+    status: session.status,
+    processing_timestamp: session.processing_timestamp,
+    processing_duration: session.processing_duration,
+    pages: session.pages,
+    words: session.words,
+    requirements_found: session.requirements_found,
+    maps_generated: session.maps_generated,
+    departments_impacted: session.departments_impacted,
+    knowledge_graph_nodes: session.knowledge_graph_nodes,
+    knowledge_graph_edges: session.knowledge_graph_edges,
+    automation_percentage: session.automation_percentage,
+    overall_risk: session.overall_risk,
+  };
+}
+
+/** Restore full session structure from lightweight metadata. */
+function hydrateSession(metadata) {
+  return {
+    ...metadata,
+    stages: [],
+    maps: [],
+    department_impact: [],
+    verification_plans: [],
+    graph: { nodes: [], edges: [] },
+  };
+}
+
+/** Safely persist sessions to localStorage (lightweight metadata only). */
+function persistSessions(sessions) {
+  try {
+    const metadata = sessions.map(extractMetadata);
+    localStorage.setItem("sessions", JSON.stringify(metadata));
+  } catch (err) {
+    console.warn("[SessionContext] Failed to persist to localStorage:", err.message);
+    // Continue without crashing
+  }
+}
+
 export function SessionProvider({ children }) {
-  const [sessions, setSessions] = useState([]);
+  const [sessions, setSessions] = useState(() => {
+    try {
+      const stored = localStorage.getItem("sessions");
+      if (stored) {
+        const metadata = JSON.parse(stored);
+        return metadata.map(hydrateSession);
+      }
+      return [];
+    } catch (err) {
+      console.warn("[SessionContext] Failed to load from localStorage:", err.message);
+      return [];
+    }
+  });
 
   /** Create a new session shell and return its id. */
   const createSession = useCallback((filename) => {
@@ -38,15 +97,21 @@ export function SessionProvider({ children }) {
       verification_plans: [],
       graph: { nodes: [], edges: [] },
     };
-    setSessions((prev) => [shell, ...prev]);
+    setSessions((prev) => {
+      const updated = [shell, ...prev];
+      persistSessions(updated);
+      return updated;
+    });
     return session_id;
   }, []);
 
   /** Merge completed simulation data into an existing session. */
   const updateSession = useCallback((session_id, data) => {
-    setSessions((prev) =>
-      prev.map((s) => (s.session_id === session_id ? { ...s, ...data, status: "completed" } : s))
-    );
+    setSessions((prev) => {
+      const updated = prev.map((s) => (s.session_id === session_id ? { ...s, ...data, status: "completed" } : s));
+      persistSessions(updated);
+      return updated;
+    });
   }, []);
 
   return (

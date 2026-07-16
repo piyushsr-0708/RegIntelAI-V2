@@ -1,0 +1,20 @@
+{
+  "document_id": "MD10190",
+  "requirement_id": "MD10190_req45",
+  "assignment_id": "8bcb64ac-0814-4689-8f10-973e24df09a2",
+  "verdict": "ESCALATE",
+  "reasoning": "Verifying 'Foreign Exchange Compliance Control'. which addresses monitor cross-border capital flows and enforce limits. All 3 checks require manual verification. Control type requires human judgment and process adherence. Routing to compliance officer for manual verification.",
+  "confidence_score": 0.81,
+  "automated_checks_available": 0,
+  "manual_checks_required": 3,
+  "total_checks": 3,
+  "execute_automated": false,
+  "requires_manual_review": true,
+  "recommended_action": "Route all 3 checks to compliance officer for manual verification",
+  "control_objective": "To ensure that all applicable Foreign Exchange requirements relating to 'FEMA Compliance Control', thereby enabling the institution to demonstrate full regulatory adherence and reduce Financial Risk exposure.",
+  "regulatory_intent": "Monitor cross-border capital flows and enforce limits",
+  "automation_feasibility": "Low",
+  "timestamp": "2026-07-15T03:01:12.438978+00:00",
+  "criticality": "MEDIUM",
+  "department": "Risk"
+}

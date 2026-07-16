@@ -296,7 +296,7 @@ export default function SessionKnowledgeGraph({ graph }) {
                       textAnchor="middle" fontSize={8.5} fontWeight={600}
                       fill={isSelected ? "#f1f5f9" : "#cbd5e1"}
                       style={{ pointerEvents: "none" }}>
-                      {n.label.length > 12 ? n.label.slice(0, 11) + "…" : n.label}
+                      {(() => { const lbl = String(n.label ?? ""); return lbl.length > 12 ? lbl.slice(0, 11) + "…" : lbl; })()}
                     </text>
                     {/* Expand indicator */}
                     {hasChildren && (

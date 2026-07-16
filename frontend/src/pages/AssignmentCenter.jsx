@@ -18,6 +18,8 @@ export default function AssignmentCenter() {
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
   const [pageSize] = useState(50);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState("DRAFT");
   
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState({});
@@ -26,8 +28,19 @@ export default function AssignmentCenter() {
   const fetchMaps = useCallback(async () => {
     setLoading(true);
     try {
+      // Build query params
+      const params = new URLSearchParams();
+      if (statusFilter && statusFilter !== 'All') {
+        params.append('status', statusFilter);
+      }
+      params.append('page', page);
+      params.append('page_size', pageSize);
+      if (searchQuery) {
+        params.append('search', searchQuery);
+      }
+      
       const [data, statsData, departmentsData] = await Promise.all([
-        apiFetch(`/maps?status=DRAFT&page=${page}&page_size=${pageSize}`),
+        apiFetch(`/maps?${params.toString()}`),
         apiFetch(`/maps/stats/summary`),
         apiFetch(`/departments`),
       ]);
@@ -40,7 +53,7 @@ export default function AssignmentCenter() {
     } finally {
       setLoading(false);
     }
-  }, [page, pageSize]);
+  }, [page, pageSize, searchQuery, statusFilter]);
 
   useEffect(() => {
     fetchMaps();
@@ -140,6 +153,30 @@ export default function AssignmentCenter() {
 
         {/* ── Right: MAP review table ────────────────────────────────── */}
         <div>
+          {/* Search and Filter Bar */}
+          <div style={{ display: "flex", gap: 12, marginBottom: 14 }}>
+            <input
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search by MAP ID, Document ID, Requirement ID, Control Name, or Assignment ID"
+              style={{ flex: 1, background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, color: "#e2e8f0", padding: "9px 12px", fontSize: 12.5, outline: "none" }}
+              onFocus={e => e.target.style.borderColor = "#10b981"}
+              onBlur={e  => e.target.style.borderColor = "rgba(255,255,255,0.07)"}
+            />
+            <select
+              value={statusFilter}
+              onChange={(e) => setStatusFilter(e.target.value)}
+              style={{ background: "#162030", border: "1.5px solid rgba(255,255,255,0.07)", borderRadius: 7, color: "#e2e8f0", padding: "9px 12px", fontSize: 12.5, outline: "none", minWidth: 140 }}
+              onFocus={e => e.target.style.borderColor = "#10b981"}
+              onBlur={e  => e.target.style.borderColor = "rgba(255,255,255,0.07)"}
+            >
+              <option value="All">All Statuses</option>
+              <option value="DRAFT">Draft</option>
+              <option value="APPROVED">Approved</option>
+              <option value="REJECTED">Rejected</option>
+            </select>
+          </div>
+          
           <div className="card" style={{ padding: 0, overflow: "hidden" }}>
             
             {/* Table header */}

@@ -79,7 +79,8 @@ class PipelineIngestionService:
                         self.db.flush()
 
                 # 3. Upsert Deduplicated Control
-                deterministic_ctrl_id = self._generate_control_hash(ctrl_data)
+                # Use the control_id from JSON if available, otherwise fall back to hash
+                deterministic_ctrl_id = ctrl_data.get("control_id") or self._generate_control_hash(ctrl_data)
                 control = self.db.query(ComplianceControl).filter_by(control_id=deterministic_ctrl_id).first()
                 if not control:
                     control = ComplianceControl(

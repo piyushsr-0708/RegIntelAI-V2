@@ -39,8 +39,13 @@ def main():
     decisions_by_doc = {}
     decision_files = sorted(DECISIONS_DIR.glob("*.json"))
     for p in decision_files:
-        doc_id = p.name.split('_')[0]
-        decisions_by_doc[doc_id] = json.loads(p.read_text(encoding="utf-8"))
+        parts = p.stem.split('_')
+        doc_id = f"{parts[0]}_{parts[1]}" if p.name.startswith("UP") and len(parts) >= 2 else parts[0]
+        try:
+            d = json.loads(p.read_text(encoding="utf-8"))
+            decisions_by_doc[doc_id] = d
+        except Exception:
+            pass
 
     logger.info("Aggregating dashboard state...")
 

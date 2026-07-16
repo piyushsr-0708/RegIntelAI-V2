@@ -375,7 +375,7 @@ class ControlDerivationEngine:
             return
             
         try:
-            requirements = doc.get("enriched_requirements") or []
+            requirements = doc.get("reasoned_controls") or []
             controls = []
             
             for req in requirements:
