@@ -633,6 +633,237 @@ def _effort_hours(criticality: str, task_type: str) -> int:
     return max(1, int(base * mult))
 
 
+# ---------------------------------------------------------------------------
+# Obligation Decomposition
+# ---------------------------------------------------------------------------
+
+# Phrases that indicate a clause is a qualifier, definition, or governance
+# delegation — never an independent obligation.
+INHIBITOR_PATTERNS: List[str] = [
+    # Definitional / naming
+    "shall mean",
+    "shall include",
+    "shall refer to",
+    "shall be referred to as",
+    "shall be known as",
+    "shall be called",
+    "shall be deemed",
+    "shall be construed",
+    "for the purposes of",
+    # Classification
+    "shall be classified as",
+    "shall be treated as",
+    "shall be considered as",
+    "shall be categorised as",
+    "shall be categorized as",
+    # Applicability / scope
+    "shall be applicable",
+    "shall apply to",
+    "shall extend to",
+    "shall also fall under",
+    "shall be covered under",
+    # Governance delegation
+    "shall be governed by",
+    "shall be subject to",
+    "shall be in accordance with",
+    "shall be in compliance with",
+    "shall be as per",
+    "shall be in terms of",
+    # Conditional / explanatory
+    "provided that",
+    "subject to",
+    "notwithstanding",
+    "in the event of",
+    "where applicable",
+    "as the case may be",
+    # Effective date / transitional
+    "shall come into effect",
+    "shall be effective from",
+    "shall cease to apply",
+    # Prohibition — a constraint, not an independently actionable obligation
+    "shall not",
+]
+
+# Root forms of verbs that represent a concrete, verifiable action.
+ACTIONABLE_VERBS: List[str] = [
+    "submit", "notify", "maintain", "review", "approve",
+    "train", "monitor", "audit", "report", "register",
+    "publish", "authenticate", "verify", "generate",
+    "disclose", "obtain", "designate", "implement", "establish",
+    "conduct", "ensure", "classify", "test", "document",
+    "assess", "appoint", "record", "retain", "update",
+    "evaluate", "inspect", "investigate", "remediate",
+    "encrypt", "restrict", "revoke", "provision", "configure",
+    "archive", "log", "alert", "escalate", "communicate",
+    "subject", "make", "place", "bring", "put", "keep",
+    "issue", "seek", "certify", "freeze", "inform", "develop",
+]
+
+# Structural phrases that may separate two independent obligations.
+# Ordered from most specific to least specific so the first match wins.
+SPLIT_SEPARATORS: List[str] = [
+    "and also shall",
+    "and shall also",
+    "and shall",
+    "; the ",
+    "further, the ",
+    "additionally, the ",
+]
+
+# Phrases that, when found at the START of the right-side segment, indicate
+# it is a list header or subordinate enumeration rather than a standalone
+# obligation.  These are checked only on the right segment after splitting
+# because they are too common in full text to use as global inhibitors.
+RIGHT_SEGMENT_LIST_HEADERS: List[str] = [
+    "the following",
+    "as follows",
+    "at a minimum",
+    "inter alia",
+    "among others",
+    "including but not limited to",
+]
+
+# Categories where a single obligation is the strong default even when
+# structural separators are present.
+CONSERVATIVE_CATEGORIES: set = {"Policy", "Procedure", "Monitoring"}
+
+
+def _contains_inhibitor(text: str) -> bool:
+    """Return True if the text contains any inhibitor pattern."""
+    lowered = text.lower()
+    return any(pattern in lowered for pattern in INHIBITOR_PATTERNS)
+
+
+def _right_segment_is_list_header(text: str) -> bool:
+    """
+    Return True if the right-side segment is a list-introduction clause
+    rather than a standalone obligation.
+    Checks whether the segment contains a list-header phrase within its
+    first 120 characters (the preamble before the enumeration begins).
+    """
+    lowered = text.lower()[:120]
+    return any(phrase in lowered for phrase in RIGHT_SEGMENT_LIST_HEADERS)
+
+
+def _has_actionable_verb(text: str) -> bool:
+    """Return True if the text contains at least one actionable verb root."""
+    lowered = text.lower()
+    return any(verb in lowered for verb in ACTIONABLE_VERBS)
+
+
+def _split_on_separators(text: str) -> List[str]:
+    """
+    Split text on the first matching structural separator.
+    Returns the original text as a single-element list if no separator matches.
+    Only the first separator found is used to avoid over-fragmentation.
+    """
+    lowered = text.lower()
+    for separator in SPLIT_SEPARATORS:
+        idx = lowered.find(separator)
+        if idx == -1:
+            continue
+        left = text[:idx].strip()
+        right_raw = text[idx + len(separator):].strip()
+        # Re-attach "shall" when the separator consumed it.
+        right = ("shall " + right_raw) if separator.strip().endswith("shall") else right_raw
+        if left and right:
+            return [left, right]
+    return [text]
+
+
+def _extract_primary_object(text: str) -> str:
+    """
+    Naive extraction of the primary object of a clause.
+    Finds the first actionable verb and returns the three words that follow it
+    as a rough proxy for the artifact being acted upon.
+    Intentionally simple: it only needs to distinguish clearly different
+    objects (e.g. 'the database' vs 'supervisory review').
+    """
+    words = text.lower().split()
+    for i, word in enumerate(words):
+        for verb in ACTIONABLE_VERBS:
+            if word.startswith(verb):
+                return " ".join(words[i + 1: i + 4])
+    return ""
+
+
+def _semantically_independent(segments: List[str], category: str) -> bool:
+    """
+    Placeholder independence check.
+    Returns True only when every segment has a detectable primary object
+    and all objects are mutually distinct.
+    Conservative categories additionally require that no two objects share
+    their first word.
+    """
+    objects = [_extract_primary_object(s) for s in segments]
+
+    if any(obj == "" for obj in objects):
+        return False
+
+    if len(set(objects)) < len(objects):
+        return False
+
+    if category in CONSERVATIVE_CATEGORIES:
+        first_words = [obj.split()[0] for obj in objects if obj]
+        if len(set(first_words)) < len(first_words):
+            return False
+
+    return True
+
+
+def decompose_obligations(control: Dict[str, Any]) -> List[Dict[str, Any]]:
+    """
+    Attempt to decompose a control into independent obligation segments.
+
+    Returns a list of control dicts: either the original single control
+    (the common case) or 2-3 derived controls with adjusted requirement_text
+    and control_id suffixes.
+
+    Conservative by design: defaults to one MAP whenever any splitting
+    condition is not clearly satisfied.
+    """
+    text: str = control.get("requirement_text", "").strip()
+    category: str = control.get("implementation_category", "")
+
+    # Step 1: Fast-path inhibitor check on the full text.
+    if _contains_inhibitor(text):
+        return [control]
+
+    # Step 2: Structural segmentation.
+    segments = _split_on_separators(text)
+    if len(segments) <= 1:
+        return [control]
+
+    # Step 3: Per-segment validation.
+    for i, segment in enumerate(segments):
+        if _contains_inhibitor(segment):
+            return [control]
+        if not _has_actionable_verb(segment):
+            return [control]
+        # The right-side segment must not be a list-introduction clause.
+        if i > 0 and _right_segment_is_list_header(segment):
+            return [control]
+
+    # Step 4: Conservative cap — never produce more than 3 MAPs.
+    if len(segments) > 3:
+        return [control]
+
+    # Step 5: Semantic independence check.
+    if not _semantically_independent(segments, category):
+        return [control]
+
+    # Step 6: Build one derived control per segment.
+    base_id: str = control.get("control_id", str(uuid.uuid4()))
+    derived_controls: List[Dict[str, Any]] = []
+    for i, segment in enumerate(segments, start=1):
+        derived = dict(control)          # shallow copy — all metadata is reused
+        derived["requirement_text"] = segment
+        derived["control_id"] = f"{base_id}_OBL{i}"
+        derived_controls.append(derived)
+
+    return derived_controls
+
+
 def _gen_map_id(control_id: str) -> str:
     return f"MAP_{control_id}"
 
@@ -784,6 +1015,7 @@ class MAPGenerationEngine:
         self.stats = {
             "documents_processed": 0,
             "controls_processed": 0,
+            "controls_decomposed": 0,
             "maps_generated": 0,
             "tasks_generated": 0,
             "machine_verifiable": 0,
@@ -842,9 +1074,15 @@ class MAPGenerationEngine:
         for ctrl in controls:
             self.stats["controls_processed"] += 1
             try:
-                map_obj = build_map(ctrl)
-                self._update_stats(map_obj)
-                maps.append(asdict(map_obj))
+                # Expose the obligation text field decompose_obligations reads.
+                ctrl.setdefault("requirement_text", ctrl.get("control_description", ""))
+                derived_controls = decompose_obligations(ctrl)
+                if len(derived_controls) > 1:
+                    self.stats["controls_decomposed"] += 1
+                for derived in derived_controls:
+                    map_obj = build_map(derived)
+                    self._update_stats(map_obj)
+                    maps.append(asdict(map_obj))
             except Exception as e:
                 self.logger.error(f"MAP generation failed for control {ctrl.get('control_id')}: {e}")
 
@@ -890,6 +1128,7 @@ class MAPGenerationEngine:
             f"{'='*60}\n"
             f"Documents processed:         {self.stats['documents_processed']}\n"
             f"Controls processed:          {self.stats['controls_processed']}\n"
+            f"Controls decomposed:         {self.stats['controls_decomposed']}\n"
             f"MAPs generated:              {maps}\n"
             f"Tasks generated:             {tasks}\n"
             f"Average tasks per MAP:       {avg_tasks:.2f}\n"

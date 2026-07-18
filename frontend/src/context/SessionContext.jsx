@@ -76,7 +76,7 @@ export function SessionProvider({ children }) {
     const shell = {
       session_id,
       filename,
-      document_id: deriveDocumentId(filename),
+      document_id: null,
       upload_timestamp: new Date().toISOString(),
       status: "processing",
       // All numeric fields start null; filled by updateSession after simulation.
@@ -105,10 +105,14 @@ export function SessionProvider({ children }) {
     return session_id;
   }, []);
 
-  /** Merge completed simulation data into an existing session. */
+  /** Merge data into an existing session. Caller's status is preserved; defaults to "completed" only when no status is supplied. */
   const updateSession = useCallback((session_id, data) => {
     setSessions((prev) => {
-      const updated = prev.map((s) => (s.session_id === session_id ? { ...s, ...data, status: "completed" } : s));
+      const updated = prev.map((s) => {
+        if (s.session_id !== session_id) return s;
+        const nextStatus = data.status !== undefined ? data.status : "completed";
+        return { ...s, ...data, status: nextStatus };
+      });
       persistSessions(updated);
       return updated;
     });

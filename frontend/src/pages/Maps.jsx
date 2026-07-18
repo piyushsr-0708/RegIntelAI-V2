@@ -156,7 +156,7 @@ export default function Maps() {
                 <td><span style={{ fontFamily: "monospace", fontSize: 10, fontWeight: 600, color: "#60a5fa", background: "rgba(96,165,250,0.1)", padding: "2px 6px", borderRadius: 4 }}>{m.document_id}</span></td>
                 <td style={{ maxWidth: 280, color: "#d1d5db", lineHeight: 1.4 }}>{m.title.length > 80 ? m.title.substring(0, 80) + "…" : m.title}</td>
                 <td><span style={{ fontSize: 11.5, color: "#94a3b8", background: "#162030", padding: "3px 9px", borderRadius: 6, border: "1px solid rgba(255,255,255,0.06)" }}>{m.department}</span></td>
-                <td><PriorityBadge priority={m.priority?.charAt(0) + m.priority?.slice(1).toLowerCase()} /></td>
+                <td><PriorityBadge priority={String(m.priority || "Medium").charAt(0) + String(m.priority || "Medium").slice(1).toLowerCase()} /></td>
                 <td><StatusBadge status={m.compliance_status} /></td>
                 <td style={{ color: "#64748b", fontSize: 12, fontFamily: "monospace" }}>{m.automation_percentage.toFixed(1)}%</td>
               </tr>

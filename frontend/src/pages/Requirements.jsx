@@ -263,7 +263,7 @@ export default function Requirements() {
             <span style={{ fontFamily: "monospace", fontSize: 10, fontWeight: 600, color: "#60a5fa", background: "rgba(96,165,250,0.1)", padding: "2px 6px", borderRadius: 4 }}>
               <Highlight text={r.document_id} term={query} />
             </span>
-            <PriorityBadge priority={r.priority.charAt(0) + r.priority.slice(1).toLowerCase()} />
+            <PriorityBadge priority={String(r.priority || "Medium").charAt(0) + String(r.priority || "Medium").slice(1).toLowerCase()} />
             <StatusBadge status={r.compliance_status} />
             <span style={{ fontSize: 11, color: "#64748b", background: "#162030", padding: "2px 8px", borderRadius: 6, border: "1px solid rgba(255,255,255,0.05)" }}>
               {r.department}

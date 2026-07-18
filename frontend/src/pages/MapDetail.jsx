@@ -7,6 +7,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useFrontendState, useComplianceRegister } from "../context/FrontendStateContext";
 import { fetchMapDetail } from "../utils/api";
+import { useSession } from "../context/SessionContext";
 import { PriorityBadge, StatusBadge } from "../components/Badges";
 import Breadcrumbs from "../components/Breadcrumbs";
 
@@ -39,12 +40,17 @@ function StatPill({ label, value, color }) {
 }
 
 export default function MapDetail() {
-  const { id } = useParams();
+  const { id, sessionId, mapId: paramMapId } = useParams();
   const navigate = useNavigate();
-  const mapId = decodeURIComponent(id);
+  const mapId = decodeURIComponent(id || paramMapId);
 
   const { state, loading } = useFrontendState();
   const register = useComplianceRegister();
+  const session = useSession(sessionId ? decodeURIComponent(sessionId) : null);
+  
+  const isSessionRoute = Boolean(sessionId);
+  const backDest = isSessionRoute ? `/session/${encodeURIComponent(sessionId)}` : "/maps";
+  const backText = isSessionRoute ? "← Back to Session" : "← Back to Register";
   
   const [detailData, setDetailData] = useState(null);
   const [detailLoading, setDetailLoading] = useState(true);
@@ -70,6 +76,18 @@ export default function MapDetail() {
     }
   }, [mapId]);
 
+  // Re-fetch when the tab regains focus so MAP status reflects recent approvals
+  useEffect(() => {
+    if (!mapId) return;
+    function onFocus() {
+      fetchMapDetail(mapId)
+        .then((data) => setDetailData(data))
+        .catch(() => {});
+    }
+    window.addEventListener("focus", onFocus);
+    return () => window.removeEventListener("focus", onFocus);
+  }, [mapId]);
+
   // ── Loading state ──────────────────────────────────────────────────────────
   if (loading || detailLoading) return (
     <div style={{ textAlign: "center", padding: 80 }}>
@@ -81,7 +99,7 @@ export default function MapDetail() {
     </div>
   );
 
-  const listItem = register.find(m => m.map_id === mapId);
+  const listItem = register.find(m => m.map_id === mapId) || session?.maps?.find(m => m.map_id === mapId);
 
   // ── Not found state ────────────────────────────────────────────────────────
   if (!listItem) return (
@@ -90,10 +108,10 @@ export default function MapDetail() {
       <div style={{ fontSize: 17, fontWeight: 700, color: "#94a3b8", marginBottom: 6 }}>MAP not found</div>
       <div style={{ fontSize: 12, color: "#475569", marginBottom: 20 }}>{mapId}</div>
       <button
-        onClick={() => navigate("/maps")}
+        onClick={() => navigate(backDest)}
         style={{ padding: "10px 24px", background: "#10b981", color: "#fff", border: "none", borderRadius: 8, fontWeight: 700, cursor: "pointer" }}
       >
-        ← Back to Register
+        {backText}
       </button>
     </div>
   );
@@ -126,12 +144,12 @@ export default function MapDetail() {
 
       {/* Back button */}
       <button
-        onClick={() => navigate("/maps")}
+        onClick={() => navigate(backDest)}
         style={{ background: "#1a2332", border: "1.5px solid rgba(255,255,255,0.08)", borderRadius: 7, padding: "8px 16px", fontSize: 12.5, color: "#94a3b8", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 18, cursor: "pointer", transition: "all 0.15s" }}
         onMouseEnter={e => { e.currentTarget.style.borderColor = "#10b981"; e.currentTarget.style.color = "#10b981"; }}
         onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"; e.currentTarget.style.color = "#94a3b8"; }}
       >
-        ← Back to Register
+        {backText}
       </button>
 
       {/* ── Header ─────────────────────────────────────────────────────────── */}
@@ -141,7 +159,7 @@ export default function MapDetail() {
             <span style={{ fontFamily: "monospace", fontSize: 11.5, fontWeight: 800, color: "#34d399", background: "rgba(52,211,153,0.1)", padding: "3px 9px", borderRadius: 5, border: "1px solid rgba(52,211,153,0.2)" }}>
               {listItem.map_id}
             </span>
-            <PriorityBadge priority={listItem.priority.charAt(0) + listItem.priority.slice(1).toLowerCase()} size="lg" />
+            <PriorityBadge priority={String(listItem.priority || "Medium").charAt(0) + String(listItem.priority || "Medium").slice(1).toLowerCase()} size="lg" />
             <StatusBadge status={complianceStatus} />
           </div>
           <h1 style={{ fontSize: 19, fontWeight: 800, color: "#f1f5f9", lineHeight: 1.4, margin: 0 }}>{listItem.title}</h1>
@@ -473,7 +491,7 @@ export default function MapDetail() {
                       {task.description}
                     </div>
                   </div>
-                  <PriorityBadge priority={task.priority.charAt(0) + task.priority.slice(1).toLowerCase()} size="sm" />
+                  <PriorityBadge priority={String(task.priority || "Medium").charAt(0) + String(task.priority || "Medium").slice(1).toLowerCase()} size="sm" />
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 10, fontSize: 11 }}>
                   <div>
@@ -530,6 +548,15 @@ export default function MapDetail() {
           {detailData.compliance_decision.rationale && (
             <div style={{ fontSize: 12, color: "#cbd5e1", lineHeight: 1.6 }}>{detailData.compliance_decision.rationale}</div>
           )}
+        </div>
+      )}
+
+      {/* Session context footer */}
+      {isSessionRoute && (
+        <div style={{ padding: "12px 16px", background: "rgba(96,165,250,0.05)", border: "1px solid rgba(96,165,250,0.12)", borderRadius: 9, fontSize: 12, color: "#64748b", lineHeight: 1.6, marginTop: 14 }}>
+          <span style={{ color: "#60a5fa", fontWeight: 700 }}>Session artefact</span> — this MAP was generated during session{" "}
+          <code style={{ color: "#94a3b8", fontSize: 11 }}>{decodeURIComponent(sessionId)}</code> from document{" "}
+          <code style={{ color: "#60a5fa", fontSize: 11 }}>{listItem?.document_id ?? "—"}</code>.
         </div>
       )}
     </div>

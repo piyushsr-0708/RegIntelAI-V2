@@ -36,12 +36,12 @@ export default function AssignmentPreview({ maps, department_impact }) {
                 {deptMaps.map((m) => (
                   <div key={m.map_id} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 10px", background: "rgba(255,255,255,0.02)", borderRadius: 7, border: "1px solid rgba(255,255,255,0.04)" }}>
                     <span style={{ fontFamily: "monospace", fontSize: 10, color: "#34d399", background: "rgba(52,211,153,0.1)", padding: "1px 6px", borderRadius: 4, flexShrink: 0 }}>
-                      {m.map_id.slice(-14)}
+                      {String(m.map_id || "").slice(-14)}
                     </span>
                     <span style={{ fontSize: 12, color: "#94a3b8", flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                       {m.title}
                     </span>
-                    <PriorityBadge priority={m.priority.charAt(0) + m.priority.slice(1).toLowerCase()} />
+                    <PriorityBadge priority={String(m.priority || m.criticality || "Medium").charAt(0) + String(m.priority || m.criticality || "Medium").slice(1).toLowerCase()} />
                   </div>
                 ))}
                 {d.map_count > 5 && (

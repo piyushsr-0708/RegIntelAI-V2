@@ -1,0 +1,20 @@
+{
+  "document_id": "MD10190",
+  "requirement_id": "MD10190_req48",
+  "assignment_id": "1d4f17b1-73ad-4e86-a501-418bbda2f504",
+  "verdict": "ESCALATE",
+  "reasoning": "Verifying 'Foreign Exchange Compliance Control'. addressing monitor cross-border capital flows and enforce limits. Plan contains 3 checks: 2 automated, 1 manual. Executing automated portion (2 checks) while flagging 1 checks for compliance officer review. Automated checks have 81% confidence. Partial automation with manual oversight.",
+  "confidence_score": 0.81,
+  "automated_checks_available": 2,
+  "manual_checks_required": 1,
+  "total_checks": 3,
+  "execute_automated": true,
+  "requires_manual_review": true,
+  "recommended_action": "Execute 2 automated checks, then route 1 manual checks to compliance officer",
+  "control_objective": "To ensure that all applicable Foreign Exchange requirements relating to 'Anti-Money Laundering Controls', thereby enabling the institution to demonstrate full regulatory adherence and reduce Financial Risk exposure.",
+  "regulatory_intent": "Monitor cross-border capital flows and enforce limits",
+  "automation_feasibility": "Low",
+  "timestamp": "2026-07-16T15:44:28.114378+00:00",
+  "criticality": "MEDIUM",
+  "department": "IT"
+}

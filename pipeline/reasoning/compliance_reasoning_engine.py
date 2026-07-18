@@ -369,8 +369,23 @@ class ComplianceReasoningEngine:
         return asdict(obj)
 
     def process_document(self, json_path: Path) -> None:
+        import os
+        import traceback
+        
+        print(f"1.\n{os.getcwd()}")
+        print(f"2.\n{json_path}")
+        print(f"3.\n{json_path.resolve()}")
+        print(f"4.\n{json_path.exists()}")
+        
         doc_id = json_path.stem
+        print(f"5.\n{doc_id}")
+        print(f"6.\n{self.output_dir}")
+        print(f"7.\n{self.output_dir.resolve()}")
+        
         output_file = self.output_dir / f"{doc_id}.json"
+        print(f"8.\n{output_file}")
+        print(f"9.\n{output_file.resolve()}")
+        print(f"10.\n{output_file.exists()}")
 
         if output_file.exists():
             self.logger.info(f"Skipping {doc_id} — reasoned controls already generated.")
@@ -379,20 +394,41 @@ class ComplianceReasoningEngine:
         try:
             with open(json_path, "r", encoding="utf-8") as f:
                 doc = json.load(f)
+            print("11.\nSuccessfully opened JSON")
         except Exception as e:
+            print(f"exact exception class\n{e.__class__.__name__}")
+            print(f"exact exception message\n{str(e)}")
+            print(f"full traceback\n{traceback.format_exc()}")
             self.logger.error(f"Cannot read {json_path}: {e}")
             return
 
+        interpreted_control_count = doc.get("interpreted_control_count", -1)
+        print(f"12.\n{interpreted_control_count}")
+        
         interpreted = doc.get("interpreted_controls", [])
+        print(f"13.\n{len(interpreted)}")
+        
         reasoned: List[Dict[str, Any]] = []
 
-        for ctrl in interpreted:
+        print("14.\nEntering processing loop")
+        for idx, ctrl in enumerate(interpreted):
+            if idx == 0:
+                print(f"15.\n{ctrl.get('requirement_id')}")
             try:
                 rcc = reason_control(ctrl)
+                if idx == 0: print("16.\nAfter reason_control()")
                 self._update_stats(rcc)
-                reasoned.append(self._dataclass_to_dict(rcc))
+                rcc_dict = self._dataclass_to_dict(rcc)
+                if idx == 0: print("17.\nAfter _dataclass_to_dict()")
+                reasoned.append(rcc_dict)
+                if idx == 0: print("18.\nAfter appending to reasoned list")
             except Exception as e:
+                print(f"exact exception class\n{e.__class__.__name__}")
+                print(f"exact exception message\n{str(e)}")
+                print(f"full traceback\n{traceback.format_exc()}")
                 self.logger.error(f"Reasoning failed for {ctrl.get('requirement_id')}: {e}")
+
+        print(f"19.\n{len(reasoned)}")
 
         output = {
             "document_id": doc_id,
@@ -402,12 +438,26 @@ class ComplianceReasoningEngine:
             "reasoned_controls": reasoned,
         }
 
+        print("20.\nImmediately before opening output file")
         try:
             with open(output_file, "w", encoding="utf-8") as f:
+                print("21.\nImmediately after opening output file")
                 json.dump(output, f, indent=2, ensure_ascii=False)
+                print("22.\nImmediately after json.dump()")
+            print("23.\nImmediately after closing output file")
             self.stats["documents_processed"] += 1
             self.logger.info(f"Generated {len(reasoned)} reasoned controls for {doc_id}")
+            print("23.1")
+            print(output_file.exists())
+            if output_file.exists():
+                print(output_file.stat().st_size)
+            print("23.2")
+            print(list(self.output_dir.glob("*.json"))[-5:])
+            print(f"24.\n{output_file.resolve()}")
         except Exception as e:
+            print(f"exact exception class\n{e.__class__.__name__}")
+            print(f"exact exception message\n{str(e)}")
+            print(f"full traceback\n{traceback.format_exc()}")
             self.logger.error(f"Cannot write {output_file}: {e}")
 
     def run(self) -> None:

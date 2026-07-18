@@ -4,6 +4,7 @@ FastAPI application with offline JWT authentication, RBAC, paginated endpoints.
 Run: .venv/Scripts/python.exe -m uvicorn backend.main:app --port 8000 --reload
 """
 import uvicorn
+import json
 import logging
 from typing import Optional
 from pathlib import Path
@@ -321,7 +322,33 @@ def list_assignments(
 
     svc = AssignmentService(db)
     result = svc.get_assignments(department_id=department_id, status=status, search=search, page=page, page_size=page_size)
-    return {**result, "items": [_serialize_assignment(a) for a in result["items"]]}
+
+    # Filter out stale assignments whose source document artifacts no longer exist.
+    # Build a set of document_ids that have MAP files to avoid N+1 queries.
+    maps_dir = project_root / "datasets" / "maps"
+    # Collect all source_document_ids referenced by the returned assignments in one query
+    map_ids = [a.map_id for a in result["items"] if a.map_id]
+    if map_ids:
+        source_docs = {
+            row[0]: row[1]
+            for row in db.query(ManagementActionPlan.id, ManagementActionPlan.source_document_id)
+            .filter(ManagementActionPlan.id.in_(map_ids))
+            .all()
+        }
+        valid_items = [
+            a for a in result["items"]
+            if not a.map_id
+            or not source_docs.get(a.map_id)
+            or (maps_dir / f"{source_docs[a.map_id]}.json").exists()
+        ]
+    else:
+        valid_items = result["items"]
+
+    return {
+        **result,
+        "total": len(valid_items),
+        "items": [_serialize_assignment(a) for a in valid_items],
+    }
 
 
 @app.patch("/assignments/{assignment_id}", tags=["Assignments"])
@@ -369,7 +396,35 @@ def assignment_stats(
     if current.department_id and not current.can(Perm.WILDCARD):
         department_id = current.department_id
     svc = AssignmentService(db)
-    return svc.get_assignment_status_summary(department_id=department_id)
+
+    # Apply the same orphan filter as list_assignments so stats match visible rows.
+    maps_dir = project_root / "datasets" / "maps"
+    all_assignments = db.query(ControlAssignment).all()
+    map_ids = [a.map_id for a in all_assignments if a.map_id]
+    if map_ids:
+        source_docs = {
+            row[0]: row[1]
+            for row in db.query(ManagementActionPlan.id, ManagementActionPlan.source_document_id)
+            .filter(ManagementActionPlan.id.in_(map_ids))
+            .all()
+        }
+        valid = [
+            a for a in all_assignments
+            if (not a.map_id
+                or not source_docs.get(a.map_id)
+                or (maps_dir / f"{source_docs[a.map_id]}.json").exists())
+            and (not department_id or a.department_id == department_id)
+        ]
+    else:
+        valid = [
+            a for a in all_assignments
+            if not department_id or a.department_id == department_id
+        ]
+
+    summary = {}
+    for a in valid:
+        summary[a.status] = summary.get(a.status, 0) + 1
+    return summary
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -453,22 +508,25 @@ def entity_audit_log(
 def get_document_session(
     document_id: str,
     current: CurrentUser = Depends(require_permission(Perm.MAP_READ)),
+    db: Session = Depends(get_db),
 ):
     """
     Get complete session data for a processed document.
     Returns parsed data, requirements, MAPs, verification plans, and processing metrics.
+    MAPs are normalized using DB records (same source as Compliance Register).
     """
     import json
     from pathlib import Path
-    
+    from sqlalchemy.orm import joinedload
+
     # Read parsed document metadata
     parsed_path = project_root / "datasets" / "parsed" / f"{document_id}.json"
     if not parsed_path.exists():
         raise HTTPException(status_code=404, detail=f"Document {document_id} not found or not yet processed")
-    
+
     with open(parsed_path, "r", encoding="utf-8") as f:
         parsed_data = json.load(f)
-    
+
     # Read requirements
     requirements = []
     requirements_path = project_root / "datasets" / "requirements" / f"{document_id}.json"
@@ -476,41 +534,82 @@ def get_document_session(
         with open(requirements_path, "r", encoding="utf-8") as f:
             req_data = json.load(f)
             requirements = req_data.get("requirements", [])
-    
-    # Read MAPs
-    maps_list = []
-    departments = set()
-    maps_path = project_root / "datasets" / "maps" / f"{document_id}.json"
-    if maps_path.exists():
-        with open(maps_path, "r", encoding="utf-8") as f:
-            maps_data = json.load(f)
-            maps_list = maps_data.get("maps", [])
-            departments = {m.get("department") for m in maps_list if m.get("department")}
-    
+
     # Read verification plans
     verification_plans = []
     vp_path = project_root / "datasets" / "verification_plans" / f"{document_id}.json"
     if vp_path.exists():
         with open(vp_path, "r", encoding="utf-8") as f:
             vp_data = json.load(f)
-            verification_plans = vp_data.get("plans", [])
-    
+            verification_plans = vp_data.get("verification_plans", vp_data.get("plans", []))
+
+    # Build normalized MAP list from DB (same source as Compliance Register)
+    # Falls back to raw JSON if DB records are not yet ingested.
+    db_maps = db.query(ManagementActionPlan).options(
+        joinedload(ManagementActionPlan.department),
+        joinedload(ManagementActionPlan.control),
+    ).filter(ManagementActionPlan.source_document_id == document_id).all()
+
+    if db_maps:
+        maps_list = [
+            {
+                "map_id": m.id,
+                "control_id": m.control_id,
+                "title": m.control.name if m.control else m.description or m.id,
+                "department": m.department.name if m.department else "",
+                "priority": m.priority or "MEDIUM",
+                "automation_percentage": float(m.automation_percent or 0),
+                "compliance_status": m.status,
+                "status": m.status,
+                "owner_department": m.department.name if m.department else "",
+                "source_document_id": m.source_document_id,
+                "ai_rationale": m.ai_rationale,
+                "verification_plan": m.verification_plan,
+                "control_objective": m.control.objective if m.control else None,
+                "control_description": m.control.description if m.control else None,
+                "source_requirement_text": m.source_requirement_text,
+            }
+            for m in db_maps
+        ]
+    else:
+        # Fallback: raw JSON with field normalization
+        maps_path = project_root / "datasets" / "maps" / f"{document_id}.json"
+        raw_maps = []
+        if maps_path.exists():
+            with open(maps_path, "r", encoding="utf-8") as f:
+                raw_maps = json.load(f).get("maps", [])
+        maps_list = [
+            {
+                **m,
+                "department": m.get("owner_department") or m.get("department") or "",
+                "automation_percentage": float(m.get("automation_percentage") or m.get("automation_percent") or 0),
+                "compliance_status": m.get("compliance_status") or m.get("status") or "DRAFT",
+            }
+            for m in raw_maps
+        ]
+
+    departments = {m["department"] for m in maps_list if m.get("department")}
+
     # Build department impact summary
-    department_impact = []
-    for dept in departments:
-        dept_maps = [m for m in maps_list if m.get("department") == dept]
-        department_impact.append({
-            "department": dept,
-            "map_count": len(dept_maps)
-        })
-    
-    # Calculate metadata
+    department_impact = [
+        {"department": dept, "map_count": sum(1 for m in maps_list if m.get("department") == dept)}
+        for dept in departments
+    ]
+
+    # Read pipeline stage durations from status file
+    stages = []
+    status_path = project_root / "datasets" / "processed" / f"{document_id}_status.json"
+    if status_path.exists():
+        with open(status_path, "r", encoding="utf-8") as f:
+            status_data = json.load(f)
+        stages = status_data.get("stages", [])
+
     page_count = parsed_data.get("page_count", 0)
-    word_count = page_count * 350  # Average words per page estimate
-    
+    word_count = parsed_data.get("word_count") or page_count * 350
+
     return {
         "document_id": document_id,
-        "filename": f"{document_id}.pdf",
+        "filename": parsed_data.get("metadata", {}).get("filename") or f"{document_id}.pdf",
         "page_count": page_count,
         "word_count": word_count,
         "requirements_count": len(requirements),
@@ -518,14 +617,49 @@ def get_document_session(
         "departments_count": len(departments),
         "processing_complete": True,
         "metadata": parsed_data.get("metadata", {}),
-        # Complete session data
         "requirements": requirements,
         "maps": maps_list,
         "verification_plans": verification_plans,
         "department_impact": department_impact,
-        "graph": {"nodes": [], "edges": []},  # Graph not persisted yet
-        "stages": [],  # Pipeline stages not persisted yet
+        "graph": {"nodes": [], "edges": []},
+        "stages": stages,
     }
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DOCUMENT STATUS HELPERS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+def _status_path(document_id: str) -> Path:
+    return project_root / "datasets" / "processed" / f"{document_id}_status.json"
+
+
+def _write_status(document_id: str, status: str, current_stage: str, progress: int, message: str, error=None):
+    path = _status_path(document_id)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({
+            "status": status,
+            "current_stage": current_stage,
+            "progress": progress,
+            "message": message,
+            "error": error,
+        }, f)
+
+
+@app.get("/documents/{document_id}/status", tags=["Documents"])
+def get_document_status(
+    document_id: str,
+    current: CurrentUser = Depends(require_permission(Perm.MAP_READ)),
+):
+    """
+    Returns the current processing status of a document.
+    """
+    path = _status_path(document_id)
+    if not path.exists():
+        raise HTTPException(status_code=404, detail=f"No status found for document {document_id}")
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -561,40 +695,101 @@ def _generate_upload_document_id() -> str:
     return f"UP{today}_{next_seq:04d}"
 
 
+# Stage name → (progress %, human message) for status updates
+# Keys are stage_name.upper().replace(" ", "_") from the orchestrator's _run_stage calls
+_STAGE_PROGRESS = {
+    "PDF_PARSER":                    (10,  "Parsing PDF document"),
+    "DOCUMENT_NORMALIZER":           (20,  "Normalizing document text"),
+    "HIERARCHY_BUILDER":             (28,  "Building document hierarchy"),
+    "LOGICAL_UNIT_BUILDER":          (36,  "Building logical units"),
+    "REQUIREMENT_EXTRACTOR":         (45,  "Extracting requirements"),
+    "REQUIREMENT_ENRICHER":          (54,  "Enriching requirements"),
+    "COMPLIANCE_INTERPRETER":        (62,  "Interpreting compliance controls"),
+    "COMPLIANCE_REASONING_ENGINE":   (70,  "Running compliance reasoning engine"),
+    "CONTROL_DERIVER":               (76,  "Deriving controls"),
+    "VERIFICATION_RULE_GENERATOR":   (82,  "Generating verification rules"),
+    "VERIFICATION_PLANNER":          (87,  "Planning verification"),
+    "MAP_GENERATOR":                 (92,  "Generating MAPs"),
+    "DATABASE_INGEST":               (96,  "Ingesting into database"),
+    "DASHBOARD_AGGREGATOR":          (99,  "Aggregating dashboard"),
+}
+
+
+def _write_status_with_stages(document_id: str, status: str, current_stage: str, progress: int, message: str, stages: list, error=None):
+    """Write status JSON including accumulated stage records."""
+    path = _status_path(document_id)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({
+            "status": status,
+            "current_stage": current_stage,
+            "progress": progress,
+            "message": message,
+            "error": error,
+            "stages": stages,
+        }, f)
+
+
 def _run_uploaded_document_pipeline(document_id: str, pdf_source_dir: Path):
     """
     Background task wrapper that executes the pipeline for an uploaded document.
+    Writes status JSON at each stage transition so the frontend can poll it.
+    Persists completed stage records so the session endpoint can return them.
     """
+    import time
+    import traceback
+
+    completed_stages = []
+    _write_status_with_stages(document_id, "processing", "STARTING", 2, "Pipeline initialising", completed_stages)
     logger.info(f"[BACKGROUND] Background task started for document: {document_id}")
-    logger.info(f"[BACKGROUND] PDF source directory: {pdf_source_dir}")
-    
+
     try:
-        logger.info(f"[BACKGROUND] Importing DocumentPipelineOrchestrator...")
         from pipeline.orchestrator.document_orchestrator import DocumentPipelineOrchestrator
-        logger.info(f"[BACKGROUND] ✓ Import successful")
-        
-        logger.info(f"[BACKGROUND] Instantiating orchestrator with pdf_source_dir={pdf_source_dir}")
+
+        # Monkey-patch _run_stage to emit live status updates AND accumulate stage records.
+        original_run_stage = DocumentPipelineOrchestrator._run_stage
+
+        def _patched_run_stage(self, stage_name, stage_function, doc_id, expected_output_dir=None):
+            stage_key = stage_name.upper().replace(" ", "_")
+            progress, message = _STAGE_PROGRESS.get(stage_key, (50, f"Running {stage_name}"))
+            _write_status_with_stages(document_id, "processing", stage_key, progress, message, completed_stages)
+            stage_start = time.time()
+            result = original_run_stage(self, stage_name, stage_function, doc_id, expected_output_dir)
+            duration_ms = int((time.time() - stage_start) * 1000)
+            completed_stages.append({
+                "id": stage_key,
+                "label": stage_name,
+                "records": "—",
+                "duration_ms": duration_ms,
+                "status": result.status,
+            })
+            return result
+
+        DocumentPipelineOrchestrator._run_stage = _patched_run_stage
+
         orchestrator = DocumentPipelineOrchestrator(
             project_root=project_root,
             pdf_source_dir=pdf_source_dir
         )
-        logger.info(f"[BACKGROUND] ✓ Orchestrator instantiated")
-        
-        logger.info(f"[BACKGROUND] Starting pipeline execution for {document_id}")
+
         result = orchestrator.process_document(document_id)
-        
+
         if result.status == "SUCCESS":
-            logger.info(f"[BACKGROUND] ✓ Pipeline completed successfully for {document_id}")
-            logger.info(f"[BACKGROUND] Duration: {result.total_duration_seconds:.2f}s")
-            logger.info(f"[BACKGROUND] Stages completed: {len(result.completed_stages)}/14")
+            _write_status_with_stages(document_id, "completed", "COMPLETED", 100,
+                                      "Pipeline completed successfully", completed_stages)
+            logger.info(f"[BACKGROUND] ✓ Pipeline completed for {document_id} in {result.total_duration_seconds:.2f}s")
         else:
-            logger.error(f"[BACKGROUND] ✗ Pipeline failed for {document_id}")
-            logger.error(f"[BACKGROUND] Failed at stage: {result.failed_stage}")
-            logger.error(f"[BACKGROUND] Error: {result.error_message}")
-            
+            _write_status_with_stages(document_id, "failed", result.failed_stage or "UNKNOWN", 0,
+                                      f"Pipeline failed at {result.failed_stage}", completed_stages,
+                                      error=result.error_message)
+            logger.error(f"[BACKGROUND] ✗ Pipeline failed for {document_id} at {result.failed_stage}")
+
     except Exception as e:
-        logger.error(f"[BACKGROUND] ✗ Critical error in background task for {document_id}")
-        logger.error(f"[BACKGROUND] Exception: {e}", exc_info=True)
+        error_msg = f"{type(e).__name__}: {e}"
+        _write_status_with_stages(document_id, "failed", "EXCEPTION", 0,
+                                  "Pipeline encountered an unexpected error", completed_stages, error=error_msg)
+        logger.error(f"[BACKGROUND] ✗ Critical error for {document_id}: {e}", exc_info=True)
+        traceback.print_exc()
 
 
 @app.post("/documents/upload", tags=["Documents"])
@@ -605,99 +800,68 @@ async def upload_document(
 ):
     """
     Upload a new RBI circular PDF for processing.
-    
-    The uploaded document will be processed through the complete pipeline:
-    - PDF parsing
-    - Requirement extraction
-    - Control generation
-    - Verification planning
-    - MAP generation
-    - Database ingestion
-    
     Returns immediately with document_id. Processing happens in background.
+    Poll GET /documents/{document_id}/status for progress.
     """
-    logger.info(f"[UPLOAD] Upload request received from user {current.username} (ID: {current.id})")
-    logger.info(f"[UPLOAD] Filename: {file.filename}, Content-Type: {file.content_type}")
-    
-    # Validate file type
+    logger.info(f"[UPLOAD] Upload request from {current.username}: {file.filename}")
+
     if not file.filename.lower().endswith('.pdf'):
-        logger.warning(f"[UPLOAD] Invalid file type rejected: {file.filename}")
         raise HTTPException(status_code=400, detail="Only PDF files are accepted")
-    
-    logger.info(f"[UPLOAD] File type validated: PDF")
-    
-    # Validate file size (50MB limit)
-    MAX_SIZE = 50 * 1024 * 1024  # 50MB
+
+    MAX_SIZE = 50 * 1024 * 1024
     file_content = await file.read()
-    file_size_mb = len(file_content) / (1024 * 1024)
-    
-    logger.info(f"[UPLOAD] File size: {file_size_mb:.2f} MB")
-    
     if len(file_content) > MAX_SIZE:
-        logger.warning(f"[UPLOAD] File too large: {file_size_mb:.2f} MB (max 50 MB)")
-        raise HTTPException(status_code=400, detail=f"File too large. Maximum size is 50MB")
-    
-    # Compute SHA-256 hash for duplicate detection
+        raise HTTPException(status_code=400, detail="File too large. Maximum size is 50MB")
+
     import hashlib
     file_hash = hashlib.sha256(file_content).hexdigest()
-    logger.info(f"[UPLOAD] Computed SHA-256: {file_hash}")
-    
-    # Check for existing document with same hash
+
+    # Duplicate detection
     parsed_dir = project_root / "datasets" / "parsed"
     if parsed_dir.exists():
         for parsed_file in parsed_dir.glob("*.json"):
             try:
-                import json
                 with open(parsed_file, "r", encoding="utf-8") as f:
                     parsed_data = json.load(f)
                     if parsed_data.get("metadata", {}).get("sha256") == file_hash:
                         existing_doc_id = parsed_data.get("document_id")
-                        logger.info(f"[UPLOAD] Duplicate detected! Existing document: {existing_doc_id}")
+                        logger.info(f"[UPLOAD] Duplicate detected: {existing_doc_id}")
                         return {
                             "document_id": existing_doc_id,
                             "filename": file.filename,
-                            "original_filename": file.filename,
                             "status": "completed",
-                            "message": f"Document already exists as {existing_doc_id}. Reusing existing processed data.",
-                            "duplicate": True
+                            "message": f"Document already processed as {existing_doc_id}.",
+                            "duplicate": True,
                         }
-            except:
+            except Exception:
                 continue
-    
-    # Generate document ID
+
     document_id = _generate_upload_document_id()
     logger.info(f"[UPLOAD] Generated document ID: {document_id}")
-    
-    # Create upload directory
+
     upload_dir = project_root / "datasets" / "raw" / "uploaded_documents" / "pdfs"
     upload_dir.mkdir(parents=True, exist_ok=True)
-    logger.info(f"[UPLOAD] Upload directory ready: {upload_dir}")
-    
-    # Save PDF
+
     pdf_path = upload_dir / f"{document_id}.pdf"
     try:
         with open(pdf_path, "wb") as f:
             f.write(file_content)
-        logger.info(f"[UPLOAD] ✓ PDF saved successfully: {pdf_path}")
     except Exception as e:
-        logger.error(f"[UPLOAD] ✗ Failed to save PDF: {e}", exc_info=True)
+        logger.error(f"[UPLOAD] Failed to save PDF: {e}")
         raise HTTPException(status_code=500, detail="Failed to save uploaded document")
-    
-    # Queue background pipeline execution
-    logger.info(f"[UPLOAD] Scheduling background task for document {document_id}")
+
+    # Write initial status before queuing background task
+    _write_status_with_stages(document_id, "processing", "QUEUED", 1, "Document queued for processing", [])
+
     background_tasks.add_task(_run_uploaded_document_pipeline, document_id, upload_dir)
-    logger.info(f"[UPLOAD] ✓ Background task scheduled successfully")
-    
-    response_data = {
+    logger.info(f"[UPLOAD] Background task queued for {document_id}")
+
+    return {
         "document_id": document_id,
         "filename": file.filename,
-        "original_filename": file.filename,
         "status": "processing",
-        "message": "Document uploaded successfully. Processing in background."
+        "message": "Document uploaded successfully. Processing in background.",
     }
-    
-    logger.info(f"[UPLOAD] Returning response: {response_data}")
-    return response_data
 
 
 if __name__ == "__main__":

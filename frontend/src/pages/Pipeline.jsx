@@ -7,14 +7,14 @@
  */
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import { useSessionContext } from "../context/SessionContext";
-import { useComplianceRegister } from "../context/FrontendStateContext";
 import { PIPELINE_STAGE_DEFS } from "../pipeline/pipelineUtils";
 import * as PipelineOrchestrator from "../pipeline/PipelineOrchestrator";
 import PipelineStageCard from "../components/session/PipelineStageCard";
 import Breadcrumbs from "../components/Breadcrumbs";
 
-const PHASE = { IDLE: "idle", RUNNING: "running", DONE: "done" };
+const PHASE = { IDLE: "idle", RUNNING: "running", DONE: "done", ERROR: "error" };
 
 const INIT_STAGES = PIPELINE_STAGE_DEFS.map(() => ({
   status: "pending", progress: 0, elapsed_ms: 0,
@@ -22,8 +22,8 @@ const INIT_STAGES = PIPELINE_STAGE_DEFS.map(() => ({
 
 export default function Pipeline() {
   const navigate   = useNavigate();
+  const { can } = useAuth();
   const { createSession, updateSession } = useSessionContext();
-  const register   = useComplianceRegister();
 
   const [phase,        setPhase]        = useState(PHASE.IDLE);
   const [file,         setFile]         = useState(null);
@@ -31,6 +31,7 @@ export default function Pipeline() {
   const [sessionId,    setSessionId]    = useState(null);
   const [stageStates,  setStageStates]  = useState(INIT_STAGES);
   const [totalElapsed, setTotalElapsed] = useState(0);
+  const [errorMsg,     setErrorMsg]     = useState(null);
 
   const fileInputRef = useRef(null);
   const timerRef     = useRef(null);
@@ -55,6 +56,7 @@ export default function Pipeline() {
     setStageStates(INIT_STAGES);
     setTotalElapsed(0);
     setSessionId(null);
+    setErrorMsg(null);
   }, []);
 
   const onInputChange = (e) => handleFile(e.target.files?.[0] ?? null);
@@ -67,34 +69,49 @@ export default function Pipeline() {
     const sid = createSession(file.name);
     setSessionId(sid);
     setPhase(PHASE.RUNNING);
+    setErrorMsg(null);
 
-    const sessionData = await PipelineOrchestrator.run({
-      file,
-      complianceRegister: register,
+    try {
+      const result = await PipelineOrchestrator.run({
+        file,
 
-      onStageStart: (i) => {
-        setStageStates((prev) =>
-          prev.map((s, idx) => idx === i ? { status: "running", progress: 0, elapsed_ms: 0 } : s)
-        );
-      },
+        onUploadComplete: (document_id) => {
+          // Persist the real backend document_id as soon as upload succeeds,
+          // before the pipeline finishes. Fixes stale document_id after refresh.
+          updateSession(sid, { document_id, status: "processing" });
+        },
 
-      onStageProgress: (i, pct, elapsed_ms) => {
-        setStageStates((prev) =>
-          prev.map((s, idx) => idx === i ? { ...s, progress: pct, elapsed_ms } : s)
-        );
-      },
+        onStageStart: (i) => {
+          setStageStates((prev) =>
+            prev.map((s, idx) => idx === i ? { status: "running", progress: 0, elapsed_ms: 0 } : s)
+          );
+        },
 
-      onStageComplete: (i) => {
-        setStageStates((prev) =>
-          prev.map((s, idx) => idx === i ? { ...s, status: "completed", progress: 100 } : s)
-        );
-      },
-    });
+        onStageProgress: (i, pct, elapsed_ms) => {
+          setStageStates((prev) =>
+            prev.map((s, idx) => idx === i ? { ...s, progress: pct, elapsed_ms } : s)
+          );
+        },
 
-    updateSession(sid, sessionData);
-    setPhase(PHASE.DONE);
-    setTimeout(() => navigate(`/session/${encodeURIComponent(sid)}`), 700);
-  }, [file, register, createSession, updateSession, navigate]);
+        onStageComplete: (i) => {
+          setStageStates((prev) =>
+            prev.map((s, idx) => idx === i ? { ...s, status: "completed", progress: 100 } : s)
+          );
+        },
+      });
+
+      // Store the real document_id from the backend into the session
+      updateSession(sid, { document_id: result.document_id, status: "completed" });
+      setPhase(PHASE.DONE);
+      setTimeout(() => navigate(`/session/${encodeURIComponent(sid)}`), 700);
+    } catch (err) {
+      console.error("[Pipeline] Upload/pipeline error:", err);
+      setErrorMsg(err.message || "Upload failed");
+      setPhase(PHASE.ERROR);
+      // Remove the incomplete session so it doesn't appear in Recent Sessions
+      updateSession(sid, { status: "failed" });
+    }
+  }, [file, createSession, updateSession, navigate]);
 
   const completedCount  = stageStates.filter((s) => s.status === "completed").length;
   const overallProgress = Math.round((completedCount / PIPELINE_STAGE_DEFS.length) * 100);
@@ -135,15 +152,16 @@ export default function Pipeline() {
         <div>
           {/* Drop zone */}
           <div
-            onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+            onDragOver={(e) => { if (can('doc:upload')) { e.preventDefault(); setDragOver(true); } }}
             onDragLeave={() => setDragOver(false)}
-            onDrop={onDrop}
-            onClick={() => phase === PHASE.IDLE && fileInputRef.current?.click()}
+            onDrop={(e) => { if (can('doc:upload')) onDrop(e); }}
+            onClick={() => can('doc:upload') && phase === PHASE.IDLE && fileInputRef.current?.click()}
             style={{
               border: `2px dashed ${dragOver ? "#10b981" : file ? "rgba(16,185,129,0.4)" : "rgba(255,255,255,0.1)"}`,
               borderRadius: 12, padding: "36px 24px", textAlign: "center",
               background: dragOver ? "rgba(16,185,129,0.05)" : "rgba(255,255,255,0.02)",
-              cursor: phase === PHASE.IDLE ? "pointer" : "default",
+              cursor: can('doc:upload') ? (phase === PHASE.IDLE ? "pointer" : "default") : "not-allowed",
+              opacity: can('doc:upload') ? 1 : 0.5,
               transition: "all 0.2s ease", marginBottom: 16,
             }}
           >
@@ -165,7 +183,7 @@ export default function Pipeline() {
           </div>
 
           {/* Run button */}
-          {phase === PHASE.IDLE && file && (
+          {phase === PHASE.IDLE && file && can('doc:upload') && (
             <button
               onClick={runPipeline}
               style={{ width: "100%", padding: "14px", fontSize: 14, fontWeight: 700, color: "#fff", background: "linear-gradient(135deg,#10b981,#059669)", border: "none", borderRadius: 9, cursor: "pointer", boxShadow: "0 4px 14px rgba(16,185,129,0.3)", transition: "all 0.2s", marginBottom: 16 }}
@@ -187,7 +205,7 @@ export default function Pipeline() {
                 <div style={{ height: "100%", width: `${overallProgress}%`, background: "linear-gradient(90deg,#38bdf8,#0ea5e9)", borderRadius: 3, transition: "width 0.3s ease" }} />
               </div>
               <div style={{ fontSize: 11, color: "#475569", marginTop: 6 }}>
-                Stage {completedCount + 1} of {PIPELINE_STAGE_DEFS.length}
+                Stage {Math.min(completedCount + 1, PIPELINE_STAGE_DEFS.length)} of {PIPELINE_STAGE_DEFS.length}
               </div>
             </div>
           )}
@@ -197,6 +215,20 @@ export default function Pipeline() {
             <div style={{ padding: "14px 16px", background: "rgba(52,211,153,0.08)", border: "1px solid rgba(52,211,153,0.25)", borderRadius: 9, marginBottom: 16, textAlign: "center" }}>
               <div style={{ fontSize: 22, marginBottom: 6 }}>✅</div>
               <div style={{ fontSize: 13, fontWeight: 700, color: "#34d399" }}>Pipeline complete — navigating to session…</div>
+            </div>
+          )}
+
+          {/* Error */}
+          {phase === PHASE.ERROR && (
+            <div style={{ padding: "14px 16px", background: "rgba(239,68,68,0.08)", border: "1px solid rgba(239,68,68,0.3)", borderRadius: 9, marginBottom: 16 }}>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "#f87171", marginBottom: 4 }}>⚠ Upload failed</div>
+              <div style={{ fontSize: 12, color: "#94a3b8" }}>{errorMsg}</div>
+              <button
+                onClick={() => { setPhase(PHASE.IDLE); setStageStates(INIT_STAGES); }}
+                style={{ marginTop: 10, padding: "6px 14px", background: "rgba(239,68,68,0.15)", border: "1px solid rgba(239,68,68,0.3)", borderRadius: 6, color: "#f87171", fontSize: 12, fontWeight: 600, cursor: "pointer" }}
+              >
+                Try again
+              </button>
             </div>
           )}
 
@@ -244,7 +276,7 @@ function RecentSessions() {
         Recent Sessions
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-        {sessions.slice(0, 5).map((s) => (
+        {sessions.filter(s => s.status !== "failed").slice(0, 5).map((s) => (
           <button
             key={s.session_id}
             onClick={() => s.status === "completed" && navigate(`/session/${encodeURIComponent(s.session_id)}`)}

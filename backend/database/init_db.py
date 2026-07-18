@@ -33,8 +33,6 @@ DEPARTMENTS = [
     ("Risk",            "Risk Management"),
     ("Internal Audit",  "Internal Audit Department"),
     ("Operations",      "Operations Department"),
-    ("Treasury",        "Treasury Department"),
-    ("Legal",           "Legal & Regulatory Affairs"),
 ]
 
 def init_db():

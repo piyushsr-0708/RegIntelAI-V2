@@ -1,9 +1,8 @@
 /**
  * SessionDashboard.jsx — RegIntel AI V2
  * Document-centric dashboard for a single analysis session.
- * Reads from SessionContext only — NOT the global compliance register.
- * 9 sections: Summary, Pipeline, MAPs, Dept Impact, Priority, Capability,
- *             Knowledge Graph, Verification Plans, Assignment Preview.
+ * Always fetches real data from GET /documents/{document_id}/session.
+ * No simulated fallback.
  */
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
@@ -18,7 +17,6 @@ import SessionKnowledgeGraph from "../components/session/SessionKnowledgeGraph";
 import VerificationSummary from "../components/session/VerificationSummary";
 import AssignmentPreview from "../components/session/AssignmentPreview";
 
-// ─── Pipeline stage summary row ───────────────────────────────────────────────
 function StageSummaryRow({ stage }) {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "9px 14px", borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
@@ -32,7 +30,6 @@ function StageSummaryRow({ stage }) {
   );
 }
 
-// ─── Section wrapper ──────────────────────────────────────────────────────────
 function Section({ title, children }) {
   return (
     <div style={{ marginBottom: 24 }}>
@@ -45,62 +42,86 @@ function Section({ title, children }) {
   );
 }
 
-// ─── Main ─────────────────────────────────────────────────────────────────────
 export default function SessionDashboard() {
   const { id }   = useParams();
   const navigate = useNavigate();
   const session  = useSession(decodeURIComponent(id));
-  const [realData, setRealData] = React.useState(null);
-  const [loading, setLoading] = React.useState(true);
 
-  // Fetch real data from backend if this is an uploaded document
+  const [backendData,    setBackendData]    = React.useState(null);
+  const [loadState,      setLoadState]      = React.useState("loading"); // loading | processing | done | error
+  const [errorMsg,       setErrorMsg]       = React.useState(null);
+  const [statusMessage,  setStatusMessage]  = React.useState(null);
+
+  const docId = session?.document_id;
+
   React.useEffect(() => {
-    if (!session) {
-      setLoading(false);
+    if (!docId) {
+      setLoadState("error");
+      setErrorMsg("No document ID associated with this session.");
       return;
     }
 
-    // Check if document_id looks like an uploaded document (UP prefix)
-    const docId = session.document_id;
-    if (docId && docId.startsWith("UP")) {
-      console.log("[SessionDashboard] Fetching real data for uploaded document:", docId);
-      
+    setLoadState("loading");
+    let pollInterval = null;
+
+    function loadSession() {
       apiFetch(`/documents/${docId}/session`)
-        .then(data => {
-          console.log("[SessionDashboard] ✓ Fetched real data:", data);
-          setRealData(data);
-          setLoading(false);
+        .then((data) => {
+          setBackendData(data);
+          setLoadState("done");
         })
-        .catch(err => {
-          console.error("[SessionDashboard] Failed to fetch real data:", err);
-          setLoading(false);
+        .catch((err) => {
+          console.error("[SessionDashboard] Failed to fetch session:", err);
+          setErrorMsg(err.message || "Failed to load session data from backend.");
+          setLoadState("error");
         });
-    } else {
-      setLoading(false);
     }
-  }, [session]);
 
-  // Merge real data with session data if available
-  const displaySession = realData ? {
-    ...session,
-    filename: realData.original_filename || realData.filename,
-    pages: realData.page_count,
-    words: realData.word_count,
-    // Restore complete session data from backend
-    maps: realData.maps || [],
-    requirements: realData.requirements || [],
-    verification_plans: realData.verification_plans || [],
-    department_impact: realData.department_impact || [],
-    graph: realData.graph || { nodes: [], edges: [] },
-    stages: realData.stages || session.stages || [],
-    // Recalculate counts from actual arrays for consistency
-    requirements_found: (realData.requirements || []).length,
-    maps_generated: (realData.maps || []).length,
-    departments_impacted: (realData.department_impact || []).length,
-    knowledge_graph_nodes: (realData.graph?.nodes || []).length,
-    knowledge_graph_edges: (realData.graph?.edges || []).length,
-  } : session;
+    function checkStatus() {
+      apiFetch(`/documents/${docId}/status`)
+        .then((statusData) => {
+          const { status, message } = statusData;
+          if (status === "completed") {
+            if (pollInterval) { clearInterval(pollInterval); pollInterval = null; }
+            loadSession();
+          } else if (status === "failed") {
+            if (pollInterval) { clearInterval(pollInterval); pollInterval = null; }
+            setErrorMsg(statusData.error || message || "Pipeline failed.");
+            setLoadState("error");
+          } else {
+            // still processing
+            setStatusMessage(message || "Processing…");
+            setLoadState("processing");
+          }
+        })
+        .catch(() => {
+          // Status endpoint unreachable — try loading the session directly.
+          // If it succeeds the pipeline completed; if it 404s we stay in loading.
+          loadSession();
+        });
+    }
 
+    // First attempt: try to load the session directly.
+    // If it succeeds (pipeline already done), we're done immediately.
+    // If it fails with 404, check the status endpoint to decide whether
+    // to poll (processing) or show an error (failed / unknown).
+    apiFetch(`/documents/${docId}/session`)
+      .then((data) => {
+        setBackendData(data);
+        setLoadState("done");
+      })
+      .catch(() => {
+        // Session not ready yet — check status
+        checkStatus();
+        pollInterval = setInterval(checkStatus, 2000);
+      });
+
+    return () => {
+      if (pollInterval) clearInterval(pollInterval);
+    };
+  }, [docId]);
+
+  // ── Session not in context ─────────────────────────────────────────────────
   if (!session) return (
     <div style={{ textAlign: "center", padding: 80 }}>
       <div style={{ fontSize: 40, marginBottom: 14 }}>🔍</div>
@@ -113,23 +134,86 @@ export default function SessionDashboard() {
     </div>
   );
 
-  if (displaySession.status === "processing" || loading) return (
+  // ── Loading ────────────────────────────────────────────────────────────────
+  if (loadState === "loading") return (
     <div style={{ textAlign: "center", padding: 80 }}>
       <svg width="40" height="40" viewBox="0 0 40 40" style={{ animation: "spin 1s linear infinite", marginBottom: 16 }}>
         <circle cx="20" cy="20" r="16" fill="none" stroke="rgba(16,185,129,0.15)" strokeWidth="4"/>
         <path d="M20 4a16 16 0 0 1 16 16" fill="none" stroke="#10b981" strokeWidth="4" strokeLinecap="round"/>
       </svg>
-      <div style={{ fontSize: 14, fontWeight: 700, color: "#10b981" }}>
-        {loading ? "Loading session data…" : "Pipeline still running…"}
-      </div>
+      <div style={{ fontSize: 14, fontWeight: 700, color: "#10b981" }}>Loading session data…</div>
+      <div style={{ fontSize: 12, color: "#475569", marginTop: 6, fontFamily: "monospace" }}>{docId}</div>
     </div>
   );
+
+  // ── Processing (pipeline still running) ────────────────────────────────────
+  if (loadState === "processing") return (
+    <div style={{ textAlign: "center", padding: 80 }}>
+      <svg width="40" height="40" viewBox="0 0 40 40" style={{ animation: "spin 1s linear infinite", marginBottom: 16 }}>
+        <circle cx="20" cy="20" r="16" fill="none" stroke="rgba(16,185,129,0.15)" strokeWidth="4"/>
+        <path d="M20 4a16 16 0 0 1 16 16" fill="none" stroke="#10b981" strokeWidth="4" strokeLinecap="round"/>
+      </svg>
+      <div style={{ fontSize: 14, fontWeight: 700, color: "#10b981" }}>Pipeline still running…</div>
+      <div style={{ fontSize: 12, color: "#94a3b8", marginTop: 6 }}>{statusMessage}</div>
+      <div style={{ fontSize: 11, color: "#475569", marginTop: 4, fontFamily: "monospace" }}>{docId}</div>
+      <div style={{ fontSize: 11, color: "#475569", marginTop: 8 }}>This page will update automatically when processing completes.</div>
+    </div>
+  );
+
+  // ── Backend error ──────────────────────────────────────────────────────────
+  if (loadState === "error") return (
+    <div style={{ textAlign: "center", padding: 80 }}>
+      <div style={{ fontSize: 40, marginBottom: 14 }}>⚠️</div>
+      <div style={{ fontSize: 16, fontWeight: 700, color: "#f87171", marginBottom: 8 }}>Failed to load session</div>
+      <div style={{ fontSize: 12, color: "#94a3b8", marginBottom: 6 }}>{errorMsg}</div>
+      <div style={{ fontSize: 11, color: "#475569", marginBottom: 20, fontFamily: "monospace" }}>{docId}</div>
+      <button onClick={() => navigate("/pipeline")}
+        style={{ padding: "10px 24px", background: "#10b981", color: "#fff", border: "none", borderRadius: 8, fontWeight: 700, cursor: "pointer" }}>
+        ← Back to Pipeline
+      </button>
+    </div>
+  );
+
+  // ── Render real backend data ───────────────────────────────────────────────
+  const d = backendData;
+  const displaySession = {
+    session_id:            session.session_id,
+    document_id:           d.document_id,
+    filename:              d.filename || session.filename,
+    pages:                 d.page_count,
+    words:                 d.word_count,
+    requirements_found:    d.requirements_count,
+    maps_generated:        d.maps_count,
+    departments_impacted:  d.departments_count,
+    knowledge_graph_nodes: (d.graph?.nodes || []).length,
+    knowledge_graph_edges: (d.graph?.edges || []).length,
+    automation_percentage: d.maps?.length
+      ? Math.round(d.maps.reduce((s, m) => s + (Number(m.automation_percentage) || Number(m.automation_percent) || 0), 0) / d.maps.length)
+      : null,
+    overall_risk:          null,
+    maps:                  (d.maps || []).map((m) => ({
+      ...m,
+      // Normalise field names so SessionMapTable and SessionMapDetail always find them
+      department:           m.department || m.owner_department || "",
+      owner_department:     m.owner_department || m.department || "",
+      automation_percentage: Number(m.automation_percentage ?? m.automation_percent ?? 0),
+      compliance_status:    m.compliance_status || m.status || "DRAFT",
+      status:               m.status || m.compliance_status || "DRAFT",
+    })),
+    requirements:          d.requirements || [],
+    verification_plans:    d.verification_plans || [],
+    department_impact:     d.department_impact || [],
+    graph:                 d.graph || { nodes: [], edges: [] },
+    stages:                d.stages || [],
+    processing_duration:   d.stages?.reduce((s, st) => s + (st.duration_ms || 0), 0) ?? 0,
+    processing_timestamp:  session.processing_timestamp,
+    upload_timestamp:      session.upload_timestamp,
+  };
 
   return (
     <div className="animate-fade-in">
       <Breadcrumbs />
 
-      {/* Back button */}
       <button
         onClick={() => navigate("/pipeline")}
         style={{ background: "#1a2332", border: "1.5px solid rgba(255,255,255,0.08)", borderRadius: 7, padding: "8px 16px", fontSize: 12.5, color: "#94a3b8", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 18, cursor: "pointer", transition: "all 0.15s" }}
@@ -139,7 +223,6 @@ export default function SessionDashboard() {
         ← Back to Pipeline
       </button>
 
-      {/* Page header */}
       <div className="page-header">
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 5 }}>
           <div style={{ width: 4, height: 28, borderRadius: 2, background: "linear-gradient(180deg,#10b981,#059669)", boxShadow: "0 0 10px rgba(16,185,129,0.5)" }} />
@@ -150,60 +233,51 @@ export default function SessionDashboard() {
         </p>
       </div>
 
-      {/* 1 — Document Summary */}
       <Section title="Document Summary">
         <SessionSummary session={displaySession} />
       </Section>
 
-      {/* 2 — Pipeline Summary */}
-      <Section title="Pipeline Summary">
-        <div className="card" style={{ overflow: "hidden", marginBottom: 0 }}>
-          <div style={{ padding: "10px 14px", background: "#162030", borderBottom: "1px solid rgba(255,255,255,0.05)", display: "flex", justifyContent: "space-between", fontSize: 11, color: "#475569" }}>
-            <span>Stage</span>
-            <div style={{ display: "flex", gap: 40 }}>
-              <span>Records</span>
-              <span>Duration</span>
+      {displaySession.stages.length > 0 && (
+        <Section title="Pipeline Summary">
+          <div className="card" style={{ overflow: "hidden", marginBottom: 0 }}>
+            <div style={{ padding: "10px 14px", background: "#162030", borderBottom: "1px solid rgba(255,255,255,0.05)", display: "flex", justifyContent: "space-between", fontSize: 11, color: "#475569" }}>
+              <span>Stage</span>
+              <div style={{ display: "flex", gap: 40 }}><span>Records</span><span>Duration</span></div>
+            </div>
+            {displaySession.stages.map((stage, i) => (
+              <StageSummaryRow key={stage.id || i} stage={stage} />
+            ))}
+            <div style={{ padding: "10px 14px", background: "#162030", borderTop: "1px solid rgba(255,255,255,0.05)", display: "flex", justifyContent: "space-between", fontSize: 11.5, color: "#34d399", fontWeight: 700 }}>
+              <span>Total</span>
+              <span style={{ fontFamily: "monospace" }}>{(displaySession.processing_duration / 1000).toFixed(1)}s</span>
             </div>
           </div>
-          {displaySession.stages.map((stage) => (
-            <StageSummaryRow key={stage.id} stage={stage} />
-          ))}
-          <div style={{ padding: "10px 14px", background: "#162030", borderTop: "1px solid rgba(255,255,255,0.05)", display: "flex", justifyContent: "space-between", fontSize: 11.5, color: "#34d399", fontWeight: 700 }}>
-            <span>Total</span>
-            <span style={{ fontFamily: "monospace" }}>{(displaySession.processing_duration / 1000).toFixed(1)}s</span>
-          </div>
-        </div>
-      </Section>
+        </Section>
+      )}
 
-      {/* 3 — MAP Summary */}
       <Section title="MAP Summary">
         <SessionMapTable maps={displaySession.maps} sessionId={displaySession.session_id} />
       </Section>
 
-      {/* 4 — Department Impact */}
       <Section title="Department Impact">
         <DepartmentImpact department_impact={displaySession.department_impact} />
       </Section>
 
-      {/* 5 + 6 — Charts side by side */}
       <Section title="Distributions">
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 16 }}>
-          <PriorityChart    maps={displaySession.maps} />
-          <CapabilityChart  maps={displaySession.maps} />
+          <PriorityChart   maps={displaySession.maps} />
+          <CapabilityChart maps={displaySession.maps} />
         </div>
       </Section>
 
-      {/* 7 — Knowledge Graph */}
       <Section title="Knowledge Graph">
         <SessionKnowledgeGraph graph={displaySession.graph} />
       </Section>
 
-      {/* 8 — Verification Plans */}
       <Section title="Verification Plans">
         <VerificationSummary verification_plans={displaySession.verification_plans} />
       </Section>
 
-      {/* 9 — Assignment Preview */}
       <Section title="Assignment Preview">
         <AssignmentPreview maps={displaySession.maps} department_impact={displaySession.department_impact} />
       </Section>

@@ -83,7 +83,7 @@ export async function run({ document_id, requirements, maps, verification_plans 
   for (const m of maps) {
     const mId  = `map:${m.map_id}`;
     const rId  = `req:${m.req_id}`;
-    addNode(mId, m.map_id.slice(-12), "map", {
+    addNode(mId, String(m.map_id || "").slice(-12), "map", {
       layer: 2,
       full_id: m.map_id,
       title: m.title,
@@ -106,7 +106,7 @@ export async function run({ document_id, requirements, maps, verification_plans 
   // Layer 4 — Verification Plans (children of MAPs)
   for (const vp of safePlans) {
     const vId = `vp:${vp.plan_id}`;
-    addNode(vId, vp.plan_id.slice(-10), "verification", {
+    addNode(vId, String(vp.plan_id || "").slice(-10), "verification", {
       layer: 4,
       checks: vp.checks,
       machine_verifiable: vp.machine_verifiable,

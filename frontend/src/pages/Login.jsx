@@ -4,7 +4,7 @@
  * Validates credentials against bcryptjs hashes in AuthContext.
  * Shows all demo credentials to judges directly on the login screen.
  */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
@@ -13,7 +13,7 @@ const DEMO_CREDENTIALS = [
   { username: "compliance", password: "compliance123", role: "Compliance Officer", color: "#60a5fa" },
   { username: "risk",       password: "risk123",       role: "Risk Manager",       color: "#fbbf24" },
   { username: "it",         password: "it123",         role: "IT Security",        color: "#a78bfa" },
-  { username: "treasury",   password: "treasury123",   role: "Treasury Manager",   color: "#34d399" },
+  { username: "operations", password: "ops123",        role: "Operations Manager", color: "#34d399" },
   { username: "audit",      password: "audit123",      role: "Internal Audit",     color: "#fb923c" },
 ];
 
@@ -23,7 +23,13 @@ export default function Login() {
   const [error, setError]       = useState("");
   const [loading, setLoading]   = useState(false);
   const navigate = useNavigate();
-  const { login, isAdmin } = useAuth();
+  const { login, isAdmin, isAuthenticated } = useAuth();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate(isAdmin ? "/" : "/workspace", { replace: true });
+    }
+  }, [isAuthenticated, isAdmin, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,7 +39,8 @@ export default function Login() {
     const result = await login(username, password);
 
     if (result.success) {
-      navigate(result.user.role === "head_office" ? "/" : "/workspace");
+      const isUserAdmin = result.user.permissions?.includes('*') || result.user.permissions?.includes('user:write');
+      navigate(isUserAdmin ? "/" : "/workspace");
     } else {
       setError(result.error);
     }
@@ -45,7 +52,8 @@ export default function Login() {
     setLoading(true);
     const result = await login(cred.username, cred.password);
     if (result.success) {
-      navigate(result.user.role === "head_office" ? "/" : "/workspace");
+      const isUserAdmin = result.user.permissions?.includes('*') || result.user.permissions?.includes('user:write');
+      navigate(isUserAdmin ? "/" : "/workspace");
     } else {
       setError(result.error);
       setLoading(false);

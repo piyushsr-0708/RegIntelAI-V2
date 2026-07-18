@@ -228,8 +228,8 @@ export default function AssignmentCenter() {
 
                     {/* Actions */}
                     <div style={{ display: "flex", gap: 5 }}>
-                      <button disabled={busyMapId === m.id} onClick={() => handleApprove(m.id)} style={{ fontSize: 10, fontWeight: 700, color: "#34d399", background: "rgba(52,211,153,0.1)", border: "1px solid rgba(52,211,153,0.25)", borderRadius: 5, padding: "4px 8px", cursor: busyMapId === m.id ? "wait" : "pointer", opacity: busyMapId === m.id ? 0.5 : 1 }}>Approve</button>
-                      <button disabled={busyMapId === m.id} onClick={() => handleReject(m.id)}  style={{ fontSize: 10, fontWeight: 700, color: "#f87171", background: "rgba(248,113,113,0.1)", border: "1px solid rgba(248,113,113,0.25)", borderRadius: 5, padding: "4px 8px", cursor: busyMapId === m.id ? "wait" : "pointer", opacity: busyMapId === m.id ? 0.5 : 1 }}>Reject</button>
+                      <button disabled={busyMapId === m.id || !can('map:approve')} onClick={() => handleApprove(m.id)} style={{ fontSize: 10, fontWeight: 700, color: "#34d399", background: "rgba(52,211,153,0.1)", border: "1px solid rgba(52,211,153,0.25)", borderRadius: 5, padding: "4px 8px", cursor: (busyMapId === m.id || !can('map:approve')) ? (busyMapId === m.id ? "wait" : "not-allowed") : "pointer", opacity: (busyMapId === m.id || !can('map:approve')) ? 0.5 : 1 }}>Approve</button>
+                      <button disabled={busyMapId === m.id || !can('map:approve')} onClick={() => handleReject(m.id)}  style={{ fontSize: 10, fontWeight: 700, color: "#f87171", background: "rgba(248,113,113,0.1)", border: "1px solid rgba(248,113,113,0.25)", borderRadius: 5, padding: "4px 8px", cursor: (busyMapId === m.id || !can('map:approve')) ? (busyMapId === m.id ? "wait" : "not-allowed") : "pointer", opacity: (busyMapId === m.id || !can('map:approve')) ? 0.5 : 1 }}>Reject</button>
                     </div>
                   </div>
                 ))

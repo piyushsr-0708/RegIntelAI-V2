@@ -24,33 +24,42 @@ export default function VerificationSummary({ verification_plans }) {
             </tr>
           </thead>
           <tbody>
-            {verification_plans.map((vp) => (
-              <tr key={vp.plan_id} style={{ cursor: "default" }}>
+            {verification_plans.map((vp) => {
+              const planId   = String(vp.plan_id ?? "");
+              const mapId    = String(vp.map_id ?? vp.requirement_id ?? "");
+              const dept     = String(vp.department ?? (vp.candidate_departments ?? [])[0] ?? "—");
+              const priority = String(vp.priority ?? vp.criticality ?? "MEDIUM");
+              const checks   = Array.isArray(vp.checks) ? vp.checks.length : (vp.checks ?? vp.total_checks ?? 0);
+              const machineVerifiable = vp.machine_verifiable ?? (vp.machine_verifiable_checks > 0) ?? false;
+              const status   = vp.status ?? "PENDING";
+              return (
+              <tr key={planId} style={{ cursor: "default" }}>
                 <td>
                   <span style={{ fontFamily: "monospace", fontSize: 10, color: "#60a5fa", background: "rgba(96,165,250,0.1)", padding: "2px 6px", borderRadius: 4 }}>
-                    {vp.plan_id.slice(-16)}
+                    {planId.slice(-16)}
                   </span>
                 </td>
                 <td>
                   <span style={{ fontFamily: "monospace", fontSize: 10, color: "#34d399", background: "rgba(52,211,153,0.1)", padding: "2px 6px", borderRadius: 4 }}>
-                    {vp.map_id.slice(-16)}
+                    {mapId ? mapId.slice(-16) : "—"}
                   </span>
                 </td>
-                <td style={{ fontSize: 12, color: "#94a3b8" }}>{vp.department}</td>
-                <td><PriorityBadge priority={vp.priority.charAt(0) + vp.priority.slice(1).toLowerCase()} /></td>
-                <td style={{ fontFamily: "monospace", color: "#64748b", fontSize: 12 }}>{vp.checks}</td>
+                <td style={{ fontSize: 12, color: "#94a3b8" }}>{dept}</td>
+                <td><PriorityBadge priority={priority.charAt(0) + priority.slice(1).toLowerCase()} /></td>
+                <td style={{ fontFamily: "monospace", color: "#64748b", fontSize: 12 }}>{checks}</td>
                 <td>
-                  <span style={{ fontSize: 11, fontWeight: 700, color: vp.machine_verifiable ? "#34d399" : "#475569" }}>
-                    {vp.machine_verifiable ? "✓ Yes" : "✕ No"}
+                  <span style={{ fontSize: 11, fontWeight: 700, color: machineVerifiable ? "#34d399" : "#475569" }}>
+                    {machineVerifiable ? "✓ Yes" : "✕ No"}
                   </span>
                 </td>
                 <td>
                   <span style={{ fontSize: 11, color: "#94a3b8", background: "rgba(148,163,184,0.1)", border: "1px solid rgba(148,163,184,0.2)", padding: "2px 8px", borderRadius: 20, fontWeight: 700 }}>
-                    {vp.status}
+                    {status}
                   </span>
                 </td>
               </tr>
-            ))}
+              );
+            })}
           </tbody>
         </table>
       </div>

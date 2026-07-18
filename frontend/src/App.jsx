@@ -77,6 +77,25 @@ function AuthGate({ children }) {
   return children;
 }
 
+// ─── Route Access Gate ────────────────────────────────────────────────────────
+function RoleGate({ children, permission, requireAdmin }) {
+  const { can, isAdmin } = useAuth();
+  
+  const hasPerm = permission ? can(permission) : true;
+  const hasAdmin = requireAdmin ? !!isAdmin : true;
+
+  if (hasPerm && hasAdmin) {
+    return children;
+  }
+
+  return (
+    <div style={{ padding: 40, textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center", height: "100%" }}>
+      <h2 style={{ color: "#f87171", marginBottom: 10, fontSize: 24 }}>Access Denied</h2>
+      <p style={{ color: "#94a3b8", fontSize: 14 }}>You do not have permission to access this page.</p>
+    </div>
+  );
+}
+
 // ─── All routes ────────────────────────────────────────────────────────────────
 function AppRoutes() {
   const { isAuthenticated } = useAuth();
@@ -88,7 +107,7 @@ function AppRoutes() {
         path="/login"
         element={
           <Suspense fallback={<PageLoader />}>
-            {isAuthenticated ? <Navigate to="/" replace /> : <Login />}
+            <Login />
           </Suspense>
         }
       />
@@ -99,30 +118,28 @@ function AppRoutes() {
         element={
           <AuthGate>
             <FrontendStateProvider>
-              <StateGate>
-                <SessionProvider>
-                  <AppShell>
-                    <Suspense fallback={<PageLoader />}>
-                      <Routes>
-                        <Route path="/"                  element={<Dashboard />} />
-                        <Route path="/maps"              element={<Maps />} />
-                        <Route path="/registry/:id"      element={<MapDetail />} />
-                        <Route path="/maps/:id"          element={<MapDetail />} />
-                        <Route path="/departments"       element={<Departments />} />
-                        <Route path="/requirements"      element={<Requirements />} />
-                        <Route path="/graph"             element={<Graph />} />
-                        <Route path="/assignment-center" element={<AssignmentCenter />} />
-                        <Route path="/workspace"         element={<DepartmentWorkspace />} />
-                        <Route path="/pipeline"                    element={<Pipeline />} />
-                        <Route path="/session/:id"                 element={<SessionDashboard />} />
-                        <Route path="/session/:sessionId/map/:mapId" element={<SessionMapDetail />} />
-                        {/* Catch-all */}
-                        <Route path="*"                  element={<Navigate to="/" replace />} />
-                      </Routes>
-                    </Suspense>
-                  </AppShell>
-                </SessionProvider>
-              </StateGate>
+              <SessionProvider>
+                <AppShell>
+                  <Suspense fallback={<PageLoader />}>
+                    <Routes>
+                      <Route path="/"                  element={<RoleGate permission="pipeline:read" requireAdmin><StateGate><Dashboard /></StateGate></RoleGate>} />
+                      <Route path="/maps"              element={<RoleGate permission="map:read" requireAdmin><StateGate><Maps /></StateGate></RoleGate>} />
+                      <Route path="/registry/:id"      element={<RoleGate permission="map:read" requireAdmin><StateGate><MapDetail /></StateGate></RoleGate>} />
+                      <Route path="/maps/:id"          element={<RoleGate permission="map:read" requireAdmin><StateGate><MapDetail /></StateGate></RoleGate>} />
+                      <Route path="/departments"       element={<RoleGate permission="dept:read" requireAdmin><Departments /></RoleGate>} />
+                      <Route path="/requirements"      element={<Requirements />} />
+                      <Route path="/graph"             element={<Graph />} />
+                      <Route path="/assignment-center" element={<RoleGate permission="map:approve"><AssignmentCenter /></RoleGate>} />
+                      <Route path="/workspace"         element={<RoleGate permission="assign:read"><DepartmentWorkspace /></RoleGate>} />
+                      <Route path="/pipeline"                    element={<RoleGate permission="pipeline:read"><Pipeline /></RoleGate>} />
+                      <Route path="/session/:id"                 element={<RoleGate permission="pipeline:read"><SessionDashboard /></RoleGate>} />
+                      <Route path="/session/:sessionId/map/:mapId" element={<RoleGate permission="pipeline:read"><StateGate><MapDetail /></StateGate></RoleGate>} />
+                      {/* Catch-all */}
+                      <Route path="*"                  element={<Navigate to="/" replace />} />
+                    </Routes>
+                  </Suspense>
+                </AppShell>
+              </SessionProvider>
             </FrontendStateProvider>
           </AuthGate>
         }

@@ -1,163 +1,164 @@
 /**
  * PipelineOrchestrator.js — RegIntel AI V2
  *
- * The single entry point for all pipeline execution.
- * No UI component calls a stage module directly — everything flows through here.
+ * Real upload workflow:
+ *   1. POST /documents/upload  → receive document_id
+ *   2. Poll GET /documents/{document_id}/status every 2 s
+ *   3. Drive the progress UI via callbacks
+ *   4. On completion, return { document_id, status: "completed" }
+ *      so Pipeline.jsx can navigate to SessionDashboard.
  *
- * Architecture:
- *   Pipeline.jsx → PipelineOrchestrator.run() → stage modules (in order)
- *                                              → onStageComplete callback (UI updates)
- *                                              → returns completed SessionData
- *
- * Each stage module exposes:
- *   run(input, rng?) → Promise<StageOutput>
- *
- * The orchestrator:
- *   1. Calls each stage in sequence, passing accumulated context.
- *   2. Fires onStageComplete(stageIndex, stageResult) after each stage.
- *   3. Animates stage duration via a configurable tick interval.
- *   4. Returns the final aggregated session data.
- *
- * Future integration:
- *   To connect a real offline stage, replace the import of the mock module
- *   with a module that calls the Python pipeline via a local IPC bridge
- *   (e.g. Tauri invoke, or a localhost-only HTTP server bundled with the app).
- *   The orchestrator interface does not change.
+ * The simulated JS stage modules are no longer executed.
  */
 
-import { seedRng, PIPELINE_STAGE_DEFS } from "./pipelineUtils.js";
-import * as StageUpload       from "./stages/stageUpload.js";
-import * as StageParser       from "./stages/stageParser.js";
-import * as StageMetadata     from "./stages/stageMetadata.js";
-import * as StageCleaning     from "./stages/stageCleaning.js";
-import * as StageSegmentation from "./stages/stageSegmentation.js";
-import * as StageExtraction   from "./stages/stageExtraction.js";
-import * as StageMapGen       from "./stages/stageMapGeneration.js";
-import * as StageDept         from "./stages/stageDeptAssignment.js";
-import * as StagePriority     from "./stages/stagePriority.js";
-import * as StageVerification from "./stages/stageVerification.js";
-import * as StageGraph        from "./stages/stageGraphBuilder.js";
-import * as StageDashboard    from "./stages/stageDashboardAggregator.js";
+import { PIPELINE_STAGE_DEFS } from "./pipelineUtils.js";
 
-// ─── Stage registry — ordered, matches PIPELINE_STAGE_DEFS ───────────────────
-// Each entry: { def (from PIPELINE_STAGE_DEFS), module (stage module) }
-// The "completed" entry has no module — it is a terminal marker only.
-const STAGE_REGISTRY = [
-  { module: StageUpload       },  // 0  upload
-  { module: StageParser       },  // 1  parsing
-  { module: StageMetadata     },  // 2  metadata
-  { module: StageCleaning     },  // 3  cleaning
-  { module: StageSegmentation },  // 4  segmentation
-  { module: StageExtraction   },  // 5  extraction
-  { module: StageMapGen       },  // 6  map_generation
-  { module: StageDept         },  // 7  dept_assignment
-  { module: StagePriority     },  // 8  priority
-  { module: StageVerification },  // 9  verification
-  { module: StageGraph        },  // 10 graph
-  { module: StageDashboard    },  // 11 dashboard
-  { module: null              },  // 12 completed (terminal)
-];
+const API_BASE_URL = "http://localhost:8000";
+const POLL_INTERVAL_MS = 2000;
+const POLL_TIMEOUT_MS  = 30 * 60 * 1000; // 30 minutes
 
-const TICK_MS = 50; // progress animation resolution
+// Map backend stage keys to the frontend stage index (0-based, matches PIPELINE_STAGE_DEFS)
+const STAGE_KEY_TO_INDEX = {
+  QUEUED:                         0,
+  STARTING:                       0,
+  PDF_PARSER:                     1,
+  DOCUMENT_NORMALIZER:            2,
+  HIERARCHY_BUILDER:              3,
+  LOGICAL_UNIT_BUILDER:           4,
+  REQUIREMENT_EXTRACTOR:          5,
+  REQUIREMENT_ENRICHER:           6,
+  COMPLIANCE_INTERPRETER:         7,
+  COMPLIANCE_REASONING_ENGINE:    8,
+  CONTROL_DERIVER:                9,
+  VERIFICATION_RULE_GENERATOR:    9,
+  VERIFICATION_PLANNER:           10,
+  MAP_GENERATOR:                  11,
+  DATABASE_INGEST:                11,
+  DASHBOARD_AGGREGATOR:           12,
+  COMPLETED:                      PIPELINE_STAGE_DEFS.length - 1,
+};
 
 /**
  * PipelineOrchestrator.run(options)
  *
- * @param {File}     options.file               - The uploaded File object
- * @param {Array}    options.complianceRegister  - From FrontendStateContext
- * @param {Function} options.onStageStart(i)     - Called when stage i begins
- * @param {Function} options.onStageProgress(i, pct, elapsed_ms) - Called during stage
- * @param {Function} options.onStageComplete(i, result) - Called when stage i finishes
- * @returns {Promise<SessionData>}
+ * @param {File}     options.file
+ * @param {Function} options.onStageStart(i)
+ * @param {Function} options.onStageProgress(i, pct, elapsed_ms)
+ * @param {Function} options.onStageComplete(i, result)
+ * @returns {Promise<{ document_id, status }>}
+ * @throws  {Error} if upload fails
  */
-export async function run({ file, complianceRegister, onStageStart, onStageProgress, onStageComplete }) {
-  const rng = seedRng(file.name);
+export async function run({ file, onUploadComplete, onStageStart, onStageProgress, onStageComplete }) {
+  const token = sessionStorage.getItem("regintel_jwt");
+  if (!token) throw new Error("Not authenticated");
 
-  // Accumulated context — each stage reads from and writes to this object.
-  // file is included so stageUpload can access it directly.
-  let ctx = { file, complianceRegister };
+  // ── Stage 0: Upload ────────────────────────────────────────────────────────
+  onStageStart?.(0);
+  onStageProgress?.(0, 10, 0);
 
-  // Pre-compute all stage durations deterministically (same seed = same timings)
-  const durations = PIPELINE_STAGE_DEFS.map((def) => {
-    const jitter = 0.7 + rng() * 0.6;
-    return Math.round(def.base_ms * jitter);
+  const formData = new FormData();
+  formData.append("file", file);
+
+  const uploadStart = Date.now();
+  const uploadRes = await fetch(`${API_BASE_URL}/documents/upload`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}` },
+    body: formData,
   });
 
-  const stageResults = [];
-
-  for (let i = 0; i < PIPELINE_STAGE_DEFS.length; i++) {
-    const def    = PIPELINE_STAGE_DEFS[i];
-    const entry  = STAGE_REGISTRY[i];
-    const dur_ms = durations[i];
-
-    onStageStart?.(i);
-
-    // ── Run the stage module first, then animate concurrently ────────────
-    // Both the stage execution and the animation timer run in parallel.
-    // The animation resolves after dur_ms; the stage output is awaited after.
-    const stageStart = Date.now();
-
-    // Start stage execution immediately — pass current ctx and rng
-    const stageOutputPromise = entry.module?.run
-      ? entry.module.run(ctx, rng).catch((err) => {
-          console.error(`[Pipeline] Stage ${def.id} threw:`, err);
-          return {}; // degrade gracefully — never hang
-        })
-      : Promise.resolve({});
-
-    // Animate progress for dur_ms
-    await new Promise((resolve) => {
-      const interval = setInterval(() => {
-        const elapsed  = Date.now() - stageStart;
-        const progress = Math.min(99, Math.round((elapsed / dur_ms) * 100));
-        onStageProgress?.(i, progress, elapsed);
-        if (elapsed >= dur_ms) { clearInterval(interval); resolve(); }
-      }, TICK_MS);
-    });
-
-    // Await stage output (resolves instantly for all mock stages)
-    const output = await stageOutputPromise;
-
-    // Merge output into accumulated context
-    ctx = { ...ctx, ...output };
-
-    const stageRecord = {
-      id:            def.id,
-      label:         def.label,
-      duration_ms:   dur_ms,
-      records:       summariseOutput(def.id, ctx),
-      records_label: def.records_label ?? "",
-      status:        "completed",
-    };
-
-    stageResults.push(stageRecord);
-    onStageProgress?.(i, 100, dur_ms);
-    onStageComplete?.(i, stageRecord);
+  if (!uploadRes.ok) {
+    const err = await uploadRes.json().catch(() => ({ detail: "Upload failed" }));
+    throw new Error(err.detail || `Upload failed (${uploadRes.status})`);
   }
 
-  // Attach the stage records array to the aggregated session data.
-  // stageDashboardAggregator runs as stage 11 and already built the session
-  // object — we just stamp the stages list and processing_duration onto it here.
-  const processing_duration = stageResults.reduce((s, st) => s + st.duration_ms, 0);
-  return { ...ctx, stages: stageResults, processing_duration };
+  const uploadData = await uploadRes.json();
+  const document_id = uploadData.document_id;
+
+  onStageProgress?.(0, 100, Date.now() - uploadStart);
+  onStageComplete?.(0, { id: "upload", label: "Upload", status: "completed", records: `${(file.size / 1024).toFixed(1)} KB`, duration_ms: Date.now() - uploadStart });
+
+  // Notify caller of the real document_id immediately after upload
+  onUploadComplete?.(document_id);
+
+  // If the backend already completed (duplicate), skip polling
+  if (uploadData.status === "completed") {
+    _markRemainingComplete(onStageStart, onStageProgress, onStageComplete, 1);
+    return { document_id, status: "completed" };
+  }
+
+  // ── Poll status ────────────────────────────────────────────────────────────
+  let lastStageIndex = 0;
+  const pollStart = Date.now();
+
+  return new Promise((resolve, reject) => {
+    const interval = setInterval(async () => {
+      // FIX 3: enforce 30-minute timeout
+      if (Date.now() - pollStart > POLL_TIMEOUT_MS) {
+        clearInterval(interval);
+        reject(new Error("Pipeline timed out after 30 minutes"));
+        return;
+      }
+
+      try {
+        const res = await fetch(`${API_BASE_URL}/documents/${document_id}/status`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+
+        if (!res.ok) return; // transient error — keep polling
+
+        const statusData = await res.json();
+        const { status, current_stage, progress } = statusData;
+
+        const stageIndex = STAGE_KEY_TO_INDEX[current_stage] ?? lastStageIndex;
+        const elapsed = Date.now() - pollStart;
+
+        // Advance UI through any newly completed stages
+        for (let i = lastStageIndex + 1; i <= stageIndex; i++) {
+          onStageStart?.(i);
+          onStageProgress?.(i, 100, elapsed);
+          onStageComplete?.(i, {
+            id: PIPELINE_STAGE_DEFS[i]?.id,
+            label: PIPELINE_STAGE_DEFS[i]?.label,
+            status: "completed",
+            records: "—",
+            duration_ms: 0,
+          });
+        }
+
+        // Update progress on the current stage
+        if (stageIndex >= lastStageIndex) {
+          onStageProgress?.(stageIndex, Math.min(progress ?? 50, 99), elapsed);
+        }
+
+        lastStageIndex = Math.max(lastStageIndex, stageIndex);
+
+        if (status === "completed") {
+          clearInterval(interval);
+          // Mark any remaining stages complete
+          _markRemainingComplete(onStageStart, onStageProgress, onStageComplete, lastStageIndex + 1);
+          resolve({ document_id, status: "completed" });
+        } else if (status === "failed") {
+          clearInterval(interval);
+          reject(new Error(statusData.error || `Pipeline failed at ${current_stage}`));
+        }
+      } catch (e) {
+        // Network hiccup — keep polling
+        console.warn("[PipelineOrchestrator] Poll error (will retry):", e.message);
+      }
+    }, POLL_INTERVAL_MS);
+  });
 }
 
-// ─── Human-readable output summary per stage ─────────────────────────────────
-function summariseOutput(stageId, ctx) {
-  switch (stageId) {
-    case "upload":          return `${((ctx.file_size_bytes ?? 0) / 1024).toFixed(1)} KB`;
-    case "parsing":         return `${ctx.pages ?? 0} pages`;
-    case "metadata":        return `${ctx.fields_extracted ?? 0} fields`;
-    case "cleaning":        return `${(ctx.tokens_cleaned ?? 0).toLocaleString()} tokens`;
-    case "segmentation":    return `${ctx.logical_units_count ?? 0} segments`;
-    case "extraction":      return `${ctx.requirements?.length ?? 0} requirements`;
-    case "map_generation":  return `${ctx.maps?.length ?? 0} MAPs`;
-    case "dept_assignment": return `${ctx.department_impact?.length ?? 0} departments`;
-    case "priority":        return `${ctx.maps?.length ?? 0} priorities set`;
-    case "verification":    return `${ctx.verification_plans?.length ?? 0} plans`;
-    case "graph":           return `${ctx.graph?.nodes?.length ?? 0} nodes`;
-    case "dashboard":       return `${ctx.maps?.length ?? 0} MAPs aggregated`;
-    case "completed":       return `13 stages`;
-    default:                return "—";
+function _markRemainingComplete(onStageStart, onStageProgress, onStageComplete, fromIndex) {
+  for (let i = fromIndex; i < PIPELINE_STAGE_DEFS.length; i++) {
+    onStageStart?.(i);
+    onStageProgress?.(i, 100, 0);
+    onStageComplete?.(i, {
+      id: PIPELINE_STAGE_DEFS[i]?.id,
+      label: PIPELINE_STAGE_DEFS[i]?.label,
+      status: "completed",
+      records: "—",
+      duration_ms: 0,
+    });
   }
 }

@@ -346,7 +346,7 @@ export default function SessionKnowledgeGraph({ graph }) {
               ].filter(Boolean).map(([k, v]) => (
                 <div key={k} style={{ marginBottom: 5 }}>
                   <div style={{ fontSize: 9.5, color: "#475569", fontWeight: 700 }}>{k}</div>
-                  <div style={{ fontSize: 11, color: "#e2e8f0", lineHeight: 1.4, wordBreak: "break-word" }}>{v}</div>
+                  <div style={{ fontSize: 11, color: "#e2e8f0", lineHeight: 1.4, wordBreak: "break-word" }}>{Array.isArray(v) ? v.length : v}</div>
                 </div>
               ))}
             </div>

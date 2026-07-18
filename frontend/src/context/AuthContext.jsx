@@ -73,7 +73,7 @@ export function AuthProvider({ children }) {
   }, [user]);
 
   // Legacy convenience getters mapping to actual permissions/roles
-  const isAdmin = can('*') || can('map:approve');
+  const isAdmin = can('*') || can('user:write');
 
   return (
     <AuthContext.Provider value={{ user, isAuthenticated, isAdmin, authLoading, login, logout, can }}>

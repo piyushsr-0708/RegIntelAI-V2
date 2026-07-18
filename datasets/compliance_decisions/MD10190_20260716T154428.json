@@ -1,0 +1,40 @@
+{
+  "document_id": "MD10190",
+  "execution_timestamp": "2026-07-16T15:44:28.384087+00:00",
+  "overall_document_verdict": "PENDING",
+  "compliance_percentage": 66.67,
+  "failed_blocker_list": [],
+  "pending_manual_checks": [
+    "CVP_VR_MD10190_req48_C03"
+  ],
+  "document_statistics": {
+    "plans": 1,
+    "checks": 3,
+    "machine_checks": 2,
+    "manual_checks": 1,
+    "passed": 2,
+    "failed": 0,
+    "errored": 0,
+    "skipped": 0,
+    "pending": 1,
+    "automation_percentage": 66.67
+  },
+  "execution_summary": {
+    "machine_passed": 2,
+    "machine_failed": 0,
+    "machine_errored": 0,
+    "machine_skipped": 0,
+    "manual_pending": 1,
+    "blocker_failures": 0,
+    "overall_verdict": "PENDING"
+  },
+  "plan_verdicts": [
+    {
+      "plan_id": "CVP_VR_MD10190_req48",
+      "verdict": "PENDING",
+      "rationale": "Manual review required. Machine checks passed or were not applicable.",
+      "department": "Unknown",
+      "control_name": "Foreign Exchange Compliance Control"
+    }
+  ]
+}

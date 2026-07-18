@@ -17,7 +17,9 @@ export default function SessionMapTable({ maps, sessionId }) {
 
   const filtered = maps.filter((m) => {
     const q = search.trim().toLowerCase();
-    return !q || m.map_id.toLowerCase().includes(q) || m.title.toLowerCase().includes(q) || m.department.toLowerCase().includes(q);
+    if (!q) return true;
+    const dept = (m.department || m.owner_department || "").toLowerCase();
+    return String(m.map_id || "").toLowerCase().includes(q) || (m.title || "").toLowerCase().includes(q) || dept.includes(q);
   });
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
@@ -62,18 +64,18 @@ export default function SessionMapTable({ maps, sessionId }) {
                     </span>
                   </td>
                   <td style={{ maxWidth: 260, color: "#d1d5db", lineHeight: 1.4 }}>
-                    {m.title.length > 70 ? m.title.slice(0, 70) + "…" : m.title}
+                    {(m.title || m.map_id).length > 70 ? (m.title || m.map_id).slice(0, 70) + "…" : (m.title || m.map_id)}
                   </td>
                   <td>
                     <span style={{ fontSize: 11, color: "#94a3b8", background: "#162030", padding: "2px 8px", borderRadius: 6, border: "1px solid rgba(255,255,255,0.06)" }}>
-                      {m.department}
+                      {m.department || m.owner_department || "—"}
                     </span>
                   </td>
-                  <td><PriorityBadge priority={m.priority.charAt(0) + m.priority.slice(1).toLowerCase()} /></td>
+                  <td><PriorityBadge priority={String(m.priority || "Medium").charAt(0) + String(m.priority || "Medium").slice(1).toLowerCase()} /></td>
                   <td style={{ fontFamily: "monospace", color: "#64748b", fontSize: 12 }}>
-                    {(m.automation_percentage ?? 0).toFixed(1)}%
+                    {(m.automation_percentage ?? m.automation_percent ?? 0).toFixed(1)}%
                   </td>
-                  <td><StatusBadge status={m.compliance_status} /></td>
+                  <td><StatusBadge status={m.compliance_status || m.status} /></td>
                   <td>
                     <button
                       onClick={(e) => { e.stopPropagation(); navigate(dest); }}
