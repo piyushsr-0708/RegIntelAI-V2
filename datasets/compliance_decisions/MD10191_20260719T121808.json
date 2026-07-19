@@ -1,0 +1,40 @@
+{
+  "document_id": "MD10191",
+  "execution_timestamp": "2026-07-19T12:18:08.447553+00:00",
+  "overall_document_verdict": "NON_COMPLIANT",
+  "compliance_percentage": 33.33,
+  "failed_blocker_list": [
+    "CVP_VR_MD10191_req55_C02"
+  ],
+  "pending_manual_checks": [],
+  "document_statistics": {
+    "plans": 1,
+    "checks": 3,
+    "machine_checks": 3,
+    "manual_checks": 0,
+    "passed": 1,
+    "failed": 1,
+    "errored": 1,
+    "skipped": 0,
+    "pending": 0,
+    "automation_percentage": 100.0
+  },
+  "execution_summary": {
+    "machine_passed": 1,
+    "machine_failed": 1,
+    "machine_errored": 1,
+    "machine_skipped": 0,
+    "manual_pending": 0,
+    "blocker_failures": 1,
+    "overall_verdict": "NON_COMPLIANT"
+  },
+  "plan_verdicts": [
+    {
+      "plan_id": "CVP_VR_MD10191_req55",
+      "verdict": "NON_COMPLIANT",
+      "rationale": "One or more blocker or mandatory checks failed execution.",
+      "department": "Unknown",
+      "control_name": "Foreign Exchange Compliance Control"
+    }
+  ]
+}

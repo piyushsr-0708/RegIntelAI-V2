@@ -191,7 +191,7 @@ def main():
 
     out_file = OUTPUT_DIR / "frontend_state.json"
     with open(out_file, "w", encoding="utf-8") as f:
-        json.dump(frontend_state, f, indent=2)
+        json.dump(frontend_state, f, indent=2, ensure_ascii=True)
 
     logger.info(f"Dashboard Aggregator completed successfully. Output saved to {out_file}")
 

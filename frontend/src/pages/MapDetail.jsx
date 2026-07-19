@@ -99,9 +99,44 @@ export default function MapDetail() {
     </div>
   );
 
-  const listItem = register.find(m => m.map_id === mapId) || session?.maps?.find(m => m.map_id === mapId);
+  const registerItem = register.find(m => m.map_id === mapId) || session?.maps?.find(m => m.map_id === mapId);
 
-  // ── Not found state ────────────────────────────────────────────────────────
+  // ── Synthesise a listItem from API detailData when the compliance register
+  //    doesn't contain this MAP (e.g. frontend_state.json is stale or corrupt
+  //    after a new document upload). This prevents the false "MAP not found"
+  //    screen for uploaded MAPs that are fully ingested into the DB.
+  const listItem = registerItem || (detailData ? {
+    map_id:               detailData.map_id,
+    title:                detailData.title || detailData.control_id || mapId,
+    document_id:          detailData.source_document_id || detailData.document_id,
+    department:           detailData.department_name || detailData.owner_department || "",
+    priority:             detailData.priority || "MEDIUM",
+    compliance_status:    detailData.status || "DRAFT",
+    decision_rationale:   detailData.ai_rationale || "",
+    failed_blocker_count: 0,
+    automation_percentage: detailData.automation_percent ?? detailData.automation_percentage ?? 0,
+  } : null);
+
+  // ── API error state — shown when fetchMapDetail fails (e.g. 404 from backend) ──
+  // Must be checked BEFORE !listItem, because a failed API call leaves detailData
+  // null, which makes listItem null, which would otherwise show the misleading
+  // "MAP not found" screen even though the real problem is an API/auth error.
+  if (detailError && !listItem) return (
+    <div style={{ textAlign: "center", padding: 80 }}>
+      <div style={{ fontSize: 44, marginBottom: 12 }}>⚠️</div>
+      <div style={{ fontSize: 17, fontWeight: 700, color: "#f87171", marginBottom: 6 }}>Failed to load MAP</div>
+      <div style={{ fontSize: 12, color: "#475569", marginBottom: 8, fontFamily: "monospace" }}>{mapId}</div>
+      <div style={{ fontSize: 12, color: "#f87171", marginBottom: 20 }}>{detailError}</div>
+      <button
+        onClick={() => navigate(backDest)}
+        style={{ padding: "10px 24px", background: "#10b981", color: "#fff", border: "none", borderRadius: 8, fontWeight: 700, cursor: "pointer" }}
+      >
+        {backText}
+      </button>
+    </div>
+  );
+
+  // ── Not found state — only shown when both register AND API return nothing ──
   if (!listItem) return (
     <div style={{ textAlign: "center", padding: 80 }}>
       <div style={{ fontSize: 44, marginBottom: 12 }}>📋</div>
