@@ -163,15 +163,28 @@ export default function MapDetail() {
     (detailData.compliance_decision?.verdict || "PENDING") : 
     listItem.compliance_status;
   
-  const decisionRationale = detailData?.compliance_decision?.rationale || listItem.decision_rationale;
+  // Do NOT fall back to listItem.decision_rationale (stale aggregator value = "No verification plan found.")
+  // when detailData is loaded but simply has no decision yet. Only fall back when detailData itself is absent.
+  const decisionRationale = detailData?.compliance_decision?.rationale ||
+    (detailData ? null : listItem.decision_rationale) ||
+    "Awaiting verification execution.";
   
   const failedBlockerCount = detailData?.compliance_decision ? 
     (detailData.compliance_decision.failed_blocker_count || 0) : 
     (listItem.failed_blocker_count ?? 0);
   
+  // Prefer live plan automation_percentage; fall back to listItem only if detailData absent.
   const autoVal = detailData?.verification_plan?.automation_percentage != null ? 
     detailData.verification_plan.automation_percentage.toFixed(1) : 
-    (listItem.automation_percentage != null ? listItem.automation_percentage.toFixed(1) : "N/A");
+    (detailData ? "N/A" : (listItem.automation_percentage != null ? listItem.automation_percentage.toFixed(1) : "N/A"));
+
+  // Supplement docRow counts from live detailData when the document hasn't been through the
+  // decision engine yet (plans=0, checks=0 in documents_table are stale aggregator defaults).
+  const livePlans  = docRow?.plans  || (detailData?.verification_plan ? 1 : 0);
+  const liveChecks = docRow?.checks || (detailData?.verification_plan?.checks?.length ?? 0);
+  const liveAutoDoc = docRow?.automation_percentage != null
+    ? docRow.automation_percentage
+    : (detailData?.verification_plan?.automation_percentage ?? null);
 
   return (
     <div className="animate-fade-in">
@@ -243,10 +256,10 @@ export default function MapDetail() {
         <div className="card" style={{ padding: "16px 18px", marginBottom: 14 }}>
           <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 12, letterSpacing: 0.5 }}>DOCUMENT PIPELINE METADATA</div>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 12 }}>
-            <StatPill label="PLANS"       value={docRow.plans}   color="#60a5fa" />
-            <StatPill label="CHECKS"      value={docRow.checks}  color="#a78bfa" />
-            <StatPill label="DOC AUTOMATION" value={`${docRow.automation_percentage?.toFixed(1) ?? "N/A"}%`} color="#34d399" />
-            <StatPill label="VERDICT"     value={docRow.verdict} color={docRow.verdict === "COMPLIANT" ? "#34d399" : docRow.verdict === "NON_COMPLIANT" ? "#f87171" : "#fbbf24"} />
+            <StatPill label="PLANS"       value={livePlans}   color="#60a5fa" />
+            <StatPill label="CHECKS"      value={liveChecks}  color="#a78bfa" />
+            <StatPill label="DOC AUTOMATION" value={liveAutoDoc != null ? `${Number(liveAutoDoc).toFixed(1)}%` : "N/A"} color="#34d399" />
+            <StatPill label="VERDICT"     value={docRow?.verdict ?? "PENDING"} color={docRow?.verdict === "COMPLIANT" ? "#34d399" : docRow?.verdict === "NON_COMPLIANT" ? "#f87171" : "#fbbf24"} />
           </div>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
             <div>

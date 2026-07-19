@@ -864,5 +864,40 @@ async def upload_document(
     }
 
 
+
+
 if __name__ == "__main__":
     uvicorn.run("backend.main:app", host="127.0.0.1", port=8000, reload=True)
+
+
+# ─── Compliance Report PDF ─────────────────────────────────────────────────────
+
+from fastapi.responses import FileResponse
+
+@app.get("/reports/{document_id}/pdf", tags=["Reports"])
+def get_compliance_report_pdf(
+    document_id: str,
+    current: CurrentUser = Depends(require_permission(Perm.MAP_READ)),
+):
+    """
+    Generate (or regenerate) a professional Compliance Assessment PDF for *document_id*.
+    Returns the PDF file as a download.
+
+    READ-ONLY: only reads existing pipeline artifacts. Never modifies compliance data.
+    """
+    from backend.reports.compliance_pdf_generator import generate_compliance_pdf
+
+    try:
+        pdf_path = generate_compliance_pdf(document_id, project_root)
+    except FileNotFoundError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        logger.error(f"PDF generation failed for {document_id}: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=f"PDF generation failed: {e}")
+
+    return FileResponse(
+        path=str(pdf_path),
+        media_type="application/pdf",
+        filename=pdf_path.name,
+        headers={"Content-Disposition": f'attachment; filename="{pdf_path.name}"'},
+    )

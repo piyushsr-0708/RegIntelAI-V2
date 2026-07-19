@@ -403,11 +403,11 @@ class AssignmentService:
         self._audit.record("ASSIGNMENT", assignment_id, "COMPLETED",
                            user_id=actor_id, changes=changes)
         self.db.commit()
-        
+
         # ─── PIPELINE EXECUTION CHAIN ───────────────────────────────────────────
         # After successful database commit, trigger verification and decision.
         # Failures in pipeline execution do NOT rollback assignment completion.
-        
+
         # Extract document_id using existing pattern from get_map_detail()
         document_id = None
         requirement_id = None
@@ -417,145 +417,142 @@ class AssignmentService:
             if map_record:
                 document_id = map_record.source_document_id
                 requirement_id = map_record.source_requirement_id
-                
-                # TASK 1: Derive plan_id from requirement_id to filter verification scope
+
+                # Derive plan_id from requirement_id to filter verification scope
                 if requirement_id:
                     plan_id = f"CVP_VR_{requirement_id}"
                     logger.info(f"📋 Scoping verification to plan: {plan_id}")
-        
+
         if not document_id:
             logger.warning(f"Assignment {assignment_id} has no source_document_id, skipping verification")
             return assignment
-        
+
         if not requirement_id:
             logger.warning(f"Assignment {assignment_id} has no source_requirement_id, verification may process entire document")
-        
+
         # Get project root (same pattern as get_map_detail)
         current_file = Path(__file__).resolve()
         project_root = current_file.parents[3]
-        
+
         # Locate verification plan
         plan_file = project_root / "datasets" / "verification_plans" / f"{document_id}.json"
-        
+
         if not plan_file.exists():
             logger.warning(f"Verification plan not found: {plan_file}, skipping verification")
             return assignment
-        
-        # ─── Stage 0: Verification Agent Decision ───
-        agent_decision_data = None  # Store for later persistence
-        try:
-            from backend.database.services.verification_agent_service import VerificationAgentService
-            
-            agent = VerificationAgentService(project_root)
-            decision = agent.decide_verification_strategy(
-                document_id=document_id,
-                requirement_id=requirement_id,
-                criticality=map_record.priority if map_record else None,
-                department=assignment.department.name if assignment.department else None
-            )
-            
-            logger.info(f"🤖 Verification Agent Analysis:")
-            logger.info(f"   Verdict: {decision.verdict}")
-            logger.info(f"   Reasoning: {decision.reasoning}")
-            logger.info(f"   Automated checks: {decision.automated_checks_available}/{decision.total_checks}")
-            logger.info(f"   Manual checks: {decision.manual_checks_required}/{decision.total_checks}")
-            logger.info(f"   Recommendation: {decision.recommended_action}")
-            
-            # Persist agent decision for later retrieval
-            from datetime import datetime
-            agent_decision_data = {
-                "document_id": document_id,
-                "requirement_id": requirement_id,
-                "assignment_id": assignment_id,
-                "verdict": decision.verdict,
-                "reasoning": decision.reasoning,
-                "confidence_score": decision.confidence_score,
-                "automated_checks_available": decision.automated_checks_available,
-                "manual_checks_required": decision.manual_checks_required,
-                "total_checks": decision.total_checks,
-                "execute_automated": decision.execute_automated,
-                "requires_manual_review": decision.requires_manual_review,
-                "recommended_action": decision.recommended_action,
-                "control_objective": decision.control_objective,
-                "regulatory_intent": decision.regulatory_intent,
-                "automation_feasibility": decision.automation_feasibility,
-                "timestamp": datetime.now(timezone.utc).isoformat(),
-                "criticality": map_record.priority if map_record else None,
-                "department": assignment.department.name if assignment.department else None
-            }
-            
-            # Save to datasets/agent_decisions/
-            agent_decisions_dir = project_root / "datasets" / "agent_decisions"
-            agent_decisions_dir.mkdir(exist_ok=True)
-            
-            # Use requirement_id or document_id for filename
-            decision_file = agent_decisions_dir / f"{requirement_id or document_id}_{datetime.now().strftime('%Y%m%d%H%M%S')}.json"
-            with open(decision_file, "w", encoding="utf-8") as f:
-                json.dump(agent_decision_data, f, indent=2, ensure_ascii=False)
-            
-            if decision.verdict == "NO_GO":
-                logger.warning(f"⛔ Verification blocked: {decision.reasoning}")
-                logger.warning(f"   Action: {decision.recommended_action}")
-                return assignment
-            
-            if decision.verdict == "ESCALATE":
-                logger.warning(f"⚠️ Escalated for manual review: {decision.reasoning}")
-                logger.warning(f"   Action: {decision.recommended_action}")
-                
-                # KEY CHANGE: ESCALATE no longer terminates workflow
-                # If automated checks are available, execute them
-                if not decision.execute_automated:
-                    logger.info(f"   No automated checks available - routing to manual review only")
-                    # Future: Update assignment status to "ESCALATED" or similar
-                    return assignment
-                
-                logger.info(f"   Continuing with {decision.automated_checks_available} automated checks")
-                logger.info(f"   {decision.manual_checks_required} checks flagged for manual review")
-                # Fall through to verification execution
-            
-            if decision.verdict == "GO":
-                logger.info(f"✅ Agent approved: {decision.reasoning}")
-                logger.info(f"   Action: {decision.recommended_action}")
-                # Fall through to verification execution
-            
-        except Exception as e:
-            logger.error(f"❌ Verification agent failed for document {document_id}: {e}", exc_info=True)
-            # Fallback: Continue with verification (preserve existing behavior)
-            logger.warning("⚠️ Falling back to direct verification execution")
-        
-        # Stage 1: Execute Verification (independently wrapped)
-        try:
-            from pipeline.executor.compliance_verification_executor import process_document
-            
-            # TASK 1: Pass plan_id to filter verification to specific requirement
-            # Create args namespace as expected by executor
-            args = argparse.Namespace(timeout=300, dry_run=False, document=None, plan=plan_id)
-            
-            if plan_id:
-                logger.info(f"🎯 Executing verification for specific plan: {plan_id}")
-            else:
-                logger.warning(f"⚠️ No plan_id available, executing all plans for document {document_id}")
-            
-            # Execute verification for the document
-            process_document(plan_file, args)
-            logger.info(f"✅ Verification executed successfully for document {document_id}")
-            
-        except Exception as e:
-            logger.error(f"❌ Verification execution failed for document {document_id}: {e}", exc_info=True)
-            # Continue to decision engine even if verification fails
-        
-        # Stage 2: Execute Decision Engine (independently wrapped)
-        try:
-            from pipeline.decision.compliance_decision_engine import process_document
-            
-            # Pass plan_id so the decision engine evaluates only the same plan the executor ran
-            process_document(document_id, plan_file, plan_id)
-            logger.info(f"✅ Compliance decision generated successfully for plan {plan_id or document_id}")
 
-            
-        except Exception as e:
-            logger.error(f"❌ Decision engine failed for document {document_id}: {e}", exc_info=True)
-        
+        # Snapshot all values needed inside the background thread BEFORE returning.
+        # The SQLAlchemy db session is request-scoped and must NOT be used inside the thread.
+        _map_priority  = map_record.priority if map_record else None
+        _dept_name     = assignment.department.name if assignment.department else None
+        _doc_id        = document_id
+        _req_id        = requirement_id
+        _plan_id       = plan_id
+        _plan_file     = plan_file
+        _project_root  = project_root
+        _assignment_id = assignment_id
+
+        def _run_verification_pipeline():
+            """Background daemon thread: agent → executor → decision engine.
+            All I/O is file-based; no SQLAlchemy session is used."""
+            import argparse as _argparse
+
+            # ── Stage 0: Verification Agent Decision ─────────────────────────
+            try:
+                from backend.database.services.verification_agent_service import VerificationAgentService
+                agent = VerificationAgentService(_project_root)
+                decision = agent.decide_verification_strategy(
+                    document_id=_doc_id,
+                    requirement_id=_req_id,
+                    criticality=_map_priority,
+                    department=_dept_name
+                )
+                logger.info(f"🤖 Verification Agent Analysis:")
+                logger.info(f"   Verdict: {decision.verdict}")
+                logger.info(f"   Reasoning: {decision.reasoning}")
+                logger.info(f"   Automated checks: {decision.automated_checks_available}/{decision.total_checks}")
+                logger.info(f"   Manual checks: {decision.manual_checks_required}/{decision.total_checks}")
+                logger.info(f"   Recommendation: {decision.recommended_action}")
+
+                from datetime import datetime
+                agent_decision_data = {
+                    "document_id": _doc_id,
+                    "requirement_id": _req_id,
+                    "assignment_id": _assignment_id,
+                    "verdict": decision.verdict,
+                    "reasoning": decision.reasoning,
+                    "confidence_score": decision.confidence_score,
+                    "automated_checks_available": decision.automated_checks_available,
+                    "manual_checks_required": decision.manual_checks_required,
+                    "total_checks": decision.total_checks,
+                    "execute_automated": decision.execute_automated,
+                    "requires_manual_review": decision.requires_manual_review,
+                    "recommended_action": decision.recommended_action,
+                    "control_objective": decision.control_objective,
+                    "regulatory_intent": decision.regulatory_intent,
+                    "automation_feasibility": decision.automation_feasibility,
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
+                    "criticality": _map_priority,
+                    "department": _dept_name
+                }
+                agent_decisions_dir = _project_root / "datasets" / "agent_decisions"
+                agent_decisions_dir.mkdir(exist_ok=True)
+                decision_file = agent_decisions_dir / f"{_req_id or _doc_id}_{datetime.now().strftime('%Y%m%d%H%M%S')}.json"
+                with open(decision_file, "w", encoding="utf-8") as f:
+                    json.dump(agent_decision_data, f, indent=2, ensure_ascii=False)
+
+                if decision.verdict == "NO_GO":
+                    logger.warning(f"⛔ Verification blocked: {decision.reasoning}")
+                    logger.warning(f"   Action: {decision.recommended_action}")
+                    return
+
+                if decision.verdict == "ESCALATE":
+                    logger.warning(f"⚠️ Escalated for manual review: {decision.reasoning}")
+                    logger.warning(f"   Action: {decision.recommended_action}")
+                    if not decision.execute_automated:
+                        logger.info(f"   No automated checks available - routing to manual review only")
+                        return
+                    logger.info(f"   Continuing with {decision.automated_checks_available} automated checks")
+
+                if decision.verdict == "GO":
+                    logger.info(f"✅ Agent approved: {decision.reasoning}")
+
+            except Exception as e:
+                logger.error(f"❌ Verification agent failed for document {_doc_id}: {e}", exc_info=True)
+                logger.warning("⚠️ Falling back to direct verification execution")
+
+            # ── Stage 1: Execute Verification ────────────────────────────────
+            try:
+                from pipeline.executor.compliance_verification_executor import process_document
+                # timeout=30 per check (was 300 — the cause of the hang)
+                args = _argparse.Namespace(timeout=30, dry_run=False, document=None, plan=_plan_id)
+                if _plan_id:
+                    logger.info(f"🎯 Executing verification for specific plan: {_plan_id}")
+                else:
+                    logger.warning(f"⚠️ No plan_id available, executing all plans for document {_doc_id}")
+                process_document(_plan_file, args)
+                logger.info(f"✅ Verification executed successfully for document {_doc_id}")
+            except Exception as e:
+                logger.error(f"❌ Verification execution failed for document {_doc_id}: {e}", exc_info=True)
+
+            # ── Stage 2: Execute Decision Engine ─────────────────────────────
+            try:
+                from pipeline.decision.compliance_decision_engine import process_document
+                process_document(_doc_id, _plan_file, _plan_id)
+                logger.info(f"✅ Compliance decision generated successfully for plan {_plan_id or _doc_id}")
+            except Exception as e:
+                logger.error(f"❌ Decision engine failed for document {_doc_id}: {e}", exc_info=True)
+
+        # Launch as daemon thread — HTTP response returns immediately.
+        import threading as _threading
+        _t = _threading.Thread(
+            target=_run_verification_pipeline,
+            daemon=True,
+            name=f"verify-{_assignment_id[:8]}"
+        )
+        _t.start()
+        logger.info(f"🚀 Verification pipeline dispatched to background thread for assignment {assignment_id}")
+
         return assignment
 
     def reset_assignment_to_active(

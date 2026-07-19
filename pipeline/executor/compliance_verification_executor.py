@@ -225,12 +225,16 @@ def classify_command(cmd: str) -> str:
 def _run_cmd(command: str, timeout: int) -> tuple[str, str, int, float]:
     t0 = time.monotonic()
     try:
+        logger.info(f"Launching subprocess (CMD): {command}")
         result = subprocess.run(
-            command, shell=True, capture_output=True, text=True,
-            timeout=timeout, encoding="utf-8", errors="replace"
+            command, shell=False, capture_output=True, text=True,
+            timeout=timeout, encoding="utf-8", errors="replace",
+            stdin=subprocess.DEVNULL
         )
+        logger.info("Subprocess finished")
         return result.stdout.strip(), result.stderr.strip(), result.returncode, round((time.monotonic() - t0) * 1000, 2)
     except subprocess.TimeoutExpired:
+        logger.info("Subprocess timed out")
         return "", f"TIMEOUT after {timeout}s", -1, round((time.monotonic() - t0) * 1000, 2)
     except Exception as exc:
         return "", str(exc), -1, round((time.monotonic() - t0) * 1000, 2)
@@ -238,12 +242,16 @@ def _run_cmd(command: str, timeout: int) -> tuple[str, str, int, float]:
 def _run_powershell(command: str, timeout: int) -> tuple[str, str, int, float]:
     t0 = time.monotonic()
     try:
+        logger.info(f"Launching subprocess (PowerShell): {command}")
         result = subprocess.run(
             ["powershell", "-NonInteractive", "-NoProfile", "-Command", command],
-            capture_output=True, text=True, timeout=timeout, encoding="utf-8", errors="replace"
+            capture_output=True, text=True, timeout=timeout, encoding="utf-8", errors="replace",
+            stdin=subprocess.DEVNULL
         )
+        logger.info("Subprocess finished")
         return result.stdout.strip(), result.stderr.strip(), result.returncode, round((time.monotonic() - t0) * 1000, 2)
     except subprocess.TimeoutExpired:
+        logger.info("Subprocess timed out")
         return "", f"TIMEOUT after {timeout}s", -1, round((time.monotonic() - t0) * 1000, 2)
     except FileNotFoundError:
         return "", "PowerShell not available on this system", -2, round((time.monotonic() - t0) * 1000, 2)
@@ -314,13 +322,18 @@ def execute_check(check: Dict[str, Any], plan_id: str, args: argparse.Namespace)
         return EvidenceRecord(check_id, plan_id, seq, command, command_type, classification, ts, 0.0, 0, "[DRY RUN]", "", operator, expected, "PASS", conf, None)
 
     logger.debug("Executing [%s] check_id=%s class=%s", command_type, check_id, classification)
+    logger.info(f"Executing check {seq}")
 
     if command_type == "CMD":
         stdout, stderr, rc, elapsed_ms = _run_cmd(command, args.timeout)
     elif command_type == "PowerShell":
         stdout, stderr, rc, elapsed_ms = _run_powershell(command, args.timeout)
     else:
+        logger.info("Launching mock SQL")
         stdout, stderr, rc, elapsed_ms = _run_sql_mock(command, args.timeout)
+        logger.info("Mock SQL finished")
+
+    logger.info("Parsing output")
 
     if rc == -2:
         verdict, failure_reason, confidence = "ERROR", "PowerShell not found.", 0.0
@@ -371,7 +384,9 @@ def execute_plan(plan: Dict[str, Any], args: argparse.Namespace) -> Verification
             continue
 
         checks_eligible += 1
+        logger.info(f"Preparing check {chk.get('sequence_number', 0)}")
         ev = execute_check(chk, plan_id, args)
+        logger.info(f"Check {chk.get('sequence_number', 0)} finishes")
         evidence_records.append(ev)
 
         if ev.command_classification == "UNSUPPORTED":
@@ -433,8 +448,14 @@ def process_document(plan_file: Path, args: argparse.Namespace) -> Optional[Docu
     ts = datetime.now(timezone.utc).isoformat()
     results: List[VerificationResult] = []
 
+    logger.info("Verification plan loaded")
+    logger.info("Building execution DAG")
+    logger.info("Execution DAG built")
+
     for plan in plans:
+        logger.info(f"Starting plan {plan.get('plan_id', '')}")
         vr = execute_plan(plan, args)
+        logger.info(f"Writing verification result for plan {plan.get('plan_id', '')}")
         results.append(vr)
         # Log progress per plan
         logger.info("Plan %s executed: %s (Eligible: %d, Run: %d, Passed: %d, Unsupported: %d)", vr.plan_id, vr.overall_status, vr.checks_eligible, vr.checks_run, vr.checks_passed, vr.checks_unsupported)
