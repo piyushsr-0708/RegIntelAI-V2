@@ -1,6 +1,6 @@
 {
   "document_id": "MD10191",
-  "execution_timestamp": "2026-07-19T17:48:26.110497+00:00",
+  "execution_timestamp": "2026-07-19T17:57:56.544587+00:00",
   "executor_version": "1.1.0",
   "total_plans": 1,
   "plans_with_eligible_checks": 1,
@@ -25,7 +25,7 @@
       "logical_unit_id": "MD10191_lu9",
       "control_name": "Foreign Exchange Compliance Control",
       "business_capability": "FEMA Compliance Control",
-      "execution_timestamp": "2026-07-19T17:48:26.110940+00:00",
+      "execution_timestamp": "2026-07-19T17:57:56.547232+00:00",
       "executor_version": "1.1.0",
       "overall_status": "NON_COMPLIANT",
       "checks_eligible": 3,
@@ -43,8 +43,8 @@
           "command": "reg query \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\"",
           "command_type": "CMD",
           "command_classification": "SAFE",
-          "execution_timestamp": "2026-07-19T17:48:26.111012+00:00",
-          "execution_time_ms": 260.44,
+          "execution_timestamp": "2026-07-19T17:57:56.547757+00:00",
+          "execution_time_ms": 539.29,
           "return_code": 0,
           "raw_output": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\n    ConsentPromptBehaviorAdmin    REG_DWORD    0x5\n    ConsentPromptBehaviorEnhancedAdmin    REG_DWORD    0x1\n    ConsentPromptBehaviorUser    REG_DWORD    0x3\n    DSCAutomationHostEnabled    REG_DWORD    0x2\n    EnableCursorSuppression    REG_DWORD    0x1\n    EnableFullTrustStartupTasks    REG_DWORD    0x2\n    EnableInstallerDetection    REG_DWORD    0x1\n    EnableLUA    REG_DWORD    0x1\n    EnableSecureUIAPaths    REG_DWORD    0x1\n    EnableUIADesktopToggle    REG_DWORD    0x0\n    EnableUwpStartupTasks    REG_DWORD    0x2\n    EnableVirtualization    REG_DWORD    0x1\n    PromptOnSecureDesktop    REG_DWORD    0x1\n    SupportFullTrustStartupTasks    REG_DWORD    0x1\n    SupportUwpStartupTasks    REG_DWORD    0x1\n    TypeOfAdminApprovalMode    REG_DWORD    0x1\n    ValidateAdminCodeSignatures    REG_DWORD    0x0\n    dontdisplaylastusername    REG_DWORD    0x0\n    legalnoticecaption    REG_SZ    \n    legalnoticetext    REG_SZ    \n    scforceoption    REG_DWORD    0x0\n    shutdownwithoutlogon    REG_DWORD    0x1\n    undockwithoutlogon    REG_DWORD    0x1\n\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Audit\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\EnableLinkedConnections\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\UIPI",
           "stderr_output": "",
@@ -61,8 +61,8 @@
           "command": "reg query \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\" /v EnableLUA",
           "command_type": "CMD",
           "command_classification": "SAFE",
-          "execution_timestamp": "2026-07-19T17:48:26.371919+00:00",
-          "execution_time_ms": 255.08,
+          "execution_timestamp": "2026-07-19T17:57:57.089387+00:00",
+          "execution_time_ms": 502.27,
           "return_code": 0,
           "raw_output": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\n    EnableLUA    REG_DWORD    0x1",
           "stderr_output": "",
@@ -79,22 +79,22 @@
           "command": "reg export \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\" \"RegistryEvidence.reg\"",
           "command_type": "CMD",
           "command_classification": "SAFE",
-          "execution_timestamp": "2026-07-19T17:48:26.627311+00:00",
-          "execution_time_ms": 5266.54,
+          "execution_timestamp": "2026-07-19T17:57:57.593190+00:00",
+          "execution_time_ms": 30593.61,
           "return_code": -1,
           "raw_output": "",
-          "stderr_output": "TIMEOUT after 5s",
+          "stderr_output": "TIMEOUT after 30s",
           "comparison_operator": "exists",
           "expected_result": ".reg file created in working directory.",
           "verdict": "ERROR",
           "confidence": 0.0,
-          "failure_reason": "Timed out after 5s."
+          "failure_reason": "Timed out after 30s."
         }
       ],
       "execution_log": [
-        "PASS check=CVP_VR_MD10191_req55_C01 elapsed=260.44ms",
+        "PASS check=CVP_VR_MD10191_req55_C01 elapsed=539.29ms",
         "BLOCKER_FAIL check=CVP_VR_MD10191_req55_C02 reason=Did not satisfy '=='.",
-        "ERROR check=CVP_VR_MD10191_req55_C03 reason=Timed out after 5s."
+        "ERROR check=CVP_VR_MD10191_req55_C03 reason=Timed out after 30s."
       ],
       "blocker_failed": true
     }

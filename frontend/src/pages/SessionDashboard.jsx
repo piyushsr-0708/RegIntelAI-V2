@@ -42,6 +42,111 @@ function Section({ title, children }) {
   );
 }
 
+/**
+ * Minimal chat panel — sends document_id + question to POST /chat,
+ * renders the answer in the same card style used across this page.
+ */
+function ChatPanel({ documentId }) {
+  const [question,  setQuestion]  = React.useState("");
+  const [answer,    setAnswer]    = React.useState(null);
+  const [sources,   setSources]   = React.useState([]);
+  const [loading,   setLoading]   = React.useState(false);
+  const [error,     setError]     = React.useState(null);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!question.trim() || loading) return;
+
+    setLoading(true);
+    setAnswer(null);
+    setSources([]);
+    setError(null);
+
+    apiFetch("/chat", {
+      method: "POST",
+      body: JSON.stringify({ document_id: documentId, question: question.trim() }),
+    })
+      .then((data) => {
+        setAnswer(data.answer);
+        setSources(data.sources || []);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message || "Request failed.");
+        setLoading(false);
+      });
+  }
+
+  return (
+    <div className="card" style={{ padding: "18px 20px" }}>
+      <form onSubmit={handleSubmit} style={{ display: "flex", gap: 10, marginBottom: answer || error || loading ? 16 : 0 }}>
+        <input
+          id="chat-question-input"
+          type="text"
+          value={question}
+          onChange={(e) => setQuestion(e.target.value)}
+          placeholder={`Ask a compliance question about ${documentId}…`}
+          disabled={loading}
+          style={{
+            flex: 1, background: "#0d1520", border: "1px solid rgba(255,255,255,0.1)",
+            borderRadius: 7, padding: "10px 14px", fontSize: 13, color: "#e2e8f0",
+            outline: "none", fontFamily: "inherit",
+          }}
+        />
+        <button
+          id="chat-submit-btn"
+          type="submit"
+          disabled={loading || !question.trim()}
+          style={{
+            background: loading ? "#1a2332" : "#10b981", color: loading ? "#475569" : "#fff",
+            border: "none", borderRadius: 7, padding: "10px 20px", fontSize: 13,
+            fontWeight: 700, cursor: loading ? "not-allowed" : "pointer", transition: "background 0.15s",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {loading ? "Asking…" : "Ask"}
+        </button>
+      </form>
+
+      {loading && (
+        <div style={{ display: "flex", alignItems: "center", gap: 10, color: "#10b981", fontSize: 12, fontWeight: 600 }}>
+          <svg width="16" height="16" viewBox="0 0 24 24" style={{ animation: "spin 1s linear infinite", flexShrink: 0 }}>
+            <circle cx="12" cy="12" r="10" fill="none" stroke="rgba(16,185,129,0.2)" strokeWidth="3"/>
+            <path d="M12 2a10 10 0 0 1 10 10" fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round"/>
+          </svg>
+          Generating answer — this may take up to 60 seconds on CPU…
+        </div>
+      )}
+
+      {error && (
+        <div style={{ padding: "10px 14px", background: "rgba(248,113,113,0.08)", border: "1px solid rgba(248,113,113,0.2)", borderRadius: 7, fontSize: 13, color: "#f87171" }}>
+          {error}
+        </div>
+      )}
+
+      {answer && (
+        <div>
+          <div style={{ fontSize: 10, fontWeight: 700, color: "#475569", letterSpacing: 0.5, textTransform: "uppercase", marginBottom: 8 }}>Answer</div>
+          <div style={{ fontSize: 13, color: "#e2e8f0", lineHeight: 1.7, whiteSpace: "pre-wrap", wordBreak: "break-word" }}>
+            {answer}
+          </div>
+          {sources.length > 0 && (
+            <div style={{ marginTop: 12, display: "flex", gap: 6, flexWrap: "wrap" }}>
+              <span style={{ fontSize: 10, color: "#475569", fontWeight: 700, textTransform: "uppercase", alignSelf: "center" }}>Sources:</span>
+              {sources.map((s) => (
+                <span key={s} style={{ fontSize: 11, fontFamily: "monospace", background: "rgba(16,185,129,0.08)", border: "1px solid rgba(16,185,129,0.2)", color: "#34d399", padding: "2px 8px", borderRadius: 5 }}>
+                  {s}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+
 export default function SessionDashboard() {
   const { id }   = useParams();
   const navigate = useNavigate();
@@ -280,6 +385,10 @@ export default function SessionDashboard() {
 
       <Section title="Assignment Preview">
         <AssignmentPreview maps={displaySession.maps} department_impact={displaySession.department_impact} />
+      </Section>
+
+      <Section title="AI Compliance Assistant">
+        <ChatPanel documentId={docId} />
       </Section>
     </div>
   );

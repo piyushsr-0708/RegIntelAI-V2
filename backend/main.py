@@ -901,3 +901,105 @@ def get_compliance_report_pdf(
         filename=pdf_path.name,
         headers={"Content-Disposition": f'attachment; filename="{pdf_path.name}"'},
     )
+
+# ─── Chat Assistant ─────────────────────────────────────────────────────────────
+
+from typing import List, Dict, Any
+from backend.services.ollama_service import OllamaService
+from backend.services.context_builder import ContextBuilder
+import time
+
+class ChatRequest(BaseModel):
+    question: str
+    document_id: str
+    conversation_history: Optional[List[Dict[str, str]]] = []
+
+class ChatResponse(BaseModel):
+    answer: str
+    sources: List[str]
+    document_id: str
+    model: str
+    generated_at: str
+
+@app.get("/chat/health", tags=["AI Assistant"])
+def chat_health():
+    """Check if the local Ollama service is available."""
+    service = OllamaService()
+    return service.check_health()
+
+@app.post("/chat", response_model=ChatResponse, tags=["AI Assistant"])
+def chat_endpoint(
+    payload: ChatRequest,
+    current: CurrentUser = Depends(require_permission(Perm.MAP_READ)),
+):
+    """
+    RAG Assistant endpoint using local Ollama.
+    Calls ContextBuilder.build_context() and OllamaService.chat() with their
+    actual method signatures.
+    """
+    start_time = time.time()
+    logger.info(
+        "[CHAT] doc=%s user=%s question=%s",
+        payload.document_id, current.username, payload.question[:80],
+    )
+
+    # Check Ollama health first so we fail fast with a clear 503.
+    service = OllamaService()
+    health = service.check_health()
+    if health.get("status") != "online":
+        logger.error("[CHAT] Ollama offline: %s", health)
+        raise HTTPException(status_code=503, detail="Ollama service is currently unavailable.")
+
+    # Build retrieval context.  build_context() returns (context_str, metadata_dict).
+    builder = ContextBuilder(project_root)
+    context_start = time.time()
+    context_str, ctx_metadata = builder.build_context(payload.document_id)
+    context_elapsed = time.time() - context_start
+    logger.info(
+        "[CHAT] context built in %.2fs: %d chars from %s",
+        context_elapsed, ctx_metadata["characters"], ctx_metadata["sources_used"],
+    )
+
+    if not context_str.strip():
+        logger.warning("[CHAT] No context for document %s", payload.document_id)
+        raise HTTPException(
+            status_code=404,
+            detail=f"No compliance artifacts found for document {payload.document_id}.",
+        )
+
+    system_prompt = (
+        "You are RegulAI1 Mitra, an AI Compliance Assistant.\n"
+        "Rules:\n"
+        "- Use ONLY the supplied context.\n"
+        "- Never invent facts.\n"
+        "- If information is unavailable, explicitly say so.\n"
+        "- Never fabricate compliance advice.\n"
+        "- Prefer concise professional responses.\n"
+        "- Explain technical compliance concepts clearly."
+    )
+
+    try:
+        ollama_start = time.time()
+        # chat() signature: (system_prompt, context, user_question, conversation_history)
+        answer = service.chat(
+            system_prompt=system_prompt,
+            context=context_str,
+            user_question=payload.question,
+            conversation_history=payload.conversation_history,
+        )
+        ollama_elapsed = time.time() - ollama_start
+        logger.info(
+            "[CHAT] inference %.2fs, total %.2fs, answer %d chars",
+            ollama_elapsed, time.time() - start_time, len(answer),
+        )
+    except Exception as e:
+        logger.error("[CHAT] Ollama chat failed: %s", e)
+        raise HTTPException(status_code=500, detail="Inference failed. Please try again.")
+
+    return ChatResponse(
+        answer=answer,
+        sources=ctx_metadata["sources_used"],
+        document_id=payload.document_id,
+        model=service.model,
+        generated_at=datetime.utcnow().isoformat() + "Z",
+    )
