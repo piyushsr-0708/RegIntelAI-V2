@@ -61,68 +61,47 @@ export async function run({ document_id, requirements, maps, verification_plans 
     edges.push({ id: eid, source, target, label });
   };
 
-  // Layer 0 — Document root (starts expanded to show requirements)
+  // Layer 0 — Document root (starts expanded to show MAPs)
   const docId = `doc:${document_id ?? "unknown"}`;
   addNode(docId, document_id ?? "(unknown)", "document", { expanded: true, layer: 0 });
 
-  // Layer 1 — Requirements (children of document)
-  for (const req of requirements) {
-    const rId = `req:${req.req_id}`;
-    addNode(rId, req.req_id.slice(-8), "requirement", {
-      layer: 1,
-      full_id: req.req_id,
-      text: req.text,
-      obligation: req.obligation_type,
-      source_page: req.source_page,
-      confidence: req.confidence,
-    });
-    addEdge(docId, rId, "contains");
-  }
-
-  // Layer 2 — MAPs (children of requirements)
+  // Layer 1 — MAPs (children of document)
   for (const m of maps) {
     const mId  = `map:${m.map_id}`;
-    const rId  = `req:${m.req_id}`;
+    
+    // Find associated verification plan
+    const vp = safePlans.find(p => String(p.map_id) === String(m.map_id));
+    
+    const reqBadgeId = m.req_id || m.source_requirement_id;
+    const reqBadge = reqBadgeId ? `Req-${String(reqBadgeId).slice(-4)}` : (m.source_requirement_text ? "Requirement" : "");
+    
     addNode(mId, String(m.map_id || "").slice(-12), "map", {
-      layer: 2,
+      layer: 1,
       full_id: m.map_id,
       title: m.title,
       priority: m.priority,
       department: m.department,
+      compliance_status: m.compliance_status || m.status,
+      control_description: m.control_description || m.control_objective || "",
+      source_requirement_text: m.source_requirement_text || "",
+      ai_rationale: m.ai_rationale || "",
+      req_badge: reqBadge,
+      verification_plan: vp,
+      machine_verifiable: (m.automation_percentage > 0) || (m.automation_percent > 0) || m.machine_verifiable === true || m.is_machine_verifiable === true || (vp ? (vp.machine_verifiable_checks > 0 || (vp.automation_percentage && vp.automation_percentage > 0)) : false),
+      automation_percentage: m.automation_percentage || m.automation_percent || 0
     });
-    addEdge(rId, mId, "generates");
+    addEdge(docId, mId, "generates");
   }
 
-  // Layer 3 — Departments (children of MAPs, deduplicated)
-  const depts = [...new Set(maps.map((m) => m.department))];
+  // Layer 2 — Departments (children of MAPs, deduplicated)
+  const depts = [...new Set(maps.map((m) => m.department).filter(Boolean))];
   for (const dept of depts) {
     const dId = `dept:${dept}`;
-    addNode(dId, dept, "department", { layer: 3 });
+    addNode(dId, dept, "department", { layer: 2 });
   }
   for (const m of maps) {
-    addEdge(`map:${m.map_id}`, `dept:${m.department}`, "assigned to");
-  }
-
-  // Layer 4 — Verification Plans (children of MAPs)
-  for (const vp of safePlans) {
-    const vId = `vp:${vp.plan_id}`;
-    addNode(vId, String(vp.plan_id || "").slice(-10), "verification", {
-      layer: 4,
-      checks: vp.checks,
-      machine_verifiable: vp.machine_verifiable,
-    });
-    addEdge(`map:${vp.map_id}`, vId, "verified by");
-  }
-
-  // Layer 5 — Capabilities (children of MAPs, deduplicated)
-  const caps = [...new Set(maps.flatMap((m) => m.business_capability ?? []))];
-  for (const cap of caps) {
-    const cId = `cap:${cap}`;
-    addNode(cId, cap, "capability", { layer: 5 });
-  }
-  for (const m of maps) {
-    for (const cap of (m.business_capability ?? []).slice(0, 1)) {
-      addEdge(`map:${m.map_id}`, `cap:${cap}`, "capability");
+    if (m.department) {
+      addEdge(`map:${m.map_id}`, `dept:${m.department}`, "assigned to");
     }
   }
 

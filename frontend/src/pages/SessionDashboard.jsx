@@ -16,6 +16,7 @@ import { PriorityChart, CapabilityChart } from "../components/session/SessionCha
 import SessionKnowledgeGraph from "../components/session/SessionKnowledgeGraph";
 import VerificationSummary from "../components/session/VerificationSummary";
 import AssignmentPreview from "../components/session/AssignmentPreview";
+import { run as buildGraph } from "../pipeline/stages/stageGraphBuilder";
 
 function StageSummaryRow({ stage }) {
   return (
@@ -171,7 +172,14 @@ export default function SessionDashboard() {
 
     function loadSession() {
       apiFetch(`/documents/${docId}/session`)
-        .then((data) => {
+        .then(async (data) => {
+          const graphOutput = await buildGraph({
+            document_id: data.document_id,
+            requirements: data.requirements || [],
+            maps: data.maps || [],
+            verification_plans: data.verification_plans || []
+          });
+          data.graph = graphOutput.graph;
           setBackendData(data);
           setLoadState("done");
         })
@@ -211,7 +219,14 @@ export default function SessionDashboard() {
     // If it fails with 404, check the status endpoint to decide whether
     // to poll (processing) or show an error (failed / unknown).
     apiFetch(`/documents/${docId}/session`)
-      .then((data) => {
+      .then(async (data) => {
+        const graphOutput = await buildGraph({
+            document_id: data.document_id,
+            requirements: data.requirements || [],
+            maps: data.maps || [],
+            verification_plans: data.verification_plans || []
+        });
+        data.graph = graphOutput.graph;
         setBackendData(data);
         setLoadState("done");
       })

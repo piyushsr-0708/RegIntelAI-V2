@@ -128,7 +128,7 @@ function AppRoutes() {
                       <Route path="/maps/:id"          element={<RoleGate permission="map:read" requireAdmin><StateGate><MapDetail /></StateGate></RoleGate>} />
                       <Route path="/departments"       element={<RoleGate permission="dept:read" requireAdmin><Departments /></RoleGate>} />
                       <Route path="/requirements"      element={<Requirements />} />
-                      <Route path="/graph"             element={<Graph />} />
+                      {/* <Route path="/graph"             element={<Graph />} /> Disabled for hackathon demo */}
                       <Route path="/assignment-center" element={<RoleGate permission="map:approve"><AssignmentCenter /></RoleGate>} />
                       <Route path="/workspace"         element={<RoleGate permission="assign:read"><DepartmentWorkspace /></RoleGate>} />
                       <Route path="/pipeline"                    element={<RoleGate permission="pipeline:read"><Pipeline /></RoleGate>} />

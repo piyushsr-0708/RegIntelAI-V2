@@ -7,6 +7,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import logo from "../assets/logo.jpg";
 
 const DEMO_CREDENTIALS = [
   { username: "admin",      password: "admin123",      role: "Head Office Admin",  color: "#10b981" },
@@ -78,11 +79,11 @@ export default function Login() {
         <div style={{ position: "relative", zIndex: 1, maxWidth: 480 }}>
           {/* Logo */}
           <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 40 }}>
-            <div style={{ width: 56, height: 56, borderRadius: 14, background: "linear-gradient(135deg,#10b981,#059669)", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 0 32px rgba(16,185,129,0.45)" }}>
-              <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#fff" strokeWidth="2.5">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
-            </div>
+            <img
+              src={logo}
+              alt="RegIntel AI"
+              style={{ width: 64, height: 64, borderRadius: 16, objectFit: "cover", boxShadow: "0 0 36px rgba(16,185,129,0.4)" }}
+            />
             <div>
               <div style={{ fontSize: 28, fontWeight: 900, color: "#f1f5f9", letterSpacing: -0.5, lineHeight: 1 }}>RegIntel AI</div>
               <div style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginTop: 4 }}>Compliance Intelligence Platform</div>

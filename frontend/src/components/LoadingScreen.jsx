@@ -2,6 +2,7 @@
  * LoadingScreen.jsx
  * Shown while frontend_state.json is being fetched on first load.
  */
+import logo from "../assets/logo.jpg";
 
 export default function LoadingScreen({ error }) {
   if (error) {
@@ -50,16 +51,11 @@ export default function LoadingScreen({ error }) {
     }}>
       {/* Logo */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-        <div style={{
-          width: 52, height: 52, borderRadius: 14,
-          background: 'linear-gradient(135deg, #10b981, #059669)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          boxShadow: '0 0 32px rgba(16,185,129,0.45)',
-        }}>
-          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#fff" strokeWidth="2.5">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
-        </div>
+        <img
+          src={logo}
+          alt="RegIntel AI"
+          style={{ width: 56, height: 56, borderRadius: 14, objectFit: 'cover', boxShadow: '0 0 32px rgba(16,185,129,0.45)' }}
+        />
         <div>
           <div style={{ fontSize: 24, fontWeight: 900, color: '#f1f5f9', letterSpacing: -0.5, lineHeight: 1 }}>RegIntel AI</div>
           <div style={{ fontSize: 12, color: '#10b981', fontWeight: 600, marginTop: 4, letterSpacing: 0.5 }}>

@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { useAuth, ROLE_META } from "../context/AuthContext";
 import { useMetadata } from "../context/FrontendStateContext";
+import logo from "../assets/logo.jpg";
 
 export default function Topbar() {
   const { user, logout, isAdmin } = useAuth();
@@ -44,11 +45,11 @@ export default function Topbar() {
 
         {/* Brand */}
         <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
-          <div style={{ width: 32, height: 32, borderRadius: 8, background: "linear-gradient(135deg,#10b981,#059669)", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 0 14px rgba(16,185,129,0.45)" }}>
-            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#fff" strokeWidth="2.5">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
+          <img
+            src={logo}
+            alt="RegIntel AI"
+            style={{ width: 32, height: 32, borderRadius: 8, objectFit: "cover", boxShadow: "0 0 14px rgba(16,185,129,0.35)" }}
+          />
           <div>
             <div style={{ color: "#f8fafc", fontWeight: 800, fontSize: 14, letterSpacing: 0.2, lineHeight: 1 }}>RegIntel AI</div>
             <div style={{ color: "#10b981", fontSize: 9, fontWeight: 600, letterSpacing: 0.5, lineHeight: 1, marginTop: 2 }}>Compliance Intelligence</div>

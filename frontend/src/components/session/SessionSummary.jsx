@@ -41,11 +41,12 @@ export default function SessionSummary({ session }) {
         <div style={{ display: "flex", gap: 10, flexShrink: 0 }}>
           <div style={{ padding: "10px 16px", background: `${riskColor}12`, border: `1px solid ${riskColor}30`, borderRadius: 9, textAlign: "center" }}>
             <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 3 }}>OVERALL RISK</div>
-            <div style={{ fontSize: 16, fontWeight: 900, color: riskColor }}>{session.overall_risk ?? "—"}</div>
+            <div style={{ fontSize: 16, fontWeight: 900, color: session.overall_risk ? riskColor : "#94a3b8" }}>{session.overall_risk ?? "PENDING ASSESSMENT"}</div>
+            {!session.overall_risk && <div style={{ fontSize: 9, color: "#64748b", marginTop: 4 }}>Calculated after verification execution.</div>}
           </div>
-          <div style={{ padding: "10px 16px", background: "rgba(52,211,153,0.08)", border: "1px solid rgba(52,211,153,0.2)", borderRadius: 9, textAlign: "center" }}>
+          <div style={{ padding: "10px 16px", background: "rgba(52,211,153,0.08)", border: "1px solid rgba(52,211,153,0.2)", borderRadius: 9, textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <div style={{ fontSize: 10, color: "#475569", fontWeight: 700, marginBottom: 3 }}>STATUS</div>
-            <div style={{ fontSize: 13, fontWeight: 800, color: "#34d399" }}>COMPLETED</div>
+            <div style={{ fontSize: 13, fontWeight: 800, color: "#34d399", whiteSpace: "nowrap" }}>AWAITING VERIFICATION</div>
           </div>
         </div>
       </div>

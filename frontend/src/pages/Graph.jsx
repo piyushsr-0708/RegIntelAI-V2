@@ -8,27 +8,42 @@ const NODE_COLORS = {
   document: "#60a5fa",
   map: "#34d399",
   department: "#a78bfa",
-  priority: "#fbbf24",
-  status: "#fb923c",
 };
+
+const STATUS_COLORS = {
+  "Compliant": "#10b981", // Emerald
+  "Non-Compliant": "#ef4444", // Red
+  "Pending": "#f59e0b", // Amber
+};
+
+function getStatusColor(status) {
+  if (!status) return "#475569";
+  for (const [key, color] of Object.entries(STATUS_COLORS)) {
+    if (status.toLowerCase().includes(key.toLowerCase())) return color;
+  }
+  return "#475569";
+}
+
+function getPriorityIcon(priority) {
+  if (!priority) return "";
+  const p = priority.toLowerCase();
+  if (p.includes("high") || p.includes("critical")) return "🔴 ";
+  if (p.includes("medium")) return "🟡 ";
+  if (p.includes("low")) return "🟢 ";
+  return "";
+}
 
 function buildGraphData(records) {
   const scope = records.slice(0, GRAPH_SCOPE_LIMIT);
   const documentCounts = new Map();
   const departmentCounts = new Map();
-  const priorityCounts = new Map();
-  const statusCounts = new Map();
 
   scope.forEach((entry) => {
     const documentId = entry.document_id || "Unknown Document";
     const department = entry.department || "Unassigned";
-    const priority = entry.priority || "Unknown";
-    const status = entry.compliance_status || "Unknown";
 
     documentCounts.set(documentId, (documentCounts.get(documentId) || 0) + 1);
     departmentCounts.set(department, (departmentCounts.get(department) || 0) + 1);
-    priorityCounts.set(priority, (priorityCounts.get(priority) || 0) + 1);
-    statusCounts.set(status, (statusCounts.get(status) || 0) + 1);
   });
 
   const nodes = [];
@@ -73,17 +88,20 @@ function buildGraphData(records) {
     const documentKey = `document:${documentId}`;
     const mapKey = `map:${mapId}`;
     const departmentKey = `department:${department}`;
-    const priorityKey = `priority:${priority}`;
-    const statusKey = `status:${status}`;
 
     addNode(documentKey, `Document ${documentId}`, "document", {
       documentId,
       entryCount: documentCounts.get(documentId) || 1,
+      borderColor: "#60a5fa"
     });
 
-    addNode(mapKey, `${mapId}`.length > 30 ? `${mapId.slice(0, 27)}…` : mapId, "map", {
+    const title = entry.title || "Untitled MAP";
+    const shortMapId = `${mapId}`.length > 20 ? `${mapId.slice(0, 17)}…` : mapId;
+    const mapLabel = `${getPriorityIcon(priority)}${shortMapId}\n${title.length > 25 ? title.slice(0,22)+'...' : title}\n[${status}]`;
+
+    addNode(mapKey, mapLabel, "map", {
       mapId,
-      title: entry.title || "Untitled MAP",
+      title,
       department,
       priority,
       complianceStatus: status,
@@ -92,27 +110,17 @@ function buildGraphData(records) {
         : entry.business_capability || "N/A",
       automationPercentage: entry.automation_percentage ?? null,
       documentId,
+      borderColor: getStatusColor(status)
     });
 
     addNode(departmentKey, department, "department", {
       department,
       entryCount: departmentCounts.get(department) || 1,
-    });
-
-    addNode(priorityKey, priority, "priority", {
-      priority,
-      entryCount: priorityCounts.get(priority) || 1,
-    });
-
-    addNode(statusKey, status, "status", {
-      complianceStatus: status,
-      entryCount: statusCounts.get(status) || 1,
+      borderColor: "#a78bfa"
     });
 
     addEdge(documentKey, mapKey, "references");
     addEdge(mapKey, departmentKey, "assigned to");
-    addEdge(mapKey, priorityKey, "priority");
-    addEdge(mapKey, statusKey, "status");
   });
 
   return {
@@ -123,8 +131,6 @@ function buildGraphData(records) {
       documents: documentCounts.size,
       maps: scope.length,
       departments: departmentCounts.size,
-      priorities: priorityCounts.size,
-      statuses: statusCounts.size,
     },
   };
 }
@@ -152,41 +158,53 @@ export default function Graph() {
         {
           selector: "node",
           style: {
+            shape: "round-rectangle",
             label: "data(label)",
             "text-wrap": "wrap",
-            "text-max-width": "120px",
-            width: 28,
-            height: 28,
-            "font-size": 10,
-            "font-weight": 700,
+            "text-max-width": "180px",
+            width: "label",
+            height: "label",
+            padding: "14px",
+            "font-size": 12,
+            "font-weight": 600,
             color: "#f8fafc",
             "text-valign": "center",
             "text-halign": "center",
-            "border-width": 2,
-            "border-color": "#0f172a",
+            "border-width": 3,
+            "border-color": "data(borderColor)",
             "background-color": (ele) => NODE_COLORS[ele.data("type")] || "#64748b",
-            "background-opacity": 0.95,
+            "background-opacity": 0.2,
           },
+        },
+        {
+          selector: "node[type='map']",
+          style: {
+            "background-opacity": 0.15,
+            "border-width": 4,
+            "border-color": "data(borderColor)",
+          }
         },
         {
           selector: "edge",
           style: {
-            width: 1.4,
-            "line-color": "rgba(96,165,250,0.3)",
-            "target-arrow-color": "rgba(96,165,250,0.3)",
+            width: 2.5,
+            "line-color": "rgba(96,165,250,0.4)",
+            "target-arrow-color": "rgba(96,165,250,0.4)",
             "target-arrow-shape": "triangle",
             "curve-style": "bezier",
             label: "data(label)",
-            "font-size": 8,
+            "font-size": 9,
             color: "#94a3b8",
             "text-rotation": "autorotate",
+            "text-margin-y": -10,
           },
         },
         {
           selector: "node:selected",
           style: {
-            "border-color": "#34d399",
-            "border-width": 3,
+            "border-color": "#ffffff",
+            "border-width": 4,
+            "background-opacity": 0.4,
           },
         },
         {
@@ -194,36 +212,46 @@ export default function Graph() {
           style: {
             "background-color": "#fbbf24",
             "border-color": "#f59e0b",
-            "border-width": 3,
+            "border-width": 4,
+            "background-opacity": 0.5,
           },
         },
         {
           selector: "node.faded",
           style: {
-            opacity: 0.22,
-          },
-        },
-        {
-          selector: "edge.highlighted",
-          style: {
-            width: 2.2,
-            "line-color": "rgba(251, 191, 36, 0.75)",
-            "target-arrow-color": "rgba(251, 191, 36, 0.75)",
+            opacity: 0.15,
           },
         },
         {
           selector: "edge.faded",
           style: {
-            opacity: 0.2,
+            opacity: 0.05,
           },
         },
+        {
+          selector: "node.hover-highlight",
+          style: {
+            "border-width": 4,
+            "border-color": "#ffffff",
+            "background-opacity": 0.5,
+          }
+        },
+        {
+          selector: "edge.hover-highlight",
+          style: {
+            width: 4,
+            "line-color": "#ffffff",
+            "target-arrow-color": "#ffffff",
+            opacity: 1
+          }
+        }
       ],
       layout: {
-        name: "cose",
-        animate: false,
-        padding: 24,
-        nodeDimensionsIncludeLabels: true,
-        idealEdgeLength: 90,
+        name: "breadthfirst",
+        directed: true,
+        padding: 40,
+        spacingFactor: 1.5,
+        avoidOverlap: true,
       },
     });
 
@@ -240,9 +268,27 @@ export default function Graph() {
       }
     });
 
+    // Hover interactions
+    cy.on("mouseover", "node", (event) => {
+      const node = event.target;
+      const neighborhood = node.neighborhood();
+      
+      cy.elements().addClass("faded");
+      node.removeClass("faded").addClass("hover-highlight");
+      neighborhood.removeClass("faded").addClass("hover-highlight");
+    });
+
+    cy.on("mouseout", "node", (event) => {
+      cy.elements().removeClass("faded").removeClass("hover-highlight");
+      // Re-apply search/selection fading if necessary
+      if (searchTerm.trim() || selectedNodeId) {
+         updateSearchAndSelection(cyRef.current, searchTerm, selectedNodeId);
+      }
+    });
+
     cy.fit();
     if (graph.nodes.length > 0) {
-      cy.zoom({ level: 0.9 });
+      cy.zoom({ level: Math.min(cy.zoom(), 1) });
       cy.center();
     }
 
@@ -252,21 +298,18 @@ export default function Graph() {
     };
   }, [graph.nodes, graph.edges]);
 
-  useEffect(() => {
-    if (!cyRef.current) return;
-
-    const cy = cyRef.current;
-    const term = searchTerm.trim().toLowerCase();
+  const updateSearchAndSelection = (cy, term, selectedId) => {
+    if (!cy) return;
+    const lowerTerm = term.trim().toLowerCase();
 
     cy.batch(() => {
       cy.elements().removeClass("search-match");
-      cy.elements().removeClass("highlighted");
       cy.elements().removeClass("faded");
       cy.elements().removeClass("selected");
 
-      if (!term) {
-        if (selectedNodeId) {
-          cy.getElementById(selectedNodeId).addClass("selected");
+      if (!lowerTerm) {
+        if (selectedId) {
+          cy.getElementById(selectedId).addClass("selected");
         }
         return;
       }
@@ -274,7 +317,7 @@ export default function Graph() {
       const matchingNodes = cy.nodes().filter((node) => {
         const label = node.data("label") || "";
         const id = node.data("id") || "";
-        return label.toLowerCase().includes(term) || id.toLowerCase().includes(term);
+        return label.toLowerCase().includes(lowerTerm) || id.toLowerCase().includes(lowerTerm);
       });
 
       if (matchingNodes.length === 0) {
@@ -284,13 +327,17 @@ export default function Graph() {
 
       matchingNodes.addClass("search-match");
       const relatedEdges = matchingNodes.edgesWith(cy.edges());
-      relatedEdges.addClass("highlighted");
+      
       cy.elements().difference(matchingNodes).difference(relatedEdges).addClass("faded");
 
-      if (selectedNodeId) {
-        cy.getElementById(selectedNodeId).addClass("selected");
+      if (selectedId) {
+        cy.getElementById(selectedId).addClass("selected");
       }
     });
+  };
+
+  useEffect(() => {
+    updateSearchAndSelection(cyRef.current, searchTerm, selectedNodeId);
   }, [searchTerm, selectedNodeId, graph.nodes.length]);
 
   const selectedNode = useMemo(() => {
@@ -302,7 +349,7 @@ export default function Graph() {
     ? [
         ["Type", selectedNode.type || "—"],
         ["ID", selectedNode.id || "—"],
-        ["Label", selectedNode.label || "—"],
+        ["Label", selectedNode.label ? selectedNode.label.replace(/\n/g, ' ') : "—"],
         ["Entries", selectedNode.entryCount || "1"],
         ["Document", selectedNode.documentId || "—"],
         ["Department", selectedNode.department || "—"],
@@ -329,7 +376,7 @@ export default function Graph() {
   const resetView = () => {
     if (cyRef.current) {
       cyRef.current.fit();
-      cyRef.current.zoom({ level: 0.9 });
+      cyRef.current.zoom({ level: Math.min(cyRef.current.zoom(), 1) });
       cyRef.current.center();
     }
   };
@@ -355,7 +402,7 @@ export default function Graph() {
                 Live graph view
               </div>
               <div style={{ fontSize: 13, color: "#94a3b8", marginTop: 4 }}>
-                Document → MAP → Department / Priority / Compliance status
+                Document → MAP → Department
               </div>
             </div>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
@@ -380,12 +427,11 @@ export default function Graph() {
 
           <div ref={graphContainerRef} style={{ width: "100%", height: 500, minHeight: 400, borderRadius: 12, overflow: "hidden", background: "linear-gradient(180deg, rgba(15,23,42,0.78) 0%, rgba(2,6,23,0.96) 100%)", border: "1px solid rgba(255,255,255,0.06)" }} />
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: 10, marginTop: 14 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 10, marginTop: 14 }}>
             {[
               ["Records", graph.stats.records, "#60a5fa"],
               ["Documents", graph.stats.documents, "#34d399"],
               ["Departments", graph.stats.departments, "#a78bfa"],
-              ["Statuses", graph.stats.statuses, "#fb923c"],
             ].map(([label, value, color]) => (
               <div key={label} style={{ padding: "12px 10px", borderRadius: 10, background: "rgba(15,23,42,0.54)", border: "1px solid rgba(255,255,255,0.05)" }}>
                 <div style={{ fontSize: 20, fontWeight: 800, color }}>{value}</div>
@@ -401,7 +447,7 @@ export default function Graph() {
           </div>
           {selectedNode ? (
             <div>
-              <div style={{ fontSize: 15, fontWeight: 700, color: "#f8fafc", marginBottom: 10 }}>{selectedNode.label}</div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#f8fafc", marginBottom: 10 }}>{selectedNode.label ? selectedNode.label.replace(/\n/g, ' ') : "—"}</div>
               <div style={{ display: "grid", gap: 8 }}>
                 {metadataRows.map(([label, value]) => (
                   <div key={label} style={{ padding: "10px 12px", borderRadius: 10, background: "rgba(15,23,42,0.47)", border: "1px solid rgba(255,255,255,0.05)" }}>
@@ -413,7 +459,7 @@ export default function Graph() {
             </div>
           ) : (
             <div style={{ color: "#64748b", lineHeight: 1.65, fontSize: 13 }}>
-              Click a node to inspect its document, department, priority, and compliance status metadata. Use the search field to highlight matching nodes and their relationships.
+              Hover over a node to see its relationships. Click a node to inspect its document, department, priority, and compliance status metadata. Use the search field to highlight matching nodes and their relationships.
             </div>
           )}
         </div>
