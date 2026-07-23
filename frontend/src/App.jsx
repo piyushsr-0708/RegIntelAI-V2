@@ -24,11 +24,11 @@ const Login              = lazy(() => import("./pages/Login"));
 const Dashboard          = lazy(() => import("./pages/Dashboard"));
 const Maps               = lazy(() => import("./pages/Maps"));
 const MapDetail          = lazy(() => import("./pages/MapDetail"));
-const Departments        = lazy(() => import("./pages/Departments"));
+const DepartmentOperations = lazy(() => import("./pages/DepartmentOperations"));
 const Requirements       = lazy(() => import("./pages/Requirements"));
 const Graph              = lazy(() => import("./pages/Graph"));
 const AssignmentCenter   = lazy(() => import("./pages/AssignmentCenter"));
-const DepartmentWorkspace= lazy(() => import("./pages/DepartmentWorkspace"));
+const MyAssignments      = lazy(() => import("./pages/MyAssignments"));
 const Pipeline           = lazy(() => import("./pages/Pipeline"));
 const SessionDashboard   = lazy(() => import("./pages/SessionDashboard"));
 const SessionMapDetail   = lazy(() => import("./pages/SessionMapDetail"));
@@ -126,11 +126,11 @@ function AppRoutes() {
                       <Route path="/maps"              element={<RoleGate permission="map:read" requireAdmin><StateGate><Maps /></StateGate></RoleGate>} />
                       <Route path="/registry/:id"      element={<RoleGate permission="map:read" requireAdmin><StateGate><MapDetail /></StateGate></RoleGate>} />
                       <Route path="/maps/:id"          element={<RoleGate permission="map:read" requireAdmin><StateGate><MapDetail /></StateGate></RoleGate>} />
-                      <Route path="/departments"       element={<RoleGate permission="dept:read" requireAdmin><Departments /></RoleGate>} />
+                      <Route path="/departments"       element={<RoleGate permission="dept:read" requireAdmin><DepartmentOperations /></RoleGate>} />
                       <Route path="/requirements"      element={<Requirements />} />
                       {/* <Route path="/graph"             element={<Graph />} /> Disabled for hackathon demo */}
                       <Route path="/assignment-center" element={<RoleGate permission="map:approve"><AssignmentCenter /></RoleGate>} />
-                      <Route path="/workspace"         element={<RoleGate permission="assign:read"><DepartmentWorkspace /></RoleGate>} />
+                      <Route path="/my-assignments"    element={<RoleGate permission="assign:read"><MyAssignments /></RoleGate>} />
                       <Route path="/pipeline"                    element={<RoleGate permission="pipeline:read"><Pipeline /></RoleGate>} />
                       <Route path="/session/:id"                 element={<RoleGate permission="pipeline:read"><SessionDashboard /></RoleGate>} />
                       <Route path="/session/:sessionId/map/:mapId" element={<RoleGate permission="pipeline:read"><StateGate><MapDetail /></StateGate></RoleGate>} />

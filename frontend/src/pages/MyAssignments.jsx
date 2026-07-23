@@ -9,7 +9,7 @@ import { apiFetch } from "../utils/api";
 import { StatusBadge } from "../components/Badges";
 import Breadcrumbs from "../components/Breadcrumbs";
 
-export default function DepartmentWorkspace() {
+export default function MyAssignments() {
   const { user, can } = useAuth();
   const navigate = useNavigate();
   

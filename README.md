@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/logo.jpg" width="180" alt="RegIntel AI Logo">
+  <img src="docs/images/logo.jpg" width="160" alt="RegIntel AI Logo">
 </p>
 
 <h1 align="center">RegIntel AI</h1>
@@ -7,232 +7,201 @@
 <h3 align="center">Agentic Regulatory Compliance Intelligence for Banking</h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Production--Ready-brightgreen?style=for-the-badge" alt="Status">
+  <img src="https://img.shields.io/badge/Status-Hackathon--Ready-brightgreen?style=for-the-badge" alt="Status">
   <img src="https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/FastAPI-0.100+-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/FastAPI-0.139-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
   <img src="https://img.shields.io/badge/React-Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
   <img src="https://img.shields.io/badge/Ollama-Qwen3:8B-FF6B35?style=for-the-badge" alt="Ollama">
   <img src="https://img.shields.io/badge/License-MIT-gray?style=for-the-badge" alt="License">
 </p>
 
 <p align="center">
-  <strong>Upload a regulatory circular. Get independently verified compliance decisions. Ask questions in plain English.</strong>
+  <strong>Upload a regulatory circular. Get AI-generated compliance obligations. Manage execution across departments.</strong>
 </p>
 
 ---
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Why It Matters](#why-it-matters)
-- [Features](#features)
-- [End-to-End Workflow](#end-to-end-workflow)
+- [Problem Statement](#problem-statement)
+- [Solution](#solution)
+- [Key Features](#key-features)
 - [System Architecture](#system-architecture)
-- [AI Compliance Assistant](#ai-compliance-assistant)
-- [Tech Stack](#tech-stack)
+- [Application Workflow](#application-workflow)
+- [Technology Stack](#technology-stack)
 - [Project Structure](#project-structure)
-- [Screenshots](#screenshots)
 - [Installation](#installation)
 - [Running the Project](#running-the-project)
-- [Demo Walkthrough](#demo-walkthrough)
+- [Current Navigation](#current-navigation)
+- [Demo Flow](#demo-flow)
 - [API Reference](#api-reference)
 - [User Roles & Permissions](#user-roles--permissions)
-- [Future Roadmap](#future-roadmap)
-- [Contributors](#contributors)
+- [Future Scope](#future-scope)
 - [License](#license)
 
 ---
 
-## Overview
+## Problem Statement
 
-Regulatory bodies — RBI, CERT-In, SEBI, and others — issue dozens of advisories every quarter. Each advisory must be semantically understood, decomposed into concrete action points, routed to the correct department, and — critically — independently verified against actual banking systems before a bank can declare itself compliant.
+Regulatory bodies — RBI, CERT-In, SEBI, and others — issue dozens of advisories every quarter. Each advisory must be semantically understood, decomposed into concrete action points, routed to the correct banking department, and tracked through to completion.
 
-**RegIntel AI** automates this entire lifecycle end to end.
+Today, this process is largely manual:
 
-It ingests a regulatory PDF, runs it through a 14-stage agentic pipeline, assigns Measurable Action Points (MAPs) to departments, generates and executes verification plans against live systems, and issues an audit-grade compliance decision — traceable back to the exact clause in the source document.
-
-A built-in AI Compliance Assistant (RegulAI1 Mitra) lets compliance officers query the system in natural language, receiving answers grounded exclusively in the pipeline's verified evidence.
-
----
-
-## Why It Matters
-
-> [!IMPORTANT]
-> The hardest requirement in regulatory compliance is **independent verification** — verifying that departments are actually compliant, not just self-reporting it. RegIntel AI is built around this constraint.
-
-| Problem | Impact |
+| Problem | Business Impact |
 |---|---|
 | Manual circular interpretation is slow and error-prone | Compliance cycles take weeks; sub-clauses are routinely missed |
-| Department self-attestation is the industry norm | Non-compliance is hidden until an audit exposes it |
-| No structured traceability from rule to evidence | Audit defensibility is weak; remediation is slow |
-| Advisory volume is growing; compliance headcount is not | Backlogs accumulate; regulatory risk compounds |
-| Verification is never done against source systems | Banks confirm compliance on paper while systems remain exposed |
-
-RegIntel AI addresses each of these failure modes with an automated, independently verified, and fully traceable compliance workflow.
+| No structured traceability from rule to assigned task | Audit defensibility is weak; remediation is reactive |
+| Obligations are siloed — no cross-department visibility | Department heads have no operational view of their regulatory load |
+| Advisory volume is growing; compliance headcount is not | Backlogs compound; regulatory risk is underestimated |
 
 ---
 
-## Features
+## Solution
 
-### 🔄 Regulatory Advisory Ingestion
-Upload any RBI or regulatory circular as a PDF. The system assigns a unique, human-readable document ID (`UP20260720_0001`) and immediately queues it for background processing. Duplicate detection via SHA-256 prevents reprocessing.
+**RegIntel AI** automates the full intake-to-execution lifecycle for regulatory advisories.
 
-### 🧠 Semantic Decomposition into MAPs
-The 14-stage agentic pipeline parses, normalises, and hierarchically structures the document, then extracts explicit regulatory obligations and decomposes them into granular **Measurable Action Points (MAPs)** — each traceable to its source page and block.
+It ingests a regulatory PDF, runs it through a 14-stage agentic pipeline, and produces **Measurable Action Points (MAPs)** — structured, department-assigned compliance obligations derived directly from the source document. These MAPs are immediately visible across the platform: in a macro Executive Dashboard, a searchable Compliance Register, a department-scoped Workspace, and an individual contributor's personal queue.
 
-### 🏦 Automated Department Assignment
-Each MAP is routed to the responsible banking department (IT Security, Risk, Treasury, Operations, etc.) based on an ontological compliance mapping that understands which controls belong to which system.
+An embedded AI Compliance Assistant (powered by Ollama and Qwen3:8B) allows compliance officers to query the system in natural language. All inference runs on-premise — no regulatory data leaves the bank's infrastructure.
 
-### 📋 Verification Planning
-For every MAP, the system auto-generates a structured verification plan — a set of machine-readable checks specifying exactly what evidence is required and how to collect it.
+---
 
-### 🔍 Independent Compliance Verification
-The Compliance Verification Executor runs each verification plan directly against available systems using read-only commands (SQL `SELECT`, PowerShell queries, CMD). It does not rely on department confirmation. Each check returns a verifiable verdict: `PASS`, `FAIL`, `ERROR`, or `SKIPPED_ENVIRONMENT_UNAVAILABLE`.
+## Key Features
 
-### ⚖️ Compliance Decision Engine
-A deterministic rule engine (not an LLM) aggregates check verdicts into a per-MAP and document-level compliance verdict with structured rationale. Decisions are reproducible and audit-grade.
+### 🏛️ Executive Dashboard
+A macro-level operations view powered by aggregated pipeline output. Displays enterprise KPIs (total MAPs, compliance status distribution, automation profile) and a custom Sankey flow diagram visualizing the path from uploaded documents → generated MAPs → impacted departments. Includes session-level drill-down analytics.
 
-### 🤖 AI Compliance Assistant (RegulAI1 Mitra)
-A stage-aware, locally running AI assistant powered by Ollama and Qwen3:8B. Answers compliance questions in natural language, grounded exclusively in pipeline-generated evidence. No data leaves the bank's infrastructure.
+### 🔄 AI-Powered Analysis Pipeline
+Tracks document processing in real time across 14 sequential pipeline stages. Stage cards display execution duration and status, giving compliance teams full visibility into how an uploaded circular was processed.
 
-### 📊 Executive Dashboard & Compliance Register
-A React frontend with role-based views: Executive Dashboard (KPIs, department status), Compliance Register (MAP-level detail, verification results, decisions), and Department Workspace (assigned MAPs, evidence submission).
+### 📋 MAP Generation
+The 14-stage agentic pipeline parses, normalizes, and semantically structures uploaded regulatory PDFs, then extracts explicit obligations and decomposes them into granular MAPs. Each MAP is traceable to its source page and requirement text.
+
+### 🗂️ Compliance Register
+The central enterprise repository for all MAPs. Supports full-text search, and filtering by department, priority, and compliance status. Columns are sortable. Each row links to a deep-detail page showing source requirement text, AI-generated rationale, and the verification plan.
+
+### 🏢 Department Workspace
+An operational command center scoped to a single department. Shows the department's regulatory impact (which source documents generated obligations), KPIs (total MAPs, critical/high priority count, automation profile), and a searchable MAP explorer filtered to that department's obligations. The active department is selectable via dropdown.
+
+### ✅ Assignment Center
+An administrator-level hub for managing organization-wide MAP approvals. Administrators review drafted MAPs, can reassign departments, and approve or reject them. Approval automatically creates trackable assignments for department personnel. Includes a live MAP status summary panel.
+
+### 👤 My Assignments
+A personal work queue for department members. Shows all assignments created for the logged-in user's department, with status tracking (Active / Completed), due dates, evidence notes, and the ability to mark assignments complete.
+
+### 🤖 AI Compliance Assistant
+A Retrieval-Augmented Generation (RAG) assistant embedded inside the Session Dashboard. Accepts natural language questions about a processed document and returns answers grounded exclusively in pipeline-generated artifacts (requirements, verification plans, compliance decisions). Powered by Ollama + Qwen3:8B running locally. Will never invent facts or fabricate compliance advice.
 
 ### 📄 Compliance Report Export
-Programmatic PDF generation — download a structured compliance assessment report for any processed document.
+Programmatic PDF generation for any processed document. Download a structured compliance assessment report via `GET /reports/{document_id}/pdf`.
 
----
-
-## End-to-End Workflow
-
-```mermaid
-flowchart TD
-    A([📄 RBI Circular Uploaded]) --> B[PDF Parser]
-    B --> C[Normalizer]
-    C --> D[Hierarchy Builder]
-    D --> E[Logical Unit Builder]
-    E --> F[Requirement Extractor]
-    F --> G[Requirement Enricher]
-    G --> H[Compliance Interpreter\nSingle Source of Truth]
-    H --> I[Compliance Reasoning Engine]
-    I --> J[Control Deriver]
-    J --> K[Verification Rule Generator]
-    K --> L[Verification Planner]
-    L --> M[MAP Generator]
-    M --> N[Database Ingest]
-    N --> O[Dashboard Aggregator]
-
-    O --> P([📊 Executive Dashboard])
-    O --> Q([📋 Compliance Register])
-    O --> R([🏦 Department Workspace])
-
-    M --> S[Compliance Verification Executor]
-    S --> T[Compliance Decision Engine]
-    T --> U([✅ Compliance Decision + Audit Trail])
-
-    style H fill:#d4edda,stroke:#28a745,stroke-width:2px
-    style T fill:#d4edda,stroke:#28a745,stroke-width:2px
-    style U fill:#c3e6cb,stroke:#155724,stroke-width:2px
-```
+### 🔐 Role-Based Access Control
+JWT-based authentication (HS256, stdlib-only — no external dependency). Seven distinct roles with granular permission scoping. Department-scoped users see only their own MAPs and assignments automatically.
 
 ---
 
 ## System Architecture
 
 ```mermaid
-graph TD
-    subgraph Frontend ["🖥️ React Frontend (Vite)"]
-        FE1[Executive Dashboard]
-        FE2[Compliance Register]
-        FE3[Department Workspace]
-        FE4[Pipeline Tracker]
-        FE5[AI Assistant UI]
-    end
+flowchart TD
+    A([📄 Regulatory PDF Uploaded]) --> B[14-Stage Agentic Pipeline]
+    B --> C[Generated MAPs]
+    C --> D[Database Ingest]
+    D --> E[Frontend State Aggregator]
 
-    subgraph Backend ["⚙️ FastAPI Backend"]
-        API1[Auth & RBAC\nJWT + HS256]
-        API2[Document Upload\nAsync Background]
-        API3[MAP & Assignment APIs]
-        API4[Chat Endpoint\n/chat]
-        API5[Report Generator\n/reports/pdf]
-    end
+    E --> F([📊 Executive Dashboard])
+    E --> G([🗂️ Compliance Register])
+    E --> H([🏢 Department Workspace])
 
-    subgraph Pipeline ["🔗 Agentic Pipeline (14 Stages)"]
-        P1[Parse → Normalise → Hierarchy]
-        P2[Extract → Enrich → Interpret]
-        P3[Reason → Derive → Plan]
-        P4[Generate MAPs → Verify → Decide]
-    end
+    C --> I[Assignment Center]
+    I --> J([👤 My Assignments])
 
-    subgraph Artifacts ["📁 Knowledge Artifacts"]
-        D1[(Compliance Decisions)]
-        D2[(Verification Results)]
-        D3[(Verification Plans)]
-        D4[(Requirements)]
-    end
+    B --> K[AI Context Builder]
+    K --> L([🤖 AI Compliance Assistant])
 
-    subgraph AI ["🤖 Local AI Inference"]
-        OL[Ollama\nQwen3:8B]
-        CB[Context Builder\nStage-Aware RAG]
-    end
-
-    Frontend <-->|REST API| Backend
-    Backend --> Pipeline
-    Pipeline --> Artifacts
-    Backend --> CB
-    CB --> D1
-    CB --> D2
-    CB --> D3
-    CB --> D4
-    CB --> OL
-    OL -->|Grounded Answer| Backend
+    style A fill:#1a2332,stroke:#10b981,stroke-width:2px,color:#e2e8f0
+    style L fill:#1a2332,stroke:#a78bfa,stroke-width:2px,color:#e2e8f0
 ```
 
-> [!NOTE]
-> All AI inference runs locally via Ollama. No regulatory data is transmitted to external services.
+> **Privacy guarantee:** All AI inference runs locally via Ollama. No regulatory data is transmitted to external services.
 
 ---
 
-## AI Compliance Assistant
+## Application Workflow
 
-**RegulAI1 Mitra** is a stage-aware Retrieval-Augmented Generation (RAG) assistant embedded in the platform.
+```
+1. UPLOAD
+   Compliance officer uploads an RBI circular PDF via the Analysis Pipeline.
+   System assigns a unique document ID (e.g., UP20260720_0001).
+   Duplicate detection via SHA-256 prevents reprocessing.
 
-### Stage-Aware Retrieval
+        ↓
 
-The assistant automatically selects the right evidence source based on where the document is in the pipeline:
+2. PIPELINE EXECUTION (background)
+   Stage 1:  PDF Parser           — structural extraction
+   Stage 2:  Document Normalizer  — text normalization
+   Stage 3:  Hierarchy Builder    — section/clause tree
+   Stage 4:  Logical Unit Builder — semantic chunking
+   Stage 5:  Requirement Extractor
+   Stage 6:  Requirement Enricher
+   Stage 7:  Compliance Interpreter (Single Source of Truth)
+   Stage 8:  Compliance Reasoning Engine
+   Stage 9:  Control Deriver
+   Stage 10: Verification Rule Generator
+   Stage 11: Verification Planner
+   Stage 12: MAP Generator        — department assignment
+   Stage 13: Database Ingest
+   Stage 14: Dashboard Aggregator
 
-| Stage | Context Sources | Example Answer |
-|---|---|---|
-| **Pre-Verification** | Verification Plans + Requirements | "The VAPT plan requires a bi-annual vulnerability scan of critical systems." |
-| **Post-Verification** | Compliance Decisions + Verification Results | "MAP CVP-001 is NON_COMPLIANT. The scan evidence check returned FAIL — no completed scan found within the required 6-month window." |
+        ↓
 
-### Design Principles
+3. REGISTER REVIEW
+   All generated MAPs are immediately visible in the Compliance Register.
+   Compliance Head filters by department, priority, and status.
 
-- `temperature: 0.1` — near-deterministic, grounded responses
-- `think: False` — disables Qwen3 chain-of-thought for faster factual retrieval
-- Streaming response — avoids socket timeouts on CPU-only hardware
-- Context budget: 3,000 characters — aggressive summarisation keeps prefill fast on local hardware
-- System prompt enforces: *never invent facts, never fabricate compliance advice*
+        ↓
 
-> [!CAUTION]
-> The assistant will explicitly state when information is unavailable rather than generating a plausible-sounding but unverified answer.
+4. DEPARTMENT TRIAGE
+   Each Department Head opens their Department Workspace.
+   They see which source documents generated obligations for their unit
+   and can explore their specific MAP obligations.
+
+        ↓
+
+5. APPROVAL & ASSIGNMENT
+   Administrator reviews drafted MAPs in the Assignment Center.
+   On approval, an assignment is automatically created for the department.
+
+        ↓
+
+6. EXECUTION
+   Department members see their work in My Assignments.
+   They review the obligation, add evidence notes, and mark complete.
+
+        ↓
+
+7. QUERY
+   Any authorized user can query the AI Compliance Assistant
+   in natural language about the document's compliance obligations.
+```
 
 ---
 
-## Tech Stack
+## Technology Stack
 
-| Layer | Technology | Purpose |
+| Layer | Technology | Notes |
 |---|---|---|
-| **Backend** | FastAPI (Python 3.13) | REST API, async document processing |
-| **Authentication** | Custom JWT (HS256 + PBKDF2) | Offline-capable, no external auth dependency |
-| **Database ORM** | SQLAlchemy | Database abstraction (SQLite in dev, PostgreSQL-ready) |
-| **Frontend** | React + Vite | Dashboard, register, workspace, assistant UI |
-| **Local AI** | Ollama + Qwen3:8B | On-premise LLM inference, no external API |
-| **Pipeline** | Python (modular, JSON-driven) | 14-stage agentic compliance pipeline |
+| **Frontend** | React 18 + Vite | SPA, lazy-loaded routes, custom SVG charts |
+| **Styling** | Vanilla CSS | CSS custom properties, no framework |
+| **State** | React Context API | `FrontendStateContext`, `AuthContext`, `SessionContext` |
+| **Backend** | FastAPI 0.139 (Python 3.13) | Async document processing via `BackgroundTasks` |
+| **Authentication** | Custom JWT (HS256 + PBKDF2) | stdlib-only, no external auth dependency |
+| **Database ORM** | SQLAlchemy 2.0 | SQLite in development, PostgreSQL-compatible |
+| **AI / LLM** | Ollama + Qwen3:8B | On-premise inference, streaming responses |
+| **RAG Context** | Custom `ContextBuilder` | Stage-aware artifact retrieval |
 | **PDF Parsing** | lxml, BeautifulSoup4 | Regulatory document ingestion |
-| **Data Processing** | pandas, numpy | Dataset processing during pipeline stages |
+| **Data Processing** | pandas, numpy | Pipeline stage computations |
 | **PDF Reports** | Programmatic generation | Compliance assessment PDF export |
-| **Package Management** | pip + venv | Python dependency isolation |
 
 ---
 
@@ -241,160 +210,104 @@ The assistant automatically selects the right evidence source based on where the
 ```text
 RegIntelAI-V2/
 │
-├── backend/                         # FastAPI application
-│   ├── main.py                      # All API endpoints (auth, maps, upload, chat, reports)
-│   ├── auth.py                      # JWT auth + PBKDF2 password hashing
-│   ├── permissions.py               # Role-based permission constants
+├── backend/                              # FastAPI application
+│   ├── main.py                           # All API endpoints
+│   ├── auth.py                           # JWT (HS256 + PBKDF2, stdlib-only)
+│   ├── permissions.py                    # Permission constants & role mapping
 │   ├── database/
-│   │   ├── models/                  # SQLAlchemy ORM models
-│   │   │   ├── map.py               # ManagementActionPlan
-│   │   │   ├── control.py           # ComplianceControl
-│   │   │   ├── department.py        # Department
-│   │   │   ├── user.py              # User + Role
-│   │   │   ├── verification.py      # VerificationResult
-│   │   │   └── ...
-│   │   ├── services/                # Business logic services
-│   │   └── session.py               # DB session management
+│   │   ├── models/                       # SQLAlchemy ORM models
+│   │   │   ├── map.py                    # ManagementActionPlan
+│   │   │   ├── control.py                # ComplianceControl
+│   │   │   ├── department.py             # Department
+│   │   │   ├── user.py                   # User + Role
+│   │   │   ├── verification.py           # VerificationResult
+│   │   │   ├── requirement.py            # Requirement
+│   │   │   ├── document.py               # Document
+│   │   │   └── audit.py                  # AuditLog
+│   │   ├── services/                     # Business logic (AssignmentService, AuditService)
+│   │   ├── init_db.py                    # Schema creation + demo seed data
+│   │   └── session.py                    # DB session factory
 │   ├── services/
-│   │   ├── ollama_service.py        # Ollama REST API wrapper (streaming)
-│   │   └── context_builder.py       # Stage-aware RAG context builder
+│   │   ├── ollama_service.py             # Ollama REST wrapper (streaming)
+│   │   └── context_builder.py            # Stage-aware RAG context builder
 │   └── reports/
-│       └── compliance_pdf_generator.py
+│       └── compliance_pdf_generator.py   # PDF report generation
 │
-├── pipeline/                        # 14-stage agentic pipeline
-│   ├── acquisition/                 # Document intake
-│   ├── parser/                      # PDF parsing
-│   ├── normalizer/                  # Text normalisation
-│   ├── hierarchy/                   # Section/clause hierarchy
-│   ├── logical_units/               # Semantic chunking
-│   ├── extractor/                   # Requirement extraction
-│   ├── enrichment/                  # Regulatory keyword enrichment
-│   ├── interpreter/                 # Compliance interpreter (SSOT)
-│   ├── reasoning/                   # Compliance Reasoning Engine
-│   ├── derivation/                  # Control derivation
-│   ├── verification/                # Verification rule generation + execution
-│   ├── verification_planner/        # Verification plan generation
-│   ├── map_generator/               # MAP generation + department assignment
-│   ├── decision/                    # Compliance Decision Engine
-│   ├── aggregator/                  # Dashboard state aggregation
-│   └── orchestrator/                # End-to-end pipeline orchestrator
+├── pipeline/                             # 14-stage agentic pipeline
+│   ├── acquisition/                      # Document intake & deduplication
+│   ├── parser/                           # PDF parsing (lxml)
+│   ├── normalizer/                       # Text normalization
+│   ├── hierarchy/                        # Section/clause hierarchy builder
+│   ├── logical_units/                    # Semantic chunking
+│   ├── extractor/                        # Requirement extraction
+│   ├── enrichment/                       # Regulatory keyword enrichment
+│   ├── interpreter/                      # Compliance Interpreter (SSOT)
+│   ├── reasoning/                        # Compliance Reasoning Engine
+│   ├── derivation/                       # Control derivation
+│   ├── verification/                     # Verification rule generation
+│   ├── verification_planner/             # Verification plan generation
+│   ├── map_generator/                    # MAP generation + department assignment
+│   ├── executor/                         # Compliance Verification Executor
+│   ├── decision/                         # Compliance Decision Engine
+│   ├── aggregator/                       # Frontend state aggregation
+│   └── orchestrator/                     # End-to-end pipeline orchestrator
 │
-├── frontend/                        # React + Vite dashboard
+├── frontend/                             # React + Vite dashboard
 │   └── src/
 │       ├── pages/
-│       │   ├── Dashboard.jsx        # Executive KPI dashboard
-│       │   ├── Maps.jsx             # Compliance register
-│       │   ├── MapDetail.jsx        # MAP detail with verification + decision
-│       │   ├── DepartmentWorkspace.jsx
-│       │   ├── Pipeline.jsx         # Session pipeline tracker
-│       │   ├── SessionDashboard.jsx
-│       │   ├── AssignmentCenter.jsx
-│       │   ├── Requirements.jsx
-│       │   └── Login.jsx
-│       └── components/
-│           ├── Sidebar.jsx
-│           ├── Topbar.jsx
-│           └── ...
+│       │   ├── Dashboard.jsx             # Executive Dashboard
+│       │   ├── Pipeline.jsx              # Analysis Pipeline tracker
+│       │   ├── SessionDashboard.jsx      # Per-document session view + AI chat
+│       │   ├── Maps.jsx                  # Compliance Register
+│       │   ├── MapDetail.jsx             # MAP deep-detail page
+│       │   ├── DepartmentOperations.jsx  # Department Workspace
+│       │   ├── AssignmentCenter.jsx      # Assignment Center (admin)
+│       │   ├── MyAssignments.jsx         # My Assignments (personal queue)
+│       │   ├── Login.jsx                 # Authentication
+│       │   └── Graph.jsx                 # Knowledge Graph (disabled in nav)
+│       ├── components/
+│       │   ├── Sidebar.jsx               # Navigation
+│       │   ├── Topbar.jsx                # Header with user context
+│       │   ├── Breadcrumbs.jsx           # Page breadcrumbs
+│       │   ├── Badges.jsx                # Priority & Status badges
+│       │   ├── LoadingScreen.jsx         # Full-page loading state
+│       │   ├── FullTextModal.jsx         # Text expansion modal
+│       │   └── session/                  # Session-scoped sub-components
+│       │       ├── ExecutiveDepartmentView.jsx  # Sankey visualization
+│       │       ├── SessionKnowledgeGraph.jsx
+│       │       ├── SessionMapTable.jsx
+│       │       ├── SessionSummary.jsx
+│       │       ├── SessionCharts.jsx
+│       │       ├── PipelineStageCard.jsx
+│       │       ├── DepartmentImpact.jsx
+│       │       ├── VerificationSummary.jsx
+│       │       └── AssignmentPreview.jsx
+│       ├── context/
+│       │   ├── AuthContext.jsx            # JWT token & permission helpers
+│       │   ├── FrontendStateContext.jsx   # Global MAP/KPI data from pipeline
+│       │   ├── SessionContext.jsx         # Per-session document data
+│       │   └── TaskContext.jsx            # Background task polling
+│       └── pipeline/
+│           └── stages/
+│               └── stageGraphBuilder.js  # Graph data transformation
 │
-├── datasets/                        # Pipeline artifact store
-│   ├── raw/                         # Source PDFs (master_directions + uploaded_documents)
-│   ├── parsed/                      # Structured parse outputs
-│   ├── requirements/                # Extracted regulatory requirements
-│   ├── maps/                        # Generated MAPs
-│   ├── verification_plans/          # Per-control verification plans
-│   ├── verification_results/        # Execution evidence records
-│   ├── compliance_decisions/        # Final compliance verdicts
-│   └── frontend/                    # Aggregated frontend state JSON
+├── datasets/                             # Pipeline artifact store
+│   ├── raw/                              # Source PDFs
+│   │   └── uploaded_documents/pdfs/      # User-uploaded circulars
+│   ├── parsed/                           # Structured parse output
+│   ├── requirements/                     # Extracted requirements
+│   ├── maps/                             # Generated MAPs (JSON)
+│   ├── verification_plans/               # Per-MAP verification plans
+│   ├── verification_results/             # Execution evidence records
+│   ├── compliance_decisions/             # Final compliance verdicts
+│   ├── processed/                        # Pipeline status JSON files
+│   └── frontend/                         # Aggregated frontend_state.json
 │
-├── docs/
-│   └── images/                      # Screenshots and diagrams
-│
-├── regintel.db                      # SQLite database (dev)
-├── requirements.txt
+├── docs/images/                          # Screenshots and logo
+├── regintel.db                           # SQLite database
+├── requirements.txt                      # Python dependencies
 └── README.md
 ```
-
----
-
-## Screenshots
-
-### Executive Dashboard
-
-<p align="center">
-  <img src="docs/images/dashboard.png" alt="Executive Dashboard" width="90%">
-</p>
-
-*KPI summary: total MAPs, compliance percentage, department-level status, document inventory.*
-
----
-
-### Session Pipeline Tracker
-
-<p align="center">
-  <img src="docs/images/pipeline.png" alt="Pipeline Tracker" width="90%">
-</p>
-
-*Real-time stage-by-stage progress for a newly uploaded circular, from PDF parsing through compliance decisioning.*
-
----
-
-### MAP Generation & Compliance Register
-
-<p align="center">
-  <img src="docs/images/maps.png" alt="MAP Generation" width="90%">
-</p>
-
-*Measurable Action Points derived from the circular, with department assignment, priority, and compliance status.*
-
----
-
-### MAP Detail — Verification & Decision
-
-<p align="center">
-  <img src="docs/images/map_detail.png" alt="MAP Detail" width="90%">
-</p>
-
-*Full MAP detail: source requirement text, verification plan, per-check evidence, and final compliance decision with rationale.*
-
----
-
-### AI Compliance Assistant
-
-<p align="center">
-  <img src="docs/images/chatbot.png" alt="AI Compliance Assistant" width="90%">
-</p>
-
-*RegulAI1 Mitra answering compliance questions grounded in verified pipeline evidence.*
-
----
-
-### Compliance Verification
-
-<p align="center">
-  <img src="docs/images/verification.png" alt="Compliance Verification" width="90%">
-</p>
-
-*Verification execution results: per-check verdicts (PASS / FAIL / SKIPPED), raw evidence, and overall plan status.*
-
----
-
-### Compliance Decisions
-
-<p align="center">
-  <img src="docs/images/decisions.png" alt="Compliance Decisions" width="90%">
-</p>
-
-*Document-level compliance verdict with structured rationale, compliance percentage, and failed-blocker list.*
-
----
-
-### Department Workspace
-
-<p align="center">
-  <img src="docs/images/department.png" alt="Department Workspace" width="90%">
-</p>
-
-*Department-scoped view: assigned MAPs, due dates, evidence notes, and per-assignment status tracking.*
 
 ---
 
@@ -404,10 +317,8 @@ RegIntelAI-V2/
 
 - Python 3.13+
 - Node.js 18+ and npm
-- [Ollama](https://ollama.com/) installed and running locally
+- [Ollama](https://ollama.com/) installed locally
 - Git
-
----
 
 ### 1. Clone the Repository
 
@@ -419,13 +330,13 @@ cd RegIntelAI-V2
 ### 2. Backend Setup
 
 ```bash
-# Create and activate virtual environment
+# Create virtual environment
 python -m venv .venv
 
-# Windows
+# Activate — Windows
 .venv\Scripts\activate
 
-# macOS / Linux
+# Activate — macOS / Linux
 source .venv/bin/activate
 
 # Install dependencies
@@ -433,6 +344,8 @@ pip install -r requirements.txt
 ```
 
 ### 3. Database Initialisation
+
+Creates all tables and seeds demo user accounts:
 
 ```bash
 python -m backend.database.init_db
@@ -449,170 +362,189 @@ cd ..
 ### 5. Ollama Setup
 
 ```bash
-# Install Ollama from https://ollama.com/
-# Then pull the required model
+# Install Ollama from https://ollama.com/, then pull the model
 ollama pull qwen3:8b
 ```
 
-> [!TIP]
-> Qwen3:8B requires approximately 5GB of disk space. The model runs on CPU; a GPU will significantly improve inference speed.
+> **Note:** Qwen3:8B requires approximately 5 GB of disk space. Inference runs on CPU if no GPU is available — a GPU will improve response speed significantly.
+
+### 6. Environment Variables (Optional)
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `REGINTEL_SECRET` | `regintel-ai-offline-secret-key-v2` | JWT signing secret |
 
 ---
 
 ## Running the Project
 
-Open three terminal windows from the project root.
+Open **three terminal windows** from the project root.
 
 **Terminal 1 — Backend API**
 ```bash
+# Windows (from project root, venv active)
 .venv\Scripts\python.exe -m uvicorn backend.main:app --port 8000 --reload
 ```
-API available at: `http://localhost:8000`
-Swagger UI: `http://localhost:8000/docs`
+- API: `http://localhost:8000`
+- Swagger docs: `http://localhost:8000/docs`
 
 **Terminal 2 — Frontend**
 ```bash
 cd frontend
 npm run dev
 ```
-Dashboard available at: `http://localhost:5173`
+- Dashboard: `http://localhost:5173`
 
 **Terminal 3 — Ollama (if not running as a service)**
 ```bash
 ollama serve
 ```
 
+---
+
 ### Demo Credentials
 
-| Username | Password | Role |
-|---|---|---|
-| `admin` | `admin123` | Admin (full access) |
-| `compliance` | `compliance123` | Compliance Head |
-| `it` | `it123` | IT Security Department |
-| `risk` | `risk123` | Risk Department |
-| `treasury` | `treasury123` | Treasury Department |
-| `audit` | `audit123` | Auditor (read-only) |
+| Username | Password | Role | Access |
+|---|---|---|---|
+| `admin` | `admin123` | Admin | Full platform access + document upload |
+| `superadmin` | `super123` | Super Admin | Unrestricted wildcard access |
+| `compliance` | `compliance123` | Compliance Head | MAP approval, pipeline, all departments |
+| `risk` | `risk123` | Risk Head | Risk department MAPs & assignments |
+| `audit` | `audit123` | Audit Head | Read-only, audit logs |
+| `it` | `it123` | IT Head | IT department MAPs & assignments |
+| `operations` | `ops123` | Operations Head | Operations department MAPs & assignments |
+| `viewer` | `viewer123` | Viewer | Read-only across all departments |
 
 ---
 
-## Demo Walkthrough
+## Current Navigation
 
-The following sequence demonstrates the complete compliance lifecycle on a new regulatory circular.
+The finalized navigation for the hackathon build:
+
+| Route | Page | Accessible To |
+|---|---|---|
+| `/` | Executive Dashboard | Admin roles |
+| `/pipeline` | Analysis Pipeline | All authenticated users |
+| `/maps` | Compliance Register | Admin roles |
+| `/departments` | Department Workspace | Admin roles |
+| `/assignment-center` | Assignment Center | Users with `map:approve` |
+| `/my-assignments` | My Assignments | All authenticated users |
+
+> **Note:** The Knowledge Graph (`/graph`) and Requirement Search (`/requirements`) pages are present in the codebase but are **not exposed in the sidebar navigation** for this build. They remain accessible by direct URL.
+
+---
+
+## Demo Flow
+
+Recommended sequence for hackathon judges and technical reviewers:
 
 ```
-Step 1 — Upload Circular
-  POST /documents/upload  ←  RBI circular PDF
-  System assigns document ID: UP20260720_0001
-  14-stage pipeline queued in background
+Step 1 — Login as Admin
+  Credential: admin / admin123
+  Shows full navigation and enterprise KPIs immediately.
 
        ↓
 
-Step 2 — Pipeline Executes (background)
-  PDF Parser → Normalizer → Hierarchy Builder
-  → Requirement Extractor → Compliance Interpreter (SSOT)
-  → Compliance Reasoning Engine → Verification Planner
-  → MAP Generator → Database Ingest → Dashboard Aggregator
+Step 2 — Executive Dashboard
+  Observe macro KPIs: total MAPs, compliance status, automation %.
+  Click the Sankey chart to see document → MAP → department flow.
+  Click a session card to drill into a specific circular.
 
        ↓
 
-Step 3 — Review MAPs
-  Dashboard → Compliance Register
-  Each MAP shows: control name, department, priority, verification status
+Step 3 — Session Dashboard (from pipeline)
+  Review pipeline stage cards with per-stage execution timings.
+  See the AI-generated session summary (MAP count, dept coverage, automation %).
+  Ask the AI Compliance Assistant a question about the document's obligations.
 
        ↓
 
-Step 4 — View Verification Results
-  Click any MAP → MAP Detail
-  See: source requirement (with page reference) + verification checks + verdict
+Step 4 — Compliance Register
+  Browse and search all generated MAPs.
+  Apply filters: department, priority, status.
+  Click a MAP row to open its deep-detail page (source text, rationale, verification plan).
 
        ↓
 
-Step 5 — Review Compliance Decision
-  Decision Engine verdict: COMPLIANT / NON_COMPLIANT / PARTIALLY_COMPLIANT
-  Structured rationale traceable to specific failed checks
+Step 5 — Department Workspace
+  Select a department (e.g., IT) from the dropdown.
+  Review which source documents impact that department.
+  Explore the filtered MAP list for that department.
 
        ↓
 
-Step 6 — Ask the AI Assistant
-  Question: "What are the key compliance gaps for this document?"
-  RegulAI1 Mitra answers from verified compliance decisions + evidence
-  (No hallucination — answers are grounded in pipeline artifacts only)
+Step 6 — Assignment Center (admin view)
+  Review drafted MAPs awaiting approval.
+  Demonstrate approve/reject workflow.
 
        ↓
 
-Step 7 — Export Report
-  GET /reports/{document_id}/pdf
-  Download structured compliance assessment PDF
+Step 7 — My Assignments (department view)
+  Switch to a department user (e.g., it / it123).
+  Show the personal assignment queue with status tracking.
 ```
 
 ---
 
 ## API Reference
 
-Key endpoints — full documentation at `http://localhost:8000/docs`.
+Full interactive documentation: `http://localhost:8000/docs`
 
-| Method | Endpoint | Description | Auth Required |
+| Method | Endpoint | Description | Permission |
 |---|---|---|---|
-| `POST` | `/auth/login` | Obtain JWT access token | No |
-| `POST` | `/documents/upload` | Upload RBI circular PDF | `DOC_UPLOAD` |
-| `GET` | `/documents/{id}/status` | Poll pipeline progress | `MAP_READ` |
-| `GET` | `/documents/{id}` | Full document session data | `MAP_READ` |
-| `GET` | `/maps` | List all MAPs (paginated, filterable) | `MAP_READ` |
-| `GET` | `/maps/{id}` | MAP detail with verification + decision | `MAP_READ` |
-| `PATCH` | `/maps/{id}` | Update MAP (priority, assignment, notes) | `MAP_WRITE` |
-| `GET` | `/departments` | List departments with MAP counts | `MAP_READ` |
-| `GET` | `/chat/health` | Check Ollama service availability | No |
-| `POST` | `/chat` | Query the AI Compliance Assistant | `MAP_READ` |
-| `GET` | `/reports/{id}/pdf` | Download compliance assessment PDF | `MAP_READ` |
+| `POST` | `/auth/login` | Obtain JWT access token | Public |
+| `GET` | `/auth/me` | Get current user profile | Authenticated |
+| `POST` | `/documents/upload` | Upload regulatory PDF for processing | `doc:upload` |
+| `GET` | `/documents/{id}/status` | Poll pipeline progress | `map:read` |
+| `GET` | `/documents/{id}/session` | Full session data for a processed document | `map:read` |
+| `GET` | `/maps` | List all MAPs (paginated, filterable) | `map:read` |
+| `GET` | `/maps/{id}` | MAP detail | `map:read` |
+| `GET` | `/maps/{id}/detail` | Extended MAP detail with pipeline artifacts | `map:read` |
+| `PATCH` | `/maps/{id}` | Update MAP metadata (priority, department, notes) | `map:write` |
+| `POST` | `/maps/{id}/approve` | Approve MAP and create assignment | `map:approve` |
+| `POST` | `/maps/{id}/reject` | Reject MAP with reason | `map:approve` |
+| `GET` | `/maps/stats/summary` | MAP status counts by state | `map:read` |
+| `GET` | `/assignments` | List assignments (dept-scoped for non-admins) | `assign:read` |
+| `PATCH` | `/assignments/{id}` | Mark assignment complete with evidence note | `assign:complete` |
+| `GET` | `/assignments/stats/summary` | Assignment status counts | `assign:read` |
+| `GET` | `/departments` | List all departments | `dept:read` |
+| `GET` | `/users` | List all users | `user:read` |
+| `GET` | `/audit` | Recent audit log entries | `audit:read` |
+| `GET` | `/audit/{type}/{id}` | Audit trail for a specific entity | `audit:read` |
+| `GET` | `/chat/health` | Check Ollama availability | Public |
+| `POST` | `/chat` | Query the AI Compliance Assistant | `map:read` |
+| `GET` | `/reports/{id}/pdf` | Download compliance assessment PDF | `map:read` |
 
 ---
 
 ## User Roles & Permissions
 
-| Role | Upload | Edit MAPs | Verify | View All | Export |
+| Role | Upload Docs | Approve MAPs | View All | Edit MAPs | Complete Assignments |
 |---|---|---|---|---|---|
 | Super Admin | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Admin | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Admin | ✅ | ✅ | ✅ | ✅ | — |
 | Compliance Head | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Department Member | ❌ | Own dept. | ❌ | Own dept. | ✅ |
-| Auditor | ❌ | ❌ | ❌ | ✅ | ✅ |
+| Risk Head | — | — | Own dept | — | ✅ |
+| Audit Head | — | — | ✅ | — | — |
+| IT Head | — | — | Own dept | — | ✅ |
+| Operations Head | — | — | Own dept | — | ✅ |
+| Viewer | — | — | ✅ | — | — |
 
 ---
 
-## Future Roadmap
+## Future Scope
 
-### Phase 2 — Integration Layer
-- [ ] GRC platform connector (ServiceNow, Jira) — auto-create tickets from MAPs
-- [ ] Live API adapters for Tenable, Rapid7, Qualys — direct source-system verification
-- [ ] WebSocket/SSE real-time pipeline progress streaming
-- [ ] Multi-regulator support (CERT-In, SEBI, IRDAI) on the same pipeline
+The following items are explicitly **not implemented** in the current build and are planned for future development:
 
-### Phase 3 — Intelligence
-- [ ] Knowledge Graph — regulatory concept graph linking MAPs across documents
-- [ ] Semantic requirement search across all processed circulars
-- [ ] Scheduled re-verification — periodic automated compliance re-checks
-- [ ] Delta analysis — detect changes between circular versions
-
-### Phase 4 — Enterprise Scale
-- [ ] Celery + Redis task queue for distributed pipeline execution
-- [ ] PostgreSQL / Oracle migration path (ORM layer already abstracted)
-- [ ] Predictive compliance — flag likely non-compliance before advisory arrives
-- [ ] Audit-grade immutable event log with cryptographic signing
-
-> [!NOTE]
-> The core pipeline, SSOT architecture, and verification framework are designed for extension. Adding a new integration or regulator does not require changes to the pipeline's business logic.
-
----
-
-## Contributors
-
-Built for the **Canara Bank SuRaksha Hackathon**.
-
-| Name | Role |
-|---|---|
-| *Team SuRaksha* | Full-stack development, pipeline architecture, AI integration |
-
-*Contributor details to be added here.*
+- **Server-side pagination for all tables** — current tables use client-side slice/filter over the loaded dataset
+- **Evidence file upload** — assignment completion currently accepts text notes only
+- **Formal attestation workflow** — digital sign-off by Department Heads
+- **Advanced multi-select column filters** — current Compliance Register has single-value dropdowns
+- **Enterprise SSO** — Azure AD / Okta integration (current auth is standalone JWT)
+- **Knowledge Graph re-enablement** — the Graph page exists but is disabled from navigation
+- **Scheduled re-verification** — automated periodic compliance re-checks
+- **Delta analysis** — detecting changes between two versions of the same circular
+- **WebSocket/SSE pipeline streaming** — current implementation uses client-side polling
 
 ---
 
@@ -645,7 +577,7 @@ SOFTWARE.
 ---
 
 <p align="center">
-  Built with precision for the Canara Bank SuRaksha Hackathon &nbsp;·&nbsp;
+  Built for the <strong>Canara Bank SuRaksha Hackathon</strong> &nbsp;·&nbsp;
   <a href="http://localhost:8000/docs">API Docs</a> &nbsp;·&nbsp;
   <a href="http://localhost:5173">Dashboard</a>
 </p>

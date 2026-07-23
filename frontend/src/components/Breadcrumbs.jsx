@@ -6,11 +6,11 @@ import { NavLink, useLocation } from "react-router-dom";
 const CRUMB_MAP = {
   "/":              "Dashboard",
   "/maps":          "MAP Management",
-  "/departments":   "Department Risk",
+  "/departments":   "Department Workspace",
   "/requirements":  "Requirements",
   "/graph":         "Knowledge Graph",
   "/assignment-center": "Assignment Center",
-  "/workspace":     "My Assignments",
+  "/my-assignments":     "My Assignments",
   "/pipeline":      "Analysis Pipeline",
   "/session":       "Session Dashboard",
   "/registry":      "MAP Detail",

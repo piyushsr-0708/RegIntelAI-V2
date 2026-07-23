@@ -108,9 +108,12 @@ export default function AssignmentCenter() {
   
   if (!can('map:approve')) {
     return (
-      <div style={{ padding: 40, textAlign: "center" }}>
-        <h2>Access Denied</h2>
-        <p>You do not have permission to access the Assignment Center.</p>
+      <div className="animate-fade-in" style={{ padding: 40, maxWidth: 600, margin: "0 auto", textAlign: "center" }}>
+        <div className="card" style={{ padding: "40px 20px" }}>
+          <div style={{ fontSize: 40, marginBottom: 14 }}>⚠️</div>
+          <h2 style={{ fontSize: 18, color: "#f87171", marginBottom: 8 }}>Access Denied</h2>
+          <p style={{ color: "#94a3b8", fontSize: 14 }}>You do not have permission to access the Assignment Center.</p>
+        </div>
       </div>
     );
   }

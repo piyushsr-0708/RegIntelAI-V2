@@ -25,7 +25,7 @@ export default function Sidebar() {
       icon: <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
     },
     {
-      to: "/departments", label: "Department Risk", show: can("dept:read") && isAdmin,
+      to: "/departments", label: "Department Workspace", show: can("dept:read") && isAdmin,
       icon: <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M3 21h18M9 21V7l3-4 3 4v14M9 12h6"/></svg>
     },
     {
@@ -33,12 +33,8 @@ export default function Sidebar() {
       icon: <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
     },
     {
-      to: "/workspace", label: "My Assignments", show: can("assign:read"),
+      to: "/my-assignments", label: "My Assignments", show: can("assign:read"),
       icon: <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
-    },
-    {
-      to: "/requirements", label: "Requirement Search", show: true,
-      icon: <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
     },
     // The Global Knowledge Graph route (/graph) is disabled from normal navigation for the hackathon.
   ].filter(item => item.show);
